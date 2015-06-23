@@ -5,8 +5,8 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
     <title>CMS</title>
     <hdjs/>
-    <link rel="stylesheet" type="text/css" href="http://127.0.0.1/Project/CMS/Application/Admin/View/Login/Css/css.css">
-    <script type="text/javascript" src="http://127.0.0.1/Project/CMS/Application/Admin/View/Login/Js/js.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1/home/Project/CMS/Application/Admin/View/Login/Css/css.css">
+    <script type="text/javascript" src="http://127.0.0.1/home/Project/CMS/Application/Admin/View/Login/Js/js.js"></script>
 </head>
 <body>
 <div class="header">

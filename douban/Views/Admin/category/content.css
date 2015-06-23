@@ -1,0 +1,56 @@
+table {
+  width: 100%;
+  border-spacing: 0;
+}
+thead {
+  background: #eef3f7;
+  height: 25px;
+  line-height: 25px;
+  font-weight: bold;
+}
+.content-menu {
+  line-height: 25px;
+  overflow: hidden;
+  padding: 5px 10px;
+}
+.content-menu .left {
+  float: left;
+}
+.content-menu .right {
+  float: right;
+}
+.content-menu a {
+  padding: 5px 10px;
+  background: #178EC2;
+  color: #FFFFFF;
+  border-radius: 5px;
+}
+.content-menu span {
+  margin: 0 5px;
+}
+.content-text {
+  margin-left: 10px;
+  border-top: 1px solid #ccc;
+}
+.content-text form {
+  padding-top: 10px;
+}
+.content-text td {
+  padding: 5px 0;
+}
+.content-text input {
+  padding: 0 5px;
+}
+.content-text input[type=text] {
+  width: 200px;
+  line-height: 25px;
+}
+.content-text input[type=submit] {
+  width: 60px;
+  padding: 3px 5px;
+  margin-top: 20px;
+}
+.content-text select {
+  width: 204px;
+  height: 28px;
+}
