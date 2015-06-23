@@ -31,9 +31,10 @@ thead {
 .content-text {
   margin-left: 10px;
   border-top: 1px solid #ccc;
+  line-height: 30px;
 }
 .content-text form {
-  padding-top: 10px;
+  margin-bottom: 30px;
 }
 .content-text td {
   padding: 5px 0;
@@ -53,4 +54,12 @@ thead {
 .content-text select {
   width: 204px;
   height: 28px;
+}
+.content-text .ways {
+  font-weight: bold;
+  line-height: 20px;
+  background: #eef3f7;
+}
+.content-text .note {
+  color: darkred;
 }
