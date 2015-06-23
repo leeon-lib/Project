@@ -5,7 +5,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
     <title>cms - 后台管理中心</title>
-    <script type="text/javascript" src="http://127.0.0.1/CMS/Static/Js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="http://127.0.0.1/Project/CMS/Static/Js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript">
         $(function(){
             //*********左侧导航效果*************
@@ -24,8 +24,8 @@
 
         })
     </script>
-    <link rel="stylesheet" type="text/css" href="http://127.0.0.1/CMS/Application/Admin/View/Index/Css/css.css">
-    <link rel="stylesheet" type="text/css" href="http://127.0.0.1/CMS/Application/Admin/View/Index/Css/quick_menu.css">
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1/Project/CMS/Application/Admin/View/Index/Css/css.css">
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1/Project/CMS/Application/Admin/View/Index/Css/quick_menu.css">
     <base target="iframe"/>
 </head>
 <body>
