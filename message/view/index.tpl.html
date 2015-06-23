@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>留言板</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<!--<script src="js/jquert-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>-->
+		<!--<script src="css/less.js" type="text/javascript" charset="utf-8"></script>-->
+		<script type="text/javascript">
+			function del(id)
+			            {
+			                if (confirm("确定删除？"))
+			                {
+			                    location.href = './index.php?id=' + id;
+			                }
+			            }
+		</script>
+	</head>
+
+	<body>
+
+		<!--外层容器-->
+		<div id="container">
+
+			<div class="header">
+				<div class="write">
+					<</div>
+						<div class="nowtime">
+							<?php echo $time; ?>
+						</div>
+						<div class="shezhi">...</div>
+				</div>
+				<!--主页顶部背景图-->
+				<div class="top">
+					<!--用户名-->
+					<span class="username">Liyn</span>
+					<!--用户头像-->
+					<img src="images/userphoto.png" />
+				</div>
+				<div class="box">
+					<form action="../../../lprame/test.php" method="post" enctype="multipart/form-data">
+						<input type="file" name="username[]" class="username" />
+						<br> 
+						<input type="file" name="username[]" id="" />
+						<!--<textarea class="content" name="content" rows="" cols=""></textarea>-->
+						<br>
+						<input id="btn" type="submit" value="提交" />
+					</form>
+				</div>
+				<div class="cont">
+					<ul>
+						<?php foreach($info as $k=>$v): ?>
+						<li class="items">
+							<div class="photo">
+								<img src="images/image.png" alt="" />
+							</div>
+							<div class="infobox">
+								<div class="nickname">
+									<?php echo $v[ 'username']; ?>
+								</div>
+								<div contenteditable="true" class="text">
+									<?php echo $v[ 'content']; ?>
+								</div>
+								<div class="btmbox">
+									<span class="infotime"><?php echo $v['time']; ?></span>
+									<a href="javascript:void(0)" class="edit">编辑</a>
+									<a href="javascript:del(<?php echo $k ?>);" class="del">删除</a>
+								</div>
+							</div>
+						</li>
+						<li class="line">
+							<hr>
+						</li>
+						<?php endforeach; ?>
+					</ul>
+				</div>
+			</div>
+	</body>
+
+</html>

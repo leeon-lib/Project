@@ -1,0 +1,112 @@
+a {
+  color: #666666;
+}
+/*导航*/
+.nav .logo {
+  width: 145px;
+  height: 56px;
+  background: url("../../../Images/logo_book.png") no-repeat;
+}
+/*主要内容的容器*/
+.container {
+  margin-top: 20px;
+  /*模块标题*/
+}
+.container .title {
+  border-bottom: 1px solid black;
+}
+.container .title > h2 {
+  display: inline-block;
+}
+.container .title > a {
+  color: red;
+}
+/*顶部bar*/
+.top-banner {
+  margin-bottom: 20px;
+}
+/*左部分内容*/
+.left {
+  float: left;
+  width: 590px;
+  padding-right: 40px;
+  /*新书速递*/
+  /*最受关注*/
+}
+.left .items ul {
+  overflow: hidden;
+}
+.left .items ul li {
+  float: left;
+  margin: 10px 5px;
+}
+.left .items ul li .item-info {
+  margin-top: 5px;
+}
+.left .new .turns {
+  float: right;
+}
+.left .new .turns li {
+  float: left;
+}
+.left .new .turns li > a {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 1px;
+  background: red;
+}
+.left .attention .items li {
+  float: left;
+  width: 280px;
+}
+.left .attention .items .cover {
+  float: left;
+  margin-right: 15px;
+}
+.left .attention .items .info .des {
+  margin-top: 35px;
+}
+/*右部内容*/
+.right {
+  float: right;
+  /*热门标签*/
+  /*畅销榜*/
+}
+.right .title {
+  margin: 10px 0;
+}
+.right .title h2 {
+  display: inline-block;
+}
+.right .hottag .items li {
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.right .hottag .items li a {
+  display: block;
+  float: left;
+  line-height: 20px;
+  width: 45px;
+  text-align: center;
+  background: #f5f5f5;
+  margin-right: 5px;
+  color: blue;
+}
+.right .hottag .items li a:hover {
+  background: #999;
+}
+.right .best-selling .items li {
+  margin: 5px 0;
+  line-height: 25px;
+  border-bottom: 1px solid orange;
+}
+.right .best-selling .items li .info {
+  display: inline-block;
+}
+.right .best-selling .items li .gobuy {
+  float: right;
+  display: block;
+  line-height: 50px;
+}

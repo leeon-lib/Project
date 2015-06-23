@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>注册</title>
+	</head>
+	<link rel="stylesheet" href="<?php echo __PUBLIC__ ?>/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo __PUBLIC__ ?>/css/index.css"/>
+	<script type="text/javascript" src="<?php echo __PUBLIC__ ?>/js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript">
+		var APP_URL = "<?php echo __APP__ ?>";
+	</script>
+	<body>
+		<div id="container">
+			<h2>微信网页版</h2>
+			<div class="box">
+				<form action="<?php echo __APP__ ?>?c=login&a=sign" method="post" name="sign">
+					<input type="text" name="username" class="ck" placeholder="用户名" />
+					<input type="text" name="usermail" class="ck" placeholder="邮箱" />
+					<input type="password" name="password" class="ck" placeholder="密码" />
+					<input type="password" name="password_check" class="ck" placeholder="确认密码" />
+					<input type="text" name="checkcode" class="checkcode ck" placeholder="验证码" />
+					<img class="codePic" src="<?php echo __APP__;?>?c=login&a=checkCode">
+					<input class="btn" type="submit" value="注册" disabled="disabled"/><br><br>
+					<a href="<?php echo __APP__ ?>?c=login&a=index">返回登陆</a>
+				</form>
+				<div class="notice">
+					<div class="s1"><i></i><span class="exp_usr"></span></div>
+					<div class="s2"><i></i><span class="exp_mail"></span></div>
+					<div class="s3"><i></i><span class="exp_psw"></span></div>
+					<div class="s4"><i></i><span class="exp_psw_c"></span></div>
+					<div class="s5"><i></i><span class="exp_cc"></span></div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="<?php echo __PUBLIC__ ?>/js/sign.js"></script>
+</html>

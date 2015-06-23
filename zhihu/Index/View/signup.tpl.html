@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="stylesheet" type="text/css" href="./Public/css/index.css">
+</head>
+<body>
+    <!-- top start -->
+    <div id="top">
+        <!-- 内容块 -->
+        <div class="contbox">
+            <!-- logo -->
+            <div class="logo">
+                <img src="./Public/images/logo.png">
+            </div>
+            <!-- 登录表单 -->
+            <div class="sign">
+                <span>注册账号</span>
+                <a href="./index.php?c=Login&a=signin">
+                    登录<i></i>
+                </a>
+                <form action="./index.php?c=Login&a=signup" method="post">
+                    <input type="text" name="lastname" placeholder="姓" class="name"><s></s>
+                    <input type="text" name="firstname" placeholder="名" class="name"><br>
+                    <input type="text" name="mail" placeholder="邮箱"><br>
+                    <input type="password" name="password" placeholder="密码"><br>
+                    <input type="text" name="checkcode" placeholder="验证码"><br>
+                    <img src="./index.php?c=Login&a=showCheckCode"><br>
+                    <input type="submit" value="注册知乎" class="btn">
+                </form>
+                <span>社交账号直接登录</span>
+                <a href=""><i>新浪</i></a>
+                <a href=""><i>QQ</i></a>
+            </div>
+        </div>
+    </div>
+    <!-- top end -->
+    <!-- bottom start -->
+    <div id="bottom">
+        <div class="contbox">
+            
+        </div>
+        <div id="footer">
+            
+        </div>
+    </div>
+    <!-- bottom end -->
+</body>
+</html>

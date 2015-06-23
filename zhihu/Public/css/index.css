@@ -1,0 +1,59 @@
+/*  清除浏览器默认属性  */
+* {
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  font-size: 15px;
+  background-color: #f1f5f8;
+}
+.contbox {
+  width: 800px;
+  height: 300px;
+  margin: 0px auto;
+  padding-top: 60px;
+}
+#top {
+  background-color: #0078D8;
+  color: #ffffff;
+}
+#top .logo {
+  float: left;
+}
+#top .sign {
+  float: right;
+}
+#top .sign input {
+  width: 180px;
+  margin: 5px 0px;
+  padding: 8px 10px;
+  border-radius: 5px;
+}
+#top .sign input[type="text"],
+#top .sign input[type="password"] {
+  background: #E7F1F8;
+  font-size: 15px;
+}
+#top .sign input[type="text"]:focus,
+#top .sign input[type="password"]:focus {
+  background: #ffffff;
+}
+#top .sign s {
+  margin: 0px 6px;
+}
+#top .sign .name {
+  width: 70px;
+}
+#top .sign .rememberme {
+  width: 70px;
+}
+#top .sign .btn {
+  width: 205px;
+  height: 30px;
+  border: 0;
+  color: #ffffff;
+  background-color: #77BFF7;
+}
+#top .sign .btn:hover {
+  background-color: #abd7fa;
+}

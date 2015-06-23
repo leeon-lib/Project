@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <title>标签管理</title>
+    <script type="text/javascript" src="__STATIC__/Js/jquery-1.7.2.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="__STATIC__/hdjs/hdjs.css"/>
+    <script src="__STATIC__/hdjs/hdjs.min.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="__STATIC__/Bootstrap/css/bootstrap.min.css" />
+    <style type="text/css">
+        td{
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <table class="table hd-table-list">
+        <thead>
+        <tr>
+            <td width="10%" align="center">id</td>
+            <td align="center">Logo</td>
+            <td align="center">链接名称</td>
+            <td align="center">链接描述</td>
+            <td align="center">添加时间</td>
+            <td align="center">排序</td>
+            <td align="center">链接地址</td>
+            <td align="center">是否显示</td>
+            <td width="120" align="center">操作</td>
+        </tr>
+        </thead>
+        <tbody>
+            <foreach from="$info" key="$k" value="$v">
+            <tr>
+                <td width="30" align="center">{$v.fid}</td>
+                <td align="center"><img width="50" height="50" src="__ROOT__/{$v.logo}"></td>
+                <td align="center">{$v.fname}</td>
+                <td align="center">{$v.msg}</td>
+                <td align="center">{$v.addtime|date:'Y-m-d H:i:s',@@}</td>
+                <td align="center">{$v.sort}</td>
+                <td align="center"><a href="{$v.url}">{$v._url}</a></td>
+                <td align="center">{$v.is_show}</td>
+                <td width="120" align="center">
+                    <a href="{|U:'Admin/Flink/edit',array('fid'=>$v['fid'])}" class="btn btn-warning btn-xs" >编辑</a>
+                    <a href="javascript:del({$v.fid});" class="btn btn-danger btn-xs">删除</a>
+                </td>
+            </tr>
+            </foreach>
+        </tbody>
+    </table>
+    <div class="page_hdjob">
+        
+    </div>
+</div>
+<script type="text/javascript">
+    function del(id) {
+        hd_modal({
+            width: 300,//宽度
+            height: 150,//高度
+            title: '确认删除吗？',//标题
+            content: '',//提示信息
+            button: true,//显示按钮
+            button_success: "确定",//确定按钮文字
+            button_cancel: "取消",//关闭按钮文字
+            timeout: 0,//自动关闭时间 0：不自动关闭
+            shade: true,//背景遮罩
+            shadeOpacity: 0.4,//背景透明度
+            success: function () {//点击确定后的事件
+                location.href="{|U:'Admin/Flink/del'}" + "&fid=" + id;
+            },
+            cancel: function () {//点击关闭后的事件
+                
+            }
+        });
+    }
+</script>
+</body>
+</html>

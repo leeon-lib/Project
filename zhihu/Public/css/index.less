@@ -1,0 +1,56 @@
+/*  清除浏览器默认属性  */
+*{ padding: 0px;margin: 0px};
+
+body{ font-size: 15px;background-color: #f1f5f8; }
+
+.contbox{
+	width: 800px;
+	height: 300px;
+	margin: 0px auto;
+	padding-top: 60px;
+}
+
+#top{
+	background-color: #0078D8;
+	color: #ffffff;
+	.logo{
+		float: left;
+		// background: green;
+	}
+	.sign{
+		float: right;
+		// background: orange;
+		input{
+			width: 180px;
+			margin: 5px 0px;
+			padding: 8px 10px;
+			border-radius: 5px;
+			&[type="text"],&[type="password"]{
+				background: #E7F1F8;
+				font-size: 15px;
+				&:focus{ background: #fff };
+			}
+		}
+		s{
+			margin: 0px 6px;
+		}
+		.name{
+			width: 70px;
+		}
+		.rememberme{
+			width: 70px;
+		}
+		.btn{
+			width: 205px;
+			height: 30px;
+			border: 0;
+			color: #ffffff;
+			background-color: #77BFF7;
+			&:hover{ background-color: #ABD7FA };
+		}
+	}
+}
+
+#bottom{
+	
+}

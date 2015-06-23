@@ -1,0 +1,137 @@
+<div id='right'>
+    {- nocache}
+    {- if (isset($smarty.session.uname) && isset($smarty.session.uid))}
+    <div class='userinfo'>
+        <dl>
+            <dt>
+            <a href=""><img src="" width='48' height='48' alt="占位符"/></a>
+            </dt>
+            <dd class='username'>
+                <a href="">
+                    <b>{- $argsR.user.username }</b>
+                </a>
+                <a href="">
+                    <i class='level lv1' title='Level 1'></i>
+                </a>
+            </dd>
+            <dd>金币：<a href="" style="color: #888888;">{- $argsR.user.point }<b class='point'></b></a></dd>
+            <dd>经验值：{- $argsR.user.exp }</dd>
+        </dl>
+        <table>
+            <tr>
+                <td>回答数</td>
+                <td>采纳率</td>
+                <td class='last'>提问数</td>
+            </tr>
+            <tr>
+                <td><a href="">{- $argsR.user.answer }</a></td>
+                <td><a href="">{- $argsR.user.accept }%</a></td>
+                <td class='last'><a href="">{- $argsR.user.ask }</a></td>
+            </tr>
+        </table>
+        <ul>
+            <li><a href="">我提问的</a></li>
+            <li><a href="">我回答的</a></li>
+        </ul>
+    </div>
+    {- else}
+    <div class='r-login'>
+        <span class='login'><i></i>&nbsp;登录</span>
+        <span class='register'><i></i>&nbsp;注册</span>
+    </div>
+    {- /if}
+    {- /nocache}
+
+    <div class='clear'></div>
+    <div class='star'>
+        <p class='title'>后盾问答之星</p>
+        <span class='star-name'>本日回答问题最多的人</span>
+        <div class='star-info'>
+            {- if (!isset($argsR.today)) }
+                <div>
+                    <a href="" class='star-face'>
+                        <img src="" width='48px' height='48px' alt="头像站位"/>
+                    </a>
+                    <ul>
+                        <li><a href="">暂无</a></li>
+                        <i class='level lv1' title='Level 1'></i>
+                    </ul>
+                </div>
+                <ul class='star-count'>
+                    <li>回答数：<span>暂无</span></li>
+                    <li>采纳率：<span>暂无</span></li>
+                </ul>
+            {- else }
+                <div>
+                    <a href="" class='star-face'>
+                        <img src="" width='48px' height='48px' alt="头像站位"/>
+                    </a>
+                    <ul>
+                        <li><a href="">{- $argsR.today.username }</a></li>
+                        <i class='level lv1' title='Level 1'></i>
+                    </ul>
+                </div>
+                <ul class='star-count'>
+                    <li>回答数：<span>{- $argsR.today.answer }</span></li>
+                    <li>采纳率：<span>{- $argsR.today.accept }%</span></li>
+                </ul>
+            {- /if }
+        </div>
+        <span class='star-name'>历史回答问题最多的人</span>
+        <div class='star-info'>
+            {- if (!isset($argsR.history)) }
+                <div>
+                    <a href="" class='star-face'>
+                        <img src="" width='48px' height='48px' alt="头像站位"/>
+                    </a>
+                    <ul>
+                        <li><a href="">暂无</a></li>
+                        <i class='level lv1' title='Level 1'></i>
+                    </ul>
+                </div>
+                <ul class='star-count'>
+                    <li>回答数：<span>暂无</span></li>
+                    <li>采纳率：<span>暂无</span></li>
+                </ul>
+            {- else }
+                <div>
+                    <a href="" class='star-face'>
+                        <img src="" width='48px' height='48px' alt="头像站位"/>
+                    </a>
+                    <ul>
+                        <li><a href="">{- $argsR.history.username }</a></li>
+                        <i class='level lv1' title='Level 1'></i>
+                    </ul>
+                </div>
+                <ul class='star-count'>
+                    <li>回答数：<span>{- $argsR.history.answer }</span></li>
+                    <li>采纳率：<span>{- $argsR.history.accept }%</span></li>
+                </ul>
+            {- /if }
+        </div>
+    </div>
+    <div class='star-list'>
+        <p class='title'>后盾问答助人光荣榜</p>
+        <div>
+            <ul class='ul-title'>
+                <li>用户名</li>
+                <li style='text-align:right;'>帮助过的人数</li>
+            </ul>
+            {- if (!isset($argsR.help)) }
+                <ul class='ul-list'>
+                    <li>
+                        <a href=""><i class='rank r1'></i>暂无</a>
+                        <span>未知</span>
+                    </li>
+                </ul>
+            {- else }
+                <ul class='ul-list'>
+                    <li>
+                        <a href=""><i class='rank r1'></i>{- $argsR.help.username }</a>
+                        <span>{- $argsR.help.accept }</span>
+                    </li>
+                </ul>
+            {- /if }
+        </div>
+    </div>
+</div>

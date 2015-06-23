@@ -1,0 +1,354 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"margin",
+				"margin-right"
+			],
+			[
+				"mar",
+				"margin-right"
+			],
+			[
+				"lis",
+				"lis_i_y"
+			],
+			[
+				"mo",
+				"mouseover"
+			],
+			[
+				"bor",
+				"border-bottom"
+			],
+			[
+				"pa",
+				"padding-top"
+			],
+			[
+				"mari",
+				"margin-left"
+			],
+			[
+				"bo",
+				"bottom"
+			],
+			[
+				"border",
+				"border-bottom"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"fff",
+				"FFFFFF"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"v",
+				"vertical-align"
+			],
+			[
+				"g",
+				"GetEleid"
+			],
+			[
+				"box_",
+				"box_left"
+			],
+			[
+				"timer",
+				"Timer"
+			],
+			[
+				"c",
+				"container"
+			],
+			[
+				"a",
+				"Add"
+			],
+			[
+				"new",
+				"new_h"
+			],
+			[
+				"n",
+				"new_val2"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"w",
+				"write"
+			],
+			[
+				"C",
+				"CreateArr"
+			],
+			[
+				"DO",
+				"document"
+			],
+			[
+				"d",
+				"DelRepeat"
+			],
+			[
+				"char",
+				"charCodeAt"
+			],
+			[
+				"ge",
+				"GetNum"
+			],
+			[
+				"arr",
+				"array"
+			],
+			[
+				"paixu",
+				"paixu_arr"
+			],
+			[
+				"o",
+				"OutputArr"
+			],
+			[
+				"ar",
+				"Array"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"About"
+			]
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/Liyn/home/project/jd/jd.html",
+		"/Users/Liyn/home/project/jd/css/jd.css",
+		"/Users/Liyn/home/test/jQuery/tab切换.html",
+		"/Users/Liyn/home/test/jQuery/tab切换副本.html",
+		"/Users/Liyn/home/project/jd/js/jd.js",
+		"/Users/Liyn/Desktop/编程/jQuery/演示代码/0416/05 jquery.html",
+		"/Users/Liyn/home/project/jd/index.html",
+		"/Users/Liyn/Downloads/0418/02 京东左右滑动轮播图/index.html",
+		"/Users/Liyn/Downloads/0418/03 55bbs热点无缝轮播效果.html",
+		"/Users/Liyn/Downloads/0418/04 京东轮播图效果/01 京东轮播图-孙老师说没问题的.html",
+		"/Users/Liyn/Desktop/编程/jQuery/演示代码/0417/05 animate.html",
+		"/Users/Liyn/Desktop/编程/jQuery/演示代码/0417/08 京东轮播图效果/02 京东轮播图-和京东一样的.html",
+		"/Users/Liyn/home/zuoye/0417/左右滑动.html",
+		"/Users/Liyn/home/zuoye/0417/下滑广告.html",
+		"/Users/Liyn/home/test/javascript/轮播图/轮播图.html",
+		"/Users/Liyn/home/zuoye/d/下滑广告.html",
+		"/Users/Liyn/home/test/javascript/轮播图/轮播图a.html",
+		"/Users/Liyn/home/zuoye/d/左右滑动.html",
+		"/Users/Liyn/home/test/jQuery/网站TAB切换",
+		"/Users/Liyn/home/test/jQuery/firstJQ.html",
+		"/Users/Liyn/home/project/nuomi/css/nuomi.css",
+		"/Users/Liyn/home/test/jQuery/firstJQ",
+		"/Users/Liyn/home/test/ss.html",
+		"/Users/Liyn/home/test/this实例，点击让元素消失.html",
+		"/Users/Liyn/home/test/放大镜.html",
+		"/Users/Liyn/Desktop/编程/JavaScript/演示代码/0415/04 凡客放大镜效果/index.html",
+		"/Users/Liyn/home/project/nuomi/index.html",
+		"/Volumes/LEEON/第四天20130120/am/24for语法.php",
+		"/Volumes/LEEON/第四天20130120/am/22计算器.php",
+		"/Volumes/LEEON/第五天20130121/pm/38匿名函数和闭包.php",
+		"/Users/Liyn/Desktop/编程之美/后盾/李勇/0413/冰河世纪.html",
+		"/Users/Liyn/360云盘/update/0413/抽奖.html",
+		"/Users/Liyn/home/project/nuomi/css/nuomi.less",
+		"/Users/Liyn/Desktop/te.html",
+		"/Users/Liyn/Desktop/编程之美/后盾/李勇/0410/去重与排序.html",
+		"/Users/Liyn/Desktop/test.html",
+		"/Users/Liyn/Desktop/编程之美/后盾/JavaScript/演示/0411/07 简单的运动原理.html",
+		"/Users/Liyn/Desktop/编程之美/后盾/李勇/0409/数组与对象.html",
+		"/Users/Liyn/Desktop/ss",
+		"/Users/Liyn/Desktop/李勇作业/0408/max.html",
+		"/Users/Liyn/Downloads/0407/08 if¡ï¡ï¡ï¡ï¡ï.html",
+		"/Users/Liyn/Downloads/0407/12 ¸ôÐÐ±äÉ«±í¸ñÐ§¹û¡ï¡ï¡ï.html",
+		"/Users/Liyn/Downloads/0407/09 if.html",
+		"/Users/Liyn/Downloads/0407/10 forÑ­»·¡ï¡ï¡ï¡ï¡ï.html"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			";');",
+			"b_none",
+			"r_none",
+			"news",
+			"server",
+			"items",
+			"','",
+			"'];",
+			";\n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": true,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "index.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 124.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+		"max_columns": 1
+	}
+}

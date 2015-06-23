@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>后盾问答</title>
+	<meta name="keywords" content="后盾问答"/>
+	<meta name="description" content="后盾问答"/>
+	<!-- 公共头部 -->
+	{- include file='../../../Common/header.html'}
+	<link rel="stylesheet" href="{- $smarty.const.__PUBLIC__}Css/question.css" />
+	<script type="text/javascript" src="{- $smarty.const.__PUBLIC__}Js/question.js"></script>
+
+	<!-- top 结束-->
+	<div id='location'>
+		<a href="">全部分类</a>
+		&gt;&nbsp;电脑&nbsp;&nbsp;
+		&gt;&nbsp;<a href="">硬件</a>&nbsp;&nbsp;
+	</div>
+
+	<!----------------------中部-------------------->
+	<div id='center-wrap'>
+		<div id='center'>
+			<div id='left'>
+				<div id='answer-info'>
+					<!-- 如果没有解决用wait -->
+					<div class='ans-state wait'></div>
+					<div class='answer'>
+						<p class='ans-title'>{- $args.ask.content}
+							<b class='point'>{- $args.ask.reward}</b>
+						</p>
+					</div>
+					<ul>
+						<li><a href="">{- $args.ask.username}</a></li>
+						<li><i class='level lv1' title='Level 1'></i></li>
+						<li>{- $args.ask.time}</li>
+
+					</ul>
+					<div class='ianswer'>
+						<form action="{- $smarty.const.__APP__}?c=showAsk&a=answerAsk" method='POST'>
+							<p>我来回答</p>
+							<textarea name="text"></textarea>
+							<input type="hidden" name='qid' value='{- $args.ask.asid}'>
+							<input type="submit" value='提交回答' id='anw-sub'/>
+						</form>
+					</div>
+					<!---- 满意回答 ---->
+					{- if (isset($args.trueAnswer)) }
+						<div class='ans-right'>
+							<p class='title'><i></i>满意回答<span></span></p>
+							<p class='ans-cons'>{- $args.trueAnswer.content }</p>
+							<dl>
+								<dt>
+									<a href=""><img src="{- $smarty.const.__PUBLIC__}Images/noface.gif" width='48' height='48'/></a>
+								</dt>
+								<dd>
+									<a href="">{- $args.trueAnswer.username }</a>
+								</dd>
+								<dd><i class='level lv1'></i></dd>
+								<dd>20%</dd>
+							</dl>
+						</div>
+					{- /if }
+					<!---- 满意回答 ---->
+				</div>
+
+				<div id='all-answer'>
+					<div class='ans-icon'></div>
+					{- if ($args.answerNum != 0)}
+						<p class='title'>共 <strong>{- $args.answerNum }</strong> 条回答</p>
+					{- else }
+						<p class='title'><strong>暂无回答</strong></p>
+					{- /if }
+					<ul>
+						{- foreach from=$args.answer item=v }
+						<li>
+							<div class='face'>
+								<a href="">
+									<img src="./Images/noface.gif" width='48' height='48'/>
+								</a>
+							</div>
+							<div class='cons blue'>
+								<p>{- $v.content }<span style='color:#888;font-size:12px'>&nbsp;&nbsp;({- $v.time })</span></p>
+							</div>
+							<button class='adopt-btn' anid="{- $v.anid }">采纳</button>
+						</li>
+						{- /foreach }
+					</ul>
+					<div class='page'>
+						<a href="">1</a>
+						<a href="">2</a>
+						<a href="">3</a>
+						<a href="">4</a>
+					</div>
+				</div>
+				<div id='other-ask'>
+					<p class='title'>待解决的相关问题</p>
+					<table>
+						<tr>
+							<td class='t1'><a href="">什么牌子电脑好？</a></td>
+							<td>20&nbsp;回答</td>
+							<td>1900.1.1</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<!---- 公共右侧 ---->
+			{- include file='../../../Common/right.html'}
+		</div>
+
+	</div>
+	
+	<!--------------------中部结束-------------------->
+<!-- 回答问题的内容验证 -->
+<script type="text/javascript">
+	$('#anw-sub').click(function(){
+		// 验证是否已登录
+        if (!isLogin){
+            // 如果没有登录，
+            $('.login').click();
+            return false;
+        }
+		var text = $('.ianswer textarea').val();
+		if (text.length == 0) {
+			alert('回答问题也得说点啥吧？！');
+			return false;
+		}
+	})
+</script>
+
+<!-- 问题采纳的显示与确认处理 -->
+<script type="text/javascript">
+	// 如果用户已登录，且登录用户与当前问题的提问用户匹配，且问题仍未解决，则显示采纳按钮
+	{- if (isLogin > 0) && ($smarty.session.uid == $args.ask.uid) && $args.ask.solve == 0 }
+		$('.adopt-btn').show();
+	{- else }
+		$('.adopt-btn').hide();
+	{- /if }
+
+	// 点击采纳的确认处理
+	$('.adopt-btn').click(function(){
+		if (confirm('确认采纳？')) {
+			var anid = $(this).attr('anid');
+			$.ajax({
+				type:"post",
+				url:"{- $smarty.const.__APP__ }?c=showAsk&a=toAccept",
+				data:{asid:"{- $args.ask.asid }",point:"{- $args.ask.reward }",uid:"{- $smarty.session.uid }",anid:anid},
+				success:function(phpdata){
+
+				}
+			});
+		}
+	})
+</script>
+	<!---- 公共底部 ---->
+	{- include file='../../../Common/footer.html'}

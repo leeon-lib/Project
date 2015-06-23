@@ -1,0 +1,143 @@
+/*全局样式配置*/
+#container {
+  width: 600px;
+  margin: 30px auto;
+  background: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  box-shadow: #666 0px 0px 30px;
+  position: relative;
+}
+.header {
+  height: 35px;
+  color: #FFFFFF;
+  border-bottom: 1px solid #000000;
+  background-color: #222222 ;
+}
+.header .write {
+  float: left;
+  width: 40px;
+  height: 25px;
+  margin: 5px;
+  background: #333333;
+  border-radius: 2px;
+}
+.header .shezhi {
+  float: right;
+  width: 30px;
+  height: 25px;
+  margin: 5px;
+  background: #333333;
+  border-radius: 2px;
+  line-height: 35px;
+  text-align: center;
+}
+.header .nowtime {
+  display: inline-block;
+  width: 300px;
+  height: 35px;
+  line-height: 35px;
+  margin: 0 100px;
+  text-align: center;
+}
+.top {
+  height: 300px;
+  background-image: url(../images/IMG_0298.jpg);
+  position: relative;
+}
+.top span {
+  display: block;
+  color: #FFFFFF;
+  font-family: "microsoft yahei";
+  font-size: 24px;
+  font-weight: 400;
+  margin-right: 20px;
+  position: absolute;
+  right: 90px;
+  bottom: 10px;
+}
+.top img {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  right: 10px;
+  bottom: -20px;
+  border: 2px solid #FFFFFF;
+  box-shadow: #666 0px 0px 20px;
+}
+.addBtn {
+  width: 300px;
+  height: 30px;
+  line-height: 30px;
+  margin: 0 auto;
+  margin-top: 80px;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 22px;
+  font-weight: 700;
+  border-radius: 3px;
+  background: #ECECEC;
+}
+.addBtn:hover {
+  background: #666;
+}
+.box {
+  margin: 80px auto 0;
+  display: none;
+}
+.box .content {
+  width: 300px;
+  height: 30px;
+  margin: 0 auto;
+  background: #F2F2F2;
+  border-radius: 8px;
+  position: relative;
+}
+.box .btn {
+  width: 60px;
+}
+.cont {
+  margin-top: 60px;
+}
+.cont .items {
+  width: 560px;
+  height: 150px;
+  margin-left: 20px;
+}
+.cont .items .photo {
+  float: left;
+}
+.cont .items .photo img {
+  width: 60px;
+  height: 60px;
+  border: 1px solid dodgerblue;
+}
+.cont .items .infobox {
+  float: left;
+  width: 488px;
+  margin-left: 10px;
+}
+.cont .items .infobox .nickname {
+  padding-left: 5px;
+  color: cornflowerblue;
+}
+.cont .items .infobox .text {
+  height: 80px;
+  padding-left: 5px;
+  margin-top: 5px;
+  line-height: 20px;
+  border: 1px solid dodgerblue;
+  border-radius: 5px;
+  background: #F2F2F2;
+}
+.cont .items .infobox .btmbox {
+  height: 20px;
+  line-height: 20px;
+}
+.cont .items .infobox .btmbox .infotime {
+  display: inline-block;
+  width: 55px;
+  color: #999;
+}
+.cont .line {
+  margin: 20px 0;
+}

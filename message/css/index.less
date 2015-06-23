@@ -1,0 +1,153 @@
+/*全局样式配置*/
+@fontcolor:red;
+
+/*清除浏览器默认样式*/
+*{ margin: 0;padding: 0;}
+ol,ul{ list-style: none; }
+a{ text-decoration: none; }
+body{ font-size:12px;background: #333333; }
+
+
+.header-btn(@w:30px,@bgcolor:#333){
+    width: @w;
+    height: 25px;
+    margin: 5px;
+    background: @bgcolor;
+    border-radius: 2px;
+}
+
+#container{
+    width: 600px;
+    margin: 30px auto;
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    box-shadow: #666 0px 0px 30px;
+}
+.header{
+    height: 35px;
+    color: #FFFFFF;
+    border-bottom:1px solid #000000;
+    background-color:#222222 ;
+    .write{
+        float: left;
+        .header-btn(40px);
+    }
+    .shezhi{
+        float: right;
+        .header-btn;
+        line-height: 35px;
+        text-align: center;
+    }
+    .nowtime{
+        display: inline-block;
+        width: 300px;
+        height: 35px;
+        line-height: 35px;
+        margin: 0 100px;
+        text-align: center;
+    }
+}
+
+.top{
+    height: 300px;
+    background-image: url(../images/IMG_0298.jpg);
+    position: relative;
+    span{
+        display:block;
+        color: #FFFFFF;
+        font-family:"microsoft yahei";
+        font-size: 24px;
+        font-weight: 400;
+        margin-right: 20px;
+        position: absolute;
+        right: 90px;
+        bottom: 10px;
+        
+    }
+    img{
+        width: 80px;
+        height: 80px;
+        background: red;
+        position: absolute;
+        right: 10px;
+        bottom: -20px;
+        border: 2px solid #FFFFFF;
+        box-shadow: #666 0px 0px 20px;
+    }
+}
+.box{
+    width: 560px;
+//  height: 150px;
+    margin: 0 auto;
+    border-radius: 8px;
+    margin-top: 50px;
+    background: #F2F2F2;
+//  display: none;
+    form{
+        padding: 20px;
+        .username{
+            width: 320px;
+            height: 25px;
+            margin-bottom: 10px;
+        }
+        .content{
+            width: 300px;
+            height: 50px;
+            padding: 10px;
+        }
+    }
+}
+.cont{
+    margin-top: 60px;
+//  background: orange;
+    //信息块
+    .items{
+        width: 560px;
+        height: 150px;
+        margin-left: 20px;
+//      background: green;
+        .photo{
+            float: left;
+            img{
+                width: 60px;
+                height: 60px;
+                border: 1px solid dodgerblue;
+            }
+        }
+        .infobox{
+            float: left;
+            width: 488px;
+            margin-left:10px;
+            //用户昵称
+            .nickname{
+                padding-left: 5px;
+                color: cornflowerblue;
+            }
+            //发表的内容
+            .text{
+                height: 80px;   
+                padding-left: 5px;
+                margin-top: 5px;
+                line-height: 20px;
+                border: 1px solid dodgerblue;
+                border-radius: 5px;
+                background: #ccc;
+            }
+            .btmbox{
+                height: 20px;
+                line-height: 20px;
+                .infotime{
+                    display:inline-block;
+                    width: 55px;
+                    color: #999;
+                }
+            }
+            
+        }
+        
+    }
+    .line{
+        margin:20px 0;
+    }
+    
+}

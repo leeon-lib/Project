@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" type="text/css" href="./Public/css/index.css">
+</head>
+<body>
+    <!-- top start -->
+    <div id="top">
+        <!-- 内容块 -->
+        <div class="contbox">
+            <!-- logo -->
+            <div class="logo">
+                <img src="./Public/images/logo.png">
+            </div>
+            <!-- 登录表单 -->
+            <div class="sign">
+                <span>登录知乎</span>
+                <a href="./index.php">
+                    注册<i></i>
+                </a>
+                <form action="./index.php?c=Login&a=signin" method="post">
+                    <input type="text" name="mail" placeholder="知乎注册邮箱"><br>
+                    <input type="password" name="password" placeholder="密码"><br>
+                    <input type="text" name="checkcode" placeholder="验证码"><br>
+                    <img src="./index.php?c=Login&a=showCheckCode"><br>
+                    <input type="submit" value="登录" class="btn">
+                </form>
+                <label><input type="checkbox" name="rememberme" class="rememberme">记住我</label>
+                <a href="">忘记密码</a><br>
+                <span>社交账号直接登录</span>
+                <a href=""><i>新浪</i></a>
+                <a href=""><i>QQ</i></a>
+            </div>
+        </div>
+    </div>
+    <!-- top end -->
+    <!-- bottom start -->
+    <div id="bottom">
+        <div class="contbox">
+            
+        </div>
+        <div id="footer">
+            
+        </div>
+    </div>
+    <!-- bottom end -->
+</body>
+</html>
