@@ -1,0 +1,53 @@
+.head{
+	width: 100%;
+	height: 60px;
+	background: #2C75C7;
+	position: relative;
+	.logo{ float: left; margin: 10px 0 0 10px;
+		img{ width: 80px; height: 60px; }
+	}
+	.nav{ position: absolute; left: 160px; bottom: 0;
+		li{	float: left;
+			a{
+				display: block;
+				background: #3985E6;
+				padding: 8px 15px;
+				margin-right: 5px;
+				border-radius: 3px;
+				color: #FFFFFF;
+			}
+		}
+	}
+	.info{ float: right; width: 300px; height: 100%; color: #FFFFFF;
+		.user{ float: left; height: 40px; line-height: 20px; font-size: 13px; padding-top: 20px; }
+		.exit{ float: right; width: 50px; height:100%; text-align: center; line-height: 60px;
+			a{ display: block; height: 100%; background: #215794; color: red;
+				&:hover{ background: #194271; }
+			}
+		}
+	}
+}
+
+.main{
+	width: 100%;
+	min-height: 640px;
+}
+
+.aside{
+	float: left;
+	width: 160px;
+	height: 640px;
+}
+
+.content{
+	overflow: hidden;
+	height: 640px;
+	background: #FFFFFF;
+}
+.crumbs{
+	height: 25px;
+	line-height: 25px;
+	background: #E2E9EA url("../../Images/admin-crumbs-icon.png") no-repeat 3px -21px;
+	padding: 0px 18px;
+	margin-bottom: 1px;
+}
