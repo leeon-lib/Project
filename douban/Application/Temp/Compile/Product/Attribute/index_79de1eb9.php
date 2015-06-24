@@ -4,6 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>属性管理</title>
+	<link rel="stylesheet" href="http://127.0.0.1/Project/douban/Static/Org/Bootstrap/css/Bootstrap.min.css">
 	<link rel="stylesheet" href="http://127.0.0.1/Project/douban/Static/Css/public.css">
 	<link rel="stylesheet" href="http://127.0.0.1/Project/douban/Static/Css/content.css">
 </head>

@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>添加分类</title>
+	<link rel="stylesheet" href="__STATIC__/Org/Bootstrap/css/Bootstrap.min.css">
 	<link rel="stylesheet" href="__STATIC__/Css/public.css">
 	<link rel="stylesheet" href="__STATIC__/Css/content.css">
 </head>
@@ -21,24 +22,28 @@
 			</div>
 		</div>
 		<div class="content-text">
-			<form action="" method="post">
+			<form action="{|U:'Product/Category/add'}" method="post">
 				<table>
 					<tbody>
 						<tr>
 							<td width="10%">分类名称：</td>
-							<td><input type="text"></td>
+							<td><input type="text" name="cname"></td>
 						</tr>
 						<tr>
 							<td>所属分类：</td>
 							<td>
-								<select name="" id="">
+								<select name="pid">
+									<option value="-1">请选择</option>
 									<option value="0">顶级分类</option>
+									<foreach from="$cateInfo" key="$k" value="$v">
+										<option value="{$v.cid}">{$v.cname}</option>
+									</foreach>
 								</select>
 							</td>
 						</tr>
 						<tr>
 							<td>检索字母</td>
-							<td><input type="text"></td>
+							<td><input type="text" name="key_char"></td>
 						</tr>
 						<tr>
 							<td><input type="submit" value="添加"></td>

@@ -12,18 +12,18 @@ class LoginController extends Controller
 	public function index()
 	{
 		if (IS_POST) {
-			$model = K('User');
+			$model = K('Admin');
 			// 开始模型层验证
 			$userInfo = $model->login();
 			// 如果未通过验证，则提示错误
 			if (!$userInfo) {
 				$this->error($model->error);
 			} else {
-				$_SESSION['aid'] = $userInfo['uid'];
+				$_SESSION['aid'] = $userInfo['aid'];
 				$_SESSION['aname'] = $userInfo['username'];
 				$time = time();
-				$model->where("uid={$userInfo['uid']}")->save(array('login_time'=>$time));
-				// $this->success('登录成功',U('Admin/Index/Index'));
+				$model->where("aid={$userInfo['aid']}")->save(array('last_login'=>$time));
+				// $this->success('登录成功',U('Admin/Admin/Index'));
 				go(U('Admin/Admin/Index'));
 			}
 		}

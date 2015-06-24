@@ -22,7 +22,7 @@ return array(
 
     /********************************自定义配置********************************/
     'DEFAULT_MODULE'                => 'Admin',     //默认模块
-    'DEFAULT_CONTROLLER'            => 'Admin',     //默认控制器
+    'DEFAULT_CONTROLLER'            => 'Login',     //默认控制器
     'DEFAULT_ACTION'                => 'index',     //默认方法
     'CODE_LEN'                      => 1,           //验证码长度
 );

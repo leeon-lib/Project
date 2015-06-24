@@ -8,6 +8,9 @@ thead {
   line-height: 25px;
   font-weight: bold;
 }
+thead td {
+  border-bottom: 1px solid #ccc;
+}
 .content-menu {
   line-height: 25px;
   overflow: hidden;
@@ -30,7 +33,6 @@ thead {
 }
 .content-text {
   margin-left: 10px;
-  border-top: 1px solid #ccc;
   line-height: 30px;
 }
 .content-text form {

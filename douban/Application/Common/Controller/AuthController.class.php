@@ -9,7 +9,7 @@ class AuthController extends Controller
 	{
 		parent::__construct();
 		if (!isset($_SESSION['aid']) || !isset($_SESSION['aname'])) {
-			// $this->success('未登录或长时间未操作',go('http://www.baidu.com/'));
+			$this->success('未登录或长时间未操作',U('Admin/Login/index'));
 		}
 	}
 }

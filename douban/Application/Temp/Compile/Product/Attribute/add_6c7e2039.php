@@ -4,6 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>添加属性</title>
+	<link rel="stylesheet" href="http://127.0.0.1/Project/douban/Static/Org/Bootstrap/css/Bootstrap.min.css">
 	<link rel="stylesheet" href="http://127.0.0.1/Project/douban/Static/Css/public.css">
 	<link rel="stylesheet" href="http://127.0.0.1/Project/douban/Static/Css/content.css">
 <body>
@@ -35,7 +36,7 @@
 							<td>所属分类：</td>
 							<td>
 								<select name="" id="">
-									<option value="－1">请选择分类</option>
+									<option value="－1">可选</option>
 								</select>
 							</td>
 						</tr>
@@ -59,7 +60,7 @@
 							<td>所属分类：</td>
 							<td>
 								<select name="" id="">
-									<option value="－1">请选择分类</option>
+									<option value="－1">可选</option>
 								</select>
 							</td>
 						</tr>
