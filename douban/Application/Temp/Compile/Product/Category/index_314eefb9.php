@@ -27,23 +27,21 @@
 			<table>
 				<thead>
 					<tr>
-						<td width="3%" align="right"></td>
-						<td width="10%" align="center">ID</td>
-						<td width="30%" align="left">分类名称</td>
-						<td width="10%" align="center">检索字母</td>
-						<td width="10%" align="center">属性</td>
+						<td width="5%" align="center"></td>
+						<td width="20%" align="left">ID</td>
+						<td width="25%" align="left">分类名称</td>
+						<td width="15%" align="center">属性</td>
 						<td width="15%" align="center">操作</td>
 					</tr>
 				</thead>
 				<tbody>
 					<?php foreach ($cateInfo as $k=>$v){?>
 					<tr pid="<?php echo $v['pid'];?>" cid="<?php echo $v['cid'];?>">
-						<td align="right">
+						<td align="center">
                             <a href="javascript:;" class="glyphicon glyphicon-plus" cid="<?php echo $v['cid'];?>"></a>
                         </td>
-						<td align="center"><?php echo $v['cid'];?></td>
+						<td align="left"><?php echo $v['cid'];?></td>
 						<td align="left"><?php echo $v['_name'];?></td>
-						<td align="center"><?php echo $v['key_char'];?></td>
 						<td align="center">
 							<a href="">查看</a>
 							<a href="">设置</a>

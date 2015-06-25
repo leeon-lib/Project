@@ -1,7 +1,7 @@
 <?php
 
 /**
-* 分类控制权
+* 分类控制器
 */
 class CategoryController extends AuthController
 {
@@ -40,7 +40,7 @@ class CategoryController extends AuthController
 			}
 			$this->success('添加成功',U('index'));
 		}
-
+		// p($this->cateInfo);die;
 		$this->assign('cateInfo',$this->cateInfo);
 		$this->display();
 	}
@@ -80,10 +80,10 @@ class CategoryController extends AuthController
 			$this->success('暂无此分类',U('index'));
 		}
 		// 处理所属分类不能选择自己与自己的子集
-		$subCateInfo = $this->model->getSub($this->cateInfo,$cid);
-		$subCateInfo[] = $cid;
+		$selfSub = $this->model->getSub($this->cateInfo,$cid);
+		$selfSub[] = $cid;
 		
-		$this->assign('subCateInfo',$subCateInfo);
+		$this->assign('selfSub',$selfSub);
 		$this->assign('cateInfo',$this->cateInfo);
 		$this->assign('oldInfo',$oldInfo);
 		$this->display();

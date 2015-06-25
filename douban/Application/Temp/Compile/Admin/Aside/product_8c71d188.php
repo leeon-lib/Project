@@ -11,13 +11,13 @@
 	<ul>
 		<li>
 			<h4>商品管理</h4>
-			<a href="" target="content">列表</a>
-			<a href="" target="content">添加</a>
+			<a href="<?php echo U('Product/Product/index');?>" target="content">列表</a>
+			<a href="<?php echo U('Product/Product/add');?>" target="content">添加</a>
 		</li>
 		<li>
 			<h4>品牌管理</h4>
-			<a href="" target="content">列表</a>
-			<a href="" target="content">添加</a>
+			<a href="<?php echo U('Product/Brand/index');?>" target="content">列表</a>
+			<a href="<?php echo U('Product/Brand/add');?>" target="content">添加</a>
 		</li>
 		<li>
 			<h4>类别管理</h4>

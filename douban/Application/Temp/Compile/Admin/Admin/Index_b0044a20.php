@@ -10,7 +10,7 @@
 <body>
 	<div class="head">
 		<div class="logo">
-			<a href="">
+			<a href="">Logo
 				<!-- <img src="../Admin/photo.jpg" alt=""> -->
 			</a>
 		</div>

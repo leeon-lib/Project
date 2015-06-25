@@ -26,6 +26,9 @@
 			<form action="<?php echo U('Product/Category/add');?>" method="post">
 				<table>
 					<tbody>
+						<tr class="ways">
+							<td colspan="10">直接录入：</td>
+						</tr>
 						<tr>
 							<td width="10%">分类名称：</td>
 							<td><input type="text" name="cname"></td>
@@ -34,17 +37,13 @@
 							<td>所属分类：</td>
 							<td>
 								<select name="pid">
-									<option value="-1">请选择</option>
+									<option value="-1">必选</option>
 									<option value="0">顶级分类</option>
 									<?php foreach ($cateInfo as $k=>$v){?>
 										<option value="<?php echo $v['cid'];?>"><?php echo $v['cname'];?></option>
 									<?php }?>
 								</select>
 							</td>
-						</tr>
-						<tr>
-							<td>检索字母</td>
-							<td><input type="text" name="key_char"></td>
 						</tr>
 						<tr>
 							<td><input type="submit" value="添加"></td>

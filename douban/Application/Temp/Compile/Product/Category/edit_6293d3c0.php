@@ -37,7 +37,7 @@
 									<option value="-1">请选择</option>
 									<option value="0"     <?php if($oldInfo['pid']==0){ ?>selected<?php } ?> >顶级分类</option>
 									<?php foreach ($cateInfo as $k=>$v){?>
-			                            <?php if(!in_array($v['cid'],$subCateInfo)){ ?>
+			                            <?php if(!in_array($v['cid'],$selfSub)){ ?>
 			                            <option value="<?php echo $v['cid'];?>"     <?php if($oldInfo['pid']==$v['cid']){ ?>selected<?php } ?> ><?php echo $v['_name'];?></option>
 			                        <?php } ?>
 			                        <?php }?>
@@ -45,12 +45,8 @@
 							</td>
 						</tr>
 						<tr>
-							<td>检索字母</td>
-							<td><input type="text" name="key_char" value="<?php echo $v['key_char'];?>"></td>
-						</tr>
-						<tr>
 							<input type="hidden" name="cid" value="<?php echo $hd['get']['cid'];?>" />
-							<td><input type="submit" value="添加"></td>
+							<td><input type="submit" value="修改"></td>
 						</tr>
 					</tbody>
 				</table>
