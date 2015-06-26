@@ -1,20 +1,19 @@
-<?php if(!defined('HDPHP_PATH'))exit;C('SHOW_NOTICE',FALSE);?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>添加品牌</title>
-	<link rel="stylesheet" href="http://127.0.0.1/Project/douban/Static/Org/Bootstrap/css/Bootstrap.min.css">
-	<link rel="stylesheet" href="http://127.0.0.1/Project/douban/Static/Css/public.css">
-	<link rel="stylesheet" href="http://127.0.0.1/Project/douban/Static/Css/content.css">
+	<title>修改</title>
+	<link rel="stylesheet" href="__STATIC__/Org/Bootstrap/css/Bootstrap.min.css">
+	<link rel="stylesheet" href="__STATIC__/Css/public.css">
+	<link rel="stylesheet" href="__STATIC__/Css/content.css">
 </head>
 <body>
 	<div class="warp">
 		<div class="content-menu">
 			<div class="left">
-				<a href="<?php echo U('Product/Brand/index');?>">品牌列表</a>
+				<a href="{|U:'Product/Brand/index'}">品牌列表</a>
 				<span>|</span>
-				<a href="<?php echo U('Product/Brand/add');?>">添加品牌</a>
+				<a href="{|U:'Product/Brand/add'}">添加品牌</a>
 			</div>
 			<div class="right">
 				<a href="">后退</a>
@@ -23,7 +22,7 @@
 			</div>
 		</div>
 		<div class="content-text">
-			<form action="<?php echo U('Product/Brand/add');?>" method="post">
+			<form action="{|U:'Product/Brand/add'}" method="post">
 				<table>
 					<tbody>
 						<tr class="ways">
@@ -31,11 +30,11 @@
 						</tr>
 						<tr>
 							<td width="10%">品牌名称：</td>
-							<td><input type="text" name="bname"></td>
+							<td><input type="text" name="bname" value="{$info.bname}"></td>
 						</tr>
 						<tr>
 							<td width="10%">英文名称：</td>
-							<td><input type="text" name="en_name"></td>
+							<td><input type="text" name="en_name" value="{$info.en_name}"></td>
 						</tr>
 						<tr>
 							<td>品牌Logo：</td>

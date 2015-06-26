@@ -11,6 +11,9 @@ thead {
 thead td {
   border-bottom: 1px solid #ccc;
 }
+tbody tr {
+  border-bottom: 1px solid #ccc;
+}
 tbody tr:hover {
   background: #EEEEEE;
 }
@@ -63,6 +66,12 @@ tbody tr:hover {
 }
 .content-text select option {
   padding: 5px 10px;
+}
+.content-text textarea {
+  width: 200px;
+  height: 80px;
+  line-height: 20px;
+  padding: 0 5px;
 }
 .content-text .ways {
   font-weight: bold;

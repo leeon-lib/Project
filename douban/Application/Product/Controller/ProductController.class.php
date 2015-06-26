@@ -7,9 +7,17 @@ class ProductController extends AuthController
 {
 	
 	/**
-     * 侧边栏
+     * 商品列表
      */
-    public function aside()
+    public function index()
+    {
+    	$this->display();
+    }
+
+    /**
+     * 添加商品
+     */
+    public function add()
     {
     	$this->display();
     }

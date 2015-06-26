@@ -51,7 +51,7 @@ class CategoryModel extends Model
 	}
 
 	/**
-	 * 验证添加的分类名称是否已存在
+	 * 验证名称是否已存在
 	 */
 	public function checkName()
 	{

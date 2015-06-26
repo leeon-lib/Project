@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>添加品牌</title>
+	<title>修改</title>
 	<link rel="stylesheet" href="http://127.0.0.1/Project/douban/Static/Org/Bootstrap/css/Bootstrap.min.css">
 	<link rel="stylesheet" href="http://127.0.0.1/Project/douban/Static/Css/public.css">
 	<link rel="stylesheet" href="http://127.0.0.1/Project/douban/Static/Css/content.css">
@@ -31,11 +31,11 @@
 						</tr>
 						<tr>
 							<td width="10%">品牌名称：</td>
-							<td><input type="text" name="bname"></td>
+							<td><input type="text" name="bname" value="<?php echo $info['bname'];?>"></td>
 						</tr>
 						<tr>
 							<td width="10%">英文名称：</td>
-							<td><input type="text" name="en_name"></td>
+							<td><input type="text" name="en_name" value="<?php echo $info['en_name'];?>"></td>
 						</tr>
 						<tr>
 							<td>品牌Logo：</td>

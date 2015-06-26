@@ -30,15 +30,38 @@
 						</tr>
 						<tr>
 							<td width="10%">属性名称：</td>
-							<td><input type="text"></td>
+							<td><input type="text" name="name"></td>
+							<td width="65%"></td>
+						</tr>
+						<tr>
+							<td>属性值：</td>
+							<td><textarea name="value" cols="30" rows="10"></textarea></td>
+							<td>支持以中、英文逗号或'|'隔开</td>
+						</tr>
+						<tr>
+							<td>类别：</td>
+							<td>
+								<label>属性：<input type="radio" name="kind" value="1" checked="checked"></label>
+								<label>规格：<input type="radio" name="kind" value="2"></label>
+							</td>
+							<td></td>
 						</tr>
 						<tr>
 							<td>所属分类：</td>
 							<td>
-								<select name="" id="">
-									<option value="－1">可选</option>
+								<select name="cid">
+									<option value="-1">可选</option>
+									<?php foreach ($cateInfo as $k=>$v){?>
+										<option value="<?php echo $v['cid'];?>"><?php echo $v['_name'];?></option>
+									<?php }?>
 								</select>
 							</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>检索字母：</td>
+							<td><input type="text" name="key_char"></td>
+							<td>建议填写属性首字母，以便于列表检索</td>
 						</tr>
 						<tr>
 							<td><input type="submit" value="添加"></td>
