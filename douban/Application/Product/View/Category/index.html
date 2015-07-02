@@ -42,13 +42,13 @@
 						<td align="left">{$v.cid}</td>
 						<td align="left">{$v._name}</td>
 						<td align="center">
-							<a href="">查看</a>
-							<a href="">设置</a>
+							<a href="{|U:'Product/Category/showAttr',array('cid'=>$v['cid'])}">查看</a>
+							<a href="{|U:'Product/Category/setAttr',array('cid'=>$v['cid'])}">设置</a>
 						</td>
 						<td align="center">
 							<a href="{|U:'addSub',array('cid'=>$v['cid'])}">添加子分类</a>
 							<a href="{|U:'edit',array('cid'=>$v['cid'])}">编辑</a>
-							<a href="{|U:'del',array('cid'=>$v['cid'])}">删除</a>
+							<a href="javascript:del({$v['cid']});">删除</a>
 						</td>	
 					</tr>
 					</foreach>
@@ -86,6 +86,25 @@
             });
     	}
     );
+    // 删除分类
+    function del(id) {
+    	if (confirm("确定删除此分类？")) {
+    		$.ajax({
+    			type: "post",
+    			url: "{|U:'Product/Category/ajax_del'}",
+    			data: {cid: id},
+    			success: function(info){
+    				if (false == info) {
+    					alert("无法删除存在子分类的分类");
+    				} else {
+    					$('tr[cid='+id+']').empty();
+    				}
+    			}
+    		});
+    	}
+    }
+    // 查看分类的属性
+    
 </script>
 </body>
 

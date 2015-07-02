@@ -27,21 +27,29 @@
 				<thead>
 					<tr>
 						<td width="10%" align="center">ID</td>
-						<td width="20%" align="center">属性名称</td>
-						<td width="20%" align="center">所属分类</td>
-						<td width="15%" align="center">操作</td>
+						<td width="10%" align="center">属性名称</td>
+						<td width="30%" align="center">属性值</td>
+						<td width="10%" align="center">属性类别</td>
+						<td width="10%" align="center">操作</td>
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<td align="center">1</td>
-						<td align="center">衣服</td>
-						<td align="center"></td>
-						<td align="center">
-							<a href="">编辑</a>
-							<a href="">删除</a>
-						</td>
-					</tr>
+					<?php foreach ($data as $k=>$v){?>
+						<tr>
+							<td align="center"><?php echo $v['id'];?></td>
+							<td align="center"><?php echo $v['name'];?></td>
+							<td align="center"><?php echo $v['value'];?></td>
+							    <?php if($v['kind_id'] == 1){ ?>
+								<td align="center">属性</td>
+							<?php }else{ ?>
+								<td align="center">规格</td>
+							<?php } ?>
+							<td align="center">
+								<a href="<?php echo U('Product/Attribute/edit');?>">编辑</a>
+								<a href="<?php echo U('Product/Attribute/del');?>">删除</a>
+							</td>
+						</tr>
+					<?php }?>
 				</tbody>
 			</table>
 		</div>

@@ -26,22 +26,32 @@
 			<table>
 				<thead>
 					<tr>
-						<td width="10%" align="center">ID</td>
-						<td width="20%" align="center">商品名称</td>
-						<td width="20%" align="center">英文名称</td>
-						<td width="20%" align="center">品牌Logo</td>
-						<td width="15%" align="center">操作</td>
+						<td width="5%" align="center">商品ID</td>
+						<td width="10%" align="center">商品图片</td>
+						<td width="10%" align="left">货号</td>
+						<td width="20%" align="left">商品名称</td>
+						<td width="10%" align="center">所属分类</td>
+						<td width="10%" align="center">品牌</td>
+						<td width="5%" align="center">市场价</td>
+						<td width="10%" align="center">生产日期</td>
+						<td width="10%" align="center">添加日期</td>
+						<td width="10%" align="center">管理操作</td>
 					</tr>
 				</thead>
 				<tbody>
-					<?php foreach ($info as $k=>$v){?>
+					<?php foreach ($data as $k=>$v){?>
 						<tr>
-							<td align="center"><?php echo $v['bid'];?></td>
-							<td align="center"><?php echo $v['bname'];?></td>
-							<td align="center"><?php echo $v['en_name'];?></td>
+							<td align="center"><?php echo $v['id'];?></td>
 							<td align="center">
-								<img src="<?php echo $v['logo'];?>" alt="">
+								<img src="<?php echo $v['pic'];?>" alt="">
 							</td>
+							<td align="left"><?php echo $v['goods'];?></td>
+							<td align="left"><?php echo $v['name'];?></td>
+							<td align="center"><?php echo $v['category_name'];?></td>
+							<td align="center"><?php echo $v['brand_name'];?></td>
+							<td align="center"><?php echo $v['marked_price'];?></td>
+							<td align="center"><?php echo $v['manuf_date'];?></td>
+							<td align="center"><?php echo $v['add_date'];?></td>
 							<td align="center">
 								<a href="<?php echo U('Product/Product/edit',array('pid'=>$v['pid']));?>">编辑</a>
 								<a href="<?php echo U('Product/Product/del',array('pid'=>$v['pid']));?>">删除</a>

@@ -7,57 +7,28 @@ class CategoryModel extends Model
 {
 	public $table = 'category';
 
-	public $validate = array(
-		array('cname','nonull','分类名称不能为空',2,3)
-	);
-
 	/**
-	 * 添加、修改分类
+	 * 添加、编辑分类
+	 * @param  [array]  $data [需要处理的数据]
+	 * @param  integer  1 [添加]
+	 * @return [int]     [返回添加的数据的主键]
+	 * @param  integer  2 [编辑]
+	 * @return [boolean]  [true]
 	 */
-	public function intoCate()
+	public function intoCate($data,$type=1)
 	{
-		// 表单完整性验证
-		if (!$this->create()) return false;
-		// 验证分类名称
-		if (!$this->checkName()) return false;
+		switch ($type) {
+			case 1:
+				$this->add($data);
+				break;
 
-		// 如果不存在隐藏域cid，则添加分类，否则执行修改
-		if (!array_key_exists('cid', $_POST)) {
-			// 根据所选的分类，生成对应规则的分类id
-			$pid = (int)$_POST['pid'];
-			$cidArr = $this->field("cid")->where("pid={$pid}")->all();
-			switch ($pid) {
-				case 0:
-					if (empty($cidArr)) {
-						$cid = 100;
-					} else {
-						$lastCid = current(array_pop($cidArr));
-						// p($lastCid);die;
-						$cid = $lastCid + 100;
-					}
-					break;
-				
-				default:
-					if (empty($cidArr)) {
-						$cid = $pid *100 + 1;
-					} else {
-						$lastCid = current(array_pop($cidArr));
-						$cid = $lastCid + 1;
-					}
-					break;
-			}
-			$info = array(
-				'cid' 	=> $cid,
-				'cname' => Q('post.cname'),
-				'pid' 	=> $pid
-			);
-			// 插入数据
-			return $this->add($info);
-		} else {
-			// 更新（修改）
-			$cid = (int)Q('post.cid');
-			$this->where("cid={$cid}")->update();
-			return true;
+			case 2:
+				$this->where("cid={$data['cid']}")->save($data);
+				break;
+			
+			default:
+				return false;
+				break;
 		}
 	}
 
@@ -78,15 +49,47 @@ class CategoryModel extends Model
 
 	/**
 	 * 验证添加的分类名称是否已存在
+	 * @param  [string] $name
+	 * @return [boolean]       [如果存在则返回假]
 	 */
-	public function checkName()
+	public function checkName($name)
 	{
-		$cname = Q('post.cname');
-		$res = $this->where("cname = '{$cname}' ")->find();
-		if ($res) {
-			$this->error = '该分类已存在！';
+		$res = $this->where("name = '{$name}' ")->find();
+		if ($res)
+		{
+			return true;
+		} else
+		{
 			return false;
 		}
-		return true;
+	}
+
+	/**
+	 * 生成分类id
+	 * @param  [int] $pid [父级分类id，顶级分类则为0]
+	 * @return [int] $cid [按规则生成的分类id]
+	 */
+	public function createCateId($pid)
+	{
+		$cidArr = $this->field("cid")->where("pid={$pid}")->order('id asc')->all();
+		switch ($pid) {
+			case 0:
+				if (empty($cidArr)) {
+					$cid = 100;
+				} else {
+					$lastCid = current(array_pop($cidArr));
+					$cid = $lastCid + 100;
+				}
+				break;
+			default:
+				if (empty($cidArr)) {
+					$cid = $pid *100 + 1;
+				} else {
+					$lastCid = current(array_pop($cidArr));
+					$cid = $lastCid + 1;
+				}
+				break;
+		}
+		return $cid;
 	}
 }

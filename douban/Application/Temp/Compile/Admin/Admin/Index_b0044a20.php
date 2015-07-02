@@ -17,16 +17,16 @@
 		<div class="nav">
 			<ul>
 				<li>
-					<a href="">首页</a>
+					<a href="">个人中心</a>
 				</li>
 				<li>
-					<a href="<?php echo U('Admin/Aside/product');?>" target="aside">商品</a>
+					<a href="<?php echo U('Admin/Aside/product');?>" target="aside">商品管理</a>
 				</li>
 				<li>
-					<a href="">库存</a>
+					<a href="">库存管理</a>
 				</li>
 				<li>
-					<a href="<?php echo U('Admin/Aside/settings');?>" target="aside">设置</a>
+					<a href="<?php echo U('Admin/Aside/settings');?>" target="aside">系统设置</a>
 				</li>
 			</ul>
 		</div>

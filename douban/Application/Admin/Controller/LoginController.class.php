@@ -19,10 +19,10 @@ class LoginController extends Controller
 			if (!$userInfo) {
 				$this->error($model->error);
 			} else {
-				$_SESSION['aid'] = $userInfo['aid'];
+				$_SESSION['aid'] = $userInfo['id'];
 				$_SESSION['aname'] = $userInfo['username'];
 				$time = time();
-				$model->where("aid={$userInfo['aid']}")->save(array('last_login'=>$time));
+				$model->where("id={$userInfo['id']}")->save(array('last_login'=>$time));
 				// $this->success('登录成功',U('Admin/Admin/Index'));
 				go(U('Admin/Admin/Index'));
 			}

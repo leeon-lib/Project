@@ -43,13 +43,13 @@
 						<td align="left"><?php echo $v['cid'];?></td>
 						<td align="left"><?php echo $v['_name'];?></td>
 						<td align="center">
-							<a href="">查看</a>
-							<a href="">设置</a>
+							<a href="<?php echo U('Product/Category/showAttr',array('cid'=>$v['cid']));?>">查看</a>
+							<a href="<?php echo U('Product/Category/setAttr',array('cid'=>$v['cid']));?>">设置</a>
 						</td>
 						<td align="center">
 							<a href="<?php echo U('addSub',array('cid'=>$v['cid']));?>">添加子分类</a>
 							<a href="<?php echo U('edit',array('cid'=>$v['cid']));?>">编辑</a>
-							<a href="<?php echo U('del',array('cid'=>$v['cid']));?>">删除</a>
+							<a href="javascript:del(<?php echo $v['cid'];?>);">删除</a>
 						</td>	
 					</tr>
 					<?php }?>
@@ -87,6 +87,25 @@
             });
     	}
     );
+    // 删除分类
+    function del(id) {
+    	if (confirm("确定删除此分类？")) {
+    		$.ajax({
+    			type: "post",
+    			url: "<?php echo U('Product/Category/ajax_del');?>",
+    			data: {cid: id},
+    			success: function(info){
+    				if (false == info) {
+    					alert("无法删除存在子分类的分类");
+    				} else {
+    					$('tr[cid='+id+']').empty();
+    				}
+    			}
+    		});
+    	}
+    }
+    // 查看分类的属性
+    
 </script>
 </body>
 

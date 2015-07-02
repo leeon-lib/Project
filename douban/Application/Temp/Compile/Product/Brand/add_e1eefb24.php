@@ -31,7 +31,7 @@
 						</tr>
 						<tr>
 							<td width="10%">品牌名称：</td>
-							<td><input type="text" name="bname"></td>
+							<td><input type="text" name="name"></td>
 						</tr>
 						<tr>
 							<td width="10%">英文名称：</td>

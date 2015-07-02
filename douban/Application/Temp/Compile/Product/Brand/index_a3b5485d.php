@@ -36,15 +36,15 @@
 				<tbody>
 					<?php foreach ($info as $k=>$v){?>
 						<tr>
-							<td align="center"><?php echo $v['bid'];?></td>
-							<td align="center"><?php echo $v['bname'];?></td>
+							<td align="center"><?php echo $v['id'];?></td>
+							<td align="center"><?php echo $v['name'];?></td>
 							<td align="center"><?php echo $v['en_name'];?></td>
 							<td align="center">
 								<img src="<?php echo $v['logo'];?>" alt="">
 							</td>
 							<td align="center">
-								<a href="<?php echo U('Product/Brand/edit',array('bid'=>$v['bid']));?>">编辑</a>
-								<a href="<?php echo U('Product/Brand/del',array('bid'=>$v['bid']));?>">删除</a>
+								<a href="<?php echo U('Product/Brand/edit',array('id'=>$v['id']));?>">编辑</a>
+								<a href="<?php echo U('Product/Brand/del',array('id'=>$v['id']));?>">删除</a>
 							</td>
 						</tr>
 					<?php }?>

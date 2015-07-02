@@ -35,15 +35,15 @@
 				<tbody>
 					<foreach from="$info" key="$k" value="$v">
 						<tr>
-							<td align="center">{$v.bid}</td>
-							<td align="center">{$v.bname}</td>
+							<td align="center">{$v.id}</td>
+							<td align="center">{$v.name}</td>
 							<td align="center">{$v.en_name}</td>
 							<td align="center">
 								<img src="{$v.logo}" alt="">
 							</td>
 							<td align="center">
-								<a href="{|U:'Product/Brand/edit',array('bid'=>$v['bid'])}">编辑</a>
-								<a href="{|U:'Product/Brand/del',array('bid'=>$v['bid'])}">删除</a>
+								<a href="{|U:'Product/Brand/edit',array('id'=>$v['id'])}">编辑</a>
+								<a href="{|U:'Product/Brand/del',array('id'=>$v['id'])}">删除</a>
 							</td>
 						</tr>
 					</foreach>

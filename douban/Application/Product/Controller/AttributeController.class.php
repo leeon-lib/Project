@@ -6,11 +6,13 @@
 class AttributeController extends AuthController
 {
 	private $model = null;
+    private $cateAttrModel = null;
 
     public function __construct()
     {
         parent::__construct();
         $this->model = K('Attribute');
+        $this->cateAttrModel = K('CategoryAttr');
     }
 
 	/**
@@ -18,8 +20,9 @@ class AttributeController extends AuthController
      */
     public function index()
     {
+        $data = $this->model->all();
 
-
+        $this->assign('data',$data);
         $this->display();
     }
 
@@ -30,16 +33,31 @@ class AttributeController extends AuthController
     {
         if (IS_POST) 
         {
+            $name = Q('post.name');
+            $value = Q('post.value');
+            // 一般性检测
+            if (empty($name)) 
+            {
+                $this->error('属性名称不可为空');
+            }
+            if (empty($value))
+            {
+                $this->error('属性值不可为空');
+            }
+            if ($this->model->checkName($name))
+            {
+                $this->error('属性重复，该属性名称已存在！');
+            }
+
             // 将以回车符分隔的多行分割为数组
             // 如果单行内有以'，'分隔的多个字符，便再以逗号分拆为子数组
-            $value = explode("\r", $_POST['value']);
+            $value = explode("\r", $value);
             foreach ($value as $k => $v) {
-                $v = trim($v);
-                if (empty($v)) {
+                if (empty(trim($v))) {
                     unset($value[$k]);
                     continue;
                 }
-                if (strpos($v, '，') !== false) {
+                if (false !== strpos($v, '，')) {
                     $value[$k] = explode('，', $v);
                     foreach ($value[$k] as $key => $val) {
                         $val = trim($val);
@@ -48,8 +66,6 @@ class AttributeController extends AuthController
                             continue;
                         }
                     }
-                } else {
-                    $value[$k] = $v;
                 }
             }
             // 将整理好的属性值的多维数组分解为以英文逗号分隔的字符串
@@ -61,18 +77,15 @@ class AttributeController extends AuthController
                     $str .= implode(',', $v) . ',';
                 }
             }
-            $str = rtrim($str,',');
             // 将整理好的属性值字符串压入POST替换原值，用于模型的操作
-            $_POST['value'] = $str;
-            if (!$this->model->intoAttr()) {
-                $this->error($this->model->error);
-            } else {
-                $this->success('添加成功');
-            }
-        }
+            $_POST['value'] = rtrim($str,',');
 
-        $cateInfo = Data::tree(K('category')->all(),'cname');
-        $this->assign('cateInfo',$cateInfo);
+            if (!$this->model->intoAttr())
+            {
+                $this->error($this->model->error);
+            }
+            $this->success('添加成功',U('index'));
+        }
     	$this->display();
     }
 
@@ -82,5 +95,21 @@ class AttributeController extends AuthController
     public function implode()
     {
         echo 'hi';
+    }
+
+    /**
+     * 编辑
+     */
+    public function edit()
+    {
+
+    }
+
+    /**
+     * 删除
+     */
+    public function del()
+    {
+        
     }
 }

@@ -40,20 +40,8 @@
 						<tr>
 							<td>类别：</td>
 							<td>
-								<label>属性：<input type="radio" name="kind" value="1" checked="checked"></label>
-								<label>规格：<input type="radio" name="kind" value="2"></label>
-							</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>所属分类：</td>
-							<td>
-								<select name="cid">
-									<option value="-1">可选</option>
-									<foreach from="$cateInfo" key="$k" value="$v">
-										<option value="{$v.cid}">{$v._name}</option>
-									</foreach>
-								</select>
+								<label>属性：<input type="radio" name="kind_id" value="1" checked="checked"></label>
+								<label>规格：<input type="radio" name="kind_id" value="2"></label>
 							</td>
 							<td></td>
 						</tr>

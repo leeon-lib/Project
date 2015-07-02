@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>添加子分类</title>
+	<title>编辑分类</title>
 	<link rel="stylesheet" href="http://127.0.0.1/Project/douban/Static/Org/Bootstrap/css/Bootstrap.min.css">
 	<link rel="stylesheet" href="http://127.0.0.1/Project/douban/Static/Css/public.css">
 	<link rel="stylesheet" href="http://127.0.0.1/Project/douban/Static/Css/content.css">
@@ -27,14 +27,9 @@
 				<table>
 					<tbody>
 						<tr>
-							<td width="10%">分类名称：</td>
-							<td><input type="text" name="cname" value="<?php echo $oldInfo['cname'];?>"></td>
-						</tr>
-						<tr>
 							<td>所属分类：</td>
 							<td>
-								<select name="cid">
-									<option value="-1">请选择</option>
+								<select name="pid">
 									<option value="0"     <?php if($oldInfo['pid']==0){ ?>selected<?php } ?> >顶级分类</option>
 									<?php foreach ($cateInfo as $k=>$v){?>
 			                            <?php if(!in_array($v['cid'],$selfSub)){ ?>
@@ -46,6 +41,10 @@
 						</tr>
 						<tr>
 							<input type="hidden" name="cid" value="<?php echo $hd['get']['cid'];?>" />
+							<td width="10%">分类名称：</td>
+							<td><input type="text" name="name" value="<?php echo $oldInfo['name'];?>"></td>
+						</tr>
+						<tr>
 							<td><input type="submit" value="修改"></td>
 						</tr>
 					</tbody>

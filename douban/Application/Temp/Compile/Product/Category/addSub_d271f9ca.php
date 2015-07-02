@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="http://127.0.0.1/Project/douban/Static/Org/Bootstrap/css/Bootstrap.min.css">
 	<link rel="stylesheet" href="http://127.0.0.1/Project/douban/Static/Css/public.css">
 	<link rel="stylesheet" href="http://127.0.0.1/Project/douban/Static/Css/content.css">
+	<script type="text/javascript" src="http://127.0.0.1/Project/douban/Static/Org/jquery-1.7.2.min.js"></script>
 </head>
 <body>
 	<div class="warp">
@@ -27,17 +28,19 @@
 				<table>
 					<tbody>
 						<tr>
-							<td width="10%">分类名称：</td>
-							<td><input type="text" name="cname"></td>
-						</tr>
-						<tr>
-							<td>所属分类：</td>
+							<td width="10%">所属分类：</td>
 							<td>
-								<?php echo $info['cname'];?>
+								<?php echo $info['name'];?>
 								<input type="hidden" name="pid" value="<?php echo $info['cid'];?>">
 							</td>
+							<td width="70%"></td>
 						</tr>
 						<tr>
+							<td>分类名称：</td>
+							<td><input type="text" name="name[]"></td>
+							<td><a href="javascript:;" class="glyphicon glyphicon-plus"></a></td>
+						</tr>
+						<tr class="btn">
 							<td><input type="submit" value="添加"></td>
 						</tr>
 					</tbody>
@@ -45,5 +48,16 @@
 			</form>
 		</div>
 	</div>
+<script type="text/javascript">
+	$('.glyphicon-plus').click(function(){
+		var str  = '<tr><td></td>';
+			str += '<td><input type="text" name="name[]"></td>';
+			str += '<td><a href="javascript:;" class="glyphicon glyphicon-minus"></a></td></tr>';
+		$('.btn').before(str);
+	});
+	$('tr .glyphicon-minus').live("click",function(){
+		$(this).parents('tr').empty();
+	})
+</script>
 </body>
 </html>

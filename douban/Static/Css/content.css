@@ -31,6 +31,7 @@ tbody tr:hover {
 }
 .content-menu .right {
   float: right;
+  margin-right: 10px;
 }
 .content-menu a {
   padding: 3px 10px;
@@ -52,8 +53,13 @@ tbody tr:hover {
 }
 .content-text input[type=text] {
   width: 200px;
-  line-height: 25px;
-  padding: 0 5px;
+  line-height: 15px;
+  padding: 6px 5px;
+}
+.content-text input[type=file] {
+  width: 200px;
+  line-height: 15px;
+  padding: 6px 5px;
 }
 .content-text input[type=submit] {
   width: 60px;
