@@ -33,28 +33,32 @@
 						<td width="10%" align="center">所属分类</td>
 						<td width="10%" align="center">品牌</td>
 						<td width="5%" align="center">市场价</td>
-						<td width="10%" align="center">生产日期</td>
+						<td width="10%" align="center">上市日期</td>
 						<td width="10%" align="center">添加日期</td>
 						<td width="10%" align="center">管理操作</td>
 					</tr>
 				</thead>
 				<tbody>
-					<?php foreach ($data as $k=>$v){?>
+					<?php foreach ($info as $k=>$v){?>
 						<tr>
 							<td align="center"><?php echo $v['id'];?></td>
 							<td align="center">
-								<img src="<?php echo $v['pic'];?>" alt="">
+								<?php if (empty($v['pic'])){ ?>
+									<img src="http://127.0.0.1/Project/douban/Static/Images/default_s.gif" alt="" width="60px">
+								<?php }else{ ?>
+									<img src="http://127.0.0.1/Project/douban/Upload/Product/<?php echo $v['pic'];?>" alt="" width="60px">
+								<?php } ?>
 							</td>
 							<td align="left"><?php echo $v['goods'];?></td>
 							<td align="left"><?php echo $v['name'];?></td>
 							<td align="center"><?php echo $v['category_name'];?></td>
 							<td align="center"><?php echo $v['brand_name'];?></td>
 							<td align="center"><?php echo $v['marked_price'];?></td>
-							<td align="center"><?php echo $v['manuf_date'];?></td>
-							<td align="center"><?php echo $v['add_date'];?></td>
+							<td align="center"><?php echo date('Y-m-d',$v['manuf_date']);?></td>
+							<td align="center"><?php echo date('Y-m-d',$v['add_date']);?></td>
 							<td align="center">
-								<a href="<?php echo U('Product/Product/edit',array('pid'=>$v['pid']));?>">编辑</a>
-								<a href="<?php echo U('Product/Product/del',array('pid'=>$v['pid']));?>">删除</a>
+								<a href="<?php echo U('Product/Product/edit',array('id'=>$v['id']));?>">编辑</a>
+								<a href="<?php echo U('Product/Product/del',array('id'=>$v['id']));?>">删除</a>
 							</td>
 						</tr>
 					<?php }?>

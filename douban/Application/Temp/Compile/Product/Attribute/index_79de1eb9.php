@@ -26,9 +26,9 @@
 			<table>
 				<thead>
 					<tr>
-						<td width="10%" align="center">ID</td>
+						<td width="5%" align="center">ID</td>
 						<td width="10%" align="center">属性名称</td>
-						<td width="30%" align="center">属性值</td>
+						<td width="30%" align="left">属性值</td>
 						<td width="10%" align="center">属性类别</td>
 						<td width="10%" align="center">操作</td>
 					</tr>
@@ -38,7 +38,7 @@
 						<tr>
 							<td align="center"><?php echo $v['id'];?></td>
 							<td align="center"><?php echo $v['name'];?></td>
-							<td align="center"><?php echo $v['value'];?></td>
+							<td align="left"><?php echo $v['value'];?></td>
 							    <?php if($v['kind_id'] == 1){ ?>
 								<td align="center">属性</td>
 							<?php }else{ ?>

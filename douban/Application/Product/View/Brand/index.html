@@ -25,22 +25,22 @@
 			<table>
 				<thead>
 					<tr>
-						<td width="10%" align="center">ID</td>
-						<td width="20%" align="center">品牌名称</td>
-						<td width="20%" align="center">英文名称</td>
-						<td width="20%" align="center">品牌Logo</td>
-						<td width="15%" align="center">操作</td>
+						<td width="5%" align="center">ID</td>
+						<td width="10%" align="center">Logo</td>
+						<td width="20%" align="left">品牌名称</td>
+						<td width="20%" align="left">英文名称</td>
+						<td width="10%" align="center">操作</td>
 					</tr>
 				</thead>
 				<tbody>
 					<foreach from="$info" key="$k" value="$v">
 						<tr>
 							<td align="center">{$v.id}</td>
-							<td align="center">{$v.name}</td>
-							<td align="center">{$v.en_name}</td>
 							<td align="center">
 								<img src="{$v.logo}" alt="">
 							</td>
+							<td align="left">{$v.name}</td>
+							<td align="left">{$v.en_name}</td>
 							<td align="center">
 								<a href="{|U:'Product/Brand/edit',array('id'=>$v['id'])}">编辑</a>
 								<a href="{|U:'Product/Brand/del',array('id'=>$v['id'])}">删除</a>

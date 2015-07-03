@@ -23,7 +23,13 @@
 					<a href="<?php echo U('Admin/Aside/product');?>" target="aside">商品管理</a>
 				</li>
 				<li>
-					<a href="">库存管理</a>
+					<a href="<?php echo U('Admin/Aside/stock');?>" target="aside">库存管理</a>
+				</li>
+				<li>
+					<a href="<?php echo U('Admin/Aside/order');?>" target="aside">订单管理</a>
+				</li>
+				<li>
+					<a href="<?php echo U('Admin/Aside/mall');?>" target="aside">商城管理</a>
 				</li>
 				<li>
 					<a href="<?php echo U('Admin/Aside/settings');?>" target="aside">系统设置</a>

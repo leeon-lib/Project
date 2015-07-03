@@ -32,28 +32,32 @@
 						<td width="10%" align="center">所属分类</td>
 						<td width="10%" align="center">品牌</td>
 						<td width="5%" align="center">市场价</td>
-						<td width="10%" align="center">生产日期</td>
+						<td width="10%" align="center">上市日期</td>
 						<td width="10%" align="center">添加日期</td>
 						<td width="10%" align="center">管理操作</td>
 					</tr>
 				</thead>
 				<tbody>
-					<foreach from="$data" key="$k" value="$v">
+					<foreach from="$info" key="$k" value="$v">
 						<tr>
 							<td align="center">{$v.id}</td>
 							<td align="center">
-								<img src="{$v.pic}" alt="">
+								<empty value="$v.pic">
+									<img src="__STATIC__/Images/default_s.gif" alt="" width="60px">
+								<noempty/>
+									<img src="__HTTP_UPLOAD__/Product/{$v.pic}" alt="" width="60px">
+								</empty>
 							</td>
 							<td align="left">{$v.goods}</td>
 							<td align="left">{$v.name}</td>
 							<td align="center">{$v.category_name}</td>
 							<td align="center">{$v.brand_name}</td>
 							<td align="center">{$v.marked_price}</td>
-							<td align="center">{$v.manuf_date}</td>
-							<td align="center">{$v.add_date}</td>
+							<td align="center">{$v.manuf_date|date:'Y-m-d',@@}</td>
+							<td align="center">{$v.add_date|date:'Y-m-d',@@}</td>
 							<td align="center">
-								<a href="{|U:'Product/Product/edit',array('pid'=>$v['pid'])}">编辑</a>
-								<a href="{|U:'Product/Product/del',array('pid'=>$v['pid'])}">删除</a>
+								<a href="{|U:'Product/Product/edit',array('id'=>$v['id'])}">编辑</a>
+								<a href="{|U:'Product/Product/del',array('id'=>$v['id'])}">删除</a>
 							</td>
 						</tr>
 					</foreach>

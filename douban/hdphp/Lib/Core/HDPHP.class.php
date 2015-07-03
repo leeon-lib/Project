@@ -45,6 +45,7 @@ final class HDPHP
         defined('MODULE_LANGUAGE_PATH')                         or define('MODULE_LANGUAGE_PATH', MODULE_PATH . 'Language/');
         defined('MODULE_TAG_PATH')                              or define('MODULE_TAG_PATH', MODULE_PATH . 'Tag/');
         defined('MODULE_LIB_PATH')                              or define('MODULE_LIB_PATH', MODULE_PATH . 'Lib/');
+        // defined('UPLOAD_PATH')                                  or define('UPLOAD_PATH', ROOT_PATH . '/' . 'Upload/');
         //应用配置
         is_file(MODULE_CONFIG_PATH . 'config.php')              and C(require(MODULE_CONFIG_PATH . 'config.php'));
         is_file(MODULE_LANGUAGE_PATH . C('LANGUAGE') . '.php')  and L(require MODULE_LANGUAGE_PATH . C('LANGUAGE') . '.php');
@@ -59,6 +60,7 @@ final class HDPHP
         defined("__VIEW__")                                     or define('__VIEW__', __ROOT__  . '/'.rtrim(MODULE_VIEW_PATH,'/'));
         defined("__PUBLIC__")                                   or define('__PUBLIC__', __VIEW__ . '/Public');
         defined("__CONTROLLER_VIEW__")                          or define('__CONTROLLER_VIEW__', __VIEW__  .'/'. CONTROLLER);
+        defined('__HTTP_UPLOAD__')                              or define('__HTTP_UPLOAD__', __ROOT__ .'/' . 'Upload');
         //来源URL
         define("__HISTORY__",                                   isset($_SERVER["HTTP_REFERER"])?$_SERVER["HTTP_REFERER"]:null);
         //=========================环境配置

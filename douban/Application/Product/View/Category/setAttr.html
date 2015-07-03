@@ -32,9 +32,9 @@
 							<input type="hidden" name="cid" value="{$hd.get.cid}" />
 						</tr>
 						<!-- 如果有录入属性，则显示设置属性，否则提示无属性可设置 -->
-						<if value="isset($attrInfo['no-selected'])">
+						<if value="isset($attrInfo['nosele'])">
 							<!-- 如果有已设置定属性，则显示当前已选，否则显示所有 -->
-							<empty value="$attrInfo.selected">
+							<empty value="$attrInfo.sele">
 							<noempty/>
 								<tr class="ways">
 									<td colspan="10">当前已选：</td>
@@ -42,20 +42,16 @@
 								<tr>
 									<td width="10%">规格：</td>
 									<td>
-										<foreach from="$attrInfo['selected']" key="$k" value="$v">
-											<if value="$v['kind_id'] == 2">
-												<label>{$v.name}<input type="checkbox" name="attr[sele][]" value="{$v.attribute_id}" checked="checked"></label>&nbsp;
-											</if>
+										<foreach from="$attrInfo['sele'][spec]" key="$k" value="$v">
+											<label>{$v.name}<input type="checkbox" name="attr[sele][]" value="{$v.attribute_id}" checked="checked"></label>&nbsp;
 										</foreach>
 									</td>
 								</tr>
 								<tr>
 									<td width="10%">属性：</td>
 									<td>
-										<foreach from="$attrInfo['selected']" key="$k" value="$v">
-											<if value="$v['kind_id'] == 1">
-												<label>{$v.name}<input type="checkbox" name="attr[sele][]" value="{$v.attribute_id}" checked="checked"></label>&nbsp;
-											</if>
+										<foreach from="$attrInfo['sele']['attr']" key="$k" value="$v">
+											<label>{$v.name}<input type="checkbox" name="attr[sele][]" value="{$v.attribute_id}" checked="checked"></label>&nbsp;
 										</foreach>
 									</td>
 								</tr>
@@ -66,22 +62,16 @@
 							<tr>
 								<td width="10%">规格：</td>
 								<td>
-								<foreach from="$attrInfo['no-selected']" key="$k" value="$v">
-								<if value="!in_array($v['id'],$attrInfo)">
-									<if value="($v['kind_id'] == 2)">
+									<foreach from="$attrInfo['nosele']['spec']" key="$k" value="$v">
 										<label>{$v.name}<input type="checkbox" name="attr[nosele][]" value="{$v.id}"></label>&nbsp;
-									</if>
-								</if>
-								</foreach>
+									</foreach>
 								</td>
 							</tr>
 							<tr>
 								<td width="10%">属性：</td>
 								<td>
-									<foreach from="$attrInfo['no-selected']" key="$k" value="$v">
-										<if value="$v['kind_id'] == 1">
-											<label>{$v.name}<input type="checkbox" name="attr[nosele][]" value="{$v.id}"></label>&nbsp;
-										</if>
+									<foreach from="$attrInfo['nosele'][attr]" key="$k" value="$v">
+										<label>{$v.name}<input type="checkbox" name="attr[nosele][]" value="{$v.id}"></label>&nbsp;
 									</foreach>
 								</td>
 							</tr>

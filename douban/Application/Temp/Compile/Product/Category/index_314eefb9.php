@@ -49,7 +49,7 @@
 						<td align="center">
 							<a href="<?php echo U('addSub',array('cid'=>$v['cid']));?>">添加子分类</a>
 							<a href="<?php echo U('edit',array('cid'=>$v['cid']));?>">编辑</a>
-							<a href="javascript:del(<?php echo $v['cid'];?>);">删除</a>
+							<a href="javascript:del(<?php echo $v['id'];?>);">删除</a>
 						</td>	
 					</tr>
 					<?php }?>

@@ -1,21 +1,22 @@
+<?php if(!defined('HDPHP_PATH'))exit;C('SHOW_NOTICE',FALSE);?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>添加商品</title>
-	<link rel="stylesheet" href="__STATIC__/Org/Bootstrap/css/Bootstrap.min.css">
-	<link rel="stylesheet" href="__STATIC__/Css/public.css">
-	<link rel="stylesheet" href="__STATIC__/Css/content.css">
-	<script src="__STATIC__/Org/jquery-1.7.2.min.js"></script>
-	<script src="__STATIC__/Org/cal/lhgcalendar.min.js"></script>
+	<title>商品属性</title>
+	<link rel="stylesheet" href="http://127.0.0.1/Project/douban/Static/Org/Bootstrap/css/Bootstrap.min.css">
+	<link rel="stylesheet" href="http://127.0.0.1/Project/douban/Static/Css/public.css">
+	<link rel="stylesheet" href="http://127.0.0.1/Project/douban/Static/Css/content.css">
+	<script src="http://127.0.0.1/Project/douban/Static/Org/jquery-1.7.2.min.js"></script>
+	<script src="http://127.0.0.1/Project/douban/Static/Org/cal/lhgcalendar.min.js"></script>
 </head>
 <body>
 	<div class="warp">
 		<div class="content-menu">
 			<div class="left">
-				<a href="{|U:'Product/Product/index'}">商品列表</a>
+				<a href="<?php echo U('Product/Product/index');?>">商品列表</a>
 				<span>|</span>
-				<a href="{|U:'Product/Product/add'}">添加商品</a>
+				<a href="<?php echo U('Product/Product/add');?>">添加商品</a>
 			</div>
 			<div class="right">
 				<a href="">后退</a>
@@ -24,62 +25,18 @@
 			</div>
 		</div>
 		<div class="content-text">
-			<form action="{|U:'Product/Product/add'}" method="post" enctype="multipart/form-data" name="my">
+			<div class="ways">
+				<a href="<?php echo U('Product/Product/edit');?>">基本信息</a>
+				<a href="<?php echo U('Product/Product/attr');?>">商品属性</a>
+				<a href="<?php echo U('Product/Product/details');?>">商品详情</a>
+			</div>
+			<form action="<?php echo U('Product/Product/add');?>" method="post" enctype="multipart/form-data">
 				<table>
 					<tbody>
-						<tr class="ways" align="left">
-							<td colspan="10">商品基本信息：</td>
+						<tr class="ways" align="center">
+							<td colspan="10">商品基本信息</td>
 						</tr>
-						<tr>
-							<td>商品名称：</td>
-							<td><input type="text" name="name"></td>
-						</tr>
-						<tr>
-							<td width="10%">商品货号：</td>
-							<td><input type="text" name="goods"></td>
-						</tr>
-						<tr>
-							<td>所属分类</td>
-							<td>
-								<select name="category_cid">
-									<option value="-1" selected="selected">必选</option>
-									<foreach from="$cateInfo" key="$k" value="$v">
-										<option value="{$v.cid}">{$v._name}</option>
-									</foreach>
-								</select>
-							</td>
-						</tr>
-						<tr>
-							<td>所属品牌</td>
-							<td>
-								<select name="brand_id">
-									<option value="-1">必选</option>
-									<foreach from="$brandInfo" key="$k" value="$v">
-										<option value="{$v.id}">{$v.name}</option>
-									</foreach>
-								</select>
-							</td>
-						</tr>
-						<tr>
-							<td>上市日期：</td>
-							<td>
-								<input type="text" readonly="readonly" id="updatetime" name="manuf_date" class="hd-w150">
-							</td>
-						</tr>
-						<tr>
-							<td>市场价：</td>
-							<td><input type="text" name="marked_price"></td>
-						</tr>
-						<tr>
-							<td>商品图片：</td>
-							<td><input type="file" name="pics"></td>
-						</tr>
-						<tr class="ways" align="left">
-							<td colspan="10"><a href="javascript:;" class="setAttr">设置商品属性：</a></td>
-						</tr>
-						<tr class="ways" align="left">
-							<td colspan="10"><a href="javascript:;" class="setDetails">设置商品详情：</a></td>
-						</tr>
+						
 						<tr class="btn">
 							<td><input type="submit" value="添加"></td>
 						</tr>
@@ -107,12 +64,12 @@
     	var cid = $('select[name=category_id] option[selected]').val();
     	var str = '';
     	if (-1 == cid) {
-    		str = '<tr align="left" class="notice"><td colspan="10">请先选择商品分类！</td></tr>';
+    		str = '<tr align="center" class="notice"><td colspan="10">请先选择商品分类！</td></tr>';
     		$(this).parents('tr').after(str);
     	} else {
     		$.ajax({
                 type: "post",
-                url: "{|U:'Product/Product/ajax_setAttr'}",
+                url: "<?php echo U('Product/Product/ajax_setAttr');?>",
                 data: {cid: cid},
                 dataType: "json",
                 async: false,

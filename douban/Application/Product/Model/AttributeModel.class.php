@@ -44,7 +44,7 @@ class AttributeModel extends Model
 	public function getByCid($cid)
 	{
 		$join = '__attribute__ attr JOIN __category_attr__ cate_attr ON attr.id = cate_attr.attribute_id';
-		return M()->join("{$join}")->field('attribute_id,name,kind_id,key_char')->where("cate_attr.category_cid={$cid}")->all();
+		return M()->join("{$join}")->field('attribute_id,attr.name,attr.kind_id')->where("cate_attr.category_cid={$cid}")->all();
 	}
 
 	/**

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>添加商品</title>
+	<title>编辑商品</title>
 	<link rel="stylesheet" href="__STATIC__/Org/Bootstrap/css/Bootstrap.min.css">
 	<link rel="stylesheet" href="__STATIC__/Css/public.css">
 	<link rel="stylesheet" href="__STATIC__/Css/content.css">
@@ -24,26 +24,34 @@
 			</div>
 		</div>
 		<div class="content-text">
-			<form action="{|U:'Product/Product/add'}" method="post" enctype="multipart/form-data" name="my">
+			<div class="ways">
+				<a href="{|U:'Product/Product/edit'}">基本信息</a>
+				<a href="{|U:'Product/Product/attr'}">商品属性</a>
+				<a href="{|U:'Product/Product/details'}">商品详情</a>
+			</div>
+			<form action="{|U:'Product/Product/add'}" method="post" enctype="multipart/form-data">
 				<table>
 					<tbody>
-						<tr class="ways" align="left">
-							<td colspan="10">商品基本信息：</td>
-						</tr>
-						<tr>
-							<td>商品名称：</td>
-							<td><input type="text" name="name"></td>
+						<tr class="ways" align="center">
+							<td colspan="10">商品基本信息</td>
 						</tr>
 						<tr>
 							<td width="10%">商品货号：</td>
-							<td><input type="text" name="goods"></td>
+							<td><input type="text" name="goods" value="{$oldInfo.goods}"></td>
+						</tr>
+						<tr>
+							<td>商品名称：</td>
+							<td><input type="text" name="name" value="{$oldInfo.name}"></td>
 						</tr>
 						<tr>
 							<td>所属分类</td>
 							<td>
-								<select name="category_cid">
+								<select name="category_id">
 									<option value="-1" selected="selected">必选</option>
 									<foreach from="$cateInfo" key="$k" value="$v">
+										<if value="$oldInfo['category_id']==$v.cid">
+											<option value="{$v.cid}" selected="selected">{$v._name}</option>
+										</if>
 										<option value="{$v.cid}">{$v._name}</option>
 									</foreach>
 								</select>
@@ -55,6 +63,9 @@
 								<select name="brand_id">
 									<option value="-1">必选</option>
 									<foreach from="$brandInfo" key="$k" value="$v">
+										<if value="$oldInfo['brand_id']==$v['id']">
+											<option value="{$v.id}" selected="selected">{$v.name}</option>
+										</if>
 										<option value="{$v.id}">{$v.name}</option>
 									</foreach>
 								</select>
@@ -63,22 +74,28 @@
 						<tr>
 							<td>上市日期：</td>
 							<td>
-								<input type="text" readonly="readonly" id="updatetime" name="manuf_date" class="hd-w150">
+								<input type="text" readonly="readonly" id="updatetime" name="manuf_date" class="hd-w150" value="{$oldInfo.manuf_date|date:'Y-m-d',@@}">
 							</td>
 						</tr>
 						<tr>
 							<td>市场价：</td>
-							<td><input type="text" name="marked_price"></td>
+							<td><input type="text" name="marked_price" value="{$oldInfo.marked_price}"></td>
 						</tr>
 						<tr>
 							<td>商品图片：</td>
-							<td><input type="file" name="pics"></td>
+							<td>
+								<empty value="$oldInfo['pic']">
+									<input type="file" name="pics">
+								<noempty/>
+									<img src="__ROOT__/Upload/Product/{$oldInfo['pic']}" alt="">
+								</empty>
+							</td>
 						</tr>
-						<tr class="ways" align="left">
-							<td colspan="10"><a href="javascript:;" class="setAttr">设置商品属性：</a></td>
+						<tr class="ways" align="center">
+							<td colspan="10"><a href="javascript:;" class="setAttr">设置商品属性</a></td>
 						</tr>
-						<tr class="ways" align="left">
-							<td colspan="10"><a href="javascript:;" class="setDetails">设置商品详情：</a></td>
+						<tr class="ways" align="center">
+							<td colspan="10"><a href="javascript:;" class="setDetails">设置商品详情</a></td>
 						</tr>
 						<tr class="btn">
 							<td><input type="submit" value="添加"></td>
@@ -107,7 +124,7 @@
     	var cid = $('select[name=category_id] option[selected]').val();
     	var str = '';
     	if (-1 == cid) {
-    		str = '<tr align="left" class="notice"><td colspan="10">请先选择商品分类！</td></tr>';
+    		str = '<tr align="center" class="notice"><td colspan="10">请先选择商品分类！</td></tr>';
     		$(this).parents('tr').after(str);
     	} else {
     		$.ajax({

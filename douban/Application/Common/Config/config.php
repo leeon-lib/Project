@@ -25,6 +25,6 @@ return array(
     'DEFAULT_CONTROLLER'            => 'Login',     //默认控制器
     'DEFAULT_ACTION'                => 'index',     //默认方法
     'CODE_LEN'                      => 1,           //验证码长度
-    'UPLOAD_PRODUCT_PATH'           =>'./Upload/Product',
+    'UPLOAD_PATH'                   => 'Upload/Product',   //上传路径
 );
 ?>

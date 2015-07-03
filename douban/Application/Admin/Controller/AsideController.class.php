@@ -14,6 +14,30 @@ class AsideController extends AuthController
 	}
 
 	/**
+	 * 订单管理模块
+	 */
+	public function order()
+	{
+		$this->display();
+	}
+
+	/**
+	 * 库存管理模块
+	 */
+	public function stock()
+	{
+		$this->display();
+	}
+
+	/**
+	 * 商城管理模块
+	 */
+	public function mall()
+	{
+		$this->display();
+	}
+
+	/**
 	 * 设置模块
 	 */
 	public function settings()

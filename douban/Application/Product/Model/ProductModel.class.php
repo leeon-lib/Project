@@ -24,12 +24,16 @@ class ProductModel extends Model
 		// 生产日期处理
         $date = Q('post.manuf_date');
         $_POST['manuf_date'] = strtotime($date);
-        // 添加日期处理
+        // 添加日期处理，此处有bug，每次修改都会覆盖时间
         $_POST['add_date'] = time();
 		return $this->add();
 	}
 
-
+	public function getAll()
+	{
+		$join = "__category__ c JOIN __product__ p ON p.category_id=c.cid";
+		return M()->join("$join")->all();
+	}
 
 	/**
 	 * 验证商品是否已存在

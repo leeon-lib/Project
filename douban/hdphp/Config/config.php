@@ -93,7 +93,7 @@ return array(
     'THUMB_HEIGHT'                  => 300,         //缩略图高度
     /********************************验证码********************************/
     'CODE_FONT'                     => HDPHP_PATH . 'Data/Font/font.ttf', //字体
-    'CODE_STR'                      => '23456789abcdefghjkmnpqrstuvwsyz', //验证码种子
+    'CODE_STR'                      => '0123456789abcdefghjklmnopqrstuvwxyz', //验证码种子
     'CODE_WIDTH'                    => 120,         //宽度
     'CODE_HEIGHT'                   => 35,          //高度
     'CODE_BG_COLOR'                 => '#ffffff',   //背景颜色

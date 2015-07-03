@@ -23,7 +23,7 @@ class CategoryModel extends Model
 				break;
 
 			case 2:
-				$this->where("cid={$data['cid']}")->save($data);
+				$this->where("id={$data['cid']}")->save($data);
 				break;
 			
 			default:

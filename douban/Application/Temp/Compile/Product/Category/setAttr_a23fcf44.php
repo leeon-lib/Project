@@ -33,9 +33,9 @@
 							<input type="hidden" name="cid" value="<?php echo $hd['get']['cid'];?>" />
 						</tr>
 						<!-- 如果有录入属性，则显示设置属性，否则提示无属性可设置 -->
-						    <?php if(isset($attrInfo['no-selected'])){ ?>
+						    <?php if(isset($attrInfo['nosele'])){ ?>
 							<!-- 如果有已设置定属性，则显示当前已选，否则显示所有 -->
-							<?php if (empty($attrInfo['selected'])){ ?>
+							<?php if (empty($attrInfo['sele'])){ ?>
 							<?php }else{ ?>
 								<tr class="ways">
 									<td colspan="10">当前已选：</td>
@@ -43,20 +43,16 @@
 								<tr>
 									<td width="10%">规格：</td>
 									<td>
-										<?php foreach ($attrInfo['selected'] as $k=>$v){?>
-											    <?php if($v['kind_id'] == 2){ ?>
-												<label><?php echo $v['name'];?><input type="checkbox" name="attr[sele][]" value="<?php echo $v['attribute_id'];?>" checked="checked"></label>&nbsp;
-											<?php } ?>
+										<?php foreach ($attrInfo['sele'][spec] as $k=>$v){?>
+											<label><?php echo $v['name'];?><input type="checkbox" name="attr[sele][]" value="<?php echo $v['attribute_id'];?>" checked="checked"></label>&nbsp;
 										<?php }?>
 									</td>
 								</tr>
 								<tr>
 									<td width="10%">属性：</td>
 									<td>
-										<?php foreach ($attrInfo['selected'] as $k=>$v){?>
-											    <?php if($v['kind_id'] == 1){ ?>
-												<label><?php echo $v['name'];?><input type="checkbox" name="attr[sele][]" value="<?php echo $v['attribute_id'];?>" checked="checked"></label>&nbsp;
-											<?php } ?>
+										<?php foreach ($attrInfo['sele']['attr'] as $k=>$v){?>
+											<label><?php echo $v['name'];?><input type="checkbox" name="attr[sele][]" value="<?php echo $v['attribute_id'];?>" checked="checked"></label>&nbsp;
 										<?php }?>
 									</td>
 								</tr>
@@ -67,22 +63,16 @@
 							<tr>
 								<td width="10%">规格：</td>
 								<td>
-								<?php foreach ($attrInfo['no-selected'] as $k=>$v){?>
-								    <?php if(!in_array($v['id'],$attrInfo)){ ?>
-									    <?php if(($v['kind_id'] == 2)){ ?>
+									<?php foreach ($attrInfo['nosele']['spec'] as $k=>$v){?>
 										<label><?php echo $v['name'];?><input type="checkbox" name="attr[nosele][]" value="<?php echo $v['id'];?>"></label>&nbsp;
-									<?php } ?>
-								<?php } ?>
-								<?php }?>
+									<?php }?>
 								</td>
 							</tr>
 							<tr>
 								<td width="10%">属性：</td>
 								<td>
-									<?php foreach ($attrInfo['no-selected'] as $k=>$v){?>
-										    <?php if($v['kind_id'] == 1){ ?>
-											<label><?php echo $v['name'];?><input type="checkbox" name="attr[nosele][]" value="<?php echo $v['id'];?>"></label>&nbsp;
-										<?php } ?>
+									<?php foreach ($attrInfo['nosele'][attr] as $k=>$v){?>
+										<label><?php echo $v['name'];?><input type="checkbox" name="attr[nosele][]" value="<?php echo $v['id'];?>"></label>&nbsp;
 									<?php }?>
 								</td>
 							</tr>
