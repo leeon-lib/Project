@@ -23,6 +23,9 @@
 					<a href="<?php echo U('Admin/Aside/product');?>" target="aside">商品管理</a>
 				</li>
 				<li>
+					<a href="<?php echo U('Admin/Aside/purchase');?>" target="aside">采购管理</a>
+				</li>
+				<li>
 					<a href="<?php echo U('Admin/Aside/stock');?>" target="aside">库存管理</a>
 				</li>
 				<li>

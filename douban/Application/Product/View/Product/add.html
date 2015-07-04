@@ -11,7 +11,7 @@
 </head>
 <body>
 	<div class="warp">
-		<div class="content-menu">
+		<div class="submenu">
 			<div class="left">
 				<a href="{|U:'Product/Product/index'}">商品列表</a>
 				<span>|</span>
@@ -23,11 +23,11 @@
 				<a href="">刷新</a>
 			</div>
 		</div>
-		<div class="content-text">
-			<form action="{|U:'Product/Product/operate'}" method="post" enctype="multipart/form-data" name="my">
-				<table>
+		<div class="content">
+			<form action="{|U:'Product/Product/operate'}" method="post" enctype="multipart/form-data">
+				<table class="content-table">
 					<tbody>
-						<tr class="ways" align="left">
+						<tr class="title" align="left">
 							<td colspan="10">商品基本信息：</td>
 						</tr>
 						<tr>
@@ -74,10 +74,10 @@
 							<td>商品图片：</td>
 							<td><input type="file" name="pics"></td>
 						</tr>
-						<tr class="ways" align="left">
+						<tr class="title" align="left">
 							<td colspan="10"><a href="javascript:;" class="setAttr">设置商品属性：</a></td>
 						</tr>
-						<tr class="ways" align="left">
+						<tr class="title" align="left">
 							<td colspan="10"><a href="javascript:;" class="setDetails">设置商品详情：</a></td>
 						</tr>
 						<tr class="btn">

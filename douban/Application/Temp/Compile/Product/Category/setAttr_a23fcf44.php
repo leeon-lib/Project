@@ -11,7 +11,7 @@
 </head>
 <body>
 	<div class="warp">
-		<div class="content-menu">
+		<div class="submenu">
 			<div class="left">
 				<a href="<?php echo U('Product/Category/index');?>">分类列表</a>
 				<span>|</span>
@@ -23,9 +23,9 @@
 				<a href="">刷新</a>
 			</div>
 		</div>
-		<div class="content-text">
+		<div class="content">
 			<form action="<?php echo U('Product/Category/setAttr');?>" method="post">
-				<table>
+				<table class="content-table">
 					<tbody>
 						<tr>
 							<td>分类名称：</td>
@@ -37,7 +37,7 @@
 							<!-- 如果有已设置定属性，则显示当前已选，否则显示所有 -->
 							<?php if (empty($attrInfo['sele'])){ ?>
 							<?php }else{ ?>
-								<tr class="ways">
+								<tr class="title">
 									<td colspan="10">当前已选：</td>
 								</tr>
 								<tr>
@@ -57,7 +57,7 @@
 									</td>
 								</tr>
 							<?php } ?>
-							<tr class="ways">
+							<tr class="title">
 								<td colspan="10">所有属性：</td>
 							</tr>
 							<tr>
@@ -89,6 +89,7 @@
 			</form>
 		</div>
 	</div>
+</body>
 <script type="text/javascript">
 	$('.glyphicon-plus').click(function(){
 		var str  = '<tr><td></td>';
@@ -100,5 +101,4 @@
 		$(this).parents('tr').empty();
 	})
 </script>
-</body>
 </html>

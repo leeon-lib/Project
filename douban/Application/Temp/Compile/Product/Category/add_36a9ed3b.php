@@ -11,7 +11,7 @@
 </head>
 <body>
 	<div class="warp">
-		<div class="content-menu">
+		<div class="submenu">
 			<div class="left">
 				<a href="<?php echo U('Product/Category/index');?>">分类列表</a>
 				<span>|</span>
@@ -23,11 +23,11 @@
 				<a href="">刷新</a>
 			</div>
 		</div>
-		<div class="content-text">
+		<div class="content">
 			<form action="<?php echo U('Product/Category/add');?>" method="post">
-				<table>
+				<table class="content-table">
 					<tbody>
-						<tr class="ways">
+						<tr class="title">
 							<td colspan="10">直接录入：</td>
 						</tr>
 						<tr>
@@ -56,6 +56,7 @@
 			</form>
 		</div>
 	</div>
+</body>
 <script type="text/javascript">
 	$('.glyphicon-plus').click(function(){
 		var str  = '<tr><td></td>';
@@ -67,5 +68,4 @@
 		$(this).parents('tr').empty();
 	})
 </script>
-</body>
 </html>

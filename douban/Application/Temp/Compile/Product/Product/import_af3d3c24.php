@@ -10,7 +10,7 @@
 </head>
 <body>
 	<div class="warp">
-		<div class="content-menu">
+		<div class="submenu">
 			<div class="left">
 				<a href="<?php echo U('Product/Product/index');?>">商品列表</a>
 				<span>|</span>
@@ -22,10 +22,10 @@
 				<a href="">刷新</a>
 			</div>
 		</div>
-		<div class="content-text">
-			<table>
+		<div class="content">
+			<table class="content-table">
 				<tbody>
-					<tr class="ways" align="center">
+					<tr class="title" align="center">
 						<td colspan="10">商品基本信息</td>
 					</tr>
 				</tbody>
