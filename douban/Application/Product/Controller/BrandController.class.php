@@ -44,8 +44,8 @@ class BrandController extends AuthController
 	 */
 	public function edit()
 	{
-		$bid = (int)$_GET['bid'];
-		$info = $this->model->where("bid={$bid}")->find();
+		$bid = (int)$_GET['id'];
+		$info = $this->model->where("id={$bid}")->find();
 		// p($info);die;
 		$this->assign('info',$info);
 		$this->display();

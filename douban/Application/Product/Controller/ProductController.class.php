@@ -28,13 +28,20 @@ class ProductController extends AuthController
      */
     public function index()
     {
-        $info = $this->model->limit(10)->all();
-        foreach ($info as &$v) {
+        // 获取商品列表
+        $argv = array(
+            'field' => array(),
+            'where' => '',
+            'limit' => 20
+        );
+        $productList = $this->model->getList($argv);
+        foreach ($productList as &$v)
+        {
             $v['category_name'] = $this->cateModel->where("cid={$v['category_cid']}")->getField('name');
             $v['brand_name'] = $this->brandModel->where("id={$v['brand_id']}")->getField('name');
             $v['pic'] = $this->pdModel->where("product_id={$v['id']}")->getField('small');
         }
-        $this->assign('info',$info);
+        $this->assign('productList',$productList);
     	$this->display();
     }
 
@@ -43,25 +50,6 @@ class ProductController extends AuthController
      */
     public function add()
     {
-        if (IS_POST) 
-        {
-            // p($_POST);die;
-            $this->check();
-            // 执行商品主表模型，操作商品添加、编辑
-            $product_id = $this->model->intoProduct();
-            if (FALSE == $product_id) {
-                $this->error($this->model->error);
-            }
-            // 如果有上传文件，则执行图片上传与缩略
-            if (4 != $_FILES['pics']['error']) {
-                $this->upload($product_id);
-            }
-            // 如果有选择商品属性，则执行商品属性的设置
-            if (isset($_POST['attr'])) {
-                $this->setAttr($product_id);
-            }
-            $this->success('添加成功',U('index'));
-        }
         // 品牌及分类信息的显示处理
         $brandInfo = $this->brandModel->field('id,name')->select();
         $this->assign('brandInfo',$brandInfo);
@@ -77,8 +65,8 @@ class ProductController extends AuthController
         $id = (int)Q('get.id');
         // 获取原信息
         $oldInfo = $this->model->where("id={$id}")->find();
-        // p($oldInfo);die;
-        if (empty($oldInfo)) {
+        if (empty($oldInfo))
+        {
             $this->error('非法访问','index');
         }
         // 获取商品图片
@@ -90,6 +78,79 @@ class ProductController extends AuthController
     }
 
     /**
+     * 删除商品
+     */
+    public function del()
+    {
+
+    }
+
+    /**
+     * 操作商品信息
+     */
+    public function operate()
+    {
+        // 获取输入数据
+        $name = Q('post.name');
+        $goods = Q('post.goods');
+        $brandId = (int)Q('post.brand_id');
+        $categoryCid = (int)Q('post.category_cid');
+        $manufDate = Q('post.manuf_date');
+        $markedPrice = (int)Q('post.marked_price');
+        $productId = (int)Q('post.product_id');
+        // 表单完整性验证
+        if (empty($name)) $this->error('商品名称不能为空！');
+        if (empty($goods)) $this->error('商品货号不能为空！');
+        if (-1 == $brandId) $this->error('请选择所属品牌！');
+        if (-1 == $categoryCid) $this->error('请选择所属分类！');
+        // 市场价格式限制
+        if (!preg_match('/^[0-9\.]*$/', $markedPrice))
+            $this->error('填写的市场价非数字');
+
+        $argv = array(
+            'name'  => $name,
+            'goods' => $goods,
+            'brand_id' => $brandId,
+            'category_cid' => $categoryCid,
+            'manuf_date' => strtotime($manufDate),
+            'marked_price' => $markedPrice,
+            'add_date' => time()
+        );
+
+        if (0 == $productId)
+        {// 添加
+            $pid = $this->model->_insert($argv);
+            if (false == $pid)
+            {
+                $this->error($this->model->error);
+            }
+            // 如果有上传文件，则执行图片上传与缩略
+            if (4 != $_FILES['pics']['error'])
+            {
+                $this->upload($pid);
+            }
+            // 属性设置
+            if (isset($_POST['attr']))
+            {
+                $this->setAttr($pid);
+            }
+            $this->success('添加成功','index');
+        } else {// 编辑
+            $this->model->_update($argv, $productId);
+            // 如果有上传文件，则执行图片上传与缩略
+            if (isset($_FILES['pics']) && (4 != $_FILES['pics']['error']))
+            {
+                $this->upload($productId);
+            }
+            if (isset($_POST['attr']))
+            {
+                $this->setAttr($productId);
+            }
+            $this->success('修改成功','index');
+        }
+    }
+
+    /**
      * 批量导入商品
      */
     public function import()
@@ -98,7 +159,7 @@ class ProductController extends AuthController
     }
 
     /**
-     * 设置、修改商品属性
+     * 设置商品属性
      */
     private function setAttr($pid)
     {
@@ -106,8 +167,10 @@ class ProductController extends AuthController
         // 获取规格与属性
         $specArr = $_POST['attr']['spec'];
         $attrArr = $_POST['attr']['attr'];
-        if (!empty($specArr)) {
-            foreach ($specArr as $v) {
+        if (!empty($specArr))
+        {
+            foreach ($specArr as $v)
+            {
                 $specData = array(
                     'attr_id'    => $v,
                     'product_id' => $pid,
@@ -116,8 +179,10 @@ class ProductController extends AuthController
                 $productAttrModel->add($specData);
             }
         }
-        if (!empty($attrArr)) {
-            foreach ($attrArr as $v) {
+        if (!empty($attrArr))
+        {
+            foreach ($attrArr as $v)
+            {
                 $attrData = array(
                     'attr_id'    => $v,
                     'product_id' => $pid,
@@ -129,18 +194,10 @@ class ProductController extends AuthController
     }
 
     /**
-     * 设置、编辑商品详情
-     */
-    public function details()
-    {
-        $this->display();
-    }
-
-    /**
      * ajax获取商品属性
      * @return [type] [description]
      */
-    public function ajax_setAttr()
+    public function ajax_getAttr()
     {
         $cid = (int)Q('post.cid');
         
@@ -148,7 +205,8 @@ class ProductController extends AuthController
         $attrArr = K('Attribute')->getByCid($cid);
         if (!empty($attrArr))
         {
-            foreach ($attrArr as $k => $v) {
+            foreach ($attrArr as $k => $v)
+            {
                 if (1 == $v['kind_id']) 
                 {
                     $attrList['attr'][] = $v;
@@ -159,25 +217,6 @@ class ProductController extends AuthController
             $this->ajax($attrList);
         } else {
             $this->ajax(false);
-        }
-    }
-
-    /**
-     * 验证
-     */
-    private function check()
-    {
-        // 分类、品牌完整性限制
-        if (Q('post.category_id') == -1) {
-            $this->error('请选择分类');
-        }
-        if (Q('post.brand_id') == -1) {
-            $this->error('请选择品牌');
-        }
-        // 市场价格式限制
-        $price = Q('post.marked_price');
-        if (!preg_match('/^[0-9\.]*$/', $price)) {
-            $this->error('填写的市场价非数字');
         }
     }
 

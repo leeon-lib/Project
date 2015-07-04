@@ -27,19 +27,19 @@
 				<thead>
 					<tr>
 						<td width="5%" align="center">商品ID</td>
-						<td width="10%" align="center">商品图片</td>
-						<td width="10%" align="left">货号</td>
-						<td width="20%" align="left">商品名称</td>
-						<td width="10%" align="center">所属分类</td>
-						<td width="10%" align="center">品牌</td>
+						<td width="8%" align="center">商品图片</td>
+						<td width="10%" align="center">货号</td>
+						<td width="30%" align="left">商品名称</td>
+						<td width="6%" align="center">所属分类</td>
+						<td width="6%" align="center">品牌</td>
 						<td width="5%" align="center">市场价</td>
-						<td width="10%" align="center">上市日期</td>
-						<td width="10%" align="center">添加日期</td>
+						<td width="8%" align="center">上市日期</td>
+						<td width="8%" align="center">添加日期</td>
 						<td width="10%" align="center">管理操作</td>
 					</tr>
 				</thead>
 				<tbody>
-					<?php foreach ($info as $k=>$v){?>
+					<?php foreach ($productList as $k=>$v){?>
 						<tr>
 							<td align="center"><?php echo $v['id'];?></td>
 							<td align="center">
@@ -49,7 +49,7 @@
 									<img src="http://127.0.0.1/Project/douban/Upload/Product/<?php echo $v['pic'];?>" alt="" width="60px">
 								<?php } ?>
 							</td>
-							<td align="left"><?php echo $v['goods'];?></td>
+							<td align="center"><?php echo $v['goods'];?></td>
 							<td align="left"><?php echo $v['name'];?></td>
 							<td align="center"><?php echo $v['category_name'];?></td>
 							<td align="center"><?php echo $v['brand_name'];?></td>

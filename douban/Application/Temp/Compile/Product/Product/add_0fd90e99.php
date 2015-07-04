@@ -25,7 +25,7 @@
 			</div>
 		</div>
 		<div class="content-text">
-			<form action="<?php echo U('Product/Product/add');?>" method="post" enctype="multipart/form-data" name="my">
+			<form action="<?php echo U('Product/Product/operate');?>" method="post" enctype="multipart/form-data" name="my">
 				<table>
 					<tbody>
 						<tr class="ways" align="left">
@@ -95,7 +95,7 @@
     })
 
     // 选择分类后动态获取分类属性
-    $('select[name=category_id]').change(function(){
+    $('select[name=category_cid]').change(function(){
     	$('option').click(function(){
     		$(this).attr('selected','selected').siblings('option').removeAttr('selected');
     	});
@@ -105,15 +105,14 @@
 
     // 设置商品属性
     $('.setAttr').click(function(){
-    	var cid = $('select[name=category_id] option[selected]').val();
+    	var cid = $('select[name=category_cid] option[selected]').val();
     	var str = '';
     	if (-1 == cid) {
     		str = '<tr align="left" class="notice"><td colspan="10">请先选择商品分类！</td></tr>';
-    		$(this).parents('tr').after(str);
     	} else {
     		$.ajax({
                 type: "post",
-                url: "<?php echo U('Product/Product/ajax_setAttr');?>",
+                url: "<?php echo U('Product/Product/ajax_getAttr');?>",
                 data: {cid: cid},
                 dataType: "json",
                 async: false,
@@ -122,12 +121,12 @@
                 	{
                 		str = '<tr><td>规格：<input type="hidden" name="attr[spec]"/></td><td>';
 	                	$.each(info.spec,function(k,v){
-	                        str += '<label>'+ v.name +' <input type="checkbox" name="attr[spec][]" value=" '+v.id+' "></label>&nbsp;&nbsp;&nbsp;';
+	                        str += '<label>'+ v.name +' <input type="checkbox" name="attr[spec][]" value=" '+v.attribute_id+' "></label>&nbsp;&nbsp;&nbsp;';
 	                    });
 	                    str += '</td></tr>';
 	                    str += '<tr><td>属性：<input type="hidden" name="attr[attr]"/></td><td>';
 	                    $.each(info.attr,function(k,v){
-	                        str += '<label>'+ v.name +' <input type="checkbox" name="attr[attr][]" value=" '+v.id+' "></label>&nbsp;&nbsp;&nbsp;';
+	                        str += '<label>'+ v.name +' <input type="checkbox" name="attr[attr][]" value=" '+v.attribute_id+' "></label>&nbsp;&nbsp;&nbsp;';
 	                    });
 	                    str += '</td></tr>';
                 	}
@@ -137,8 +136,10 @@
                 	}
                 }
             });
-    		$(this).parents('tr').after(str);
-    	}
+		}
+		if ('' != str) {
+			$(this).parents('tr').after(str);
+		}
     })
 </script>
 </body>

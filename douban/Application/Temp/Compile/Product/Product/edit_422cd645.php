@@ -30,27 +30,27 @@
 				<a href="<?php echo U('Product/Product/attr');?>">商品属性</a>
 				<a href="<?php echo U('Product/Product/details');?>">商品详情</a>
 			</div>
-			<form action="<?php echo U('Product/Product/add');?>" method="post" enctype="multipart/form-data">
+			<form action="<?php echo U('Product/Product/operate');?>" method="post" enctype="multipart/form-data">
 				<table>
 					<tbody>
 						<tr class="ways" align="center">
 							<td colspan="10">商品基本信息</td>
 						</tr>
 						<tr>
-							<td width="10%">商品货号：</td>
-							<td><input type="text" name="goods" value="<?php echo $oldInfo['goods'];?>"></td>
-						</tr>
-						<tr>
 							<td>商品名称：</td>
 							<td><input type="text" name="name" value="<?php echo $oldInfo['name'];?>"></td>
 						</tr>
 						<tr>
+							<td width="10%">商品货号：</td>
+							<td><input type="text" name="goods" value="<?php echo $oldInfo['goods'];?>"></td>
+						</tr>
+						<tr>
 							<td>所属分类</td>
 							<td>
-								<select name="category_id">
-									<option value="-1" selected="selected">必选</option>
+								<select name="category_cid">
+									<option value="-1">必选</option>
 									<?php foreach ($cateInfo as $k=>$v){?>
-										    <?php if($oldInfo['category_id']==$v['cid']){ ?>
+										    <?php if($oldInfo['category_cid']==$v['cid']){ ?>
 											<option value="<?php echo $v['cid'];?>" selected="selected"><?php echo $v['_name'];?></option>
 										<?php } ?>
 										<option value="<?php echo $v['cid'];?>"><?php echo $v['_name'];?></option>
@@ -99,7 +99,8 @@
 							<td colspan="10"><a href="javascript:;" class="setDetails">设置商品详情</a></td>
 						</tr>
 						<tr class="btn">
-							<td><input type="submit" value="添加"></td>
+							<td><input type="submit" value="修改"></td>
+							<input type="hidden" name="product_id" value="<?php echo $oldInfo['id'];?>">
 						</tr>
 					</tbody>
 				</table>
@@ -112,7 +113,7 @@
     })
 
     // 选择分类后动态获取分类属性
-    $('select[name=category_id]').change(function(){
+    $('select[name=category_cid]').change(function(){
     	$('option').click(function(){
     		$(this).attr('selected','selected').siblings('option').removeAttr('selected');
     	});
@@ -122,15 +123,14 @@
 
     // 设置商品属性
     $('.setAttr').click(function(){
-    	var cid = $('select[name=category_id] option[selected]').val();
+    	var cid = $('select[name=category_cid] option[selected]').val();
     	var str = '';
     	if (-1 == cid) {
     		str = '<tr align="center" class="notice"><td colspan="10">请先选择商品分类！</td></tr>';
-    		$(this).parents('tr').after(str);
     	} else {
     		$.ajax({
                 type: "post",
-                url: "<?php echo U('Product/Product/ajax_setAttr');?>",
+                url: "<?php echo U('Product/Product/ajax_getAttr');?>",
                 data: {cid: cid},
                 dataType: "json",
                 async: false,
@@ -139,12 +139,12 @@
                 	{
                 		str = '<tr><td>规格：<input type="hidden" name="attr[spec]"/></td><td>';
 	                	$.each(info.spec,function(k,v){
-	                        str += '<label>'+ v.name +' <input type="checkbox" name="attr[spec][]" value=" '+v.id+' "></label>&nbsp;&nbsp;&nbsp;';
+	                        str += '<label>'+ v.name +' <input type="checkbox" name="attr[spec][]" value=" '+v.attribute_id+' "></label>&nbsp;&nbsp;&nbsp;';
 	                    });
 	                    str += '</td></tr>';
 	                    str += '<tr><td>属性：<input type="hidden" name="attr[attr]"/></td><td>';
 	                    $.each(info.attr,function(k,v){
-	                        str += '<label>'+ v.name +' <input type="checkbox" name="attr[attr][]" value=" '+v.id+' "></label>&nbsp;&nbsp;&nbsp;';
+	                        str += '<label>'+ v.name +' <input type="checkbox" name="attr[attr][]" value=" '+v.attribute_id+' "></label>&nbsp;&nbsp;&nbsp;';
 	                    });
 	                    str += '</td></tr>';
                 	}
@@ -154,8 +154,8 @@
                 	}
                 }
             });
-    		$(this).parents('tr').after(str);
     	}
+    	$(this).parents('tr').after(str);
     })
 </script>
 </body>

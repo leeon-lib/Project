@@ -35,8 +35,7 @@ class AttributeModel extends Model
 		if ($res)
 		{
 			return true;
-		} else
-		{
+		} else {
 			return false;
 		}
 	}
