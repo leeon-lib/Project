@@ -3,12 +3,12 @@
 /**
 * 后台管理控制器
 */
-class UserSettingController extends AuthController
+class IndexController extends AuthController
 {
 	/**
 	 * 后台首页
 	 */
-	public function admin()
+	public function index()
 	{
 		$this->display();
 	}

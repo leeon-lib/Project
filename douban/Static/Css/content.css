@@ -10,6 +10,11 @@ table input[type=text] {
   padding: 6px 5px;
   line-height: 15px;
 }
+table input[type=password] {
+  width: 200px;
+  padding: 6px 5px;
+  line-height: 15px;
+}
 table select {
   width: 202px;
   height: 28px;

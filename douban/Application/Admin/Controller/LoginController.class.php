@@ -6,8 +6,7 @@
 class LoginController extends Controller
 {
 	/**
-	 * 后台登录页面
-	 * @return [type] [description]
+	 * 后台登录页
 	 */
 	public function index()
 	{
@@ -24,7 +23,7 @@ class LoginController extends Controller
 				$time = time();
 				$model->where("id={$userInfo['id']}")->save(array('last_login'=>$time));
 				// $this->success('登录成功',U('Admin/Admin/Index'));
-				go(U('Admin/Admin/Index'));
+				go(U('Admin/Index/Index'));
 			}
 		}
 		$this->display();

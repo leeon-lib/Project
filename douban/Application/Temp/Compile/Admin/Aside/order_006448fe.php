@@ -11,14 +11,14 @@
 	<ul>
 		<li>
 			<h4>销售管理</h4>
-			<a href="<?php echo U('Product/Product/index');?>" target="content">订单列表</a>
-			<a href="<?php echo U('Product/Product/import');?>" target="content">手动下单</a>
+			<a href="<?php echo U('Order/Order/index');?>" target="content">订单列表</a>
+			<a href="<?php echo U('Order/Make/index');?>" target="content">手动下单</a>
 		</li>
 		<li>
 			<h4>异常监控</h4>
-			<a href="<?php echo U('Product/Attribute/index');?>" target="content">订单缺货</a>
-			<a href="<?php echo U('Product/Category/index');?>" target="content">超时未发货</a>
-			<a href="<?php echo U('Product/Attribute/index');?>" target="content"></a>
+			<a href="<?php echo U('Order/Attribute/index');?>" target="content">订单缺货</a>
+			<a href="<?php echo U('Order/Category/index');?>" target="content">超时未发货</a>
+			<a href="<?php echo U('Order/Attribute/index');?>" target="content"></a>
 		</li>
 	</ul>
 </body>

@@ -11,9 +11,9 @@
 <body>
 	<div class="submenu">
 		<div class="left">
-			<a href="<?php echo U('Admin/Admin/index');?>">管理员列表</a>
+			<a href="<?php echo U('Settings/User/index');?>">管理员列表</a>
 			<span>|</span>
-			<a href="<?php echo U('Admin/Admin/add');?>">添加管理员</a>
+			<a href="<?php echo U('Settings/User/add');?>">添加管理员</a>
 		</div>
 		<div class="right">
 			<a href="">后退</a>
@@ -38,26 +38,26 @@
 				</tr>
 			</thead>
 			<tbody>
-				<?php foreach ($adminList as $k=>$v){?>
+				<?php foreach ($productList as $k=>$v){?>
 					<tr>
 						<td align="center"><?php echo $v['id'];?></td>
-						<td align="center"><?php echo $v['username'];?></td>
-						<td align="center"><?php echo $v['real_name'];?></td>
-						<td align="center"><?php echo $v['mail'];?></td>
-						<td align="center"><?php echo $v['phone'];?></td>
-						<td align="center"><?php echo $v['group_name'];?></td>
-						<td align="center"><?php echo $v['sole_name'];?></td>
 						<td align="center">
-							    <?php if($v['is_lock']==0){ ?>
-								<a href="<?php echo U('Admin/Admin/changeStatus',array('id'=>$v['id'],'status_id'=>$v['is_lock']));?>">√</a>
+							<?php if (empty($v['pic'])){ ?>
+								<img src="http://127.0.0.1/Project/douban/Static/Images/default_s.gif" alt="" width="60px">
 							<?php }else{ ?>
-								<a href="<?php echo U('Admin/Admin/changeStatus',array('id'=>$v['id'],'status_id'=>$v['is_lock']));?>" style="color:red;">X</a>
+								<img src="http://127.0.0.1/Project/douban/Upload/Product/<?php echo $v['pic'];?>" alt="" width="60px">
 							<?php } ?>
 						</td>
-						<td align="center"><?php echo date('Y-m-d H:i:s',$v['last_login']);?></td>
+						<td align="center"><?php echo $v['goods'];?></td>
+						<td align="center"><?php echo $v['name'];?></td>
+						<td align="center"><?php echo $v['category_name'];?></td>
+						<td align="center"><?php echo $v['brand_name'];?></td>
+						<td align="center"><?php echo $v['marked_price'];?></td>
+						<td align="center"><?php echo date('Y-m-d',$v['manuf_date']);?></td>
+						<td align="center"><?php echo date('Y-m-d',$v['add_date']);?></td>
 						<td align="center">
-							<a href="<?php echo U('Admin/Admin/edit',array('id'=>$v['id']));?>">编辑</a>
-							<a href="<?php echo U('Admin/Admin/del',array('id'=>$v['id']));?>">删除</a>
+							<a href="<?php echo U('Product/Product/edit',array('id'=>$v['id']));?>">编辑</a>
+							<a href="<?php echo U('Product/Product/del',array('id'=>$v['id']));?>">删除</a>
 						</td>
 					</tr>
 				<?php }?>

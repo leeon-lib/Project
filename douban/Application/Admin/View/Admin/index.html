@@ -2,63 +2,105 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>后台管理</title>
+	<title>系统用户管理</title>
+	<link rel="stylesheet" href="__STATIC__/Org/Bootstrap/css/Bootstrap.min.css">
 	<link rel="stylesheet" href="__STATIC__/Css/public.css">
-	<link rel="stylesheet" href="__STATIC__/Css/admin.css">
+	<link rel="stylesheet" href="__STATIC__/Css/content.css">
 </head>
 <body>
-	<div class="head">
-		<div class="logo">
-			<a href="">Logo
-				<!-- <img src="../Admin/photo.jpg" alt=""> -->
-			</a>
+	<div class="submenu">
+		<div class="left">
+			<a href="{|U:'Admin/Admin/index'}">管理员列表</a>
+			<span>|</span>
+			<a href="{|U:'Admin/Admin/add'}">添加管理员</a>
 		</div>
-		<div class="nav">
-			<ul>
-				<li>
-					<a href="">个人中心</a>
-				</li>
-				<li>
-					<a href="{|U:'Admin/Aside/product'}" target="aside">商品管理</a>
-				</li>
-				<li>
-					<a href="{|U:'Admin/Aside/purchase'}" target="aside">采购管理</a>
-				</li>
-				<li>
-					<a href="{|U:'Admin/Aside/stock'}" target="aside">库存管理</a>
-				</li>
-				<li>
-					<a href="{|U:'Admin/Aside/order'}" target="aside">订单管理</a>
-				</li>
-				<li>
-					<a href="{|U:'Admin/Aside/mall'}" target="aside">商城管理</a>
-				</li>
-				<li>
-					<a href="{|U:'Admin/Aside/settings'}" target="aside">系统设置</a>
-				</li>
-			</ul>
-		</div>
-		<div class="info">
-			<div class="user">
-				<p>部门：<span>研发部</span> 角色：<span>后端开发</span></p>
-				<p><span>User</span> Welcome!</p>
-			</div>
-			<div class="exit">
-				<a href="">退出</a>
-			</div>
+		<div class="right">
+			<a href="">后退</a>
+			<span>|</span>
+			<a href="">刷新</a>
 		</div>
 	</div>
-	<div class="main">
-		<div class="aside">
-			<iframe src="" scrolling="auto" frameborder="0" style="height:100%;width:100%;" name="aside"></iframe>
+	<div class="content">
+		<div class="search">
+			<form action="{|U:'Admin/Admin/index'}" method="post">
+				<table class="search-table">
+					<tr>
+						<td width="8%">管理员ID：</td>
+						<td width="40%"><input type="text" name="admin_id"></td>
+						<td width="8%">用户名：</td>
+						<td width="40%"><input type="text" name="username"></td>
+					</tr>
+					<tr>
+						<td>真实姓名：</td>
+						<td><input type="text" name="real_name"></td>
+						<td>电话：</td>
+						<td><input type="text" name="phone"></td>
+					</tr>
+					<tr>
+						<td>所属部门：</td>
+						<td>
+							<select name="department_id">
+								<option value="-1">-- 不限 --</option>
+								<foreach from="$deptList" key="$k" value="$v">
+									<option value="{$v.id}">{$v._name}</option>
+								</foreach>
+							</select>
+						</td>
+						<td>所属角色：</td>
+						<td>
+							<select name="role_id">
+								<option value="-1">-- 不限 --</option>
+								<foreach from="$roleList" key="$k" value="$v">
+									<option value="{$v.id}">{$v.name}</option>
+								</foreach>
+							</select>
+						</td>	
+					</tr>
+					<tr><td><input type="submit" value="搜索"></td></tr>
+				</table>
+			</form>
 		</div>
-		<div class="content">
-			<div class="crumbs">
-				<a href="">后退</a>
-				<a href="">刷新</a>
-			</div>
-			<iframe src="" scrolling="auto" frameborder="0" style="height:100%;width:100%;" name="content"></iframe>
-		</div>
+		<table class="content-table">
+			<thead>
+				<tr>
+					<td width="5%" align="center">用户ID</td>
+					<td width="10%" align="center">用户名</td>
+					<td width="10%" align="center">真实姓名</td>
+					<td width="10%" align="center">邮箱</td>
+					<td width="10%" align="center">手机号</td>
+					<td width="10%" align="center">所属部门</td>
+					<td width="10%" align="center">所属角色</td>
+					<td width="8%" align="center">状态</td>
+					<td width="10%" align="center">上次登录时间</td>
+					<td width="10%" align="center">管理操作</td>
+				</tr>
+			</thead>
+			<tbody>
+				<foreach from="$adminList" key="$k" value="$v">
+					<tr>
+						<td align="center">{$v.id}</td>
+						<td align="center">{$v.username}</td>
+						<td align="center">{$v.real_name}</td>
+						<td align="center">{$v.mail}</td>
+						<td align="center">{$v.phone}</td>
+						<td align="center">{$v.dept_name}</td>
+						<td align="center">{$v.role_name}</td>
+						<td align="center">
+							<if value="$v['is_lock']==0">
+								<a href="{|U:'Admin/Admin/changeStatus',array('id'=>$v['id'])}">√</a>
+							<else/>
+								<a href="{|U:'Admin/Admin/changeStatus',array('id'=>$v['id'])}" style="color:red;">X</a>
+							</if>
+						</td>
+						<td align="center">{$v.last_login|date:'Y-m-d H:i:s',@@}</td>
+						<td align="center">
+							<a href="{|U:'Admin/Admin/edit',array('id'=>$v['id'])}">编辑</a>
+							<a href="{|U:'Admin/Admin/del',array('id'=>$v['id'])}">删除</a>
+						</td>
+					</tr>
+				</foreach>
+			</tbody>
+		</table>
 	</div>
 </body>
 </html>

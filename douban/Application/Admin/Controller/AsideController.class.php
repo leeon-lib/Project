@@ -48,7 +48,7 @@ class AsideController extends AuthController
 	/**
 	 * 设置模块
 	 */
-	public function settings()
+	public function admin()
 	{
 		$this->display();
 	}

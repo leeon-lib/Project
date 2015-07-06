@@ -1,50 +1,17 @@
 <?php
 
 /**
-* 系统管理员模型
+* 部门管理模型
 */
-class AdminModel extends Model
+class DepartmentModel extends Model
 {
-	
-	public $table = 'admin';
-
-	public $validate = array(
-		array('username','nonull','用户名不能为空',2,3),
-		array('password','nonull','密码未填写',2,3),
-		array('code','nonull','验证码未填写',2,3)
-	);
-
-	public function login()
-	{
-		// 表单完整性验证
-		if (!$this->create()) return false;
-		$code = strtoupper(Q('post.code'));
-		if ($code != $_SESSION['code']) {
-			$this->error = '验证码错误';
-			return false;
-		}
-		// 表单数据验证
-		$username = strtolower(Q('post.username'));
-		$password = md5(Q('post.password'));
-		$info = $this->where("username='{$username}' ")->find();
-		
-		if (!$info || ($info['password'] != $password)) {
-			$this->error = '用户名或者密码错误';
-			return false;
-		} elseif (1 == $info['is_lock']) {
-			$this->error = '账户已锁定';
-			return false;
-		} else {
-			// 验证正确，返回用户信息
-			return $info;
-		}
-	}
+	public $table = 'department';
 
 
 	/**
-	 * 获取系统管理员
+	 * 获取部门列表
 	 */
-	public function getList($argv)
+	public function getList($argv = array())
 	{
 		if (empty($argv))
 		{
@@ -58,7 +25,7 @@ class AdminModel extends Model
 	}
 
 	/**
-	 * 获取一条管理员信息
+	 * 获取一条部门信息
 	 * @param  integer $id     [主键]
 	 * @param  string  $fields [字段名]
 	 * @param  boolean $is_one [是否单一字段]
@@ -82,11 +49,8 @@ class AdminModel extends Model
 			}
 		}
 	}
-
 	/**
-	 * 添加
-	 * @param  array  $argv [要添加的数据]
-	 * @return [boolean]    
+	 * 添加部门
 	 */
 	public function _insert($argv = array())
 	{
@@ -110,6 +74,4 @@ class AdminModel extends Model
 			return $this->where("id={$id}")->save($argv);
 		}
 	}
-
-	
 }

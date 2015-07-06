@@ -11,20 +11,20 @@
 	<ul>
 		<li>
 			<h4>采购管理</h4>
-			<a href="<?php echo U('Stock/Stock/index');?>" target="content">采购单管理</a>
+			<a href="<?php echo U('Purchase/Purchase/index');?>" target="content">采购单管理</a>
 			<!-- <a href="<?php echo U('Stock/Stock/details');?>" target="content"></a> -->
 		</li>
 		<li>
 			<h4>折扣管理</h4>
-			<a href="<?php echo U('Stock/Sku/index');?>" target="content">SKU列表</a>
-			<a href="<?php echo U('Stock/Sku/import');?>" target="content">批量导入</a>
+			<a href="<?php echo U('Purchase/Sku/index');?>" target="content">SKU列表</a>
+			<a href="<?php echo U('Purchase/Sku/import');?>" target="content">批量导入</a>
 		</li>
 
 		<li>
 			<h4>虚库管理</h4>
-			<a href="<?php echo U('Stock/Attribute/index');?>" target="content">采购单</a>
-			<a href="<?php echo U('Stock/Attribute/index');?>" target="content">调拨单</a>
-			<a href="<?php echo U('Stock/Attribute/index');?>" target="content">借货单</a>
+			<a href="<?php echo U('Purchase/Attribute/index');?>" target="content">采购单</a>
+			<a href="<?php echo U('Purchase/Attribute/index');?>" target="content">调拨单</a>
+			<a href="<?php echo U('Purchase/Attribute/index');?>" target="content">借货单</a>
 		</li>
 	</ul>
 </body>
