@@ -21,10 +21,28 @@ return array(
     'ROUTE'                         => array(),     //路由配置
 
     /********************************自定义配置********************************/
-    'DEFAULT_MODULE'                => 'Admin',     //默认模块
-    'DEFAULT_CONTROLLER'            => 'Login',     //默认控制器
-    'DEFAULT_ACTION'                => 'index',     //默认方法
+    'DEFAULT_MODULE'                => 'Index',     //默认模块
+    'DEFAULT_CONTROLLER'            => 'Index',     //默认控制器
+    'DEFAULT_ACTION'                => 'read',     //默认方法
     'CODE_LEN'                      => 1,           //验证码长度
-    'UPLOAD_PATH'                   => 'Upload/Product',   //上传路径
+    'UPLOAD_ALLOW_TYPE'             => array('jpg','jpeg','gif','png','zip','rar','doc','txt','csv'),//允许上传类型
+    'CITY_LIST'                     => array(
+                1 => '北京',
+                2 => '上海',
+                3 => '深圳',
+                4 => '厦门',
+                5 => '青岛',
+                6 => '杭州',
+                7 => '沈阳',
+                8 => '成都',
+                9 => '武汉',
+                10 => '郑州',
+        ),
+    'SALE_TYPE'                     => array(
+                1 => '经销',
+                2 => '实库代销',
+                3 => '虚库代销',
+                4 => '虚库买断'
+        ),
 );
 ?>

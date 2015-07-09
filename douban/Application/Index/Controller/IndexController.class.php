@@ -1,9 +1,19 @@
 <?php
-//测试控制器类
-class IndexController extends Controller{
-    //动作方法
-    public function index(){
-        //显示视图
+// 前台控制器类
+class IndexController extends Controller
+{
+    // 首页
+    public function read()
+    {
+
         $this->display();
+    }
+
+    /**
+     * 列表页
+     */
+    public function read_list()
+    {
+    	$this->display();
     }
 }

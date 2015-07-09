@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>设置分类属性</title>
+	<link rel="stylesheet" href="__PUBLIC__/Org/Bootstrap/css/Bootstrap.min.css">
+	<link rel="stylesheet" href="__PUBLIC__/Css/public.css">
+	<link rel="stylesheet" href="__PUBLIC__/Css/content.css">
+	<script type="text/javascript" src="__PUBLIC__/Org/jquery-1.7.2.min.js"></script>
+</head>
+<body>
+	<div class="warp">
+		<div class="submenu">
+			<div class="left">
+				<a href="{:U('Product/Category/index')}">分类列表</a>
+				<span>|</span>
+				<a href="{:U('Product/Category/add')}">添加分类</a>
+			</div>
+			<div class="right">
+				<a href="">后退</a>
+				<span>|</span>
+				<a href="">刷新</a>
+			</div>
+		</div>
+		<div class="content">
+			<form action="{:U('Product/Category/setAttr')}" method="post">
+				<table class="content-table">
+					<tbody>
+						<tr>
+							<td>分类名称：</td>
+							<td>{$cateName}</td>
+							<input type="hidden" name="cid" value="{$hd.get.cid}" />
+						</tr>
+						<!-- 如果有录入属性，则显示设置属性，否则提示无属性可设置 -->
+						<present name="attrInfo['nosele']">
+							<!-- 如果有已设置定属性，则显示当前已选，否则显示所有 -->
+							<empty name="attrInfo['sele']">
+							<else />
+								<tr class="title">
+									<td colspan="10">当前已选：</td>
+								</tr>
+								<tr>
+									<td width="10%">规格：</td>
+									<td>
+										<foreach name="attrInfo['sele'][spec]" item="v">
+											<label>{$v.name}<input type="checkbox" name="attr[sele][]" value="{$v.attribute_id}" checked="checked"></label>&nbsp;
+										</foreach>
+									</td>
+								</tr>
+								<tr>
+									<td width="10%">属性：</td>
+									<td>
+										<foreach name="attrInfo['sele']['attr']" item="v">
+											<label>{$v.name}<input type="checkbox" name="attr[sele][]" value="{$v.attribute_id}" checked="checked"></label>&nbsp;
+										</foreach>
+									</td>
+								</tr>
+							</empty>
+							<tr class="title">
+								<td colspan="10">所有属性：</td>
+							</tr>
+							<tr>
+								<td width="10%">规格：</td>
+								<td>
+									<foreach name="attrInfo['nosele']['spec']" item="v">
+										<label>{$v.name}<input type="checkbox" name="attr[nosele][]" value="{$v.id}"></label>&nbsp;
+									</foreach>
+								</td>
+							</tr>
+							<tr>
+								<td width="10%">属性：</td>
+								<td>
+									<foreach name="attrInfo['nosele'][attr]" item="v">
+										<label>{$v.name}<input type="checkbox" name="attr[nosele][]" value="{$v.id}"></label>&nbsp;
+									</foreach>
+								</td>
+							</tr>
+						<else />
+							<tr>
+								<td colspan="10">无属性可设置，请先录入属性</td>
+							</tr>
+						</present>
+						<tr class="btn">
+							<td><input type="submit" value="设置"></td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	$('.glyphicon-plus').click(function(){
+		var str  = '<tr><td></td>';
+			str += '<td><input type="text" name="name[]"></td>';
+			str += '<td><a href="javascript:;" class="glyphicon glyphicon-minus"></a></td></tr>';
+		$('.btn').before(str);
+	});
+	$('tr .glyphicon-minus').live("click",function(){
+		$(this).parents('tr').empty();
+	})
+</script>
+</html>

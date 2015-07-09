@@ -1,0 +1,212 @@
+/*内容部分*/
+.content {
+  float: left;
+  width: 600px;
+}
+.content .item-head {
+  overflow: hidden;
+  border-bottom: 1px solid #dddddd;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.content .pic {
+  float: left;
+  margin-right: 20px;
+}
+.content .pic img {
+  width: 140px;
+  height: 209px;
+}
+.content .item-info {
+  overflow: hidden;
+  line-height: 25px;
+}
+.content .item-info h1 {
+  font-size: 20px;
+  line-height: 30px;
+}
+.content .item-info .attached {
+  font-size: 14px;
+  line-height: 30px;
+}
+.content .price {
+  overflow: hidden;
+  margin-top: 20px;
+}
+.content .price a {
+  margin-right: 10px;
+  padding: 10px 12px;
+  background: #825d5b;
+  color: #fff;
+  border-radius: 3px;
+  line-height: 30px;
+}
+.content .price a span {
+  border-right: 1px solid #98706f;
+  padding-right: 10px;
+  margin-right: 10px;
+}
+.content .price a i {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("../../../Images/item-cart-icon.png") no-repeat 0 -20px;
+  background-size: 19px 60px;
+  vertical-align: -5px;
+  margin-right: 5px;
+}
+.content .price .try-read {
+  background: #999995;
+}
+.content .price .try-read:hover {
+  background: #899385;
+  color: #fff;
+}
+.content .cart-bar {
+  margin-bottom: 20px;
+  overflow: hidden;
+  line-height: 25px;
+}
+.content .cart-bar .my-comment {
+  float: left;
+}
+.content .cart-bar .add-cart {
+  float: right;
+}
+.content .cart-bar .add-cart a {
+  padding: 8px 12px;
+  background: #edede3;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+}
+.content .cart-bar .add-cart a:hover {
+  color: #825d5b;
+  background: #dbdbd4;
+}
+.content .cart-bar .add-cart a i {
+  display: inline-block;
+  width: 17px;
+  height: 14px;
+  background: url("../../../Images/icon-cart2.png") no-repeat;
+  background-size: 17px 30px;
+  vertical-align: -2px;
+  margin-right: 5px;
+}
+.content .item-synopsis {
+  margin-bottom: 50px;
+}
+.content .item-synopsis .tab {
+  overflow: hidden;
+  margin: 20px 0;
+}
+.content .item-synopsis .tab a {
+  display: inline-block;
+}
+.content .item-synopsis .tab a:hover {
+  background: #fff;
+  color: #825d5b;
+}
+.content .item-synopsis .tab li {
+  float: left;
+  padding: 5px 25px;
+  border-left: 1px solid #dddddd;
+  font-size: 14px;
+  font-weight: bold;
+}
+.content .item-synopsis .tab .last-li {
+  border-right: 1px solid #dddddd;
+}
+.content .item-synopsis .description {
+  line-height: 24px;
+}
+.content .item-synopsis .description .text-info {
+  margin-bottom: 20px;
+  text-indent: 2em;
+}
+.content .comment .title {
+  border: 0;
+  overflow: hidden;
+  margin: 0;
+}
+.content .comment .title span {
+  font-size: 16px;
+  font-weight: 700;
+}
+.content .comment .title .num {
+  font-size: 14px;
+  color: #999;
+  margin: 0 10px 0 5px;
+}
+.content .comment .title a {
+  margin: 5px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block;
+}
+.content .comment .comment-item li {
+  border-top: 1px solid #dddddd;
+  padding: 15px 0;
+}
+.content .comment .comment-item .cover {
+  float: left;
+  margin-right: 20px;
+}
+.content .comment .comment-item .cover img {
+  width: 48px;
+  height: 48px;
+}
+.content .comment .comment-item .comment-item-info {
+  overflow: hidden;
+}
+.content .comment .comment-item .comment-item-info .username {
+  margin-bottom: 15px;
+}
+.content .comment .comment-item .comment-item-info .comment-text {
+  margin-bottom: 15px;
+}
+.content .comment .comment-item .comment-item-info .comment-date {
+  margin-right: 10px;
+}
+.content .comment .comment-item .comment-item-info span {
+  margin-left: 5px;
+}
+/*边栏部分*/
+.aside {
+  float: right;
+  width: 264px;
+}
+.aside .author-info {
+  border: 1px solid #dddddd;
+  padding: 15px 15px 30px 15px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.aside .author-info .cover {
+  float: left;
+  margin-right: 10px;
+}
+.aside .author-info .cover a:hover {
+  background: #fff;
+}
+.aside .author-info .cover img {
+  width: 48px;
+  height: 48px;
+}
+.aside .author-info .author-info-r {
+  overflow: hidden;
+}
+.aside .author-info .author-info-r h4 {
+  font-size: 16px;
+  margin: 5px 0 10px 0;
+}
+.aside .author-info .author-info-r > a {
+  display: inline-block;
+  padding: 3px 10px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  background: #edede3;
+}
+.aside .author-info .author-info-r > a:hover {
+  color: #825d5b;
+  background: #dbdbd4;
+}

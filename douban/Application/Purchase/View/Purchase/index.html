@@ -12,9 +12,9 @@
 <body>
 	<div class="submenu">
 		<div class="left">
-			<a href="{|U:'Product/Product/index'}">采购单列表</a>
+			<a href="{|U:'Purchase/Purchase/index'}">采购单列表</a>
 			<span>|</span>
-			<a href="{|U:'Product/Product/add'}">添加采购单</a>
+			<a href="{|U:'Purchase/Purchase/add'}">添加采购单</a>
 		</div>
 		<div class="right">
 			<a href="">后退</a>
@@ -24,16 +24,23 @@
 	</div>
 	<div class="content">
 		<div class="search">
-			<form action="{|U:'Product/Product/index'}" method="post">
+			<form action="{|U:'Purchase/Purchase/add'}" method="post">
 				<table class="search-table">
 					<tr>
-						<td width="8%">商品ID：</td>
+						<td width="8%">采购单号：</td>
 						<td width="40%"><input type="text" name="product_id"></td>
-						<td width="8%">货号：</td>
-						<td width="40%"><input type="text" name="goods"></td>
+						<td width="8%">销售方式：</td>
+						<td width="40%">
+							<select name="sale_type">
+								<option value="-1">-- 不限 --</option>
+								<foreach from="$cateInfo" key="$k" value="$v">
+									<option value="{$v.cid}">{$v._name}</option>
+								</foreach>
+							</select>
+						</td>
 					</tr>
 					<tr>
-						<td>所属分类：</td>
+						<td>供应商：</td>
 						<td>
 							<select name="category_cid">
 								<option value="-1">-- 不限 --</option>
@@ -42,7 +49,7 @@
 								</foreach>
 							</select>
 						</td>
-						<td>所属品牌：</td>
+						<td>到货库房：</td>
 						<td>
 							<select name="brand_id">
 								<option value="-1">-- 不限 --</option>
@@ -52,24 +59,6 @@
 							</select>
 						</td>	
 					</tr>
-					<tr class="date">
-						<td>上市日期：</td>
-						<td>
-							<input type="text" readonly="readonly" id="manuf_date_start" name="manuf_date_start" class="hd-w150">
-							&nbsp;&nbsp;&nbsp;
-							<input type="text" readonly="readonly" id="manuf_date_end" name="manuf_date_end" class="hd-w150">
-						</td>
-						<td>添加日期：</td>
-						<td>
-							<input type="text" readonly="readonly" id="add_date_start" name="add_date_start" class="hd-w150">
-							&nbsp;&nbsp;&nbsp;
-							<input type="text" readonly="readonly" id="add_date_end" name="add_date_end" class="hd-w150">
-						</td>
-					</tr>
-					<tr class="name">
-						<td>商品标题：</td>
-						<td colspan="10"><input type="text" name="name"></td>	
-					</tr>
 					<tr><td><input type="submit" value="搜索"></td></tr>
 					<tr><td colspan="3"><a href="">按搜索条件导出</a></td></tr>
 				</table>
@@ -78,15 +67,13 @@
 		<table class="content-table">
 			<thead>
 				<tr>
-					<td width="5%" align="center">商品ID</td>
-					<td width="8%" align="center">商品图片</td>
-					<td width="10%" align="center">货号</td>
-					<td width="30%" align="left">商品名称</td>
-					<td width="6%" align="center">所属分类</td>
-					<td width="6%" align="center">品牌</td>
-					<td width="5%" align="center">市场价</td>
-					<td width="8%" align="center">上市日期</td>
-					<td width="8%" align="center">添加日期</td>
+					<td width="10%" align="center">采购单号</td>
+					<td width="20%" align="center">供应商</td>
+					<td width="10%" align="center">库房</td>
+					<td width="10%" align="center">销售方式</td>
+					<td width="10%" align="center">数量</td>
+					<td width="10%" align="center">采购日期</td>
+					<td width="10%" align="center">预计到货日期</td>
 					<td width="10%" align="center">管理操作</td>
 				</tr>
 			</thead>
@@ -102,7 +89,7 @@
 							</empty>
 						</td>
 						<td align="center">{$v.goods}</td>
-						<td align="left">{$v.name}</td>
+						<td align="center">{$v.name}</td>
 						<td align="center">{$v.category_name}</td>
 						<td align="center">{$v.brand_name}</td>
 						<td align="center">{$v.marked_price}</td>

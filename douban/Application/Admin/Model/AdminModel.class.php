@@ -42,9 +42,9 @@ class AdminModel extends Model
 
 
 	/**
-	 * 获取系统管理员
+	 * 获取多条系统管理员
 	 */
-	public function getList($argv)
+	public function getList($argv = array())
 	{
 		if (empty($argv))
 		{

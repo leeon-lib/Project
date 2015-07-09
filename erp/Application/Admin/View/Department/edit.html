@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>修改部门信息</title>
+	<link rel="stylesheet" href="__PUBLIC__/Org/Bootstrap/css/Bootstrap.min.css">
+	<link rel="stylesheet" href="__PUBLIC__/Css/public.css">
+	<link rel="stylesheet" href="__PUBLIC__/Css/content.css">
+	<script type="text/javascript" src="__PUBLIC__/Org/jquery-1.7.2.min.js"></script>
+</head>
+<body>
+	<div class="warp">
+		<div class="submenu">
+			<div class="left">
+				<a href="{:U('Admin/Department/index')}">部门列表</a>
+				<span>|</span>
+				<a href="{:U('Admin/Department/add')}">添加部门</a>
+			</div>
+			<div class="right">
+				<a href="">后退</a>
+				<span>|</span>
+				<a href="">刷新</a>
+			</div>
+		</div>
+		<div class="content">
+			<form action="{:U('Admin/Department/operate')}" method="post">
+				<table class="content-table">
+					<tbody>
+						<tr class="title">
+							<td colspan="10">修改部门信息：</td>
+						</tr>
+						<tr>
+							<td width="10%">上级部门：</td>
+							<td>
+								<select name="pid">
+									<eq name="oldInfo['pid']" value="0">
+										<option value="0" selected="selected">一级部门</option>
+										<foreach name="deptList" item="v">
+											<option value="{$v.id}">{$v.name}</option>
+										</foreach>
+									<else />
+										<option value="0">一级部门</option>
+										<foreach name="deptList" item="v">
+											<eq name="v['id']" value="oldInfo['pid']">
+												<option value="{$v.id}" selected="selected">{$v._name}</option>
+											</eq>
+											<option value="{$v.id}">{$v._name}</option>
+										</foreach>
+									</eq>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>部门名称：</td>
+							<td><input type="text" name="name" value="{$oldInfo.name}"></td>
+						</tr>
+						<tr class="btn">
+							<input type="hidden" name="id" value="{$oldInfo.id}">
+							<td><input type="submit" value="修改"></td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

@@ -18,7 +18,7 @@ class ProductModel extends Model
 	 * @param  array  $argv [description]
 	 * @return [type]       [description]
 	 */
-	public function getList($argv=array())
+	public function getList($argv = array())
 	{
 		if (empty($argv))
 		{
