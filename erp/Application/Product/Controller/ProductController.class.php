@@ -8,22 +8,22 @@ use Common\Controller\AuthController;
 */
 class ProductController extends AuthController
 {
-    private $model = null;          // 商品模型
+    private $productModel = null;   // 商品模型
     private $pdModel = null;        // 商品详情模型
     private $cateModel = null;      // 分类模型
     private $brandModel = null;     // 品牌模型
-    private $cateInfo = null;       // 全部分类
-    private $brandInfo = null;      // 全部品牌
+    private $cateData = null;       // 全部分类
+    private $brandData = null;      // 全部品牌
 
     public function __construct()
     {
         parent::__construct();
-        $this->model = D('product');
+        $this->productModel = D('product');
         $this->pdModel = D('ProductDetails');
 		$this->cateModel = D('Category');
         $this->brandModel = D('brand');
-        $this->cateInfo = $this->cateModel->select();
-        $this->brandInfo = $this->brandModel->select();
+        $this->cateData = $this->cateModel->getList();
+        $this->brandData = $this->brandModel->getList(array('field'=>'id,name'));
     }
 
     /**
@@ -96,19 +96,18 @@ class ProductController extends AuthController
         $where = '1 ' . $this->search();
         // 获取商品列表
         $argv = array(
-            'field' => array(),
             'where' => $where,
             'limit' => 20
         );
-        $productList = $this->model->getList($argv);
+        $productList = $this->productModel->getList($argv);
         foreach ($productList as &$v)
         {
             $v['category_name'] = $this->cateModel->where("cid={$v['category_cid']}")->getField('name');
             $v['brand_name'] = $this->brandModel->where("id={$v['brand_id']}")->getField('name');
             $v['pic'] = $this->pdModel->where("product_id={$v['id']}")->getField('small');
         }
-        $this->assign('brandInfo', $this->brandInfo);
-        $this->assign('cateInfo', $this->cateInfo);
+        $this->assign('brandData', $this->brandData);
+        $this->assign('cateData', $this->cateData);
         $this->assign('productList',$productList);
     	$this->display();
     }
@@ -119,9 +118,8 @@ class ProductController extends AuthController
     public function add()
     {
         // 品牌及分类信息的显示处理
-        $brandInfo = $this->brandModel->field('id,name')->select();
-        $this->assign('brandInfo',$brandInfo);
-        $this->assign('cateInfo',$this->cateInfo);
+        $this->assign('brandData',$this->brandData);
+        $this->assign('cateData',$this->cateData);
     	$this->display();
     }
 
@@ -132,7 +130,7 @@ class ProductController extends AuthController
     {
         $id = (int)I('get.id');
         // 获取原信息
-        $oldInfo = $this->model->where("id={$id}")->find();
+        $oldInfo = $this->productModel->where("id={$id}")->find();
         if (empty($oldInfo))
         {
             $this->error('非法访问','index');
@@ -140,8 +138,8 @@ class ProductController extends AuthController
         // 获取商品图片
         $oldInfo['pic'] = $this->pdModel->where("product_id={$id}")->getField('small');
         $this->assign('oldInfo',$oldInfo);
-        $this->assign('brandInfo',$this->brandInfo);
-        $this->assign('cateInfo',$this->cateInfo);
+        $this->assign('brandData',$this->brandData);
+        $this->assign('cateData',$this->cateData);
         $this->display();
     }
 
@@ -159,52 +157,61 @@ class ProductController extends AuthController
     public function operate()
     {
         // 获取输入数据
-        $name = I('post.name');
+        $name = trim(I('post.name'));
         $goods = I('post.goods');
         $brandId = (int)I('post.brand_id');
         $categoryCid = (int)I('post.category_cid');
         $manufDate = I('post.manuf_date');
         $markedPrice = (int)I('post.marked_price');
-        $productId = (int)I('post.product_id');
-        // 表单完整性验证
-        if (empty($name)) $this->error('商品名称不能为空！');
-        if (empty($goods)) $this->error('商品货号不能为空！');
-        if (-1 == $brandId) $this->error('请选择所属品牌！');
-        if (-1 == $categoryCid) $this->error('请选择所属分类！');
-        // 市场价格式限制
-        if (!preg_match('/^[0-9\.]*$/', $markedPrice))
-            $this->error('填写的市场价非数字');
-
+        $productId = (int)I('post.product_id', 'intval', 0);
+        // 表单数据验证
+        // if (!$this->productModel->create())
+        // {
+        //     $this->error($this->productModel->getError());
+        // }
+        // 组合数据
+        // 请勿改变数组内容顺序，修改分支下需要按顺序进行数组比对
         $argv = array(
             'name'  => $name,
             'goods' => $goods,
-            'brand_id' => $brandId,
-            'category_cid' => $categoryCid,
             'manuf_date' => strtotime($manufDate),
-            'marked_price' => $markedPrice,
-            'add_date' => time()
+            'marked_price' => round($markedPrice, 3),
+            'brand_id' => $brandId,
+            'category_cid' => $categoryCid
         );
-
+        // 添加与修改
         if (0 == $productId)
-        {// 添加
-            $pid = $this->model->_insert($argv);
-            if (false == $pid)
+        {   
+            // 验证数据是否重复
+            if ($this->productModel->isExists($name))
             {
-                $this->error($this->model->error);
+                $this->error('操作失败，该商品名称已存在');
+            }
+            $argv['add_time'] = time();
+            $keyPid = $this->productModel->doInsert($argv);
+            if (false == $keyPid)
+            {
+                $this->error($this->productModel->error);
             }
             // 如果有上传文件，则执行图片上传与缩略
             if (4 != $_FILES['pics']['error'])
             {
-                $this->upload($pid);
+                $this->upload($keyPid);
             }
             // 属性设置
             if (isset($_POST['attr']))
             {
-                $this->setAttr($pid);
+                $this->setAttr($keyPid);
             }
             $this->success('添加成功','index');
-        } else {// 编辑
-            $this->model->_update($argv, $productId);
+        } else {
+            // 获取旧数据，用于与用户提交的数据进行比对，给予不同提示
+            $oldData = $this->productModel->getOne($productId, ['id,add_date']);p($oldData);p($argv);die;
+            if (!array_diff($oldData, $argv))
+            {
+                $this->success('您未作任何修改', U('index'));
+            }echo 11;die;
+            $this->productModel->doUpdate($argv, $productId);
             // 如果有上传文件，则执行图片上传与缩略
             if (isset($_FILES['pics']) && (4 != $_FILES['pics']['error']))
             {
@@ -244,7 +251,7 @@ class ProductController extends AuthController
                     'product_id' => $pid,
                     'kind_id'    => 2
                 );
-                $productAttrModel->add($specData);
+                $productAttrModel->doInsert($specData);
             }
         }
         if (!empty($attrArr))
@@ -256,7 +263,7 @@ class ProductController extends AuthController
                     'product_id' => $pid,
                     'kind_id'    => 1
                 );
-                $productAttrModel->add($attrData);
+                $productAttrModel->doInsert($attrData);
             }
         }
     }
@@ -270,7 +277,7 @@ class ProductController extends AuthController
         $cid = (int)I('post.cid');
         
         // 获取所有属性值
-        $attrArr = K('Attribute')->getByCid($cid);
+        $attrArr = D('Attribute')->getByCid($cid);
         if (!empty($attrArr))
         {
             foreach ($attrArr as $k => $v)

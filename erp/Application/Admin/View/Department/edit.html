@@ -33,7 +33,7 @@
 							<td width="10%">上级部门：</td>
 							<td>
 								<select name="pid">
-									<eq name="oldInfo['pid']" value="0">
+									<eq name="oldData['pid']" value="0">
 										<option value="0" selected="selected">一级部门</option>
 										<foreach name="deptList" item="v">
 											<option value="{$v.id}">{$v.name}</option>
@@ -41,10 +41,7 @@
 									<else />
 										<option value="0">一级部门</option>
 										<foreach name="deptList" item="v">
-											<eq name="v['id']" value="oldInfo['pid']">
-												<option value="{$v.id}" selected="selected">{$v._name}</option>
-											</eq>
-											<option value="{$v.id}">{$v._name}</option>
+											<option value="{$v.id}" <if condition="$v['id'] eq $oldData['pid']">selected="selected"</if> >{$v.name}</option>
 										</foreach>
 									</eq>
 								</select>
@@ -52,10 +49,10 @@
 						</tr>
 						<tr>
 							<td>部门名称：</td>
-							<td><input type="text" name="name" value="{$oldInfo.name}"></td>
+							<td><input type="text" name="name" value="{$oldData.name}"></td>
 						</tr>
 						<tr class="btn">
-							<input type="hidden" name="id" value="{$oldInfo.id}">
+							<input type="hidden" name="id" value="{$oldData.id}">
 							<td><input type="submit" value="修改"></td>
 						</tr>
 					</tbody>

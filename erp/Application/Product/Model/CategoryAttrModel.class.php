@@ -1,12 +1,12 @@
 <?php
 
 namespace Product\Model;
-use Think\Model;
+use Common\Model\CommonModel;
 
 /**
 * 分类属性模型
 */
-class CategoryAttrModel extends Model
+class CategoryAttrModel extends CommonModel
 {
 	public $tableName = 'category_attr';
 }

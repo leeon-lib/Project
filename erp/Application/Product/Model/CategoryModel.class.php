@@ -1,12 +1,12 @@
 <?php
 
 namespace Product\Model;
-use Think\Model;
+use Common\Model\CommonModel;
 
 /**
 * 分类管理模型
 */
-class CategoryModel extends Model
+class CategoryModel extends CommonModel
 {
 	public $tableName = 'category';
 

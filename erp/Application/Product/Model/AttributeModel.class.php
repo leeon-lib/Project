@@ -1,12 +1,12 @@
 <?php
 
 namespace Product\Model;
-use Think\Model;
+use Common\Model\CommonModel;
 
 /**
 * 类别属性管理模型
 */
-class AttributeModel extends Model
+class AttributeModel extends CommonModel
 {
 	public $tableName = 'attribute';
 

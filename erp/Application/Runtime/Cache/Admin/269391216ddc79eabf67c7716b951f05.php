@@ -3,9 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>添加管理员</title>
-	<link rel="stylesheet" href="/erp/web/Public/Org/Bootstrap/css/Bootstrap.min.css">
-	<link rel="stylesheet" href="/erp/web/Public/Css/public.css">
-	<link rel="stylesheet" href="/erp/web/Public/Css/content.css">
+	<link rel="stylesheet" href="/Project/erp/web/Public/Org/Bootstrap/css/Bootstrap.min.css">
+	<link rel="stylesheet" href="/Project/erp/web/Public/Css/public.css">
+	<link rel="stylesheet" href="/Project/erp/web/Public/Css/content.css">
 </head>
 <body>
 	<div class="warp">

@@ -3,11 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>添加商品</title>
-	<link rel="stylesheet" href="/erp/web/Public/Org/Bootstrap/css/Bootstrap.min.css">
-	<link rel="stylesheet" href="/erp/web/Public/Css/public.css">
-	<link rel="stylesheet" href="/erp/web/Public/Css/content.css">
-	<script src="/erp/web/Public/Org/jquery-1.7.2.min.js"></script>
-	<script src="/erp/web/Public/Org/cal/lhgcalendar.min.js"></script>
+	<link rel="stylesheet" href="/Project/erp/web/Public/Org/Bootstrap/css/Bootstrap.min.css">
+	<link rel="stylesheet" href="/Project/erp/web/Public/Css/public.css">
+	<link rel="stylesheet" href="/Project/erp/web/Public/Css/content.css">
+	<script src="/Project/erp/web/Public/Org/jquery-1.7.2.min.js"></script>
+	<script src="/Project/erp/web/Public/Org/cal/lhgcalendar.min.js"></script>
 </head>
 <body>
 	<div class="warp">
@@ -43,7 +43,7 @@
 							<td>
 								<select name="category_cid">
 									<option value="-1" selected="selected">必选</option>
-									<?php if(is_array($cateInfo)): foreach($cateInfo as $key=>$v): ?><option value="<?php echo ($v["cid"]); ?>"><?php echo ($v["_name"]); ?></option><?php endforeach; endif; ?>
+									<?php if(is_array($cateData)): foreach($cateData as $key=>$v): ?><option value="<?php echo ($v["cid"]); ?>"><?php echo ($v["name"]); ?></option><?php endforeach; endif; ?>
 								</select>
 							</td>
 						</tr>
@@ -52,7 +52,7 @@
 							<td>
 								<select name="brand_id">
 									<option value="-1">必选</option>
-									<?php if(is_array($brandInfo)): foreach($brandInfo as $key=>$v): ?><option value="<?php echo ($v["id"]); ?>"><?php echo ($v["name"]); ?></option><?php endforeach; endif; ?>
+									<?php if(is_array($brandData)): foreach($brandData as $key=>$v): ?><option value="<?php echo ($v["id"]); ?>"><?php echo ($v["name"]); ?></option><?php endforeach; endif; ?>
 								</select>
 							</td>
 						</tr>

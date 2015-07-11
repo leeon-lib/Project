@@ -1,83 +1,24 @@
 <?php
 
 namespace Product\Model;
-use Think\Model;
+use Common\Model\CommonModel;
 
 /**
 * 商品管理模型
 */
-class ProductModel extends Model
+class ProductModel extends CommonModel
 {
 	public $tableName = 'product';
-	public $validate = array(
-		array('goods','nonull','货号不能为空',2,3),
-		array('name','nonull','商品名称不能为空',2,3),
-		array('marked_price','nonull','市场价不能为空',2,3)
-	);
+	public $_validate = [
+		['name', 'require', '商品名称不能为空', 1],
+		['goods', 'require', '货号不能为空', 1],
+		['manuf_date', 'require', '上市日期不能为空'],
+		['marked_price', 'require', '市场价不能为空'],
+		['marked_price', 'currency', '市场价格式不正确'],
+		['category_cid', '-1', '请选择所属分类', 1, 'notequal'],
+		['brand_id', '-1', '请选择所属品牌', 1, 'notequal']
+	];
 
-	
-	/**
-	 * 获取多条商品
-	 * @param  array  $argv [description]
-	 * @return [type]       [description]
-	 */
-	public function getList($argv = array())
-	{
-		if (empty($argv))
-		{
-			return $this->select();
-		} else {
-			$fields = isset($argv['field']) ? implode(',', $argv['field']) : null;
-			$where = isset($argv['where']) ? $argv['where'] : null;
-			$limit = isset($argv['limit']) ? $argv['limit'] : 1000;
-			return $this->field("{$fields}")->where("{$where}")->limit("{$limit}")->select();
-		}
-	}
-
-	/**
-	 * 添加商品
-	 * @param  array  $argv [description]
-	 * @return [boolean]       [description]
-	 */
-	public function _insert($argv = array())
-	{
-		if (empty($argv))
-		{
-			return false;
-		} else {
-			if (!$this->checkName($argv['name']))
-			{
-				$this->error = '商品名称重复';
-				return false;
-			}
-			if (!$this->checkGoods($argv['goods']))
-			{
-				$this->error = '商品货号重复';
-				return false;
-			}
-			return $this->add($argv);
-		}
-	}
-
-	/**
-	 * 修改一条商品数据
-	 * @return [boolean] 
-	 */
-	public function _update($argv=array(), $pid=0)
-	{
-		if ((empty($argv)) | (0 == $pid))
-		{
-			return false;
-		} else {
-			return $this->where("id = {$pid}")->save($argv);
-		}
-	}
-
-	public function getAll()
-	{
-		$join = "__category__ c JOIN __product__ p ON p.category_id=c.cid";
-		return M()->join("$join")->select();
-	}
 
 	/**
 	 * 验证商品名称是否重复

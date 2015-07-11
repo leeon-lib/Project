@@ -3,8 +3,8 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
     <title>CMS</title>
-    <link rel="stylesheet" type="text/css" href="/erp/web/Public/Css/css.css">
-    <script type="text/javascript" src="/erp/web/Public/Js/js.js"></script>
+    <link rel="stylesheet" type="text/css" href="/Project/erp/web/Public/Css/css.css">
+    <script type="text/javascript" src="/Project/erp/web/Public/Js/js.js"></script>
 </head>
 <body>
 <div class="header">

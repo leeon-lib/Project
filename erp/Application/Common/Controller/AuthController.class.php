@@ -14,7 +14,7 @@ class AuthController extends Controller
 		parent::__construct();
 		if (!isset($_SESSION['admin_id']) || !isset($_SESSION['admin_name']))
 		{
-			$this->success('未登录或长时间未操作',U('Admin/Login/index'));
+			$this->redirect('Admin/Login/index');
 		}
 	}
 }

@@ -3,8 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>后台管理</title>
-	<link rel="stylesheet" href="/erp/web/Public/Css/public.css">
-	<link rel="stylesheet" href="/erp/web/Public/Css/admin.css">
+	<link rel="stylesheet" href="/Project/erp/web/Public/Css/public.css">
+	<link rel="stylesheet" href="/Project/erp/web/Public/Css/admin.css">
 </head>
 <body>
 	<div class="head">
@@ -47,7 +47,7 @@
 				<p><span>User</span> Welcome!</p>
 			</div>
 			<div class="exit">
-				<a href="">退出</a>
+				<a href="<?php echo U('Admin/Login/logOut');?>">退出</a>
 			</div>
 		</div>
 	</div>

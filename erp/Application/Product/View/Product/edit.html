@@ -48,11 +48,10 @@
 							<td>
 								<select name="category_cid">
 									<option value="-1">必选</option>
-									<foreach name="cateInfo" item="v">
-										<eq name="oldInfo['category_cid']" value="v.cid">
-											<option value="{$v.cid}" selected="selected">{$v._name}</option>
-										</eq>
-										<option value="{$v.cid}">{$v._name}</option>
+									<foreach name="cateData" item="v">
+										<option value="{$v.cid}" <if condition="$v['cid'] eq $oldInfo['category_cid']">selected="selected"</if> >
+											{$v.name}
+										</option>
 									</foreach>
 								</select>
 							</td>
@@ -62,11 +61,10 @@
 							<td>
 								<select name="brand_id">
 									<option value="-1">必选</option>
-									<foreach name="brandInfo" item="v">
-										<eq name="oldInfo['brand_id']" value="v['id']">
-											<option value="{$v.id}" selected="selected">{$v.name}</option>
-										</eq>
-										<option value="{$v.id}">{$v.name}</option>
+									<foreach name="brandData" item="v">
+										<option value="{$v.id}" <if condition="$v['id'] eq $oldInfo['brand_id']">selected="selected"</if> >
+											{$v.name}
+										</option>
 									</foreach>
 								</select>
 							</td>

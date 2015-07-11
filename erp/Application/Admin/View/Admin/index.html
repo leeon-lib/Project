@@ -33,7 +33,7 @@
 					<tr>
 						<td>真实姓名：</td>
 						<td><input type="text" name="real_name"></td>
-						<td>电话：</td>
+						<td>手机号：</td>
 						<td><input type="text" name="phone"></td>
 					</tr>
 					<tr>
@@ -92,7 +92,13 @@
 								<a href="{:U('Admin/Admin/changeStatus',array('id'=>$v['id']))}" style="color:red;">X</a>
 							</eq>
 						</td>
-						<td align="center">{$v.last_login|date='Y-m-d H:i:s',###}</td>
+						<td align="center">
+							<neq name="v.last_login" value="0">
+								{$v.last_login|date='Y-m-d H:i:s',###}
+							<else />
+								－－－
+							</neq>
+						</td>
 						<td align="center">
 							<a href="{:U('Admin/Admin/edit',array('id'=>$v['id']))}">编辑</a>
 							<a href="{:U('Admin/Admin/del',array('id'=>$v['id']))}">删除</a>

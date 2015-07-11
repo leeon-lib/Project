@@ -3,9 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>系统用户管理</title>
-	<link rel="stylesheet" href="/erp/web/Public/Org/Bootstrap/css/Bootstrap.min.css">
-	<link rel="stylesheet" href="/erp/web/Public/Css/public.css">
-	<link rel="stylesheet" href="/erp/web/Public/Css/content.css">
+	<link rel="stylesheet" href="/Project/erp/web/Public/Org/Bootstrap/css/Bootstrap.min.css">
+	<link rel="stylesheet" href="/Project/erp/web/Public/Css/public.css">
+	<link rel="stylesheet" href="/Project/erp/web/Public/Css/content.css">
 </head>
 <body>
 	<div class="submenu">
@@ -33,7 +33,7 @@
 					<tr>
 						<td>真实姓名：</td>
 						<td><input type="text" name="real_name"></td>
-						<td>电话：</td>
+						<td>手机号：</td>
 						<td><input type="text" name="phone"></td>
 					</tr>
 					<tr>
@@ -85,7 +85,11 @@
 							<?php else: ?>
 								<a href="<?php echo U('Admin/Admin/changeStatus',array('id'=>$v['id']));?>" style="color:red;">X</a><?php endif; ?>
 						</td>
-						<td align="center"><?php echo (date('Y-m-d H:i:s',$v["last_login"])); ?></td>
+						<td align="center">
+							<?php if(($v["last_login"]) != "0"): echo (date('Y-m-d H:i:s',$v["last_login"])); ?>
+							<?php else: ?>
+								－－－<?php endif; ?>
+						</td>
 						<td align="center">
 							<a href="<?php echo U('Admin/Admin/edit',array('id'=>$v['id']));?>">编辑</a>
 							<a href="<?php echo U('Admin/Admin/del',array('id'=>$v['id']));?>">删除</a>

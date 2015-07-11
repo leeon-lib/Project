@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>角色管理</title>
+	<link rel="stylesheet" href="__PUBLIC__/Org/Bootstrap/css/Bootstrap.min.css">
+	<link rel="stylesheet" href="__PUBLIC__/Css/public.css">
+	<link rel="stylesheet" href="__PUBLIC__/Css/content.css">
+</head>
+<body>
+	<div class="submenu">
+		<div class="left">
+			<a href="{:U('Admin/Role/index')}">角色列表</a>
+			<span>|</span>
+			<a href="{:U('Admin/Role/add')}">添加角色</a>
+		</div>
+		<div class="right">
+			<a href="">后退</a>
+			<span>|</span>
+			<a href="">刷新</a>
+		</div>
+	</div>
+	<div class="content">
+		<table class="content-table">
+			<thead>
+				<tr>
+					<td width="5%" align="center">角色ID</td>
+					<td width="20%" align="center">角色名称</td>
+					<td width="20%" align="center">所属部门</td>
+					<td width="10%" align="center">操作</td>
+				</tr>
+			</thead>
+			<tbody>
+				<foreach name="roleList" item="v">
+					<tr>
+						<td align="center">{$v.id}</td>
+						<td align="center">{$v.name}</td>
+						<td align="center">
+							<eq name="v['department_id']" value="0">
+								－－－
+							<else />
+								<foreach name="deptList" item="val">
+									<if condition="$val['id'] eq $v['department_id']">
+										{$val.name}
+									</if>
+								</foreach>
+							</eq>
+						</td>
+						<td align="center">
+							<a href="{:U('Admin/Role/edit',array('id'=>$v['id']))}">编辑</a>
+							<a href="{:U('Admin/Role/del',array('id'=>$v['id']))}">删除</a>
+						</td>
+					</tr>
+				</foreach>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

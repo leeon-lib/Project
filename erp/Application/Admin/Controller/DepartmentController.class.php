@@ -8,12 +8,12 @@ use Common\Controller\AuthController;
 */
 class DepartmentController extends AuthController
 {
-	private $model = null;
+	private $deptModel = null;
 
 	public function __construct()
 	{
 		parent::__construct();
-		$this->model = D('Department');
+		$this->deptModel = D('Department');
 	}
 	
 	/**
@@ -22,10 +22,10 @@ class DepartmentController extends AuthController
 	public function index()
 	{
 		$where = '1 ';
-		$argv = array(
+		$argv = [
 			'where' => $where
-		);
-		$deptList = $this->model->getList($argv);
+		];
+		$deptList = $this->deptModel->getList($argv);
 		$this->assign('deptList', $deptList);
 		$this->display();
 	}
@@ -35,7 +35,8 @@ class DepartmentController extends AuthController
 	 */
 	public function add()
 	{
-		$deptList = $this->model->getList();
+		// 分配变量
+		$deptList = $this->deptModel->getList();
 		$this->assign('deptList', $deptList);
 		$this->display();
 	}
@@ -46,76 +47,89 @@ class DepartmentController extends AuthController
 	public function edit()
 	{
 		$id = (int)I('get.id');
-		$oldInfo = $this->model->getOne($id);
-		$deptList = $this->model->getList();
+		$oldData = $this->deptModel->getOne($id);
+		$deptList = $this->deptModel->getList();
+		// p($oldData);
+		// p($deptList);
 		$this->assign('deptList', $deptList);
-		$this->assign('oldInfo', $oldInfo);
+		$this->assign('oldData', $oldData);
 		$this->display();
 	}
 
 	/**
 	 * 部门的操作
+	 * 添加、修改
 	 */
 	public function operate()
 	{
+		// 获取输入内容
 		$pid = (int)I('post.pid');
-		$name = I('post.name');
-		// 添加与编辑的前台模板中的name不一样，添加时name为数组
-		if (is_array($name))
+		$name = rmEmpty(I('post.name'));		// 添加操作时，去除空值
+		$deptId = (int)I('post.id', 'intval', 0);
+		// 表单内容检测
+		if (!$this->deptModel->create())
 		{
-			$name = $this->rmEmpty($name);
+			$this->error($this->deptModel->getError());
 		}
-		if (empty($name))
-		{
-			$this->error('请填写部门！');
-		}
-		// 编辑
-		if (isset($_POST['id']))
-		{
-			$id = (int)I('post.id');
-			$argv = array(
-				'name' => $name,
-				'pid'  => $pid
-			);
-			$this->model->_update($argv, $id);
-			$this->success('修改成功', 'index');
-		} else {//添加
-			$argv = array();
+		// 组合数据
+		$argv = array(
+			'name' => $name,
+			'pid'  => $pid
+		);
+		// 添加与修改
+		if (0 == $deptId)
+		{	
+			// 检测内容是否重复，如果有重复，则比对出未重复的部分，执行未重复部分的添加
+			$repeatStr = $this->deptModel->isExists($name);
+			if ($repeatStr)
+			{
+				$repeatArr = explode(',', $repeatStr);
+				$name = array_diff($name, $repeatArr);
+			}
 			foreach ($name as $v)
 			{
-				$argv = array(
-					'name' => $v,
-					'pid' => $pid
-				);
-				$this->model->_insert($argv);
+				$argv['name'] = $v;
+				$this->deptModel->doInsert($argv);
 			}
-			$this->success('添加成功', 'index');
+			// 重复与否的执行结果提示
+			if ($repeatStr && (empty($name)))
+			{
+				$this->error("添加失败，'{$repeatStr}'已存在", U('index'));
+			} elseif ($repeatStr && (!empty($name))) {
+				$this->success("部分添加成功，'{$repeatStr}'已存在", U('index'));
+			} else {
+				$this->success('添加成功', U('index'));
+			}
+		} else {
+			// 比对原值与用户输入值，如果名称与原值不同，则判断是否重复
+			$oldData = $this->deptModel->getOne($deptId, 'name,pid');
+			if (!array_diff($oldData, $argv))
+			{
+				$this->success('您未作任何修改', U('index'));
+			}
+			if ($name != $oldData['name'])
+			{
+				$res = $this->deptModel->isExists($name);
+				if ($res){
+					$this->error("修改失败，'{$res}'已存在");
+				} else {
+					// 非重复，执行修改
+					$this->deptModel->doUpdate($argv, $deptId);
+					$this->success('修改成功', U('index'));
+				}
+			}
+			
 		}
 	}
-
-
 
 	/**
-	 * 去除数组空值
-	 * @param  [array] $arr [description]
-	 * @return [array]      [description]
+	 * 删除部门
 	 */
-	public function rmEmpty($arr)
+	public function del()
 	{
-		foreach ($arr as $key => $val)
-		{
-			if (!is_array($val))
-			{
-				if (empty(trim($val)))
-				{
-					unset($arr[$key]);
-				} else {
-					$arr[$key] = $val;
-				}
-			} else {
-				$arr[$key] = $this->rmEmpty($val);
-			}
-		}
-		return $arr;
+		$id = (int)I('get.id');
+		$this->deptModel->doDelete('id', $id);
+		$this->success('删除成功', U('index'));
 	}
+
 }

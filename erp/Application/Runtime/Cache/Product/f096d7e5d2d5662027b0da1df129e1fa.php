@@ -3,11 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>商品列表</title>
-	<link rel="stylesheet" href="/erp/web/Public/Org/Bootstrap/css/Bootstrap.min.css">
-	<link rel="stylesheet" href="/erp/web/Public/Css/public.css">
-	<link rel="stylesheet" href="/erp/web/Public/Css/content.css">
-	<script src="/erp/web/Public/Org/jquery-1.7.2.min.js"></script>
-	<script src="/erp/web/Public/Org/cal/lhgcalendar.min.js"></script>
+	<link rel="stylesheet" href="/Project/erp/web/Public/Org/Bootstrap/css/Bootstrap.min.css">
+	<link rel="stylesheet" href="/Project/erp/web/Public/Css/public.css">
+	<link rel="stylesheet" href="/Project/erp/web/Public/Css/content.css">
+	<script src="/Project/erp/web/Public/Org/jquery-1.7.2.min.js"></script>
+	<script src="/Project/erp/web/Public/Org/cal/lhgcalendar.min.js"></script>
 </head>
 <body>
 	<div class="submenu">
@@ -37,14 +37,14 @@
 						<td>
 							<select name="category_cid">
 								<option value="-1">-- 不限 --</option>
-								<?php if(is_array($cateInfo)): foreach($cateInfo as $key=>$v): ?><option value="<?php echo ($v["cid"]); ?>"><?php echo ($v["_name"]); ?></option><?php endforeach; endif; ?>
+								<?php if(is_array($cateData)): foreach($cateData as $key=>$v): ?><option value="<?php echo ($v["cid"]); ?>"><?php echo ($v["name"]); ?></option><?php endforeach; endif; ?>
 							</select>
 						</td>
 						<td>所属品牌：</td>
 						<td>
 							<select name="brand_id">
 								<option value="-1">-- 不限 --</option>
-								<?php if(is_array($brandInfo)): foreach($brandInfo as $key=>$v): ?><option value="<?php echo ($v["id"]); ?>"><?php echo ($v["name"]); ?></option><?php endforeach; endif; ?>
+								<?php if(is_array($brandData)): foreach($brandData as $key=>$v): ?><option value="<?php echo ($v["id"]); ?>"><?php echo ($v["name"]); ?></option><?php endforeach; endif; ?>
 							</select>
 						</td>	
 					</tr>
@@ -90,7 +90,7 @@
 				<?php if(is_array($productList)): foreach($productList as $key=>$v): ?><tr>
 						<td align="center"><?php echo ($v["id"]); ?></td>
 						<td align="center">
-							<?php if(empty($$v['pic'])): ?><img src="/erp/web/Public/Images/default_s.gif" alt="" width="60px">
+							<?php if(empty($$v['pic'])): ?><img src="/Project/erp/web/Public/Images/default_s.gif" alt="" width="60px">
 							<?php else: ?>
 								<img src="__HTTP_UPLOAD__/Product/<?php echo ($v["pic"]); ?>" alt="" width="60px"><?php endif; ?>
 						</td>

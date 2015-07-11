@@ -1,12 +1,12 @@
 <?php
 
 namespace Product\Model;
-use Think\Model;
+use Common\Model\CommonModel;
 
 /**
 * 品牌管理模型
 */
-class BrandModel extends Model
+class BrandModel extends CommonModel
 {
 	public $tableName = 'brand';
 

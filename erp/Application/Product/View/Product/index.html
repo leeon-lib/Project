@@ -37,8 +37,8 @@
 						<td>
 							<select name="category_cid">
 								<option value="-1">-- 不限 --</option>
-								<foreach name="cateInfo" item="v">
-									<option value="{$v.cid}">{$v._name}</option>
+								<foreach name="cateData" item="v">
+									<option value="{$v.cid}">{$v.name}</option>
 								</foreach>
 							</select>
 						</td>
@@ -46,7 +46,7 @@
 						<td>
 							<select name="brand_id">
 								<option value="-1">-- 不限 --</option>
-								<foreach name="brandInfo" item="v">
+								<foreach name="brandData" item="v">
 									<option value="{$v.id}">{$v.name}</option>
 								</foreach>
 							</select>

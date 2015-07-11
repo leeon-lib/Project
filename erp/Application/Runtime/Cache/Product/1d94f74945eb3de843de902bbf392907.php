@@ -3,11 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>编辑商品</title>
-	<link rel="stylesheet" href="/erp/web/Public/Org/Bootstrap/css/Bootstrap.min.css">
-	<link rel="stylesheet" href="/erp/web/Public/Css/public.css">
-	<link rel="stylesheet" href="/erp/web/Public/Css/content.css">
-	<script src="/erp/web/Public/Org/jquery-1.7.2.min.js"></script>
-	<script src="/erp/web/Public/Org/cal/lhgcalendar.min.js"></script>
+	<link rel="stylesheet" href="/Project/erp/web/Public/Org/Bootstrap/css/Bootstrap.min.css">
+	<link rel="stylesheet" href="/Project/erp/web/Public/Css/public.css">
+	<link rel="stylesheet" href="/Project/erp/web/Public/Css/content.css">
+	<script src="/Project/erp/web/Public/Org/jquery-1.7.2.min.js"></script>
+	<script src="/Project/erp/web/Public/Org/cal/lhgcalendar.min.js"></script>
 </head>
 <body>
 	<div class="warp">
@@ -48,8 +48,9 @@
 							<td>
 								<select name="category_cid">
 									<option value="-1">必选</option>
-									<?php if(is_array($cateInfo)): foreach($cateInfo as $key=>$v): if(($oldInfo['category_cid']) == "v.cid"): ?><option value="<?php echo ($v["cid"]); ?>" selected="selected"><?php echo ($v["_name"]); ?></option><?php endif; ?>
-										<option value="<?php echo ($v["cid"]); ?>"><?php echo ($v["_name"]); ?></option><?php endforeach; endif; ?>
+									<?php if(is_array($cateData)): foreach($cateData as $key=>$v): ?><option value="<?php echo ($v["cid"]); ?>" <?php if($v['cid'] == $oldInfo['category_cid']): ?>selected="selected"<?php endif; ?> >
+											<?php echo ($v["name"]); ?>
+										</option><?php endforeach; endif; ?>
 								</select>
 							</td>
 						</tr>
@@ -58,8 +59,9 @@
 							<td>
 								<select name="brand_id">
 									<option value="-1">必选</option>
-									<?php if(is_array($brandInfo)): foreach($brandInfo as $key=>$v): if(($oldInfo['brand_id']) == "v['id']"): ?><option value="<?php echo ($v["id"]); ?>" selected="selected"><?php echo ($v["name"]); ?></option><?php endif; ?>
-										<option value="<?php echo ($v["id"]); ?>"><?php echo ($v["name"]); ?></option><?php endforeach; endif; ?>
+									<?php if(is_array($brandData)): foreach($brandData as $key=>$v): ?><option value="<?php echo ($v["id"]); ?>" <?php if($v['id'] == $oldInfo['brand_id']): ?>selected="selected"<?php endif; ?> >
+											<?php echo ($v["name"]); ?>
+										</option><?php endforeach; endif; ?>
 								</select>
 							</td>
 						</tr>
@@ -78,7 +80,7 @@
 							<td>
 								<?php if(empty($$oldInfo['pic'])): ?><input type="file" name="pics">
 								<?php else: ?>
-									<img src="/erp/web/Upload/Product/<?php echo ($oldInfo['pic']); ?>" alt=""><?php endif; ?>
+									<img src="/Project/erp/web/Upload/Product/<?php echo ($oldInfo['pic']); ?>" alt=""><?php endif; ?>
 							</td>
 						</tr>
 						<tr class="title">
@@ -119,7 +121,7 @@
     	} else {
     		$.ajax({
                 type: "post",
-                url: "{|U:'Product/Product/ajax_getAttr'}",
+                url: "<?php echo U('Product/Product/ajax_getAttr');?>",
                 data: {cid: cid},
                 dataType: "json",
                 async: false,

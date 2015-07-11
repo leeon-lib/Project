@@ -9,7 +9,6 @@ use Think\Controller;
 class LoginController extends Controller
 {
 	
-
 	/**
 	 * 后台登录页
 	 */
@@ -24,29 +23,28 @@ class LoginController extends Controller
 	 */
 	public function logIn()
 	{
-		$adminModel = D('Admin');
+		$LoginModel = D('Login');
 		$code = I('post.code');
 		$data = [
 			'username' => I('post.username'),
 			'password' => md5(I('post.password'))
 		];
 		// 表单完整性验证
-		if (!$adminModel->create())
+		if (!$LoginModel->create())
 		{
-			$this->error($adminModel->getError());
+			$this->error($LoginModel->getError());
 		}
 		// 验证码验证
 		if (!$this->checkCode($code))
 		{
-			$this->error('验证码错误');
+			$this->error('验证码错误', U('index'));
 		}
 		// 用户信息验证
-		if (!$adminModel->checkIn($data))
+		if (!$LoginModel->checkIn($data))
 		{
-			$this->error($adminModel->getError());
+			$this->error($LoginModel->getError(), U('index'));
 		} else {
 			// 登录成功
-			// $this->success('登录成功',U('Admin/Index/Index'));
 			$this->redirect('Admin/Index/index');
 		}
 		

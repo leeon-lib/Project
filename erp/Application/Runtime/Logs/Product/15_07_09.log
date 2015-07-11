@@ -6292,3 +6292,19 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000588s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000660s ]
 
+[ 2015-07-09T22:51:51+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Product/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000648s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001115s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001261s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0051s ]
+SQL: SHOW COLUMNS FROM `product_details` [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0013s ]
+SQL: SELECT * FROM `brand`  [ RunTime:0.0015s ]
+NOTIC: [8] Array to string conversion /Users/Liyn/Desktop/home/Project/erp/Application/Common/Model/CommonModel.class.php 第 25 行.
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+

@@ -40,9 +40,9 @@
 								－－－
 							<else />
 								<foreach name="deptList" item="val">
-									<eq name="val['id']" value="v['pid']">
+									<if condition="$val['id'] eq $v['pid']">
 										{$val.name}
-									</eq>
+									</if>
 								</foreach>
 							</eq>
 						</td>

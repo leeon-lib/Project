@@ -3,8 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>商品管理</title>
-	<link rel="stylesheet" href="/erp/web/Public/Css/public.css">
-	<link rel="stylesheet" href="/erp/web/Public/Css/aside.css">
+	<link rel="stylesheet" href="/Project/erp/web/Public/Css/public.css">
+	<link rel="stylesheet" href="/Project/erp/web/Public/Css/aside.css">
 </head>
 <body>
 	<ul>

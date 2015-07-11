@@ -1,0 +1,9 @@
+[ 2015-07-11T14:44:16+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Purchase/Purchase/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000397s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000539s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000613s ]
+ERR: 无法加载控制器:Purchase
+
