@@ -1,0 +1,1301 @@
+[ 2015-07-15T21:40:18+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Product/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000120s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001071s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001218s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `product_details` [ RunTime:0.0032s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name` FROM `brand` LIMIT 1000   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `product` WHERE ( 1  ) LIMIT 20   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000233s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020555s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020846s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000588s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000771s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001186s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001299s ]
+
+[ 2015-07-15T21:40:38+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Product/import.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000099s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000556s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000628s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `product_details` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0043s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`name` FROM `brand` LIMIT 1000   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000083s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000249s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010435s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010569s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000221s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000273s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000536s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000595s ]
+
+[ 2015-07-15T21:40:40+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Product/picSize.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000068s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000432s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000487s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `product_details` [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name` FROM `brand` LIMIT 1000   [ RunTime:0.0002s ]
+ERR: 非法操作:picSize
+
+[ 2015-07-15T21:45:12+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Product/picSize.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000155s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000526s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000595s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `product_details` [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name` FROM `brand` LIMIT 1000   [ RunTime:0.0002s ]
+ERR: 非法操作:picSize
+
+[ 2015-07-15T22:00:41+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Product/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000070s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000396s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000449s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `product_details` [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name` FROM `brand` LIMIT 1000   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `product` WHERE ( 1  ) LIMIT 20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000115s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011888s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011959s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000143s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000190s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000444s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000499s ]
+
+[ 2015-07-15T22:00:43+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Product/import.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000072s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000402s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000454s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `product_details` [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name` FROM `brand` LIMIT 1000   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000099s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005732s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005789s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000123s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000168s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000564s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000629s ]
+
+[ 2015-07-15T22:00:43+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Product/picSize.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000069s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000392s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000444s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `product_details` [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name` FROM `brand` LIMIT 1000   [ RunTime:0.0002s ]
+ERR: 非法操作:picSize
+
+[ 2015-07-15T22:00:44+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Category/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000439s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000500s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `category_attr` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010842s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010917s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000218s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000281s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000477s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000532s ]
+
+[ 2015-07-15T22:00:45+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Attribute/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000074s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000428s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000482s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `category_attr` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `attribute`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000105s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008840s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008905s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000141s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000189s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000429s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000478s ]
+
+[ 2015-07-15T22:00:48+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Category/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000070s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000398s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000494s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `category_attr` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000106s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009062s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009118s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000137s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000185s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000512s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000566s ]
+
+[ 2015-07-15T22:00:48+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Attribute/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000129s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000683s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000765s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0044s ]
+SQL: SHOW COLUMNS FROM `category_attr` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `attribute`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000101s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008110s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008170s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000145s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000194s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000517s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000570s ]
+
+[ 2015-07-15T22:00:49+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Category/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000573s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000690s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `category_attr` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009514s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009577s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000150s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000204s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000510s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000570s ]
+
+[ 2015-07-15T22:00:50+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Category/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000113s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000690s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000801s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `category_attr` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000113s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009760s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009819s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000147s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000199s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000522s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000592s ]
+
+[ 2015-07-15T22:01:41+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Category/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000070s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000416s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000475s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `category_attr` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `category` WHERE ( name = '服装'  ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: INSERT INTO `category` (`name`,`pid`) VALUES ('服装','0') [ RunTime:0.0020s ]
+SQL: SELECT * FROM `category` WHERE ( name = '电子'  ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: INSERT INTO `category` (`name`,`pid`) VALUES ('电子','0') [ RunTime:0.0002s ]
+SQL: SELECT * FROM `category` WHERE ( name = '图书'  ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: INSERT INTO `category` (`name`,`pid`) VALUES ('图书','0') [ RunTime:0.0002s ]
+SQL: SELECT * FROM `category` WHERE ( name = '电器'  ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: INSERT INTO `category` (`name`,`pid`) VALUES ('电器','0') [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000121s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008799s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008867s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000148s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000199s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.004510s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004933s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000359s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000015s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.005170s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php:95) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php:95) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php:95) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000584s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000646s ]
+
+[ 2015-07-15T22:01:42+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Category/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000141s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000488s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000560s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `category_attr` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000103s ]
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009778s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009835s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000215s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000313s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000783s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000898s ]
+
+[ 2015-07-15T22:02:27+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Category/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000207s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000485s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000553s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `category_attr` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000104s ]
+NOTIC: [8] Undefined index: _name /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/fde880289656b2b42cadeb14226019e8.php 第 38 行.
+NOTIC: [8] Undefined index: _name /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/fde880289656b2b42cadeb14226019e8.php 第 38 行.
+NOTIC: [8] Undefined index: _name /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/fde880289656b2b42cadeb14226019e8.php 第 38 行.
+NOTIC: [8] Undefined index: _name /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/fde880289656b2b42cadeb14226019e8.php 第 38 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008272s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008358s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000207s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000271s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000546s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000605s ]
+
+[ 2015-07-15T22:02:33+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Category/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000074s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000533s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000622s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `category_attr` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000106s ]
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009557s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009622s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000139s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000196s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000454s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000506s ]
+
+[ 2015-07-15T22:02:59+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Category/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000443s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000496s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `category_attr` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000109s ]
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009167s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009229s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000150s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000195s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000497s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000552s ]
+
+[ 2015-07-15T22:02:59+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Category/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000103s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000490s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000550s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `category_attr` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000098s ]
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008622s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008676s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000140s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000184s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000434s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000483s ]
+
+[ 2015-07-15T22:03:02+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Category/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000070s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000402s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000456s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `category_attr` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+
+[ 2015-07-15T22:03:06+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Category/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000811s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000946s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `category_attr` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000117s ]
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009493s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009553s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000162s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000213s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000487s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000544s ]
+
+[ 2015-07-15T22:04:01+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Category/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000122s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000466s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000528s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `category_attr` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+
+[ 2015-07-15T22:04:06+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Category/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000073s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000491s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000565s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `category_attr` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000122s ]
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010758s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010824s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000178s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000517s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000574s ]
+
+[ 2015-07-15T22:04:07+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Category/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000073s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000406s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000458s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `category_attr` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000107s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006829s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006887s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000155s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000203s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000483s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000533s ]
+
+[ 2015-07-15T22:04:26+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Category/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000074s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000426s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000482s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `category_attr` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009902s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009964s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000181s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000232s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000620s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000743s ]
+
+[ 2015-07-15T22:04:43+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Category/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000068s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000494s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000549s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `category_attr` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000101s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008170s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008226s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000143s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000191s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000465s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000524s ]
+
+[ 2015-07-15T22:04:46+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Category/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000070s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000395s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000448s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `category_attr` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000230s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006693s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006756s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000142s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000189s ]
+
+[ 2015-07-15T22:04:48+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Category/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000072s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000402s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000454s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `category_attr` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000174s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011252s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011361s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000218s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000278s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000469s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000519s ]
+
+[ 2015-07-15T22:04:51+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Category/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000128s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000673s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `category_attr` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `category` WHERE ( name = '家居'  ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: INSERT INTO `category` (`name`,`pid`) VALUES ('家居','0') [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000099s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005462s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005519s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000124s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000168s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.003993s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004004s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000308s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000013s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.004196s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php:95) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php:95) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php:95) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000516s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000573s ]
+
+[ 2015-07-15T22:04:52+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Category/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000079s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000481s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000544s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0045s ]
+SQL: SHOW COLUMNS FROM `category_attr` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000163s ]
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013384s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013572s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000541s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000770s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000940s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001036s ]
+
+[ 2015-07-15T22:04:59+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Category/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000125s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000483s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000544s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0037s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `category_attr` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000110s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008094s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008159s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000136s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000181s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000995s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001085s ]
+
+[ 2015-07-15T22:05:07+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Category/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000152s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000735s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000838s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `category_attr` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `category` WHERE ( name = '户外'  ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: INSERT INTO `category` (`name`,`pid`) VALUES ('户外','0') [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000104s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007080s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007184s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000138s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000182s ]
+
+[ 2015-07-15T22:05:08+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Category/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000103s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000897s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000991s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `category_attr` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000102s ]
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009750s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009838s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000279s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000368s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000642s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000758s ]
+
+[ 2015-07-15T22:05:12+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Category/%7B:U('Product/Category/ajax_getSubCid')%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000070s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000397s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000445s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `category_attr` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+ERR: 非法操作:{:U('Product
+
+[ 2015-07-15T22:05:17+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Category/addSub/cid/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000072s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000401s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000452s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `category_attr` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+SQL: SELECT `cid`,`name` FROM `category` WHERE ( cid = 4 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007801s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007860s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000143s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000192s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000470s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000522s ]
+
+[ 2015-07-15T22:05:24+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Category/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000125s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000657s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000748s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `category_attr` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `category` WHERE ( name = '家用电器'  ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: INSERT INTO `category` (`name`,`pid`) VALUES ('家用电器','4') [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000103s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005884s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005947s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000130s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000178s ]
+
+[ 2015-07-15T22:05:25+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Category/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000142s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000612s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000736s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `category_attr` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000187s ]
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011066s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000154s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000204s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000480s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000535s ]
+
+[ 2015-07-15T22:05:27+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Category/%7B:U('Product/Category/ajax_getSubCid')%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000068s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000389s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000438s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `category_attr` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+ERR: 非法操作:{:U('Product
+
+[ 2015-07-15T22:05:28+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Category/%7B:U('Product/Category/ajax_getSubCid')%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000074s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000392s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000449s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `category_attr` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+ERR: 非法操作:{:U('Product
+
+[ 2015-07-15T22:05:31+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Category/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000429s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000482s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `category_attr` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000126s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007768s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007832s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000155s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000206s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000496s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000552s ]
+
+[ 2015-07-15T22:05:32+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Category/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000132s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000568s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000635s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `category_attr` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000103s ]
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009444s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009501s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000136s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000182s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000428s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000476s ]
+
+[ 2015-07-15T22:05:33+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Category/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000071s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000398s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000451s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `category_attr` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000068s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000197s ]
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009777s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009837s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000170s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000220s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000445s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000494s ]
+
+[ 2015-07-15T22:05:33+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Category/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000069s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000398s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000452s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `category_attr` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010498s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010560s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000160s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000209s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000455s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000507s ]
+
+[ 2015-07-15T22:09:42+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Category/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000098s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000584s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000667s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0026s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `category_attr` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000148s ]
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013735s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013808s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000164s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000212s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000521s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000585s ]
+
+[ 2015-07-15T22:09:44+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Category/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000080s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000445s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000505s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `category_attr` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000116s ]
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009967s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010026s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000154s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000205s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000472s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000526s ]
+
+[ 2015-07-15T22:09:46+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Category/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000070s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000588s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000644s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `category_attr` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000203s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010954s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011071s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000437s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000562s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001115s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001209s ]
+
+[ 2015-07-15T22:09:46+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Category/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000080s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000459s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000521s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `category_attr` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000116s ]
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010043s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010099s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000136s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000181s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000426s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000473s ]
+
+[ 2015-07-15T22:09:47+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Category/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000208s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000493s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000560s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `category_attr` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000107s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012111s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012263s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000147s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000195s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000481s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000538s ]
+
+[ 2015-07-15T22:09:53+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Category/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000470s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000638s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `category_attr` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000143s ]
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012692s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012796s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000534s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000621s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000711s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000796s ]
+
+[ 2015-07-15T22:10:01+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Attribute/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000086s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000626s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000721s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `category_attr` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `attribute`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000235s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011356s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011486s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000260s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000326s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000564s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000629s ]
+
+[ 2015-07-15T22:10:05+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Attribute/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000136s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001696s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001898s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `category_attr` [ RunTime:0.0019s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000147s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013774s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013858s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000322s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000461s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000592s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000661s ]
+
+[ 2015-07-15T22:13:44+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Product/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000430s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000486s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0048s ]
+SQL: SHOW COLUMNS FROM `product_details` [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0006s ]
+SQL: SELECT `id`,`name` FROM `brand` LIMIT 1000   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `product` WHERE ( 1  ) LIMIT 20   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000180s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001364s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014889s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014971s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000143s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000190s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000753s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000842s ]
+

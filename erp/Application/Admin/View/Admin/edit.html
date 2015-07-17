@@ -11,9 +11,9 @@
 	<div class="warp">
 		<div class="submenu">
 			<div class="left">
-				<a href="{:U('Admin/Admin/index')}">管理员列表</a>
+				<a href="-{:U('Admin/Admin/index')}-">管理员列表</a>
 				<span>|</span>
-				<a href="{:U('Admin/Admin/add')}">添加管理员</a>
+				<a href="-{:U('Admin/Admin/add')}-">添加管理员</a>
 			</div>
 			<div class="right">
 				<a href="">后退</a>
@@ -22,7 +22,7 @@
 			</div>
 		</div>
 		<div class="content">
-			<form action="{:U('Admin/Admin/operate')}" method="post">
+			<form action="-{:U('Admin/Admin/operate')}-" method="post">
 				<table class="content-table">
 					<tbody>
 						<tr class="title">
@@ -30,15 +30,15 @@
 						</tr>
 						<tr>
 							<td width="10%">用户名：</td>
-							<td>{$oldData.username}</td>
+							<td>-{$oldData.username}-</td>
 						</tr>
 						<tr>
 							<td>所属部门：</td>
 							<td>
 								<select name="department_id">
 									<foreach name="deptList" item="v">
-										<option value="{$v.id}" <if condition="$v['id'] eq $oldData['department_id']">selected="selected"</if> >
-											{$v.name}
+										<option value="-{$v.id}-" <if condition="$v['id'] eq $oldData['department_id']">selected="selected"</if> >
+											-{$v.name}-
 										</option>
 									</foreach>
 								</select>
@@ -49,8 +49,8 @@
 							<td>
 								<select name="role_id">
 									<foreach name="roleList" item="v">
-										<option value="{$v.id}" <if condition="$v['id'] eq $oldData['role_id']">selected="selected"</if> >
-											{$v.name}
+										<option value="-{$v.id}-" <if condition="$v['id'] eq $oldData['role_id']">selected="selected"</if> >
+											-{$v.name}-
 										</option>
 									</foreach>
 								</select>
@@ -58,15 +58,15 @@
 						</tr>
 						<tr>
 							<td width="10%">姓名：</td>
-							<td><input type="text" name="real_name" value="{$oldData.real_name}"></td>
+							<td><input type="text" name="real_name" value="-{$oldData.real_name}-"></td>
 						</tr>
 						<tr>
 							<td width="10%">邮箱：</td>
-							<td><input type="text" name="mail" value="{$oldData.mail}"></td>
+							<td><input type="text" name="mail" value="-{$oldData.mail}-"></td>
 						</tr>
 						<tr>
 							<td width="10%">电话：</td>
-							<td><input type="text" name="phone" value="{$oldData.phone}"></td>
+							<td><input type="text" name="phone" value="-{$oldData.phone}-"></td>
 						</tr>
 						<tr>
 							<td width="10%">是否锁定：</td>
@@ -76,7 +76,7 @@
 							</td>
 						</tr>
 						<tr class="btn">
-							<input type="hidden" name="id" value="{$oldData.id}">
+							<input type="hidden" name="id" value="-{$oldData.id}-">
 							<td><input type="submit" value="修改"></td>
 						</tr>
 					</tbody>

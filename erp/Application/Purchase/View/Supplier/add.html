@@ -6,14 +6,15 @@
 	<link rel="stylesheet" href="__PUBLIC__/Org/Bootstrap/css/Bootstrap.min.css">
 	<link rel="stylesheet" href="__PUBLIC__/Css/public.css">
 	<link rel="stylesheet" href="__PUBLIC__/Css/content.css">
+	<script src="__PUBLIC__/Org/jquery-1.7.2.min.js"></script>
 </head>
 <body>
 	<div class="warp">
 		<div class="submenu">
 			<div class="left">
-				<a href="{:U('Purchase/Supplier/index')}">供应商列表</a>
+				<a href="-{:U('Purchase/Supplier/index')}-">供应商列表</a>
 				<span>|</span>
-				<a href="{:U('Purchase/Supplier/add')}">添加供应商</a>
+				<a href="-{:U('Purchase/Supplier/add')}-">添加供应商</a>
 			</div>
 			<div class="right">
 				<a href="">后退</a>
@@ -22,7 +23,7 @@
 			</div>
 		</div>
 		<div class="content">
-			<form action="{:U('Purchase/Supplier/operate')}" method="post">
+			<form action="-{:U('Purchase/Supplier/operate')}-" method="post">
 				<table class="content-table">
 					<tbody>
 						<tr class="title">
@@ -35,18 +36,18 @@
 						<tr>
 							<td width="10%">经营类别：</td>
 							<td>
-								<select name="kind_id">
-									<option value="-1">请选择</option>
-									<option value="1">综合</option>
-									<option value="2">自有品牌</option>
-								</select>
+								<label>自有品牌<input type="radio" name="kind_id" value="1" checked="checked"></label>&nbsp;&nbsp;&nbsp;
+								<label>综合<input type="radio" name="kind_id" value="2"></label>
 							</td>
 						</tr>
 						<tr>
 							<td>品牌：</td>
-							<td>
+							<td id="brand">
 								<select name="brand_id">
-									<option value="">品牌</option>
+									<option value="-1">请选择</option>
+									<foreach name="brandList" item="v">
+										<option value="-{$v.id}-">-{$v.name}-</option>
+									</foreach>
 								</select>
 							</td>
 						</tr>
@@ -74,5 +75,30 @@
 			</form>
 		</div>
 	</div>
+
+<script type="text/javascript">
+	$('input[type="radio"]').change(function(){
+		// 经营类型，根据选择的类型，变更品牌的选择方式
+		var kindId = $(this).val();
+		// 品牌列表
+		var brandList= -{$brandList|json_encode}-;
+		var str = '';
+		if (1 == kindId){
+			str += '<select name="brand_id">';
+			str += '<option value="-1">请选择</option>';
+			for (var i in brandList){
+				str += '<option value="'+brandList[i].id+'">';
+				str += brandList[i].name + '</option>';
+			}
+		} else {
+			for (var i in brandList){
+				str += brandList[i].name ;
+				str += '<input type="checkbox" name="brand_id[]" value="'+brandList[i].id+'">';
+				str += '&nbsp;&nbsp;&nbsp;';
+			}
+		}
+		$('#brand').empty().append(str);
+	})
+</script>
 </body>
 </html>

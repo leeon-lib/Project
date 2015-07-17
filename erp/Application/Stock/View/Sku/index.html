@@ -12,9 +12,9 @@
 <body>
 	<div class="submenu">
 		<div class="left">
-			<a href="{:U('Stock/Sku/index')}">SKU列表</a>
+			<a href="-{:U('Stock/Sku/index')}-">SKU列表</a>
 			<span>|</span>
-			<a href="{:U('Stock/Sku/add')}">添加SKU</a>
+			<a href="-{:U('Stock/Sku/add')}-">添加SKU</a>
 		</div>
 		<div class="right">
 			<a href="">后退</a>
@@ -24,7 +24,7 @@
 	</div>
 	<div class="content">
 		<div class="search">
-			<form action="{:U('Stock/Sku/index')}" method="post">
+			<form action="-{:U('Stock/Sku/index')}-" method="post">
 				<table class="search-table">
 					<tr>
 						<td width="5%">SKU ID：</td>
@@ -33,8 +33,18 @@
 						<td width="10%"><input type="text" name="goods"></td>
 						<td width="5%">尺码：</td>
 						<td width="10%"><input type="text" name="size"></td>
+					</tr>
+					<tr>
 						<td width="5%">条形码：</td>
 						<td width="10%"><input type="text" name="bar_code"></td>
+						<td>所属品牌：</td>
+						<td>
+							<select name="brand_id">
+								<option value="">--不限--</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
 						<td width="5%"><input type="submit" value="搜索"></td>
 					</tr>
 				</table>
@@ -49,26 +59,29 @@
 					<td width="15%" align="center">条形码</td>
 					<td width="10%" align="center">添加时间</td>
 					<td width="10%" align="center">修改时间</td>
+					<td width="10%" align="center">操作人</td>
 					<td width="10%" align="center">管理操作</td>
 				</tr>
 			</thead>
 			<tbody>
-				<foreach name="supplierList" item="v">
+				<foreach name="skuList" item="v">
 					<tr>
-						<td align="center">{$v.id}</td>
-						<td align="center">{$v.name}</td>
+						<td align="center">-{$v.id}-</td>
+						<td align="center">-{$v.goods}-</td>
+						<td align="center">-{$v.size}-</td>
+						<td align="center">-{$v.bar_code}-</td>
 						<td align="center">
-							<eq name="v['kind_id']" value="1">综合</eq>
-							<eq name="v['kind_id']" value="2">自有品牌</eq>
+							<eq name="v.add_date" value="0">
+								－－－
+							<else />
+								-{$v.add_date|date='Y-m-d H:i:s',###}-
+							</eq>
 						</td>
-						<td align="center">{$v.brand_id}</td>
-						<td align="center">{$v.manager}</td>
-						<td align="center">{$v.mobile}</td>
-						<td align="center">{$v.qq}</td>
-						<td align="center">{$v.email}</td>
+						<td align="center">-{$v.update_date}-</td>
+						<td align="center">-{$v.admin_name}-</td>
 						<td align="center">
-							<a href="{:U('Purchase/Supplier/edit',array('id'=>$v['id']))}">编辑</a>
-							<a href="{:U('Purchase/Supplier/del',array('id'=>$v['id']))}">删除</a>
+							<a href="-{:U('Stock/Sku/edit',array('id'=>$v['id']))}-">编辑</a>
+							<a href="-{:U('Stock/Sku/del',array('id'=>$v['id']))}-">删除</a>
 						</td>
 					</tr>
 				</foreach>

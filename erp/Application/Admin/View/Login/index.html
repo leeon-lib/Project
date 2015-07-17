@@ -24,7 +24,7 @@
                     <span id="error_logo" class="error_logo"></span>
                     <span id="err_m" class="err_m">12</span>
                 </div>
-                <form action="{:U('Admin/Login/logIn')}" method="post" class="form-inline hd-form" autocomplete="on">
+                <form action="-{:U('Admin/Login/logIn')}-" method="post" class="form-inline hd-form" autocomplete="on">
                     <div class="input">
                         <div class="inputOuter">
                             <input type="text" name="username" title="帐号" placeholder="用户名" class="empty w300"/>
@@ -42,7 +42,7 @@
                     </div>
 
                     <div class="verifyimgArea">
-                        <img src="{:U('Admin/Login/showCode')}" class="code" style="cursor: pointer;float:left;"
+                        <img src="-{:U('Admin/Login/showCode')}-" class="code" style="cursor: pointer;float:left;"
                              onclick=""/>
                         <a href="javascript:void(0);">看不清，换一张</a>
                     </div>

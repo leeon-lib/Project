@@ -10,9 +10,9 @@
 <body>
 	<div class="submenu">
 		<div class="left">
-			<a href="{:U('Admin/Role/index')}">角色列表</a>
+			<a href="-{:U('Admin/Role/index')}-">角色列表</a>
 			<span>|</span>
-			<a href="{:U('Admin/Role/add')}">添加角色</a>
+			<a href="-{:U('Admin/Role/add')}-">添加角色</a>
 		</div>
 		<div class="right">
 			<a href="">后退</a>
@@ -33,22 +33,23 @@
 			<tbody>
 				<foreach name="roleList" item="v">
 					<tr>
-						<td align="center">{$v.id}</td>
-						<td align="center">{$v.name}</td>
+						<td align="center">-{$v.id}-</td>
+						<td align="center">-{$v.name}-</td>
 						<td align="center">
 							<eq name="v['department_id']" value="0">
 								－－－
 							<else />
 								<foreach name="deptList" item="val">
 									<if condition="$val['id'] eq $v['department_id']">
-										{$val.name}
+										-{$val.name}-
 									</if>
 								</foreach>
 							</eq>
 						</td>
 						<td align="center">
-							<a href="{:U('Admin/Role/edit',array('id'=>$v['id']))}">编辑</a>
-							<a href="{:U('Admin/Role/del',array('id'=>$v['id']))}">删除</a>
+							<a href="-{:U('Admin/Role/edit',array('id'=>$v['id']))}-">权限设置</a>
+							<a href="-{:U('Admin/Role/edit',array('id'=>$v['id']))}-">编辑</a>
+							<a href="-{:U('Admin/Role/del',array('id'=>$v['id']))}-">删除</a>
 						</td>
 					</tr>
 				</foreach>

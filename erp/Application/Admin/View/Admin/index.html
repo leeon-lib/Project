@@ -10,9 +10,9 @@
 <body>
 	<div class="submenu">
 		<div class="left">
-			<a href="{:U('Admin/Admin/index')}">管理员列表</a>
+			<a href="-{:U('Admin/Admin/index')}-">管理员列表</a>
 			<span>|</span>
-			<a href="{:U('Admin/Admin/add')}">添加管理员</a>
+			<a href="-{:U('Admin/Admin/add')}-">添加管理员</a>
 		</div>
 		<div class="right">
 			<a href="">后退</a>
@@ -22,7 +22,7 @@
 	</div>
 	<div class="content">
 		<div class="search">
-			<form action="{:U('Admin/Admin/index')}" method="post">
+			<form action="-{:U('Admin/Admin/index')}-" method="post">
 				<table class="search-table">
 					<tr>
 						<td width="8%">管理员ID：</td>
@@ -42,7 +42,7 @@
 							<select name="department_id">
 								<option value="-1">-- 不限 --</option>
 								<foreach name="deptList" item="v">
-									<option value="{$v.id}">{$v.name}</option>
+									<option value="-{$v.id}-">-{$v.name}-</option>
 								</foreach>
 							</select>
 						</td>
@@ -51,7 +51,7 @@
 							<select name="role_id">
 								<option value="-1">-- 不限 --</option>
 								<foreach name="roleList" item="v">
-									<option value="{$v.id}">{$v.name}</option>
+									<option value="-{$v.id}-">-{$v.name}-</option>
 								</foreach>
 							</select>
 						</td>	
@@ -78,30 +78,30 @@
 			<tbody>
 				<foreach name="adminList" item="v">
 					<tr>
-						<td align="center">{$v.id}</td>
-						<td align="center">{$v.username}</td>
-						<td align="center">{$v.real_name}</td>
-						<td align="center">{$v.mail}</td>
-						<td align="center">{$v.phone}</td>
-						<td align="center">{$v.dept_name}</td>
-						<td align="center">{$v.role_name}</td>
+						<td align="center">-{$v.id}-</td>
+						<td align="center">-{$v.username}-</td>
+						<td align="center">-{$v.real_name}-</td>
+						<td align="center">-{$v.mail}-</td>
+						<td align="center">-{$v.phone}-</td>
+						<td align="center">-{$v.dept_name}-</td>
+						<td align="center">-{$v.role_name}-</td>
 						<td align="center">
 							<eq name="v['is_lock']" value="0">
-								<a href="{:U('Admin/Admin/changeStatus',array('id'=>$v['id']))}">√</a>
+								<a href="-{:U('Admin/Admin/changeStatus',array('id'=>$v['id']))}-">√</a>
 							<else/>
-								<a href="{:U('Admin/Admin/changeStatus',array('id'=>$v['id']))}" style="color:red;">X</a>
+								<a href="-{:U('Admin/Admin/changeStatus',array('id'=>$v['id']))}-" style="color:red;">X</a>
 							</eq>
 						</td>
 						<td align="center">
 							<neq name="v.last_login" value="0">
-								{$v.last_login|date='Y-m-d H:i:s',###}
+								-{$v.last_login|date='Y-m-d H:i:s',###}-
 							<else />
 								－－－
 							</neq>
 						</td>
 						<td align="center">
-							<a href="{:U('Admin/Admin/edit',array('id'=>$v['id']))}">编辑</a>
-							<a href="{:U('Admin/Admin/del',array('id'=>$v['id']))}">删除</a>
+							<a href="-{:U('Admin/Admin/edit',array('id'=>$v['id']))}-">编辑</a>
+							<a href="-{:U('Admin/Admin/del',array('id'=>$v['id']))}-">删除</a>
 						</td>
 					</tr>
 				</foreach>

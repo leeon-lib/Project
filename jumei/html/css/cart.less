@@ -1,0 +1,453 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 12px;
+    font-family: Tahoma,Geneva,sans-serif;
+}
+a{
+    text-decoration: none;
+}
+li,ol{
+    list-style: none;
+}
+.fl{float: left;}
+.fr{float: right;}
+h1,h2,h3,h4,h5,h6{
+    font-weight: 400
+}
+div.clear{
+    clear: both;
+}
+@color:#6C6C6C;
+@hoverColor:#ED155B;
+//购物车头部
+div{
+    .cart_top{
+        position: relative;
+        height: 32px;
+        line-height: 32px;
+        color: #999;
+        width: 960px;
+        margin: 0px auto;
+        .user_box{
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            a{
+                color: @hoverColor;
+                &.out,&.query{
+                    color: #999;
+                }
+            }
+            i.tips{
+                font-style: normal;
+            }
+        }
+    }
+    .cart_header_box{
+        border-bottom: 2px solid #E5E5E5;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+        padding-bottom: 15px;
+        .cart_header{
+            width: 960px;
+            margin: 0 auto;
+            height: auto;
+            overflow: hidden;
+            .order_path_1{
+                background: url(../images/order_path.jpg) no-repeat;
+            }
+            .order_path_2{
+                background: url(../images/order_path.jpg) no-repeat 0px -50px;
+            }
+            .order_path{
+                width: 392px;
+                height: 50px;
+            }
+        }
+    }
+}
+//购物车头部
+
+//购物车主体部分
+#container{
+    width: auto;
+    min-height: 450px;
+    margin: 0px auto auto;
+    padding: 15px 0px;
+    background: #fff;
+    #group_show{
+        width: 960px;
+        margin: 0px auto;
+//      空购物车的样式
+        .cart_empty{
+            padding: 50px 70px 70px;
+            .cart_empty_right{
+                margin-left: 50px;
+                h2{
+                    margin-bottom: 15px;
+                    font-size: 28px;
+                    font-weight: 400;
+                    color: #C9C9C9;
+                }
+                p.cart_empty_backtip{
+                    vertical-align: top;
+                    line-height: 33px;
+                    height: 33px;
+                    color: #999;
+                    a.btn{
+                        width: 98px;
+                        height: 32px;
+                        line-height: 32px;
+                        font-size: 16px;
+                        display: inline-block;
+                        color: #fff;
+                        text-align: center;
+                        background: transparent -moz-linear-gradient(center top , #FA417D, #F0145C) repeat scroll 0% 0%;
+                        font-family: "Microsoft YaHei","Microsoft JhengHei",STHeiti,MingLiu;
+                    }
+                }
+            }
+        }
+//      空购物车的样式
+//      购物车有东西的样式
+        .content_header{
+            margin-top: 5px;
+            .icon_small{
+                background: url(../images/icons.png) no-repeat -8px -5px;
+                vertical-align: -5px;
+                display: inline-block;
+                width: 18px;
+                height: 18px;
+                line-height: 18px;
+                font-style: normal;
+            }
+            .cart_timer_wrapper{
+                height: 24px;
+                line-height: 24px;
+                font-size: 14px;
+                span.cart_timer_counting{
+                    span.cart_timer_text{
+                        color: @hoverColor;
+                    }
+                }
+            }
+            .top_banner{
+                float: right;
+                height: 30px;
+                ul.header_icons{
+                    li{
+                        float: left;
+                        margin-left: 10px;
+                        display: inline;
+                        span{
+                            float: left;
+                            display: inline-block;
+                            height: 25px;
+                            line-height: 25px;
+                            color: #000;
+                            font-size: 12px;
+                            text-decoration: none;
+                            overflow: hidden;
+                            cursor: default;
+                            i.header_icon{
+                                float: left;
+                                width: 26px;
+                                height: 25px;
+                                margin-right: 5px;
+                                background: transparent url(../images/header_sprites1.png) no-repeat scroll 0% 0%;
+                                &.icon_zhenpin{
+                                    background-position: 0px -107px;
+                                }
+                                &.icon_tuihuo{
+                                    background-position: 0px -142px;
+                                }
+                                &.icon_baoyou{
+                                    background-position: 0px -177px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .common_shippment{
+                padding-top: 5px;
+                color: #FA8801;
+                clear: both;
+                i.icon_baoyou{
+                    width: 35px;
+                    padding-left: 5px;
+                    background-position: -2px -86px;
+                    position: relative;
+                    top: -5px;
+                }
+            }
+            .groups_wrapper{
+                table.cart_group_item {
+                    width: 100%;
+                    margin: 10px 0px 0px;
+                    font-size: 12px;
+                    border: 1px solid #EEE;
+                    border-collapse: collapse;
+                    border-spacing: 0px;
+                    font-size: 12px;
+                    th {
+                        height: 34px;
+                        padding: 0px;
+                        text-align: center;
+                        font-weight: 400;
+                        border-bottom: 1px solid #EEE;
+                        background: #FAFAFA none repeat scroll 0% 0%;
+                        color: #000;
+                        &.cart_overview{
+                            width: 56%;
+                        }
+                        &.cart_price,&.cart_num{
+                            width: 12%;
+                        }
+                        &.cart_total,&.cart_option{
+                            width: 10%;
+                        }
+                        .cart_group_header{
+                            height: 34px;
+                            line-height: 34px;
+                            text-align: left;
+                            border-left: 5px solid #ED145B;
+                            input.cart_group_selector{
+                                margin: 0px 0px 0px 5px;
+                            }
+                            h2{
+                                margin: 0px 5px 0px 2px;
+                                padding: 0px;
+                                font-size: 12px;
+                                font-weight: 700;
+                                display: inline-block;
+                            }
+                        }
+                    }
+                    .cart_item_desc{
+                        input.cart_item_selector{
+                            float: left;
+                            margin: 40px 0px 0px 8px;
+                        }
+                        .cart_item_desc_wrapper{
+                            margin: 0px 0px 0px 30px;
+                            padding: 20px 0px 0px 11px;
+                            width: 100%;
+                            a.cart_item_pic{
+                                position: relative;
+                                float: left;
+                                width: 60px;
+                                height: 60px;
+                                margin: 0px 10px 20px 0px;
+                                overflow: hidden;
+                            }
+                            a.cart_item_link{
+                                display: inline-block;
+                                max-width: 250px;
+                                height: 18px;
+                                line-height: 16px;
+                                color: #000;
+                            }
+                            .sku_info{
+                                height: 22px;
+                                line-height: 22px;
+                                color: #999;
+                                text-align: left;
+                            }
+                        }
+                    }
+                    .cart_item_price,.cart_item_num,.cart_item_option {
+                        height: 60px;
+                        padding: 20px;
+                        text-align: center;
+                        a.delete_item{
+                            background-position: -7px -27px;
+                            &:hover{
+                                background-position: -36px -27px;
+                            }
+                        }
+                        p.jumei_price{
+                            margin-bottom: 3px;
+                            font-weight: 700;
+                            font-family: Arial,Helvetica;
+                        }
+                        p.market_price{
+                            color: #999;
+                            text-decoration: line-through;
+                            font-family: Arial,Helvetica;
+                        }
+                        .item_quantity_editer{
+                            width: 74px;
+                            .decrease_one{
+                                float: left;
+                                width: 20px;
+                                height: 20px;
+                                line-height: 20px;
+                                text-align: center;
+                                color: #CCC;
+                                cursor: not-allowed;
+                                font-size: 16px;
+                                border: 1px solid #E0E0E0;
+                                cursor: pointer;
+                                background: transparent url(../images/cart_num_editer_bg.jpg) repeat-x scroll 0px 0px;
+                                -moz-user-select: none;
+                            }
+                            .item_quantity{
+                                width: 30px;
+                                float: left;
+                                height: 20px;
+                                line-height: 20px;
+                                text-align: center;
+                                border-width: 1px 0px;
+                                border-style: solid none;
+                                -moz-border-top-colors: none;
+                                -moz-border-right-colors: none;
+                                -moz-border-bottom-colors: none;
+                                -moz-border-left-colors: none;
+                                border-image: none;
+                                border-color: #E0E0E0;
+                            }
+                            .increase_one {
+                                float: left;
+                                width: 20px;
+                                height: 20px;
+                                line-height: 20px;
+                                text-align: center;
+                                color: #666;
+                                font-size: 16px;
+                                border: 1px solid #E0E0E0;
+                                cursor: pointer;
+                                background: transparent url(../images/cart_num_editer_bg.jpg) repeat-x scroll 0px 0px;
+                                -moz-user-select: none;
+                            }
+                        }
+                    }
+                    .cart_item_total{
+                        height: 60px;
+                        padding: 0px;
+                        text-align: center;
+                        .item_total_price{
+                            margin-bottom: 3px;
+                            color: @hoverColor;
+                            font-weight: 700;
+                            font-family: Arial,Helvetica;
+                        }
+                    }
+                    .group_total_price{
+                        margin-right: 10px;
+                        color: @hoverColor;
+                        font-weight: 700;
+                        font-size: 14px;
+                        font-family: "Microsoft YaHei","Microsoft JhengHei",STHeiti,MingLiu;
+                    }
+                    tfoot tr{
+                        line-height: 30px;
+                        text-align: right;
+                        color: #999;
+                        background: #FAFAFA none repeat scroll 0% 0%;
+                    }
+                    .cart_item {
+                        border-collapse: collapse;
+                        border-bottom: 1px solid #EEEEEE;
+                    }
+                }
+            }
+        }
+        .common_handler{
+            width: 958px;
+            height: 48px;
+            margin: 10px 0px;
+            line-height: 48px;
+            border: 1px solid #EEE;
+            background: #FAFAFA none repeat scroll 0% 0%;
+            .right_handler{
+                height: 100%;
+                .total_amount,.total_price{
+                    color: @hoverColor;
+                    font-size: 14px;
+                    font-weight: 700;
+                    font-family: "Microsoft YaHei","Microsoft JhengHei",STHeiti,MingLiu;
+                }
+                .total_price{
+                    font-size: 18px;
+                }
+                #go_to_order{
+                    width: 145px;
+                    height: 100%;
+                    margin: 0px 0px 0px 10px;
+                    font-size: 18px;
+                    font-family: "Microsoft YaHei","Microsoft JhengHei",STHeiti,MingLiu;
+                    display: inline-block;
+                    color: #FFF;
+                    text-align: center;
+                    text-decoration: none;
+                    background: transparent -moz-linear-gradient(center top , #FA417D, #F0145C) repeat scroll 0% 0%;
+                }
+            }
+        }
+//      购物车有东西的样式
+    }
+}
+//购物车主体部分
+
+//购物车底部
+#footer_container {
+    overflow: hidden;
+    margin-top: 0px;
+    border-top: 1px solid #DDD;
+    background: #F2F2F2;
+    #footer_copyright{
+        text-align: center;
+        line-height: 20px;
+        padding-bottom: 20px;
+        color: #000;
+        width: 960px;
+        margin: 0px auto;
+        overflow: hidden;
+        p{
+            &.footer_copy_con{
+                padding: 10px 0;
+                a{
+                    color: #000;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+            .footer_copy_logo {
+                    width: 127px;
+                    height: 50px;
+                    overflow: hidden;
+                    border-bottom: 1px solid #D7D7D7;
+                    display: inline-block;
+                    margin: 0px 4px;
+                    background: transparent url(../images/header_corn_new_v2.png) no-repeat scroll center top;
+                    &.logo01 {
+                        background-position: 0px -168px;
+                    }
+                    &.logo02 {
+                        background-position: 0px -219px;
+                    }
+                    &.logo03 {
+                        background-position: 0px -270px;
+                    }
+                    &.logo04 {
+                        background-position: 0px -321px;
+                    }
+                    &.logo05 {
+                        background-position: 0px -372px;
+                    }
+                }
+        }  
+    }
+}
+
+//购物车底部
+
+
+
+
+
+

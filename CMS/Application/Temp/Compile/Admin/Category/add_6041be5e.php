@@ -5,8 +5,8 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
     <title>分类管理</title>
-    <link rel="stylesheet" type="text/css" href="http://127.0.0.1/CMS/Static/hdjs/hdjs.css">
-    <link rel="stylesheet" type="text/css" href="http://127.0.0.1/CMS/Static/Bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1/Project/CMS/Static/hdjs/hdjs.css">
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1/Project/CMS/Static/Bootstrap/css/bootstrap.css">
 </head>
 <body>
 <div class="wrap">

@@ -10,9 +10,9 @@
 <body>
 	<div class="submenu">
 		<div class="left">
-			<a href="{:U('Admin/Department/index')}">部门列表</a>
+			<a href="-{:U('Admin/Department/index')}-">部门列表</a>
 			<span>|</span>
-			<a href="{:U('Admin/Department/add')}">添加部门</a>
+			<a href="-{:U('Admin/Department/add')}-">添加部门</a>
 		</div>
 		<div class="right">
 			<a href="">后退</a>
@@ -33,22 +33,22 @@
 			<tbody>
 				<foreach name="deptList" item="v">
 					<tr>
-						<td align="center">{$v.id}</td>
-						<td align="center">{$v.name}</td>
+						<td align="center">-{$v.id}-</td>
+						<td align="center">-{$v.name}-</td>
 						<td align="center">
 							<eq name="v['pid']" value="0">
 								－－－
 							<else />
 								<foreach name="deptList" item="val">
 									<if condition="$val['id'] eq $v['pid']">
-										{$val.name}
+										-{$val.name}-
 									</if>
 								</foreach>
 							</eq>
 						</td>
 						<td align="center">
-							<a href="{:U('Admin/Department/edit',array('id'=>$v['id']))}">编辑</a>
-							<a href="{:U('Admin/Department/del',array('id'=>$v['id']))}">删除</a>
+							<a href="-{:U('Admin/Department/edit',array('id'=>$v['id']))}-">编辑</a>
+							<a href="-{:U('Admin/Department/del',array('id'=>$v['id']))}-">删除</a>
 						</td>
 					</tr>
 				</foreach>

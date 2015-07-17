@@ -116,12 +116,12 @@
     $('.setAttr').click(function(){
     	var cid = $('select[name=category_cid] option[selected]').val();
     	var str = '';
-    	if (-1 == cid) {
+    	if (1 == cid) {
     		str = '<tr align="center" class="notice"><td colspan="10">请先选择商品分类！</td></tr>';
     	} else {
     		$.ajax({
                 type: "post",
-                url: "<?php echo U('Product/Product/ajax_getAttr');?>",
+                url: "{:U('Product/Product/ajax_getAttr')}",
                 data: {cid: cid},
                 dataType: "json",
                 async: false,

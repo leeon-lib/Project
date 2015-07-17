@@ -11,9 +11,9 @@
 	<div class="warp">
 		<div class="submenu">
 			<div class="left">
-				<a href="{:U('Stock/Sku/index')}">SKU列表</a>
+				<a href="-{:U('Stock/Sku/index')}-">SKU列表</a>
 				<span>|</span>
-				<a href="{:U('Stock/Sku/add')}">添加SKU</a>
+				<a href="-{:U('Stock/Sku/add')}-">添加SKU</a>
 			</div>
 			<div class="right">
 				<a href="">后退</a>
@@ -22,7 +22,7 @@
 			</div>
 		</div>
 		<div class="content">
-			<form action="{:U('Stock/Sku/operate')}" method="post">
+			<form action="-{:U('Stock/Sku/operate')}-" method="post">
 				<table class="content-table">
 					<tbody>
 						<tr class="title">

@@ -165,63 +165,65 @@ class ProductController extends AuthController
         $markedPrice = (int)I('post.marked_price');
         $productId = (int)I('post.product_id', 'intval', 0);
         // 表单数据验证
-        // if (!$this->productModel->create())
-        // {
-        //     $this->error($this->productModel->getError());
-        // }
+        if (!$this->productModel->create())
+        {
+            $this->error($this->productModel->getError());
+        }
         // 组合数据
         // 请勿改变数组内容顺序，修改分支下需要按顺序进行数组比对
         $argv = array(
             'name'  => $name,
             'goods' => $goods,
             'manuf_date' => strtotime($manufDate),
-            'marked_price' => round($markedPrice, 3),
+            'marked_price' => sprintf("%.3f", $markedPrice),
             'brand_id' => $brandId,
             'category_cid' => $categoryCid
         );
-        // 添加与修改
+        
         if (0 == $productId)
-        {   
+        {//添加
             // 验证数据是否重复
             if ($this->productModel->isExists($name))
             {
                 $this->error('操作失败，该商品名称已存在');
+            } else {
+                $argv['add_time'] = time();
+                $keyPid = $this->productModel->doInsert($argv);
+                if (false == $keyPid)
+                {
+                    $this->error($this->productModel->error);
+                }
+                // 如果有上传文件，则执行图片上传与缩略
+                // if (4 != $_FILES['pics']['error'])
+                // {
+                //     $this->upload($keyPid);
+                // }
+                // 属性设置
+                if (isset($_POST['attr']))
+                {
+                    $this->setAttr($keyPid);
+                }
+                $this->success('添加成功','index');
             }
-            $argv['add_time'] = time();
-            $keyPid = $this->productModel->doInsert($argv);
-            if (false == $keyPid)
-            {
-                $this->error($this->productModel->error);
-            }
-            // 如果有上传文件，则执行图片上传与缩略
-            if (4 != $_FILES['pics']['error'])
-            {
-                $this->upload($keyPid);
-            }
-            // 属性设置
-            if (isset($_POST['attr']))
-            {
-                $this->setAttr($keyPid);
-            }
-            $this->success('添加成功','index');
-        } else {
+        } else {//修改
             // 获取旧数据，用于与用户提交的数据进行比对，给予不同提示
-            $oldData = $this->productModel->getOne($productId, ['id,add_date']);p($oldData);p($argv);die;
+            $oldData = $this->productModel->getOne($productId, ['id,add_date']);
             if (!array_diff($oldData, $argv))
             {
                 $this->success('您未作任何修改', U('index'));
-            }echo 11;die;
-            $this->productModel->doUpdate($argv, $productId);
-            // 如果有上传文件，则执行图片上传与缩略
-            if (isset($_FILES['pics']) && (4 != $_FILES['pics']['error']))
-            {
-                $this->upload($productId);
+            } else {
+                $this->productModel->doUpdate($argv, $productId);
+                // 如果有上传文件，则执行图片上传与缩略
+                if (isset($_FILES['pics']) && (4 != $_FILES['pics']['error']))
+                {
+                    $this->upload($productId);
+                }
+                if (isset($_POST['attr']))
+                {
+                    $this->setAttr($productId);
+                }
+                $this->success('修改成功','index');
             }
-            if (isset($_POST['attr']))
-            {
-                $this->setAttr($productId);
-            }
-            $this->success('修改成功','index');
         }
     }
 

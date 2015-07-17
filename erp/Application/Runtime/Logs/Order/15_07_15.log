@@ -1,0 +1,359 @@
+[ 2015-07-15T22:10:31+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Order/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000071s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000479s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000542s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: name /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/Template/TagLib/Cx.class.php 第 112 行.
+NOTIC: [8] Undefined index: item /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/Template/TagLib/Cx.class.php 第 113 行.
+NOTIC: [8] Undefined index: name /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/Template/TagLib/Cx.class.php 第 408 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+
+[ 2015-07-15T22:10:31+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Order/Order/make.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000073s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000422s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000478s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000118s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000252s ]
+NOTIC: [8] Undefined variable: cateInfo /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Order/5597f3145f1cf6f42f93ec9e5a39416d.php 第 53 行.
+NOTIC: [8] Undefined variable: brandInfo /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Order/5597f3145f1cf6f42f93ec9e5a39416d.php 第 62 行.
+NOTIC: [8] Undefined variable: brandInfo /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Order/5597f3145f1cf6f42f93ec9e5a39416d.php 第 71 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014641s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014819s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000344s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000418s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000474s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000530s ]
+
+[ 2015-07-15T22:10:32+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Order/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000114s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000517s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000578s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: name /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/Template/TagLib/Cx.class.php 第 112 行.
+NOTIC: [8] Undefined index: item /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/Template/TagLib/Cx.class.php 第 113 行.
+NOTIC: [8] Undefined index: name /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/Template/TagLib/Cx.class.php 第 408 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000155s ]
+
+[ 2015-07-15T22:11:39+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Order/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000071s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000401s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000454s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: item /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/Template/TagLib/Cx.class.php 第 113 行.
+NOTIC: [8] Undefined index: name /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/Template/TagLib/Cx.class.php 第 408 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000229s ]
+
+[ 2015-07-15T22:11:40+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Order/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000446s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000504s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: item /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/Template/TagLib/Cx.class.php 第 113 行.
+NOTIC: [8] Undefined index: name /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/Template/TagLib/Cx.class.php 第 408 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000118s ]
+
+[ 2015-07-15T22:11:40+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Order/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000130s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000755s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000857s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: item /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/Template/TagLib/Cx.class.php 第 113 行.
+NOTIC: [8] Undefined index: name /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/Template/TagLib/Cx.class.php 第 408 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000116s ]
+
+[ 2015-07-15T22:11:50+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Order/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000150s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001719s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001910s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: item /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/Template/TagLib/Cx.class.php 第 113 行.
+NOTIC: [8] Undefined index: name /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/Template/TagLib/Cx.class.php 第 408 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000262s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000547s ]
+
+[ 2015-07-15T22:11:51+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Order/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000069s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000777s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000904s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: item /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/Template/TagLib/Cx.class.php 第 113 行.
+NOTIC: [8] Undefined index: name /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/Template/TagLib/Cx.class.php 第 408 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000161s ]
+
+[ 2015-07-15T22:12:58+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Order/Order/make.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000151s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000744s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000896s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000158s ]
+NOTIC: [8] Undefined variable: cateInfo /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Order/5597f3145f1cf6f42f93ec9e5a39416d.php 第 53 行.
+NOTIC: [8] Undefined variable: brandInfo /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Order/5597f3145f1cf6f42f93ec9e5a39416d.php 第 62 行.
+NOTIC: [8] Undefined variable: brandInfo /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Order/5597f3145f1cf6f42f93ec9e5a39416d.php 第 71 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011592s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011670s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000165s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000212s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000456s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000506s ]
+
+[ 2015-07-15T22:12:58+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Order/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000070s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000398s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000451s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: name /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/Template/TagLib/Cx.class.php 第 408 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000157s ]
+
+[ 2015-07-15T22:12:59+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Order/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000160s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000504s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000576s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: name /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/Template/TagLib/Cx.class.php 第 408 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000150s ]
+
+[ 2015-07-15T22:12:59+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Order/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000128s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000455s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000514s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: name /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/Template/TagLib/Cx.class.php 第 408 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000110s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000219s ]
+
+[ 2015-07-15T22:13:00+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Order/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000079s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000499s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000566s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: name /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/Template/TagLib/Cx.class.php 第 408 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000196s ]
+
+[ 2015-07-15T22:13:34+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Order/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000226s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001046s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001181s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000351s ]
+NOTIC: [8] Undefined variable: cateInfo /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Order/fd6c1fbcfc8b404d0e533d1b0a2b33f7.php 第 58 行.
+NOTIC: [8] Undefined variable: brandInfo /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Order/fd6c1fbcfc8b404d0e533d1b0a2b33f7.php 第 65 行.
+NOTIC: [8] Undefined variable: productList /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Order/fd6c1fbcfc8b404d0e533d1b0a2b33f7.php 第 110 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014334s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014418s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000354s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000438s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000582s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000646s ]
+
+[ 2015-07-15T22:13:35+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Order/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000659s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000771s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000249s ]
+NOTIC: [8] Undefined variable: cateInfo /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Order/fd6c1fbcfc8b404d0e533d1b0a2b33f7.php 第 58 行.
+NOTIC: [8] Undefined variable: brandInfo /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Order/fd6c1fbcfc8b404d0e533d1b0a2b33f7.php 第 65 行.
+NOTIC: [8] Undefined variable: productList /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Order/fd6c1fbcfc8b404d0e533d1b0a2b33f7.php 第 110 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013887s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013989s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000257s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000317s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000566s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000642s ]
+
+[ 2015-07-15T22:13:35+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Order/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000069s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000394s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000446s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000116s ]
+NOTIC: [8] Undefined variable: cateInfo /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Order/fd6c1fbcfc8b404d0e533d1b0a2b33f7.php 第 58 行.
+NOTIC: [8] Undefined variable: brandInfo /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Order/fd6c1fbcfc8b404d0e533d1b0a2b33f7.php 第 65 行.
+NOTIC: [8] Undefined variable: productList /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Order/fd6c1fbcfc8b404d0e533d1b0a2b33f7.php 第 110 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012413s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012464s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000137s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000183s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000421s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000479s ]
+
+[ 2015-07-15T22:13:35+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Order/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000422s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000478s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000143s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000534s ]
+NOTIC: [8] Undefined variable: cateInfo /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Order/fd6c1fbcfc8b404d0e533d1b0a2b33f7.php 第 58 行.
+NOTIC: [8] Undefined variable: brandInfo /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Order/fd6c1fbcfc8b404d0e533d1b0a2b33f7.php 第 65 行.
+NOTIC: [8] Undefined variable: productList /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Order/fd6c1fbcfc8b404d0e533d1b0a2b33f7.php 第 110 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014118s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014189s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000248s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000312s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000622s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000684s ]
+
+[ 2015-07-15T22:13:50+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Order/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000107s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000569s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000635s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000179s ]
+NOTIC: [8] Undefined variable: cateInfo /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Order/fd6c1fbcfc8b404d0e533d1b0a2b33f7.php 第 58 行.
+NOTIC: [8] Undefined variable: brandInfo /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Order/fd6c1fbcfc8b404d0e533d1b0a2b33f7.php 第 65 行.
+NOTIC: [8] Undefined variable: productList /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Order/fd6c1fbcfc8b404d0e533d1b0a2b33f7.php 第 110 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014582s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014648s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000243s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000297s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000493s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000550s ]
+
+[ 2015-07-15T22:14:30+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Order/Order/make.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000116s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000630s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000733s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000189s ]
+NOTIC: [8] Undefined variable: cateInfo /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Order/5597f3145f1cf6f42f93ec9e5a39416d.php 第 53 行.
+NOTIC: [8] Undefined variable: brandInfo /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Order/5597f3145f1cf6f42f93ec9e5a39416d.php 第 62 行.
+NOTIC: [8] Undefined variable: brandInfo /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Order/5597f3145f1cf6f42f93ec9e5a39416d.php 第 71 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010945s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011049s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000434s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000605s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000884s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000968s ]
+
+[ 2015-07-15T22:14:35+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Order/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000104s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000532s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000601s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000094s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000266s ]
+NOTIC: [8] Undefined variable: cateInfo /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Order/fd6c1fbcfc8b404d0e533d1b0a2b33f7.php 第 58 行.
+NOTIC: [8] Undefined variable: brandInfo /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Order/fd6c1fbcfc8b404d0e533d1b0a2b33f7.php 第 65 行.
+NOTIC: [8] Undefined variable: productList /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Order/fd6c1fbcfc8b404d0e533d1b0a2b33f7.php 第 110 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013653s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013737s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000156s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000214s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000443s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000494s ]
+

@@ -9,11 +9,13 @@ use Common\Controller\AuthController;
 class SupplierController extends AuthController
 {
 	private $model = null;
+	private $brandModel = null;
 
 	public function __construct()
 	{
 		parent::__construct();
 		$this->model = D('Supplier');
+		$this->brandModel = D('Product/Brand');
 	}
 
 
@@ -22,7 +24,9 @@ class SupplierController extends AuthController
 	 */
 	public function index()
 	{
+		// $supplierList = $this->model->relation(true)->find();
 		$supplierList = $this->model->getList();
+		// p($supplierList);
 		$this->assign('supplierList', $supplierList);
 		$this->display();
 	}
@@ -32,8 +36,8 @@ class SupplierController extends AuthController
 	 */
 	public function add()
 	{
-		$cityList = C('CITY_LIST');
-		$this->assign('cityList', $cityList);
+		$brandList = $this->brandModel->getList(['field'=>'id,name']);
+		$this->assign('brandList', $brandList);
 		$this->display();
 	}
 
@@ -42,9 +46,9 @@ class SupplierController extends AuthController
 	 */
 	public function edit()
 	{
-		$id = (int)Q('get.id');
-		$oldInfo = $this->model->getOne($id);
-		$this->assign('oldInfo', $oldInfo);
+		$id = (int)I('get.id');
+		$oldDate = $this->model->getOne($id);
+		$this->assign('oldDate', $oldDate);
 		$this->display();
 	}
 
@@ -54,38 +58,51 @@ class SupplierController extends AuthController
 	 */
 	public function operate()
 	{
-		$name = Q('post.name');
-		$manager = Q('post.manager');
-		$mobile = (int)Q('post.mobile');
-		$qq = (int)Q('post.qq');
-		$email = (int)Q('post.email');
-		$kindId = (int)Q('post.kind_id');
-
-		if (empty($kindId) || (-1 == $kindId))
+		$name = trim(I('post.name'));
+		$kindId = (int)I('post.kind_id');
+		$brandId = I('post.brand_id');
+		$manager = trim(I('post.manager'));
+		$mobile = trim(I('post.mobile'));
+		$qq = trim(I('post.qq'));
+		$email = trim(I('post.email'));
+		$supplierId = I('post.id', 'intval', 0);
+		// 表单数据验证
+		if (!$this->model->create())
 		{
-			$this->error('请选择经营类别！');
+			$this->error($this->model->getError());
 		}
-		if (empty($name))
-		{
-			$this->error('供应商名称不可为空！');
-		}
-
+		// 组合用于插入供应商表的数据
 		$argv = array(
 			'name' => $name,
+			'kind_id' => $kindId,
 			'manager' => $manager,
 			'mobile' => $mobile,
 			'qq' => $qq,
-			'email' => $email,
-			'kind_id' => $kindId
+			'email' => $email
 		);
-		if (!isset($_POST['id']))
-		{// 添加
-			$this->model->_insert($argv);
+		// 实例化供应商品牌表对象
+		$supplierBrandModel = D('SupplierBrand');
+		if (0 == $supplierId)
+		{	
+			// 供应商表的添加
+			$keyId = $this->model->doInsert($argv);
+			// 供应商品牌表的添加
+			if (is_array($brandId))
+			{
+				foreach ($brandId as $v)
+				{
+					$supplierBrandModel->doInsert(['supplier_id'=>$keyId, 'brand_id'=>$v]);
+				}
+			} else {
+				$supplierBrandModel->doInsert(['supplier_id'=>$keyId, 'brand_id'=>$brandId]);
+			}
 			$this->success('添加成功', 'index');
-		} else {//编辑
-			$id = (int)Q('post.id');
-			$this->model->_update($argv, $id);
+		} else {
+			// 编辑修改
+			$id = (int)I('post.id');
+			$this->model->doUpdate($argv, $id);
 			$this->success('修改成功', 'index');
 		}
 	}
+
 }

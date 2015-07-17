@@ -12,9 +12,9 @@
 	<div class="warp">
 		<div class="submenu">
 			<div class="left">
-				<a href="{:U('Product/Category/index')}">分类列表</a>
+				<a href="-{:U('Product/Category/index')}-">分类列表</a>
 				<span>|</span>
-				<a href="{:U('Product/Category/add')}">添加分类</a>
+				<a href="-{:U('Product/Category/add')}-">添加分类</a>
 			</div>
 			<div class="right">
 				<a href="">后退</a>
@@ -23,14 +23,14 @@
 			</div>
 		</div>
 		<div class="content">
-			<form action="{:U('Product/Category/add')}" method="post">
+			<form action="-{:U('Product/Category/add')}-" method="post">
 				<table class="content-table">
 					<tbody>
 						<tr>
 							<td width="10%">所属分类：</td>
 							<td>
-								{$info.name}
-								<input type="hidden" name="pid" value="{$info.cid}">
+								-{$info.name}-
+								<input type="hidden" name="pid" value="-{$info.cid}-">
 							</td>
 							<td width="70%"></td>
 						</tr>

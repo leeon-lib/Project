@@ -8,7 +8,7 @@ use Common\Controller\AuthController;
 */
 class AdminController extends AuthController
 {
-	private $adminModel = null;
+	private $model = null;
 	private $deptModel = null;
 	private $roleModel = null;
 	private $deptList = null;
@@ -17,7 +17,7 @@ class AdminController extends AuthController
 	public function __construct()
 	{
 		parent::__construct();
-		$this->adminModel = D('Admin');
+		$this->model = D('Admin');
 		$this->deptModel = D('Department');
 		$this->roleModel = D('Role');
 		$this->deptList = $this->deptModel->getList();
@@ -78,7 +78,7 @@ class AdminController extends AuthController
 			'where' => $where,
 			'limit' => 20
 		);
-		$adminList = $this->adminModel->getList($argv);
+		$adminList = $this->model->getList($argv);
 		// 转换部门与角色信息
 		if (!empty($adminList))
 		{
@@ -110,7 +110,7 @@ class AdminController extends AuthController
 	{
 		$aid = (int)I('get.id');
 		$fields = [0 => 'password'];
-		$oldData = $this->adminModel->getOne($aid, $fields);
+		$oldData = $this->model->getOne($aid, $fields);
 		if (FALSE === $oldData)
 		{
 			$this->error('非法访问！');
@@ -126,7 +126,6 @@ class AdminController extends AuthController
 	 */
 	public function operate()
 	{
-		// p($_POST);die;
 		$username = trim(I('post.username'));
 		$password = trim(I('post.password'));
 		$realName = trim(I('post.real_name'));
@@ -135,10 +134,11 @@ class AdminController extends AuthController
 		$deptId = (int)I('post.department_id');
 		$roleId = (int)I('post.role_id');
 		$isLock = (int)I('post.is_lock');
+		$adminId = I('post.id', 'intval', 0);
 		// 表单数据验证
-		if (!$this->adminModel->create())
+		if (!$this->model->create())
 		{
-			$this->error($this->adminModel->getError());
+			$this->error($this->model->getError());
 		}
 		// 组合数据
 		$argv = array(
@@ -148,19 +148,23 @@ class AdminController extends AuthController
 			'mail' => $mail,
 			'phone' => $phone
 		);
-		if (isset($_POST['id']))
+		if (0 == $adminId)
 		{
-			// 编辑
-			$id = (int)I('post.id');
-			$argv['is_lock'] = $isLock;
-			$this->adminModel->doUpdate($argv, $id);
-			$this->success('修改成功', 'index');
-		} else {
 			// 添加
-			$argv['username'] = $username;
-			$argv['password'] = md5($password);
-			$this->adminModel->doInsert($argv);
-			$this->success('添加成功', 'index');
+			if ($this->isExists($name, 'username'))
+			{
+				$this->error('添加失败，该用户名已存在', U('index'));
+			} else {
+				$argv['username'] = $username;
+				$argv['password'] = md5($password);
+				$this->model->doInsert($argv);
+				$this->success('添加成功', 'index');
+			}
+		} else {
+			// 编辑
+			$argv['is_lock'] = $isLock;
+			$this->model->doUpdate($argv, $adminId);
+			$this->success('修改成功', 'index');
 		}
 	}
 
@@ -170,12 +174,12 @@ class AdminController extends AuthController
 	public function changeStatus()
 	{
 		$id = (int)I('get.id');
-		$statusId = $this->adminModel->getOne($id, 'is_lock', true);
+		$statusId = $this->model->getOne($id, 'is_lock', true);
 		if (0 == $statusId)
 		{
-			$this->adminModel->doUpdate(array('is_lock'=>1), $id);
+			$this->model->doUpdate(array('is_lock'=>1), $id);
 		} else {
-			$this->adminModel->doUpdate(array('is_lock'=>0), $id);
+			$this->model->doUpdate(array('is_lock'=>0), $id);
 		}
 		$this->redirect('index');
 	}

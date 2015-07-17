@@ -1,0 +1,852 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 12px;
+    font-family: Tahoma,Geneva,sans-serif;
+}
+a{
+    text-decoration: none;
+}
+li,ol{
+    list-style: none;
+}
+.fl{float: left;}
+.fr{float: right;}
+h1,h2,h3,h4,h5,h6{
+    font-weight: 400
+}
+div.clear{
+    clear: both;
+}
+.pink {
+    color: #ED145B;
+}
+@color:#6C6C6C;
+@hoverColor:#ED155B;
+//购物车头部
+div{
+    .cart_top{
+        position: relative;
+        height: 32px;
+        line-height: 32px;
+        color: #999;
+        width: 960px;
+        margin: 0px auto;
+        .user_box{
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            a{
+                color: @hoverColor;
+                &.out,&.query{
+                    color: #999;
+                }
+            }
+            i.tips{
+                font-style: normal;
+            }
+        }
+    }
+    .cart_header_box{
+        border-bottom: 2px solid #E5E5E5;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+        padding-bottom: 15px;
+        .cart_header{
+            width: 960px;
+            margin: 0 auto;
+            height: auto;
+            overflow: hidden;
+            .order_path_1{
+                background: url(../images/order_path.jpg) no-repeat;
+            }
+            .order_path_2{
+                background: url(../images/order_path.jpg) no-repeat 0px -50px;
+            }
+            .order_path{
+                width: 392px;
+                height: 50px;
+            }
+        }
+    }
+}
+//购物车头部
+
+//购物车主体部分
+#container{
+    width: auto;
+    background: #EEE7E1;
+    padding: 15px 0px;
+    #cart{
+        width: 960px;
+        margin: 0px auto;
+        overflow: visible;
+        .cart_left{
+            padding: 0px 22px;
+            color: #000;
+            background: #FFF;
+//      提交订单后的页面
+            .pay_status{
+                padding: 10px 18px;
+                .pay_status_img{
+                    text-align: center;
+                    overflow: hidden;
+                    margin: 20px 0px;
+                    .status_text{
+                        font-family: "微软雅黑","宋体";
+                        display: inline-block;
+                        font-weight: normal;
+                        position: relative;
+                        margin-left: 85px;
+                        color: @hoverColor;
+                        font-size: 22px;
+                        line-height: normal;
+                        text-align: left;
+                        .pay_icon{
+                            width: 65px;
+                            height: 65px;
+                            background-position: 0px 0px;
+                            position: absolute;
+                            margin-top: -33px;
+                            left: -85px;
+                            top: 50%;
+                            display: block;
+                            float: left;
+                            background: transparent url(../images/payment_status_icons.jpg) no-repeat scroll 0px 0px;
+                        }
+                        p{
+                            font-size: 12px;
+                            font-weight: normal;
+                            color: #000;
+                            margin: 5px 0px 0px;
+                            .pink{
+                                color: @hoverColor;
+                            }
+                        }
+                    }
+                }
+            }
+            .order_status{
+                margin-top: 20px;
+                h2{
+                    font-size: 14px;
+                    margin-bottom: 20px;
+                    height: 24px;
+                    line-height: 24px;
+                    text-indent: 10px;
+                    .pay_icon{
+                        width: 24px;
+                        height: 24px;
+                        display: block;
+                        float: left;
+                        background: url(../images/payment_status_icons.jpg) no-repeat -27px -160px;
+                    }
+                    a{
+                        color: @hoverColor;
+                    }
+                }
+                table{
+                    width: 100%;
+                    border: 1px solid #EDEDED;
+                    border-collapse: collapse;
+                    border-spacing: 0px;
+                    tr{
+                        border: 1px solid #EDEDED;
+                    }
+                    td{
+                        padding: 10px 20px;
+                       a{
+                           color: @hoverColor;
+                       } 
+                    }
+                }
+                p.btn_container{
+                    width: 160px;
+                    margin: 30px auto;
+                    text-align: center;
+                    overflow: hidden;
+                    line-height: 20px;
+                    padding-bottom: 30px;
+                    a.btn_pink_big{
+                        float: none;
+                        color: #FFF;
+                        font-size: 18px;
+                        font-weight: bold;
+                        margin-left: 0px;
+                        display: block;
+                        line-height: 40px;
+                        text-align: center;
+                        width: 160px;
+                        height: 40px;
+                        background: #F8296D none repeat scroll 0% 0%;
+                        border: 1px solid #F9477A;
+                        cursor: pointer;
+                        overflow: hidden;
+                    }
+                }
+            }
+//      提交订单后的页面
+        }
+
+//      确认订单部分
+        .countdown_time_wrap{
+            height: 23px;
+            padding: 15px 0px;
+            color: #666;
+            font-size: 14px;
+            .click_icon {
+                display: inline-block;
+                width: 12px;
+                height: 12px;
+                overflow: hidden;
+                background: transparent url(../images/countdown_time_coin.jpg) no-repeat scroll 0px -38px;
+                vertical-align: middle;
+                margin-top: -2px;
+            }
+            span{
+                color: @hoverColor;
+                font-weight: normal;
+            }
+            .cart_countdown_time{
+                color: @hoverColor;
+                font-size: 14px;
+                font-weight: bold;
+            }
+            .sp_icon{
+                display: inline-block;
+                height: 13px;
+                position: relative;
+                vertical-align: middle;
+                width: 13px;
+                background: transparent url(../images/countdown_time_coin.jpg) no-repeat scroll 0% 0%;
+                .sp_icon_pos{
+                    background: #FCFCFC none repeat scroll 0% 0%;
+                    border: 1px solid #DBD6D0;
+                    color: #676767;
+                    left: 30px;
+                    line-height: 18px;
+                    padding: 5px 0px 5px 12px;
+                    position: absolute;
+                    top: -21px;
+                    width: 300px;
+                    font-size: 12px;
+                    div{
+                        height: 14px;
+                        left: -8px;
+                        position: absolute;
+                        top: 20px;
+                        width: 8px;
+                        overflow: hidden;
+                        background: transparent url(../images/countdown_time_coin.jpg) no-repeat scroll 0% 0%;
+                        background-position: 0px -14px;
+                    }
+                }
+            }
+        }
+        form#check_pay_form{
+            display: inline-block;
+            width: 100%;
+            .cart_left{
+                padding: 0px 22px;
+                color: #000;
+                background: #FFF none repeat scroll 0% 0%;
+                .option{
+                    font-size: 12px;
+                    padding: 0px 0px 30px;
+                    position: relative;
+                    padding-bottom: 15px;
+                    .title{
+                        font-size: 18px;
+                        line-height: 50px;
+                        font-weight: bold;
+                        height: 50px;
+                        color: #000;
+                        font-family: "微软雅黑";
+                    }
+                    
+                    #default_address_wrap{
+                        .content{
+                            overflow: hidden;
+                            .option_box{
+                                width: 225px;
+                                height: 118px;
+                                float: left;
+                                overflow: hidden;
+                                margin: 0px 4px 5px 0px;
+                                border: none;
+                                background: transparent none repeat scroll 0% 0%;
+                                .rdoAddress{
+                                    opacity: 0;
+                                    height: 0px;
+                                    width: 0px;
+                                    border: 0px none;
+                                    position: absolute;
+                                }
+                                .address_lbl{
+                                    border: medium none;
+                                    position: relative;
+                                    width: 195px;
+                                    height: 88px;
+                                    overflow: hidden;
+                                    padding: 15px;
+                                    display: inline-block;
+                                    background: transparent url(../images/addr_bg.jpg) no-repeat scroll center top;
+                                    .btnEditAddress_new,.btnEditAddress_del{
+                                        display: inline;
+                                        position: absolute;
+                                        top: 12px;
+                                        cursor: pointer;
+                                        color: #ED145B;
+                                        height: 14px;
+                                        line-height: 14px;
+                                        font-size: 12px;
+                                        overflow: hidden;
+                                    }
+                                    .btnEditAddress_new{
+                                        right: 42px;
+                                    }
+                                    .btnEditAddress_del{
+                                        right: 10px;
+                                    }
+                                    p{
+                                        margin-bottom: 0;
+                                        span{
+                                            display: inline-block;
+                                            width: 195px;
+                                            overflow: hidden;
+                                        }
+                                        .addr_name{
+                                            height: 26px;
+                                            line-height: 26px;
+                                        }
+                                        .addr_con{
+                                            height: 40px;
+                                            line-height: 20px;
+                                        }
+                                        .addr_num{
+                                            height: 30px;
+                                            line-height: 30px;
+                                            font-family: Tahoma;;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .address_btns_wrap {
+                        height: 30px;
+                        padding: 18px 0px 6px;
+                        clear: both;
+                        .add_address_btn{
+                            display: block;
+                            width: 70px;
+                            height: 26px;
+                            line-height: 26px;
+                            border: 1px solid #CFCFCF;
+                            padding-left: 24px;
+                            color: #333;
+                            background: transparent url(../images/add_btn.jpg) repeat scroll 0% 0%;
+                            float: left;
+                        }
+                    }
+                    .content{
+                        overflow: hidden;
+                        .option_box{
+                            width: auto;
+                            height: 36px;
+                            line-height: 36px;
+                            border: 1px solid #CCC;
+                            overflow: hidden;
+                            float: left;
+                            margin: 0px 20px 0px 0px;
+                            padding-left: 10px;
+                            padding-right: 20px;
+                            input{
+                                margin-top: 9px;
+                                vertical-align: middle;
+                            }
+                            lable{
+                                padding-right: 29px;
+                                margin-left: 10px;
+                                cursor: pointer;
+                                width: auto;
+                            }
+                            &.selected{
+                                height: 34px;
+                                line-height: 34px;
+                                border: 2px solid #6EAF4F;
+                                background: #E6F6DE none repeat scroll 0% 0%;
+                                padding-left: 9px;
+                            }
+                        }
+                        
+                    }
+                }
+                &.relative{
+                    .cart_products_v2{
+                        margin-bottom: 20px;
+                        h2 {
+                            height: 20px;
+                            color: #0ABEDE;
+                            font-size: 12px;
+                            font-family: "宋体";
+                            padding-bottom: 15px;
+                            font-weight: normal;
+                            a{
+                                color: @hoverColor;
+                            }
+                        }
+                        table{
+                            font-size: 12px;
+                            color: #000;
+                            border-width: 1px 1px medium;
+                            border-style: solid solid none;
+                            border-color: #CCC #CCC -moz-use-text-color;
+                            -moz-border-top-colors: none;
+                            -moz-border-right-colors: none;
+                            -moz-border-bottom-colors: none;
+                            -moz-border-left-colors: none;
+                            border-image: none;
+                            border-collapse: collapse;
+                            border-spacing: 0px;
+                            th{
+                                background: #F0F0F0 none repeat scroll 0% 0%;
+                                font-weight: normal;
+                                height: 36px;
+                                text-align: center;
+                                color: #333;
+                                &.text_left{
+                                    text-align: left;
+                                    padding-left: 30px;
+                                }
+                            }
+                            td{
+                                border-bottom: 1px solid #EBEBEB;
+                                padding: 20px 0px 12px;
+                                &.padd_left{
+                                    padding-left: 30px;
+                                }
+                                &.text_left{
+                                    text-align: left;
+                                    padding-left: 30px;
+                                }
+                                &.name{
+                                    a{
+                                        color: #000;
+                                        font-size: 14px;
+                                    }
+                                    .pic_hover{
+                                        width: 100px;
+                                        height: 100px;
+                                        position: absolute;
+                                        left: 300px;
+                                        top: -45px;
+                                        background: #FFF none repeat scroll 0% 0%;
+                                        border: 1px solid #E2E2E2;
+                                        display: none;
+                                    }
+                                }
+                                &.number_box{
+                                    text-align: center;
+                                    width: 100px;
+                                }
+                                &.price_box,&.count_price_box{
+                                    color: #333;
+                                    font-size: 16px;
+                                    font-family: Helvetica,arial,sans-serif;
+                                    font-weight: 700;
+                                    text-align: center;
+                                }
+                                &.count{
+                                    padding: 10px 0px 10px 30px;
+                                    text-align: left;
+                                    .content{
+                                        .option_box{
+                                            height: 24px;
+                                            line-height: 24px;
+                                            border: none;
+                                            width: 100%;
+                                            input{
+                                                margin: 6px 6px 0px 0px;
+                                                float: left;
+                                                vertical-align: middle;
+                                            }
+                                        }
+                                        .express_num{
+                                            width: 149px;
+                                            font-size: 14px;
+                                            font-weight: bold;
+                                            float: right;
+                                            text-align: center;
+                                            font-family: Helvetica,arial,sans-serif;
+                                        }
+                                        .express_tit{
+                                            display: block;
+                                            width: 138px;
+                                            font-size: 12px;
+                                            padding-right: 28px;
+                                            text-align: right;
+                                            float: right;
+                                        }
+                                    }
+                                }
+                                .order_amount_container{
+                                    .express_num{
+                                        float: right;
+                                        color: @hoverColor;
+                                        font-size: 14px;
+                                        font-weight: bold;
+                                        font-family: Helvetica,arial,sans-serif;
+                                        width: 149px;
+                                        text-align: center;
+                                        span{
+                                            font-size: 16px;
+                                        }
+                                    }
+                                    .express_tit{
+                                        float: right;
+                                        display: block;
+                                        width: 138px;
+                                        font-size: 12px;
+                                        padding-right: 28px;
+                                        text-align: right;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .orders_total_amount{
+                        font-size: 12px;
+                        text-align: right;
+                        padding-right: 26px;
+                        font-family: "宋体";
+                        .total_count{
+                            font-family: Helvetica,arial,sans-serif;
+                            color: #ED415B;
+                            font-weight: bold;
+                            font-size: 22px;
+                        }
+                    }
+                    .inv_wrap{
+                        padding-top: 14px;
+                        color: #666;
+                        .inv_quesstion{
+                            display: inline-block;
+                            width: 13px;
+                            height: 14px;
+                            background: transparent url(../images/countdown_time_coin.png) no-repeat scroll 0px -60px;
+                            position: relative;
+                            vertical-align: middle;
+                        }
+                    }
+                }
+                &.cart_left_last{
+                    margin-bottom: 0px;
+                    .option{
+                        padding: 0px 0px 30px;
+                        .gateway_ul_box{
+                            border-top: 1px solid #D5D5D5;
+                            margin-top: 15px;
+                            overflow: visible;
+                            li{
+                                &.gateway_line{
+                                    border-width: 0px 1px 1px;
+                                    border-style: none solid solid;
+                                    border-color: -moz-use-text-color #D5D5D5 #D5D5D5;
+                                    -moz-border-top-colors: none;
+                                    -moz-border-right-colors: none;
+                                    -moz-border-bottom-colors: none;
+                                    -moz-border-left-colors: none;
+                                    border-image: none;
+                                    padding: 10px 15px;
+                                    input{
+                                        vertical-align: middle;
+                                        margin-right: 5px;
+                                    }
+                                    .tit{
+                                        padding: 0px 15px 0px 7px;
+                                        line-height: 40px;
+                                        font-size: 14px;
+                                        font-weight: 700;
+                                        display: inline-block;
+                                        cursor: pointer;
+                                        vertical-align: middle;
+                                        span{
+                                            margin-left: 10px;
+                                            font-size: 12px;
+                                            color: #959595;
+                                            font-weight: 300;
+                                        }
+                                    }
+                                }
+                                &.ul_on{
+                                    background: #FFF9F9 none repeat scroll 0% 0%;
+                                    border: 2px solid #FB7F89;
+                                }
+                                &.gateway_bank {
+                                    ul.third_ul{
+                                        padding-bottom: 50px;
+                                        height: auto;
+                                        overflow: hidden;
+                                        li{
+                                            background: #FFF none repeat scroll 0% 0%;
+                                            border: 1px solid #CCC;
+                                            float: left;
+                                            margin: 27px 15px 0px;
+                                            width: 188px;
+                                            padding: 0px;
+                                            position: relative;
+                                            .bd_wrap{
+                                                padding: 0px 9px;
+                                                input{
+                                                    vertical-align: middle;
+                                                    margin-right: 5px;
+                                                    margin-top: -25px;
+                                                }
+                                                span{
+                                                    position: absolute;
+                                                    width: 19px;
+                                                    height: 39px;
+                                                    line-height: 19px;
+                                                    text-align: center;
+                                                    right: 1px;
+                                                    top: 1px;
+                                                    background-color: #CFE;
+                                                    border-left: 1px solid #B4C5BF;
+                                                    padding: 1px;
+                                                    margin: -1px -1px -1px 0px;
+                                                }
+                                                .bg{
+                                                    border: medium none;
+                                                    background: transparent url(../images/gateway_bg_v6.jpg) repeat scroll 0% 0%;
+                                                    height: 38px;
+                                                    width: 130px;
+                                                    display: inline-block;
+                                                    cursor: pointer;
+                                                    &.Alipay{
+                                                        background-position: 0px -1575px;
+                                                    }
+                                                    &.AlipayQRCode{
+                                                        background-position: 0px -1613px;
+                                                    }
+                                                    &.Tenpay_0{
+                                                        background-position: 0px -40px;
+                                                    }
+                                                    &.Unionpay{
+                                                        background-position: 0px -1376px;
+                                                    }
+                                                    &.Bfb_baifubao{
+                                                        background-position: -9px -1486px;
+                                                    }
+                                                    &.Alipay_CCB{
+                                                        background-position: 0px -280px;
+                                                    }
+                                                    &.Alipay_ICBCB2C{
+                                                        background-position: 0px -240px;
+                                                    }
+                                                    &.Alipay_BOCB2C{
+                                                        background-position: 0px -320px;
+                                                    }
+                                                    &.Alipay_ABC{
+                                                        background-position: 0px -440px;
+                                                    }
+                                                    &.Alipay_CMB{
+                                                        background-position: 0px -360px;
+                                                    }
+                                                    &.Alipay_COMM{
+                                                        background-position: 0px -400px;
+                                                    }
+                                                    &.Bfb_CEBBANK{
+                                                        background-position: 0px -680px;
+                                                    }
+                                                    &.Alipay_PSBC-DEBIT{
+                                                        background-position: 0px -480px;
+                                                    }
+                                                    &.Alipay_CIB{
+                                                        background-position: 0px -560px;
+                                                    }
+                                                    &.Bfb_GDB{
+                                                        background-position: 0px -880px;
+                                                    }
+                                                    &.Alipay_SPDB{
+                                                        background-position: 0px -600px;
+                                                    }
+                                                    &.Alipay_CITIC{
+                                                        background-position: 0px -520px;
+                                                    }
+                                                    &.Bfb_CMBC{
+                                                        background-position: 0px -640px;
+                                                    }
+                                                    &.Bfb_SPABANK{
+                                                        background-position: 0px -840px;
+                                                    }
+                                                    &.Alipay_BJBANK{
+                                                        background-position: 0px -1034px;
+                                                    }
+                                                    &.Alipay_CMB-MOTO-CREDIT{
+                                                        background-position: 0px -1110px;
+                                                        width: 129px;
+                                                    }
+                                                    &.Bfb_CCB-MOTO-CREDIT{
+                                                        background-position: 0px -120px;
+                                                        width: 129px;
+                                                    }
+                                                    &.Bfb_BOC-MOTO-CREDIT{
+                                                        width: 129px;
+                                                        background-position: 0px -200px;
+                                                    }
+                                                    &.Bfb_ICBC-MOTO-CREDIT{
+                                                        width: 129px;
+                                                        background-position: 0px -160px;
+                                                    }
+                                                    &.Bfb_CITIC-EXPRESS-CREDIT{
+                                                        width: 129px;
+                                                        background-position: 0px -1148px;
+                                                    }
+                                                    &.Bfb_CEB-EXPRESS-CREDIT{
+                                                        width: 129px;
+                                                        background-position: 0px -1186px;
+                                                    }
+                                                    &.Bfb_SPABANK-MOTO-CREDIT{
+                                                        width: 129px;
+                                                        background-position: 0px -1414px;
+                                                    }
+                                                    &.Bfb_GDB-EXPRESS-CREDIT{
+                                                        width: 129px;
+                                                        background-position: 0px -1262px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+            }
+            .sure_payinfo_wrap{
+                padding-bottom: 20px;
+                background: #FFF none repeat scroll 0% 0%;
+                overflow: hidden;
+                position: relative;
+                .confirm_pay_box{
+                    width: 960px;
+                    background: #FFF none repeat scroll 0% 0%;
+                    .confirm_pay{
+                        margin: 0px auto;
+                        overflow: hidden;
+                        padding: 2px 22px 0px;
+                        .confirm_left{
+                            a{
+                                color: #333;
+                                font-size: 14px;
+                                height: 38px;
+                                line-height: 38px;
+                                width: 123px;
+                                text-align: center;
+                                display: inline-block;
+                                border: 1px solid #D9D9D9;
+                                background: #FAFAFA;
+                            }
+                        }
+                        .confirm_right{
+                            position: relative;
+                            input.btn_pink_big{
+                                    width: 160px;
+                                    height: 40px;
+                                    background: #F8296D none repeat scroll 0% 0%;
+                                    border: 1px solid #FC6E9D;
+                                    float: right;
+                                    color: #FFF;
+                                    font-size: 20px;
+                                    cursor: pointer;
+                                    overflow: hidden;
+                                    display: block;
+                                    line-height: 40px;
+                                    text-align: center;
+                                    margin-left: 20px;
+                                    font-family: "微软雅黑";
+                            }
+                            .price_sum{
+                                line-height: 40px;
+                                text-align: right;
+                                .total_count{
+                                    font-family: Helvetica,arial,sans-serif;
+                                    color: #ED415B;
+                                    font-weight: bold;
+                                    font-size: 22px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+//      确认订单部分
+    }
+}
+
+//购物车主体部分
+
+//购物车底部
+#footer_container {
+    overflow: hidden;
+    margin-top: 0px;
+    border-top: 1px solid #DDD;
+    background: #F2F2F2;
+    #footer_copyright{
+        text-align: center;
+        line-height: 20px;
+        padding-bottom: 20px;
+        color: #000;
+        width: 960px;
+        margin: 0px auto;
+        overflow: hidden;
+        p{
+            &.footer_copy_con{
+                padding: 10px 0;
+                a{
+                    color: #000;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+            .footer_copy_logo {
+                    width: 127px;
+                    height: 50px;
+                    overflow: hidden;
+                    border-bottom: 1px solid #D7D7D7;
+                    display: inline-block;
+                    margin: 0px 4px;
+                    background: transparent url(../images/header_corn_new_v2.png) no-repeat scroll center top;
+                    &.logo01 {
+                        background-position: 0px -168px;
+                    }
+                    &.logo02 {
+                        background-position: 0px -219px;
+                    }
+                    &.logo03 {
+                        background-position: 0px -270px;
+                    }
+                    &.logo04 {
+                        background-position: 0px -321px;
+                    }
+                    &.logo05 {
+                        background-position: 0px -372px;
+                    }
+                }
+        }  
+    }
+}
+
+//购物车底部
+
+
+
+
+
+

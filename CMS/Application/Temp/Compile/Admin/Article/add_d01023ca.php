@@ -5,13 +5,13 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
     <title>添加文章</title>
-    <script type="text/javascript" src="http://127.0.0.1/CMS/Static/Js/jquery-1.7.2.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="http://127.0.0.1/CMS/Static/hdjs/hdjs.css"/>
-    <script src="http://127.0.0.1/CMS/Static/hdjs/hdjs.min.js" type="text/javascript" charset="utf-8"></script>
-    <link rel="stylesheet" href="http://127.0.0.1/CMS/Static/Bootstrap/css/bootstrap.min.css" />
-    <script type="text/javascript" charset="utf-8" src="http://127.0.0.1/CMS/Static/ueditor1_4_3/ueditor.config.js"></script>
-    <script type="text/javascript" charset="utf-8" src="http://127.0.0.1/CMS/Static/ueditor1_4_3/ueditor.all.min.js"> </script>
-    <script type="text/javascript" charset="utf-8" src="http://127.0.0.1/CMS/Static/ueditor1_4_3/lang/zh-cn/zh-cn.js"></script>
+    <script type="text/javascript" src="http://127.0.0.1/Project/CMS/Static/Js/jquery-1.7.2.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1/Project/CMS/Static/hdjs/hdjs.css"/>
+    <script src="http://127.0.0.1/Project/CMS/Static/hdjs/hdjs.min.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="http://127.0.0.1/Project/CMS/Static/Bootstrap/css/bootstrap.min.css" />
+    <script type="text/javascript" charset="utf-8" src="http://127.0.0.1/Project/CMS/Static/ueditor1_4_3/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="http://127.0.0.1/Project/CMS/Static/ueditor1_4_3/ueditor.all.min.js"> </script>
+    <script type="text/javascript" charset="utf-8" src="http://127.0.0.1/Project/CMS/Static/ueditor1_4_3/lang/zh-cn/zh-cn.js"></script>
     <style type="text/css">
 		.checkbox{
 			 margin-left:5px;

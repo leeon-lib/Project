@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>部门管理</title>
+	<link rel="stylesheet" href="__STATIC__/Org/Bootstrap/css/Bootstrap.min.css">
+	<link rel="stylesheet" href="__STATIC__/Css/public.css">
+	<link rel="stylesheet" href="__STATIC__/Css/content.css">
+</head>
+<body>
+	<div class="submenu">
+		<div class="left">
+			<a href="{|U:'Admin/Department/index'}">部门列表</a>
+			<span>|</span>
+			<a href="{|U:'Admin/Department/add'}">添加部门</a>
+		</div>
+		<div class="right">
+			<a href="">后退</a>
+			<span>|</span>
+			<a href="">刷新</a>
+		</div>
+	</div>
+	<div class="content">
+		<table class="content-table">
+			<thead>
+				<tr>
+					<td width="5%" align="center">部门ID</td>
+					<td width="20%" align="center">部门名称</td>
+					<td width="20%" align="center">上级部门</td>
+					<td width="10%" align="center">操作</td>
+				</tr>
+			</thead>
+			<tbody>
+				<foreach from="$deptList" key="$k" value="$v">
+					<tr>
+						<td align="center">{$v.id}</td>
+						<td align="center">{$v.name}</td>
+						<td align="center">
+							<if value="0==$v['pid']">
+								－－－
+							<else/>
+								<foreach from="$deptList" key="$key" value="$val">
+									<if value="$v['pid']==$val['id']">
+										{$val.name}
+									</if>
+								</foreach>
+							</if>
+						</td>
+						<td align="center">
+							<a href="{|U:'Admin/Department/edit',array('id'=>$v['id'])}">编辑</a>
+							<a href="{|U:'Admin/Department/del',array('id'=>$v['id'])}">删除</a>
+						</td>
+					</tr>
+				</foreach>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

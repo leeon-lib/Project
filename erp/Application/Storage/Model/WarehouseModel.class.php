@@ -10,7 +10,11 @@ class WarehouseModel extends CommonModel
 {
 	
 	public $tableName = 'warehouse';
-
+	
+	public $_validate = [
+		['city_id', '-1', '请选择库房所在地区', 1, 'notequal'],
+		['name', 'require', '库房名称不能为空', 1]
+	];
 
 
 	/**

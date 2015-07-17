@@ -6,14 +6,16 @@
 	<link rel="stylesheet" href="__PUBLIC__/Org/Bootstrap/css/Bootstrap.min.css">
 	<link rel="stylesheet" href="__PUBLIC__/Css/public.css">
 	<link rel="stylesheet" href="__PUBLIC__/Css/content.css">
+	<script src="__PUBLIC__/Org/jquery-1.7.2.min.js"></script>
+	<script src="__PUBLIC__/Org/cal/lhgcalendar.min.js"></script>
 </head>
 <body>
 	<div class="warp">
 		<div class="submenu">
 			<div class="left">
-				<a href="{:U('Purchase/Purchase/index')}">采购单列表</a>
+				<a href="-{:U('Purchase/Purchase/index')}-">采购单列表</a>
 				<span>|</span>
-				<a href="{:U('Purchase/Purchase/add')}">添加采购单</a>
+				<a href="-{:U('Purchase/Purchase/add')}-">添加采购单</a>
 			</div>
 			<div class="right">
 				<a href="">后退</a>
@@ -22,7 +24,7 @@
 			</div>
 		</div>
 		<div class="content">
-			<form action="{:U('Purchase/Purchase/operate')}" method="post" enctype="multipart/form-data">
+			<form action="-{:U('Purchase/Purchase/insert')}-" method="post" enctype="multipart/form-data">
 				<table class="content-table">
 					<tbody>
 						<tr class="title">
@@ -30,7 +32,7 @@
 						</tr>
 						<tr>
 							<td>模板：</td>
-							<td><a href="{:U('Purchase/Purchase/downCsv')}"><u>下载模板表格</u></a></td>
+							<td><a href="-{:U('Purchase/Purchase/downCsv')}-"><u>下载模板表格</u></a></td>
 						</tr>
 						<tr>
 							<td width="10%">供应商：</td>
@@ -38,7 +40,7 @@
 								<select name="supplier_id">
 									<option value="-1">必选</option>
 									<foreach name="supplierList" item="v">
-										<option value="{$v.id}">{$v.name}</option>
+										<option value="-{$v.id}-">-{$v.name}-</option>
 									</foreach>
 								</select>
 							</td>
@@ -49,7 +51,7 @@
 								<select name="warehouse_id">
 									<option value="-1">必选</option>
 									<foreach name="warehouseList" item="v">
-										<option value="{$v.id}">{$v.name}</option>
+										<option value="-{$v.id}-">-{$v.name}-</option>
 									</foreach>
 								</select>
 							</td>
@@ -60,18 +62,22 @@
 								<select name="sale_type">
 									<option value="-1">必选</option>
 									<foreach name="saleType" item="v">
-										<option value="{$k}">{$v}</option>
+										<option value="-{$key}-">-{$v}-</option>
 									</foreach>
 								</select>
 							</td>
 						</tr>
 						<tr>
-							<td>备注：</td>
-							<td><input type="text" name="note"></td>
-						</tr>
-						<tr>
 							<td>文件：</td>
 							<td><input type="file" name="csv"></td>
+						</tr>
+						<tr>
+							<td>预计到货日期：</td>
+							<td><input type="text" readonly="readonly" id="expect_date" name="expect_date" class="hd-w150"></td>
+						</tr>
+						<tr>
+							<td>备注：</td>
+							<td><input type="text" name="note"></td>
 						</tr>
 						<tr class="btn">
 							<td><input type="submit" value="添加"></td>
@@ -81,5 +87,10 @@
 			</form>
 		</div>
 	</div>
+<script type="text/javascript">
+	$(function() {
+        $('#expect_date').calendar({format: 'yyyy/MM/dd'});
+    })
+</script>
 </body>
 </html>

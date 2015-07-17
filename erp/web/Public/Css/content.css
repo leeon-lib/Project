@@ -89,6 +89,9 @@ thead td {
 .content .content-table {
   line-height: 30px;
 }
+.content .content-table label {
+  font-weight: 400;
+}
 .content .content-table tbody tr {
   border-bottom: 1px solid #ccc;
 }

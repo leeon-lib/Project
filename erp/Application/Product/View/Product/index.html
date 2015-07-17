@@ -12,9 +12,9 @@
 <body>
 	<div class="submenu">
 		<div class="left">
-			<a href="{:U('Product/Product/index')}">商品列表</a>
+			<a href="-{:U('Product/Product/index')}-">商品列表</a>
 			<span>|</span>
-			<a href="{:U('Product/Product/add')}">添加商品</a>
+			<a href="-{:U('Product/Product/add')}-">添加商品</a>
 		</div>
 		<div class="right">
 			<a href="">后退</a>
@@ -24,7 +24,7 @@
 	</div>
 	<div class="content">
 		<div class="search">
-			<form action="{:U('Product/Product/index')}" method="post">
+			<form action="-{:U('Product/Product/index')}-" method="post">
 				<table class="search-table">
 					<tr>
 						<td width="8%">商品ID：</td>
@@ -38,7 +38,7 @@
 							<select name="category_cid">
 								<option value="-1">-- 不限 --</option>
 								<foreach name="cateData" item="v">
-									<option value="{$v.cid}">{$v.name}</option>
+									<option value="-{$v.cid}-">-{$v.name}-</option>
 								</foreach>
 							</select>
 						</td>
@@ -47,7 +47,7 @@
 							<select name="brand_id">
 								<option value="-1">-- 不限 --</option>
 								<foreach name="brandData" item="v">
-									<option value="{$v.id}">{$v.name}</option>
+									<option value="-{$v.id}-">-{$v.name}-</option>
 								</foreach>
 							</select>
 						</td>	
@@ -93,24 +93,24 @@
 			<tbody>
 				<foreach name="productList" item="v">
 					<tr>
-						<td align="center">{$v.id}</td>
+						<td align="center">-{$v.id}-</td>
 						<td align="center">
 							<empty name="$v['pic']">
 								<img src="__PUBLIC__/Images/default_s.gif" alt="" width="60px">
 							<else />
-								<img src="__HTTP_UPLOAD__/Product/{$v.pic}" alt="" width="60px">
+								<img src="__HTTP_UPLOAD__/Product/-{$v.pic}-" alt="" width="60px">
 							</empty>
 						</td>
-						<td align="center">{$v.goods}</td>
-						<td align="left">{$v.name}</td>
-						<td align="center">{$v.category_name}</td>
-						<td align="center">{$v.brand_name}</td>
-						<td align="center">{$v.marked_price}</td>
-						<td align="center">{$v.manuf_date|date='Y-m-d',###}</td>
-						<td align="center">{$v.add_date|date='Y-m-d',###}</td>
+						<td align="center">-{$v.goods}-</td>
+						<td align="left">-{$v.name}-</td>
+						<td align="center">-{$v.category_name}-</td>
+						<td align="center">-{$v.brand_name}-</td>
+						<td align="center">-{$v.marked_price}-</td>
+						<td align="center">-{$v.manuf_date|date='Y-m-d',###}-</td>
+						<td align="center">-{$v.add_date|date='Y-m-d',###}-</td>
 						<td align="center">
-							<a href="{:U('Product/Product/edit',array('id'=>$v['id']))}">编辑</a>
-							<a href="{:U('Product/Product/del',array('id'=>$v['id']))}">删除</a>
+							<a href="-{:U('Product/Product/edit',array('id'=>$v['id']))}-">编辑</a>
+							<a href="-{:U('Product/Product/del',array('id'=>$v['id']))}-">删除</a>
 						</td>
 					</tr>
 				</foreach>

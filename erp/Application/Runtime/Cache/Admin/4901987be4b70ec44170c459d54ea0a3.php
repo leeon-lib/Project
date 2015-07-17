@@ -40,6 +40,7 @@
 								<?php if(is_array($deptList)): foreach($deptList as $key=>$val): if($val['id'] == $v['department_id']): echo ($val["name"]); endif; endforeach; endif; endif; ?>
 						</td>
 						<td align="center">
+							<a href="<?php echo U('Admin/Role/edit',array('id'=>$v['id']));?>">权限设置</a>
 							<a href="<?php echo U('Admin/Role/edit',array('id'=>$v['id']));?>">编辑</a>
 							<a href="<?php echo U('Admin/Role/del',array('id'=>$v['id']));?>">删除</a>
 						</td>

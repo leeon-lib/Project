@@ -13,9 +13,9 @@
 	<div class="warp">
 		<div class="submenu">
 			<div class="left">
-				<a href="{:U('Product/Product/index')}">商品列表</a>
+				<a href="-{:U('Product/Product/index')}-">商品列表</a>
 				<span>|</span>
-				<a href="{:U('Product/Product/add')}">添加商品</a>
+				<a href="-{:U('Product/Product/add')}-">添加商品</a>
 			</div>
 			<div class="right">
 				<a href="">后退</a>
@@ -24,7 +24,7 @@
 			</div>
 		</div>
 		<div class="content">
-			<form action="{:U('Product/Product/operate')}" method="post" enctype="multipart/form-data">
+			<form action="-{:U('Product/Product/operate')}-" method="post" enctype="multipart/form-data">
 				<table class="content-table">
 					<tbody>
 						<tr class="title" align="left">
@@ -44,7 +44,7 @@
 								<select name="category_cid">
 									<option value="-1" selected="selected">必选</option>
 									<foreach name="cateData" item="v">
-										<option value="{$v.cid}">{$v.name}</option>
+										<option value="-{$v.cid}-">-{$v.name}-</option>
 									</foreach>
 								</select>
 							</td>
@@ -55,7 +55,7 @@
 								<select name="brand_id">
 									<option value="-1">必选</option>
 									<foreach name="brandData" item="v">
-										<option value="{$v.id}">{$v.name}</option>
+										<option value="-{$v.id}-">-{$v.name}-</option>
 									</foreach>
 								</select>
 							</td>
@@ -106,12 +106,12 @@
     $('.setAttr').click(function(){
     	var cid = $('select[name=category_cid] option[selected]').val();
     	var str = '';
-    	if (-1 == cid) {
+    	if (1 == cid) {
     		str = '<tr align="left" class="notice"><td colspan="10">请先选择商品分类！</td></tr>';
     	} else {
     		$.ajax({
                 type: "post",
-                url: "{:U('Product/Product/ajax_getAttr')}",
+                url: "-{:U('Product/Product/ajax_getAttr')}-",
                 data: {cid: cid},
                 dataType: "json",
                 async: false,

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>管理收货地址</title>
+		<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+		<script src="../js/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/address.js" type="text/javascript" charset="utf-8"></script>
+		<script language="javascript">
+			var s=["s1","s2","s3"];
+			var opt0 = ["省/直辖市","市","区/县"];
+			function setup(){
+			 for(i=0;i<s.length-1;i++)
+			  	document.getElementById(s[i]).onclick=new Function("change("+(i+1)+")");
+			 	change(0);
+			}
+			window.onload=function(){
+			setup()	
+				
+			};
+			$(function(){				
+				 $("#s1").change(function() {
+		            // 当选择的时候，找到当前选中的 option
+		            var option = $(this).find("option:selected");
+		            // 获得 value 和 对应文本
+		            var selt = option.text();
+		            // 然后找到 select 的父节点的第0个 span，把 selt 写入到 span 中
+		            $(this).parent('.select_ui').find("#sheng").html(selt);
+		        })
+		        // 初始化的时候，执行一次change方法
+		        $("#s2").change();
+		        
+				$("#s2").change(function() {
+		            // 当选择的时候，找到当前选中的 option
+		            var option = $(this).find("option:selected");
+		            // 获得 value 和 对应文本
+		            var selt = option.text();
+		            // 然后找到 select 的父节点的第0个 span，把 selt 写入到 span 中
+		            $(this).parent('.select_ui').find("#shi").html(selt);
+		        })
+		        // 初始化的时候，执行一次change方法
+		        $("#s2").change();
+		        
+		        $("#s3").change(function() {
+		            // 当选择的时候，找到当前选中的 option
+		            var option = $(this).find("option:selected");
+		            // 获得 对应文本
+		            var selt = option.text();
+		            // 然后找到 select 的父节点的第0个 span，把 selt 写入到 span 中
+		            $(this).parent('.select_ui').find("#xian").html(selt);
+		        })
+		        // 初始化的时候，执行一次change方法
+		        $("#s3").change();
+			})
+			
+		</script>
+		<!--<style>
+			.ui-district-panel {position:absolute;z-index:1000006;width:380px;height:auto;padding:15px 5px 15px 15px;list-style:none;background:#fff;border:1px solid #ccc;}
+			.ui-district-panel li {float:left;width:85px;margin-right:10px;padding:4px 0;color:#666;cursor:pointer;}
+			.ui-district-panel li.current {color:#ed145b;}
+			.ui-district-panel li.long {width:180px;}
+			</style>-->
+	</head>
+<body style="background: #EDE7E1;">
+	<!--头部-->
+	<div class="header">
+	<!--头部横条-->
+	<div class="header-top">
+		<div class="header-top-box">
+			<ul class="headerTopLeft fl">
+				<li>欢迎来到聚美！</li>
+				<li><a href="">请登录</a></li>
+				<li><a href="">快速注册</a></li>
+				<!--<li>欢迎您， </li>
+				<li><a href="">星海穿月</a></li>
+				<li><a href="">[退出 ]</a></li>-->
+			</ul>
+			<div class="default-city fl">
+				<span class="add-city-icons">送至
+					<span class="add-default-city">北京</span>
+					<s class="icon_arrow_down"></s>
+					<i class="user-local-icon"></i>
+				</span>
+				<div class="header-city-list">
+					<dl>
+						<dd>    
+							<span class="sheng fl">华北</span>
+							<div class="city-list fl">
+								<a href="">北京</a>
+								<a href="">天津</a>
+								<a href="">河北</a>
+								<a href="">山西</a>
+								<a href="">内蒙古</a>
+							</div>
+						</dd>
+						<dd>    
+							<span class="sheng fl">华北</span>
+							<div class="city-list fl">
+								<a href="">北京</a>
+								<a href="">天津</a>
+								<a href="">河北</a>
+								<a href="">山西</a>
+								<a href="">内蒙古</a>
+							</div>
+						</dd>
+						<dd>    
+							<span class="sheng fl">华北</span>
+							<div class="city-list fl">
+								<a href="">北京</a>
+								<a href="">天津</a>
+								<a href="">河北</a>
+								<a href="">山西</a>
+								<a href="">内蒙古</a>
+							</div>
+						</dd>
+					</dl>
+				</div>
+			</div>
+			<ul class="headerTopRight fr">
+				<li><a href="">正品保证</a></li>
+				<li><a href="">订单查询</a></li>
+				<li><a href="">
+					<s class="icon_favorite"></s>
+					收藏的品牌</a></li>
+				<li class="item_ijumei"><a href="">我的聚美
+					<s class="icon_arrow_down"></s>
+				</a></li>
+				<li class="item_mobile"><a href="">手机聚美
+					<span class="line"></span><s class="icon_mobile"></s>
+				</a></li>
+				<li class="item_koubei"><a href=""><s class="icon_koubei"></s>口碑中心</a></li>
+				<li class="see_more">
+					<span class="line"></span>
+					<div class="look_all_box">
+						<a class="look_all"><span>查看分类</span>
+	                        <b class="grid png"></b>
+	                        <b class="close png"></b>
+	                    </a>
+					</div>
+				</li>
+				<li class="item_more">
+					<a href="">更多
+						<s class="icon_arrow icon_arrow_down"></s>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!--头部横条-->
+	<!--logo和搜索部分-->
+	<div class="header_center">
+		<h1 class="logo fl"><a href="">化妆品品牌排行榜大全网站聚美优品</a></h1>
+		
+	    <div id="cart_box" class="cart_box fr cur-current">
+	        <a id="cart" class="cart_link" href="" rel="nofollow">
+	            <img src="../images/cart.gif" class="cart_gif" width="28" height="28">
+	            <span class="text">去购物车结算</span>
+	            <span class="num" style="display: none;"></span>
+	            <s class="icon_arrow_right"></s>
+	        </a>
+	
+	        <div class="cart_content" id="cart_content">
+	            <i class="cart-icons"></i>
+	            <div class="cart_content_null">购物车中还没有商品，<br>快去挑选心爱的商品吧！</div>
+	            <!--<div class="cart_content_all">
+	                <div class="cart_left_time">已超过购物车商品保留时间，请尽快结算。</div>
+	                <div class="cart_content_center"></div>
+	                <div class="con_all">
+	                    <div class="price_whole"><span>共<span class="num_all"></span>件商品</span></div>
+	                    <div><span class="price_gongji">共计<em>￥</em><span class="total_price">69</span></span><a href="" class="cart_btn" rel="nofollow">去购物车结算</a></div>
+	                </div>
+	            </div>-->
+	        </div>
+	    </div>
+	</div>
+	<!--logo和搜索部分-->
+	<!--导航条部分-->
+	<div class="header_bottom">	
+		<div class="channel_nav_box">    
+			<div class="channel_nav_list_wrap">
+				<ul class="channel_nav_list fl">
+					<li><a class="home" href="">首页</a></li>
+					<li><a href="">极速免税店</a></li>
+					<li><a href="">母婴特卖</a></li>
+					<li class="current"><a href="">美妆商城<b></b></a></li>
+					<li><a href="">服装运动</a></li>
+					<li><a href="">鞋包配饰</a></li>
+				</ul>
+				<div class="header_pop_subAtc">
+					<div class="mz_imglist fl">
+						<a target="_blank" href=""><img src="../images/30573_254_135_003-web.jpg"></a>
+						<a target="_blank" href=""><img src="../images/30573_254_135_005-web.jpg"></a>
+					  </div>
+					  <div class="mz_inner fl">
+					  	<dl style="border-left: none;">
+					  		<dt class="item_int">国际大牌<a href=""></a></dt>
+					  		<dd><a href="">兰蔻</a></dd>
+					  		<dd><a href="">兰蔻</a></dd>
+					  		<dd><a href="">兰蔻</a></dd>
+					  		<dd><a href="">兰蔻</a></dd>
+					  		<dd><a href="">兰蔻</a></dd>
+					  		<dd><a href="">兰蔻</a></dd>
+					  	</dl>
+					  	<dl>
+					  		<dt class="item_hufu">护肤<a href=""></a></dt>
+					  		<dd><a href="">兰蔻</a></dd>
+					  		<dd><a href="">兰蔻</a></dd>
+					  		<dd><a href="">兰蔻</a></dd>
+					  		<dd><a href="">兰蔻</a></dd>
+					  		<dd><a href="">兰蔻</a></dd>
+					  		<dd><a href="">兰蔻</a></dd>
+					  	</dl>
+					  	<dl>
+					  		<dt class="item_caizhuang">彩妆<a href=""></a></dt>
+					  		<dd><a href="">兰蔻</a></dd>
+					  		<dd><a href="">兰蔻</a></dd>
+					  		<dd><a href="">兰蔻</a></dd>
+					  		<dd><a href="">兰蔻</a></dd>
+					  		<dd><a href="">兰蔻</a></dd>
+					  		<dd><a href="">兰蔻</a></dd>
+					  	</dl>
+					  	<dl style="border-left: none;border-bottom: none;">
+					  		<dt class="item_xiangfen">香氛<a href=""></a></dt>
+					  		<dd><a href="">兰蔻</a></dd>
+					  		<dd><a href="">兰蔻</a></dd>
+					  		<dd><a href="">兰蔻</a></dd>
+					  		<dd><a href="">兰蔻</a></dd>
+					  		<dd><a href="">兰蔻</a></dd>
+					  		<dd><a href="">兰蔻</a></dd>
+					  	</dl>
+					  	<dl border-bottom: none;>
+					  		<dt class="item_nanshi">男士专区<a href=""></a></dt>
+					  		<dd><a href="">兰蔻</a></dd>
+					  		<dd><a href="">兰蔻</a></dd>
+					  		<dd><a href="">兰蔻</a></dd>
+					  		<dd><a href="">兰蔻</a></dd>
+					  		<dd><a href="">兰蔻</a></dd>
+					  		<dd><a href="">兰蔻</a></dd>
+					  	</dl>
+					  	<dl border-bottom: none;>
+					  		<dt class="item_hot">热门专区<a href=""></a></dt>
+					  		<dd><a href="">兰蔻</a></dd>
+					  		<dd><a href="">兰蔻</a></dd>
+					  		<dd><a href="">兰蔻</a></dd>
+					  		<dd><a href="">兰蔻</a></dd>
+					  		<dd><a href="">兰蔻</a></dd>
+					  		<dd><a href="">兰蔻</a></dd>
+					  	</dl>
+					  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--头部-->
+<!--个人中心开始-->
+<div class="profile">
+	<div class="nav fl">
+		<div class="notice">
+			<a href="photo.html" style="border-bottom: 0;padding:0;"><img src="../images/avatar_small.png" alt="" /></a>
+			<p class="nickname"><a style="border:none;padding-left:0;line-height: 1.8;color:#ed145b" href="/i/account/settings" target="_blank">星海穿月</a></p>
+			<p><a style="border:none;padding-left:0;line-height: normal;" href="" target="_blank">普通会员</a></p>
+			<p class="uid">用户ID: 65409947</p>
+		</div>
+		<h2><b></b>我的聚美优品</h2>
+		<a href="dingdan.html" class="list"><b></b>我的订单</a>
+		<a href="save.html" class="fav"><b></b>我的收藏</a>
+		<a href="" class="member"><b></b>我的会员等级</a>
+		<a href="" class="credit"><b></b>我的金币</a>
+		<h2><b></b>管理个人账户</h2>
+		<a href="" class="settings"><b></b>设置账户信息</a>
+		<a href="" class="password"><b></b>修改密码</a>
+		<a href="" class="bind"><b></b>绑定手机</a>
+		<a href="" class="addr selected"><b></b>管理收货地址</a>
+	</div>
+	<!--管理收货地址-->
+	<h1>管理收货地址</h1>
+	<div class="content sector">
+		<h2>
+			<span class="addAddress">新增</span>
+			<span class="modifyAddress" style="display: none;">修改</span>
+			收货地址
+		</h2>
+		<form id="settings-form" class="shipping_address" action="" method="post">
+			<div class="input_container">
+				<div style="float: left;">
+					<label for="recipient_name"><span class="spark">*</span>收件人姓名：</label>
+					<input size="20" class="t_input recipient_name" id="recipient_name" name="recipient_name" value="" type="text">
+				</div>
+				<a class="real_name_cert real_name_cert_hidden" href="javascript:;" title="选择身份验证已通过的收货人"></a>
+				<div style="float: left;">
+					<label for="id_card_no" class="label_id_card" style="">身份证号码：</label>
+					<input class="t_input text_id_card_no" id="id_card_no" name="id_card_no" type="text">
+				</div>
+			</div>
+			<div class="input_container input_address_select">
+				<label for="select_province"><span class="spark">*</span>收货地址：</label>
+				<div class="district_selector">
+				    <span class="select_ui">
+				    	<div class="select_arrow"></div>
+				    	<div id="sheng" style="min-width: 8.5em;" class="select_text_ui">省/直辖市</div>
+				    	<select id="s1" class="f-input select_province" data-default="省/直辖市">
+				    		<option value="">省/直辖市</option>
+				    	</select>
+				    </span>
+				    <span class="select_ui">
+				    	<div class="select_arrow"></div>
+				    	<div id="shi" style="min-width: 4.5em;" class="select_text_ui">市</div>
+				    	<select id="s2" class="f-input select_city" data-default="市">
+				    		<option value="">市</option>
+				    	</select>
+				    </span>
+				    <span class="select_ui">
+				    	<div class="select_arrow"></div>
+				    	<div id="xian" style="min-width: 3.5em;" class="select_text_ui">区/县</div>
+				    	<select id="s3" class="f-input select_area" data-default="区/县">
+				    		<option value="">区/县</option>
+				    	</select>
+				    </span>
+				    <span style="display: none;" class="select_ui"><div class="select_arrow"></div><div style="min-width: 5.5em;" class="select_text_ui">乡镇/街道</div><select class="f-input select_district" data-default="乡镇/街道"><option value="">乡镇/街道</option><option value="131123000">我不清楚</option></select></span>
+				</div>
+				<input name="structured_code" id="area" value="131123000" type="hidden">
+			</div>
+			<div class="input_container">
+				<label for="recipient_street"><span class="spark">*</span>详细地址：</label>
+				<textarea rows="3" cols="60" class="t_input recipient_street" style="height:auto;resize:none;" id="recipient_street" name="recipient_street"></textarea>
+			</div>
+			<div class="input_container">
+				<label for="recipient_hp"><span class="spark">*</span>手机号码：</label>
+				<input size="20" class="t_input recipient_hp" id="recipient_hp" name="recipient_hp" value="" maxlength="11" type="tel">
+				<label for="recipient_tel_area" style="float:none;margin-left:20px;">或固定号码：</label>
+				<input size="5" class="t_input recipient_tel_area" id="recipient_tel_area" name="recipient_tel_area" value="" maxlength="4" type="tel">
+				<span class="rod">-</span>
+				<input size="10" class="t_input recipient_tel_number" id="recipient_tel_number" name="recipient_tel_number" value="" maxlength="8" type="tel">
+				<span class="rod">-</span>
+				<input size="5" class="t_input recipient_tel_ext" id="recipient_tel_ext" name="recipient_tel_ext" value="" maxlength="8" type="tel">
+			</div>
+			<div class="act">
+				<input value="保存收货地址" name="commit" id="shipping_address_submit" class="formbutton" type="submit">&nbsp;
+				<a style="display: none;" href="#" id="edit_cancel">取消</a>
+			</div>
+		</form>
+		<h2>已保存的地址</h2>
+		<div class="notice_content">最多保存10个有效地址。  </div>
+        <div id="shipping_address_list">
+			<table id="order-list" class="order-tablev2">
+				<tbody>
+					<tr class="order_list_title" style="background: transparent linear-gradient(to bottom, #FBFBFB, #F7F4F2) repeat scroll 0% 0%;">
+						<th>收货人</th>
+						<th>收货地址</th>
+						<th>手机</th>
+						<th>固定电话</th>
+						<th width="105px">身份证号码</th>
+						<th width="80">操作</th>
+					</tr>
+					<tr>
+						<td>徐影&nbsp;</td>
+						<td class="order_info_td">北京市-市辖区-海淀区 苏州桥西北角79号金洲大厦17层</td>
+						<td style="padding:0;">132****3803&nbsp;</td> 
+						<td>&nbsp;</td>  
+						<td></td> 
+						<td>
+							<a address_id="42723959" class="sp_address_edit" style="display:inline-block;" href="javascript:void(0)">修改</a> 
+							&nbsp; 
+							<a address_id="42723959" class="sp_address_delete" style="display:inline-block;" href="javascript:void(0)">删除</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+        </div>
+	</div>
+		
+	
+	<!--管理收货地址-->
+</div>
+</body>
+</html>

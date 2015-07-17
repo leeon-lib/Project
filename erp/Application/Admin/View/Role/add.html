@@ -12,9 +12,9 @@
 	<div class="warp">
 		<div class="submenu">
 			<div class="left">
-				<a href="{:U('Admin/Role/index')}">角色列表</a>
+				<a href="-{:U('Admin/Role/index')}-">角色列表</a>
 				<span>|</span>
-				<a href="{:U('Admin/Role/add')}">添加角色</a>
+				<a href="-{:U('Admin/Role/add')}-">添加角色</a>
 			</div>
 			<div class="right">
 				<a href="">后退</a>
@@ -23,7 +23,7 @@
 			</div>
 		</div>
 		<div class="content">
-			<form action="{:U('Admin/Role/operate')}" method="post">
+			<form action="-{:U('Admin/Role/operate')}-" method="post">
 				<table class="content-table">
 					<tbody>
 						<tr class="title">
@@ -35,7 +35,7 @@
 								<select name="department_id">
 									<option value="0">--必选--</option>
 									<foreach name="deptList" item="v">
-										<option value="{$v.id}">{$v.name}</option>
+										<option value="-{$v.id}-">-{$v.name}-</option>
 									</foreach>
 								</select>
 							</td>

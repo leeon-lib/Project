@@ -11,9 +11,9 @@
 <body>
 	<div class="submenu">
 		<div class="left">
-			<a href="{:U('Product/Category/index')}">分类列表</a>
+			<a href="-{:U('Product/Category/index')}-">分类列表</a>
 			<span>|</span>
-			<a href="{:U('Product/Category/add')}">添加分类</a>
+			<a href="-{:U('Product/Category/add')}-">添加分类</a>
 		</div>
 		<div class="right">
 			<a href="">后退</a>
@@ -34,20 +34,20 @@
 			</thead>
 			<tbody>
 				<foreach name="cateInfo" item="v">
-				<tr pid="{$v.pid}" cid="{$v.cid}">
+				<tr pid="-{$v.pid}-" cid="-{$v.cid}-">
 					<td align="center">
-                        <a href="javascript:;" class="glyphicon glyphicon-plus" cid="{$v.cid}"></a>
+                        <a href="javascript:;" class="glyphicon glyphicon-plus" cid="-{$v.cid}-"></a>
                     </td>
-					<td align="left">{$v.cid}</td>
-					<td align="left">{$v.name}</td>
+					<td align="left">-{$v.cid}-</td>
+					<td align="left">-{$v.name}-</td>
 					<td align="center">
-						<a href="{:U('Product/Category/showAttr',array('cid'=>$v['cid']))}">查看</a>
-						<a href="{:U('Product/Category/setAttr',array('cid'=>$v['cid']))}">设置</a>
+						<a href="-{:U('Product/Category/showAttr',array('cid'=>$v['cid']))}-">查看</a>
+						<a href="-{:U('Product/Category/setAttr',array('cid'=>$v['cid']))}-">设置</a>
 					</td>
 					<td align="center">
-						<a href="{:U('addSub',array('cid'=>$v['cid']))}">添加子分类</a>
-						<a href="{:U('edit',array('cid'=>$v['cid']))}">编辑</a>
-						<a href="javascript:del({$v['id']});">删除</a>
+						<a href="-{:U('addSub',array('cid'=>$v['cid']))}-">添加子分类</a>
+						<a href="-{:U('edit',array('cid'=>$v['cid']))}-">编辑</a>
+						<a href="javascript:del(-{$v['id']}-);">删除</a>
 					</td>	
 				</tr>
 				</foreach>
@@ -65,11 +65,11 @@
     		var cid = $(this).attr('cid');
     		$('tbody>tr[pid='+cid+']').show();
     		// 样式变换，＋变－
-            $(this).removeClass('glyphicon-plus');
-            $(this).addClass('glyphicon-minus');
+            $(this).removeClass('glyphiconplus');
+            $(this).addClass('glyphiconminus');
     	},function(){
-    		$(this).removeClass('glyphicon-minus');
-            $(this).addClass('glyphicon-plus');
+    		$(this).removeClass('glyphiconminus');
+            $(this).addClass('glyphiconplus');
             // 点击收起子分类
             var cid = $(this).attr('cid');
             $.ajax({

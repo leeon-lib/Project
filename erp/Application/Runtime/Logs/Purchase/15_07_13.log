@@ -1,0 +1,1112 @@
+[ 2015-07-13T09:07:35+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Purchase/Purchase/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000540s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000713s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000874s ]
+SQL: SHOW COLUMNS FROM `purchase_order` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `warehouse` [ RunTime:0.0045s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000116s ]
+NOTIC: [8] Undefined variable: cateInfo /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/1a89e1aeccccbcb832228518b8d81823.php 第 36 行.
+NOTIC: [8] Undefined variable: cateInfo /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/1a89e1aeccccbcb832228518b8d81823.php 第 45 行.
+NOTIC: [8] Undefined variable: cateInfo /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/1a89e1aeccccbcb832228518b8d81823.php 第 52 行.
+NOTIC: [8] Undefined variable: productList /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/1a89e1aeccccbcb832228518b8d81823.php 第 75 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018692s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000171s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000220s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000491s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000544s ]
+
+[ 2015-07-13T09:07:37+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Purchase/Purchase/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000295s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000393s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000445s ]
+SQL: SHOW COLUMNS FROM `purchase_order` [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `warehouse` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `warehouse` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `warehouse`  [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0017s ]
+ERR: Think\Model:selectselect方法不存在！
+
+[ 2015-07-13T09:07:43+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Purchase/Purchase/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000539s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000565s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000646s ]
+SQL: SHOW COLUMNS FROM `purchase_order` [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `warehouse` [ RunTime:0.0046s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000213s ]
+NOTIC: [8] Undefined variable: cateInfo /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/1a89e1aeccccbcb832228518b8d81823.php 第 36 行.
+NOTIC: [8] Undefined variable: cateInfo /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/1a89e1aeccccbcb832228518b8d81823.php 第 45 行.
+NOTIC: [8] Undefined variable: cateInfo /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/1a89e1aeccccbcb832228518b8d81823.php 第 52 行.
+NOTIC: [8] Undefined variable: productList /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/1a89e1aeccccbcb832228518b8d81823.php 第 75 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015744s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015832s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000497s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000679s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001165s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001324s ]
+
+[ 2015-07-13T09:18:19+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Purchase/Supplier/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000622s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000740s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000817s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0047s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0034s ]
+SQL: SELECT s.id,s.name,s.manager,s.mobile,s.qq,s.email,s.kind_id,b.name as brand_name FROM supplier s,supplier_brand sb,brand b WHERE ( s.id=sb.supplier_id AND sb.brand_id=b.id )  [ RunTime:0.0031s ]
+
+[ 2015-07-13T09:18:20+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Purchase/Supplier/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000588s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000623s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000718s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0025s ]
+SQL: SELECT s.id,s.name,s.manager,s.mobile,s.qq,s.email,s.kind_id,b.name as brand_name FROM supplier s,supplier_brand sb,brand b WHERE ( s.id=sb.supplier_id AND sb.brand_id=b.id )  [ RunTime:0.0008s ]
+
+[ 2015-07-13T09:19:40+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Purchase/Supplier/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000458s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000498s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000566s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0042s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0019s ]
+SQL: SELECT s.id,s.name,s.manager,s.mobile,s.qq,s.email,s.kind_id,b.name as brand_name FROM supplier s,supplier_brand sb,brand b WHERE ( s.id=sb.supplier_id AND sb.brand_id=b.id )  [ RunTime:0.0003s ]
+
+[ 2015-07-13T09:19:52+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Purchase/Supplier/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000304s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000407s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000460s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0021s ]
+SQL: SELECT s.id,s.name,s.manager,s.mobile,s.qq,s.email,s.kind_id,b.name as brand_name FROM supplier s,supplier_brand sb,brand b WHERE ( s.id=sb.supplier_id AND sb.brand_id=b.id )  [ RunTime:0.0003s ]
+
+[ 2015-07-13T09:19:53+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Purchase/Supplier/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000335s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000459s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000531s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0019s ]
+SQL: SELECT s.id,s.name,s.manager,s.mobile,s.qq,s.email,s.kind_id,b.name as brand_name FROM supplier s,supplier_brand sb,brand b WHERE ( s.id=sb.supplier_id AND sb.brand_id=b.id )  [ RunTime:0.0003s ]
+
+[ 2015-07-13T09:20:15+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Purchase/Supplier/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000724s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000642s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000748s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0019s ]
+SQL: SELECT s.id,s.name,s.manager,s.mobile,s.qq,s.email,s.kind_id,b.name as brand_name FROM supplier s,supplier_brand sb,brand b WHERE ( s.id=sb.supplier_id AND sb.brand_id=b.id )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `supplier`  [ RunTime:0.0002s ]
+
+[ 2015-07-13T09:20:24+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Purchase/Supplier/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000615s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000655s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000766s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `supplier`  [ RunTime:0.0002s ]
+
+[ 2015-07-13T09:20:24+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Purchase/Supplier/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000295s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000383s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000436s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0039s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `supplier`  [ RunTime:0.0002s ]
+
+[ 2015-07-13T09:20:25+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Purchase/Supplier/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000293s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000882s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000972s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `supplier`  [ RunTime:0.0002s ]
+
+[ 2015-07-13T09:20:29+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Purchase/Supplier/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000294s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000389s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000441s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0039s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `supplier`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000160s ]
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010974s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011042s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000180s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000231s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000524s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000582s ]
+
+[ 2015-07-13T09:34:57+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Purchase/Supplier/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000531s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000530s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000610s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `supplier`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012054s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012130s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000177s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000224s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000493s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000545s ]
+
+[ 2015-07-13T09:34:57+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Purchase/Supplier/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000320s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000485s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000571s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `supplier`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000105s ]
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008279s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008331s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000144s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000188s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000425s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000474s ]
+
+[ 2015-07-13T09:34:57+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Purchase/Supplier/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000302s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000393s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000447s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0042s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `supplier`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000049s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000139s ]
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009221s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009279s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000142s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000186s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000426s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000473s ]
+
+[ 2015-07-13T09:34:58+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Purchase/Supplier/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000546s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000512s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000583s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `supplier`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009621s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009702s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000172s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000220s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000500s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000558s ]
+
+[ 2015-07-13T09:34:58+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Purchase/Supplier/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000412s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000949s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001099s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `supplier`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000049s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000138s ]
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009896s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009963s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000171s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000217s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000432s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000482s ]
+
+[ 2015-07-13T09:34:58+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Purchase/Supplier/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001185s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001390s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0041s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `supplier`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000110s ]
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010280s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010336s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000136s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000181s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000432s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000480s ]
+
+[ 2015-07-13T09:34:58+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Purchase/Supplier/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000913s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000888s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001062s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `supplier`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000110s ]
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010630s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010686s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000147s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000192s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000428s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000474s ]
+
+[ 2015-07-13T09:35:54+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Purchase/Supplier/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000302s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000396s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000449s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0042s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0036s ]
+SQL: SELECT s.id,s.name,s.manager,s.mobile,s.qq,s.email,s.kind_id,b.name as brand_name FROM supplier s,supplier_brand sb,brand b WHERE ( s.id=sb.supplier_id AND sb.brand_id=b.id )  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000171s ]
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011905s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012021s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000252s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000309s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000689s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000784s ]
+
+[ 2015-07-13T09:36:20+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Purchase/Supplier/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000950s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000493s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000559s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0015s ]
+SQL: SELECT s.id,s.name,s.manager,s.mobile,s.qq,s.email,s.kind_id,b.name as brand_name FROM supplier s,supplier_brand sb,brand b WHERE ( s.id=sb.supplier_id AND sb.brand_id=b.id ) GROUP BY brand_name  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000095s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000362s ]
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012446s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012509s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000172s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000222s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000455s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000509s ]
+
+[ 2015-07-13T09:36:43+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Purchase/Purchase/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000299s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000389s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000443s ]
+SQL: SHOW COLUMNS FROM `purchase_order` [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0026s ]
+SQL: SHOW COLUMNS FROM `warehouse` [ RunTime:0.0026s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000108s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000380s ]
+NOTIC: [8] Undefined variable: cateInfo /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/1a89e1aeccccbcb832228518b8d81823.php 第 36 行.
+NOTIC: [8] Undefined variable: cateInfo /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/1a89e1aeccccbcb832228518b8d81823.php 第 45 行.
+NOTIC: [8] Undefined variable: cateInfo /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/1a89e1aeccccbcb832228518b8d81823.php 第 52 行.
+NOTIC: [8] Undefined variable: productList /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/1a89e1aeccccbcb832228518b8d81823.php 第 75 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014704s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014771s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000189s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000515s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000570s ]
+
+[ 2015-07-13T09:36:44+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Purchase/Purchase/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000356s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000410s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000464s ]
+SQL: SHOW COLUMNS FROM `purchase_order` [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `warehouse` [ RunTime:0.0039s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000147s ]
+NOTIC: [8] Undefined variable: cateInfo /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/1a89e1aeccccbcb832228518b8d81823.php 第 36 行.
+NOTIC: [8] Undefined variable: cateInfo /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/1a89e1aeccccbcb832228518b8d81823.php 第 45 行.
+NOTIC: [8] Undefined variable: cateInfo /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/1a89e1aeccccbcb832228518b8d81823.php 第 52 行.
+NOTIC: [8] Undefined variable: productList /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/1a89e1aeccccbcb832228518b8d81823.php 第 75 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012718s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012811s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000161s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000207s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000437s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000488s ]
+
+[ 2015-07-13T09:36:46+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Purchase/Supplier/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000686s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001191s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0016s ]
+SQL: SELECT s.id,s.name,s.manager,s.mobile,s.qq,s.email,s.kind_id,b.name as brand_name FROM supplier s,supplier_brand sb,brand b WHERE ( s.id=sb.supplier_id AND sb.brand_id=b.id ) GROUP BY brand_name  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000098s ]
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009855s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009922s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000137s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000181s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000423s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000471s ]
+
+[ 2015-07-13T09:36:46+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Purchase/Supplier/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000293s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000772s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000907s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0026s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0022s ]
+SQL: SELECT s.id,s.name,s.manager,s.mobile,s.qq,s.email,s.kind_id,b.name as brand_name FROM supplier s,supplier_brand sb,brand b WHERE ( s.id=sb.supplier_id AND sb.brand_id=b.id ) GROUP BY brand_name  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000103s ]
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009551s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009626s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000152s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000197s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000425s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000472s ]
+
+[ 2015-07-13T09:37:19+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Purchase/Supplier/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000517s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000636s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000725s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0024s ]
+SQL: SELECT s.id,s.name,s.manager,s.mobile,s.qq,s.email,s.kind_id,b.name as brand_name FROM supplier s,supplier_brand sb,brand b WHERE ( s.id=sb.supplier_id AND sb.brand_id=b.id ) GROUP BY b.name  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000147s ]
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012007s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012101s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000261s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000320s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000557s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000635s ]
+
+[ 2015-07-13T09:37:20+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Purchase/Supplier/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000295s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000828s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000949s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0023s ]
+SQL: SELECT s.id,s.name,s.manager,s.mobile,s.qq,s.email,s.kind_id,b.name as brand_name FROM supplier s,supplier_brand sb,brand b WHERE ( s.id=sb.supplier_id AND sb.brand_id=b.id ) GROUP BY b.name  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000100s ]
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008969s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009047s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000134s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000179s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000432s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000479s ]
+
+[ 2015-07-13T09:37:21+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Purchase/Supplier/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000293s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000786s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000897s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0024s ]
+SQL: SELECT s.id,s.name,s.manager,s.mobile,s.qq,s.email,s.kind_id,b.name as brand_name FROM supplier s,supplier_brand sb,brand b WHERE ( s.id=sb.supplier_id AND sb.brand_id=b.id ) GROUP BY b.name  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000117s ]
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010772s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010839s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000137s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000182s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000427s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000475s ]
+
+[ 2015-07-13T09:37:21+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Purchase/Supplier/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000335s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000418s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000473s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0035s ]
+SQL: SELECT s.id,s.name,s.manager,s.mobile,s.qq,s.email,s.kind_id,b.name as brand_name FROM supplier s,supplier_brand sb,brand b WHERE ( s.id=sb.supplier_id AND sb.brand_id=b.id ) GROUP BY b.name  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000152s ]
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011214s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011287s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000253s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000305s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000549s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000620s ]
+
+[ 2015-07-13T09:37:52+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Purchase/Supplier/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000675s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000914s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001090s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0015s ]
+SQL: SELECT s.id,s.name,s.manager,s.mobile,s.qq,s.email,s.kind_id,b.name as brand_name FROM supplier s,supplier_brand sb,brand b WHERE ( s.id=sb.supplier_id AND sb.brand_id=b.id ) GROUP BY kind_id  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000102s ]
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008544s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008596s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000135s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000180s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000430s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000482s ]
+
+[ 2015-07-13T09:37:55+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Purchase/Supplier/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000307s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000469s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000534s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0026s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0016s ]
+SQL: SELECT s.id,s.name,s.manager,s.mobile,s.qq,s.email,s.kind_id,b.name as brand_name FROM supplier s,supplier_brand sb,brand b WHERE ( s.id=sb.supplier_id AND sb.brand_id=b.id ) GROUP BY kind_id  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000097s ]
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008389s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008443s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000227s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000289s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000916s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000998s ]
+
+[ 2015-07-13T09:37:56+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Purchase/Supplier/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000297s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000390s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000441s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0026s ]
+SQL: SELECT s.id,s.name,s.manager,s.mobile,s.qq,s.email,s.kind_id,b.name as brand_name FROM supplier s,supplier_brand sb,brand b WHERE ( s.id=sb.supplier_id AND sb.brand_id=b.id ) GROUP BY kind_id  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000104s ]
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010845s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010930s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000194s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000249s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000446s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000496s ]
+
+[ 2015-07-13T09:37:56+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Purchase/Supplier/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000295s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000391s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000444s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0018s ]
+SQL: SELECT s.id,s.name,s.manager,s.mobile,s.qq,s.email,s.kind_id,b.name as brand_name FROM supplier s,supplier_brand sb,brand b WHERE ( s.id=sb.supplier_id AND sb.brand_id=b.id ) GROUP BY kind_id  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000096s ]
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008609s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008668s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000220s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000264s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000674s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000761s ]
+
+[ 2015-07-13T09:38:13+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Purchase/Supplier/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000326s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000437s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000496s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0031s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0024s ]
+SQL: SELECT s.id,s.name,s.manager,s.mobile,s.qq,s.email,s.kind_id,b.name as brand_name FROM supplier s,supplier_brand sb,brand b WHERE ( s.id=sb.supplier_id AND sb.brand_id=b.id ) GROUP BY s.id  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000101s ]
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008557s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008613s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000145s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000190s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000902s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000995s ]
+
+[ 2015-07-13T09:38:13+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Purchase/Supplier/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000294s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000902s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001022s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0019s ]
+SQL: SELECT s.id,s.name,s.manager,s.mobile,s.qq,s.email,s.kind_id,b.name as brand_name FROM supplier s,supplier_brand sb,brand b WHERE ( s.id=sb.supplier_id AND sb.brand_id=b.id ) GROUP BY s.id  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000154s ]
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010064s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010142s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000249s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000305s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000574s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000649s ]
+
+[ 2015-07-13T09:38:14+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Purchase/Supplier/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000295s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000870s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000992s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0019s ]
+SQL: SELECT s.id,s.name,s.manager,s.mobile,s.qq,s.email,s.kind_id,b.name as brand_name FROM supplier s,supplier_brand sb,brand b WHERE ( s.id=sb.supplier_id AND sb.brand_id=b.id ) GROUP BY s.id  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000203s ]
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013026s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013096s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000188s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000240s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000495s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000550s ]
+
+[ 2015-07-13T09:38:14+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Purchase/Supplier/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000298s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000816s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000935s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0017s ]
+SQL: SELECT s.id,s.name,s.manager,s.mobile,s.qq,s.email,s.kind_id,b.name as brand_name FROM supplier s,supplier_brand sb,brand b WHERE ( s.id=sb.supplier_id AND sb.brand_id=b.id ) GROUP BY s.id  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008925s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008986s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000150s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000200s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000484s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000540s ]
+
+[ 2015-07-13T09:38:14+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Purchase/Supplier/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000295s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000390s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000443s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0026s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0016s ]
+SQL: SELECT s.id,s.name,s.manager,s.mobile,s.qq,s.email,s.kind_id,b.name as brand_name FROM supplier s,supplier_brand sb,brand b WHERE ( s.id=sb.supplier_id AND sb.brand_id=b.id ) GROUP BY s.id  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000152s ]
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009297s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009368s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000240s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000293s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000548s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000619s ]
+
+[ 2015-07-13T13:23:31+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Purchase/Supplier/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000323s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000890s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001002s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0082s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0021s ]
+SQL: SELECT s.id,s.name,s.manager,s.mobile,s.qq,s.email,s.kind_id,b.name as brand_name FROM supplier s,supplier_brand sb,brand b WHERE ( s.id=sb.supplier_id AND sb.brand_id=b.id ) GROUP BY s.id  [ RunTime:0.0049s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000249s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000404s ]
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021338s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021495s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000319s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000429s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Users/Liyn/Desktop/home/Project/erp/Application/Common/Common/function.php:14) /Users/Liyn/Desktop/home/Project/erp/ThinkPHP/Library/Think/View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000921s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001016s ]
+
+[ 2015-07-13T13:23:42+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Purchase/Supplier/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000403s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000965s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001101s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0048s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0020s ]
+SQL: SELECT s.id,s.name,s.manager,s.mobile,s.qq,s.email,s.kind_id,b.name as brand_name FROM supplier s,supplier_brand sb,brand b WHERE ( s.id=sb.supplier_id AND sb.brand_id=b.id ) GROUP BY s.id  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000159s ]
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+NOTIC: [8] Undefined index: brand_id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/b058e4b2ab66776feb9b7159675cfe8a.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011693s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011801s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000144s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000191s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000463s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000516s ]
+
+[ 2015-07-13T17:21:35+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Purchase/Purchase/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000297s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000394s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000447s ]
+SQL: SHOW COLUMNS FROM `purchase_order` [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `warehouse` [ RunTime:0.0025s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000154s ]
+NOTIC: [8] Undefined variable: cateInfo /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/1a89e1aeccccbcb832228518b8d81823.php 第 36 行.
+NOTIC: [8] Undefined variable: cateInfo /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/1a89e1aeccccbcb832228518b8d81823.php 第 45 行.
+NOTIC: [8] Undefined variable: cateInfo /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/1a89e1aeccccbcb832228518b8d81823.php 第 52 行.
+NOTIC: [8] Undefined variable: productList /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Purchase/1a89e1aeccccbcb832228518b8d81823.php 第 75 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016579s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016708s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000415s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000513s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001184s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001331s ]
+
+[ 2015-07-13T17:21:36+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Purchase/Sku/import.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000667s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000656s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000787s ]
+ERR: 无法加载控制器:Sku
+
+[ 2015-07-13T17:21:37+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Purchase/Supplier/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000327s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000417s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000472s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0045s ]
+SQL: SELECT s.id,s.name,s.manager,s.mobile,s.qq,s.email,s.kind_id,b.name as brand_name FROM supplier s,supplier_brand sb,brand b WHERE ( s.id=sb.supplier_id AND sb.brand_id=b.id ) GROUP BY s.id  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000124s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012469s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012535s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000158s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000211s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000493s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000548s ]
+
+[ 2015-07-13T17:21:38+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Purchase/Attribute/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000330s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000413s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000465s ]
+ERR: 无法加载控制器:Attribute
+
+[ 2015-07-13T17:21:38+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Purchase/Attribute/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000356s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000499s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000566s ]
+ERR: 无法加载控制器:Attribute
+
+[ 2015-07-13T17:21:39+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Purchase/Attribute/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000377s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000468s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000528s ]
+ERR: 无法加载控制器:Attribute
+

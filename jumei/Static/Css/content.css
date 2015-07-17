@@ -1,0 +1,130 @@
+table {
+  width: 100%;
+  border-spacing: 0;
+}
+table td {
+  padding: 5px 0;
+}
+table input[type=text] {
+  width: 200px;
+  padding: 6px 5px;
+  line-height: 15px;
+}
+table input[type=password] {
+  width: 200px;
+  padding: 6px 5px;
+  line-height: 15px;
+}
+table select {
+  width: 202px;
+  height: 28px;
+}
+table select option {
+  padding: 5px 10px;
+}
+table input[type=submit] {
+  display: block;
+  width: 60px;
+  border: 0;
+  border-radius: 3px;
+  padding: 5px;
+}
+thead {
+  background: #eef3f7;
+  height: 25px;
+  line-height: 25px;
+  font-weight: bold;
+}
+thead td {
+  border-bottom: 1px solid #ccc;
+}
+/*提交表单的容器*/
+.warp .content td {
+  padding-left: 10px;
+}
+/*内容页菜单*/
+.submenu {
+  line-height: 25px;
+  overflow: hidden;
+  padding: 2px 0 3px;
+  border-bottom: 1px solid #ccc;
+  margin: 0 10px 10px 10px;
+}
+.submenu .left {
+  float: left;
+}
+.submenu .right {
+  float: right;
+}
+.submenu a {
+  padding: 3px 10px;
+  background: #5288AE;
+  color: #FFFFFF;
+  border-radius: 5px;
+}
+.submenu span {
+  margin: 0 5px;
+  color: #ccc;
+}
+/*内容*/
+.content .search {
+  border: 1px solid #3C6DC6;
+  margin: 0 10px 30px;
+  padding: 10px;
+  background: #FFFEEB;
+}
+.content .search .search-table input[type=submit] {
+  background: #4D8CFF;
+  color: #FFF;
+}
+.content .search .search-table input[type=submit]:hover {
+  background: #3C6DC6;
+}
+.content .search .search-table .name input[type=text] {
+  width: 810px;
+}
+.content .search .search-table .date input[type=text] {
+  width: 92px;
+}
+.content .content-table {
+  line-height: 30px;
+}
+.content .content-table tbody tr {
+  border-bottom: 1px solid #ccc;
+}
+.content .content-table tbody tr:hover {
+  background: #EEEEEE;
+}
+.content .content-table input[type=submit] {
+  background: #4D8CFF;
+  color: #FFF;
+  font-size: 12px;
+  margin: 20px 0;
+}
+.content .content-table input[type=submit]:hover {
+  background: #3C6DC6;
+}
+.content .content-table textarea {
+  width: 200px;
+  height: 80px;
+  line-height: 20px;
+  padding: 0 5px;
+}
+.content .content-table .title {
+  font-weight: bold;
+  line-height: 20px;
+  background: #eef3f7;
+}
+.content .content-table .title:hover {
+  background: #eef3f7;
+}
+.content .content-table .note {
+  color: darkred;
+}
+.content .content-table .btn {
+  border: 0;
+  padding: 0;
+}
+.content .content-table .btn:hover {
+  background: #FFF;
+}

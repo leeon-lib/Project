@@ -49,15 +49,12 @@ class DepartmentController extends AuthController
 		$id = (int)I('get.id');
 		$oldData = $this->deptModel->getOne($id);
 		$deptList = $this->deptModel->getList();
-		// p($oldData);
-		// p($deptList);
 		$this->assign('deptList', $deptList);
 		$this->assign('oldData', $oldData);
 		$this->display();
 	}
 
 	/**
-	 * 部门的操作
 	 * 添加、修改
 	 */
 	public function operate()

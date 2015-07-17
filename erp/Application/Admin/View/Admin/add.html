@@ -11,9 +11,9 @@
 	<div class="warp">
 		<div class="submenu">
 			<div class="left">
-				<a href="{:U('Admin/Admin/index')}">管理员列表</a>
+				<a href="-{:U('Admin/Admin/index')}-">管理员列表</a>
 				<span>|</span>
-				<a href="{:U('Admin/Admin/add')}">添加管理员</a>
+				<a href="-{:U('Admin/Admin/add')}-">添加管理员</a>
 			</div>
 			<div class="right">
 				<a href="">后退</a>
@@ -22,7 +22,7 @@
 			</div>
 		</div>
 		<div class="content">
-			<form action="{:U('Admin/Admin/operate')}" method="post">
+			<form action="-{:U('Admin/Admin/operate')}-" method="post">
 				<table class="content-table">
 					<tbody>
 						<tr class="title">
@@ -34,7 +34,7 @@
 								<select name="department_id">
 									<option value="-1">必选</option>
 									<foreach name="deptList" item="v">
-										<option value="{$v.id}">{$v.name}</option>
+										<option value="-{$v.id}-">-{$v.name}-</option>
 									</foreach>
 								</select>
 							</td>
@@ -45,7 +45,7 @@
 								<select name="role_id">
 									<option value="-1">必选</option>
 									<foreach name="roleList" item="v">
-										<option value="{$v.id}">{$v.name}</option>
+										<option value="-{$v.id}-">-{$v.name}-</option>
 									</foreach>
 								</select>
 							</td>
@@ -60,15 +60,15 @@
 						</tr>
 						<tr>
 							<td width="10%">姓名：</td>
-							<td><input type="text" name="real_name" value="{$oldInfo.real_name}"></td>
+							<td><input type="text" name="real_name" value="-{$oldInfo.real_name}-"></td>
 						</tr>
 						<tr>
 							<td width="10%">邮箱：</td>
-							<td><input type="text" name="mail" value="{$oldInfo.mail}"></td>
+							<td><input type="text" name="mail" value="-{$oldInfo.mail}-"></td>
 						</tr>
 						<tr>
 							<td width="10%">电话：</td>
-							<td><input type="text" name="phone" value="{$oldInfo.phone}"></td>
+							<td><input type="text" name="phone" value="-{$oldInfo.phone}-"></td>
 						</tr>
 						<tr class="btn">
 							<td><input type="submit" value="添加"></td>

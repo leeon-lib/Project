@@ -10,9 +10,9 @@
 	<div class="warp">
 		<div class="submenu">
 			<div class="left">
-				<a href="{:U('Product/Attribute/index')}">属性列表</a>
+				<a href="-{:U('Product/Attribute/index')}-">属性列表</a>
 				<span>|</span>
-				<a href="{:U('Product/Attribute/add')}">添加属性</a>
+				<a href="-{:U('Product/Attribute/add')}-">添加属性</a>
 			</div>
 			<div class="right">
 				<a href="">后退</a>
@@ -21,7 +21,7 @@
 			</div>
 		</div>
 		<div class="content">
-			<form action="{:U('add')}" method="post">
+			<form action="-{:U('add')}-" method="post">
 				<table class="content-table">
 					<tbody>
 						<tr class="title">
@@ -56,7 +56,7 @@
 					</tbody>
 				</table>
 			</form>
-			<form action="{:U('Product/Attribute/implode')}" method="post">
+			<form action="-{:U('Product/Attribute/implode')}-" method="post">
 				<table class="content-table">
 					<tbody>
 						<tr class="title">

@@ -11,9 +11,9 @@
 	<div class="warp">
 		<div class="submenu">
 			<div class="left">
-				<a href="{:U('Storage/Warehouse/index')}">库房列表</a>
+				<a href="-{:U('Storage/Warehouse/index')}-">库房列表</a>
 				<span>|</span>
-				<a href="{:U('Storage/Warehouse/add')}">添加库房</a>
+				<a href="-{:U('Storage/Warehouse/add')}-">添加库房</a>
 			</div>
 			<div class="right">
 				<a href="">后退</a>
@@ -22,7 +22,7 @@
 			</div>
 		</div>
 		<div class="content">
-			<form action="{:U('Storage/Warehouse/operate')}" method="post">
+			<form action="-{:U('Storage/Warehouse/operate')}-" method="post">
 				<table class="content-table">
 					<tbody>
 						<tr class="title">
@@ -34,7 +34,7 @@
 								<select name="city_id">
 									<option value="-1">请选择</option>
 									<foreach name="cityList" item="v">
-										<option value="{$k}">{$v}</option>
+										<option value="-{$key}-">-{$v}-</option>
 									</foreach>
 								</select>
 							</td>

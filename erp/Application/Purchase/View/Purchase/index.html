@@ -12,9 +12,9 @@
 <body>
 	<div class="submenu">
 		<div class="left">
-			<a href="{:U('Purchase/Purchase/index')}">采购单列表</a>
+			<a href="-{:U('Purchase/Purchase/index')}-">采购单列表</a>
 			<span>|</span>
-			<a href="{:U('Purchase/Purchase/add')}">添加采购单</a>
+			<a href="-{:U('Purchase/Purchase/add')}-">添加采购单</a>
 		</div>
 		<div class="right">
 			<a href="">后退</a>
@@ -24,7 +24,7 @@
 	</div>
 	<div class="content">
 		<div class="search">
-			<form action="{:U('Purchase/Purchase/add')}" method="post">
+			<form action="-{:U('Purchase/Purchase/index')}-" method="post">
 				<table class="search-table">
 					<tr>
 						<td width="8%">采购单号：</td>
@@ -34,7 +34,7 @@
 							<select name="sale_type">
 								<option value="-1">-- 不限 --</option>
 								<foreach name="cateInfo" item="v">
-									<option value="{$v.cid}">{$v._name}</option>
+									<option value="-{$v.cid}-">-{$v._name}-</option>
 								</foreach>
 							</select>
 						</td>
@@ -45,7 +45,7 @@
 							<select name="category_cid">
 								<option value="-1">-- 不限 --</option>
 								<foreach name="cateInfo" item="v">
-									<option value="{$v.cid}">{$v._name}</option>
+									<option value="-{$v.cid}-">-{$v._name}-</option>
 								</foreach>
 							</select>
 						</td>
@@ -54,7 +54,7 @@
 							<select name="brand_id">
 								<option value="-1">-- 不限 --</option>
 								<foreach name="cateInfo" item="v">
-									<option value="{$v.id}">{$v.name}</option>
+									<option value="-{$v.id}-">-{$v.name}-</option>
 								</foreach>
 							</select>
 						</td>	
@@ -74,30 +74,24 @@
 					<td width="10%" align="center">数量</td>
 					<td width="10%" align="center">采购日期</td>
 					<td width="10%" align="center">预计到货日期</td>
+					<td width="10%" align="center">备注</td>
 					<td width="10%" align="center">管理操作</td>
 				</tr>
 			</thead>
 			<tbody>
-				<foreach from="$productList" key="$k" value="$v">
+				<foreach name="purchaseList" item="v">
 					<tr>
-						<td align="center">{$v.id}</td>
+						<td align="center">-{$v.purchase_id}-</td>
+						<td align="center">-{$v.supplier_id}-</td>
+						<td align="center">-{$v.warehouse_id}-</td>
+						<td align="center">-{$v.sale_type}-</td>
+						<td align="center">-{$v.num}-</td>
+						<td align="center">-{$v.add_date}-</td>
+						<td align="center">-{$v.expect_date}-</td>
+						<td align="center">-{$v.note}-</td>
 						<td align="center">
-							<empty value="$v.pic">
-								<img src="__PUBLIC__/Images/default_s.gif" alt="" width="60px">
-							<noempty/>
-								<img src="__HTTP_UPLOAD__/Product/{$v.pic}" alt="" width="60px">
-							</empty>
-						</td>
-						<td align="center">{$v.goods}</td>
-						<td align="center">{$v.name}</td>
-						<td align="center">{$v.category_name}</td>
-						<td align="center">{$v.brand_name}</td>
-						<td align="center">{$v.marked_price}</td>
-						<td align="center">{$v.manuf_date|date='Y-m-d',###}</td>
-						<td align="center">{$v.add_date|date='Y-m-d',###}</td>
-						<td align="center">
-							<a href="{:U('Product/Product/edit',array('id'=>$v['id']))}">编辑</a>
-							<a href="{:U('Product/Product/del',array('id'=>$v['id']))}">删除</a>
+							<a href="-{:U('Purchase/Purchase/details',array('id'=>$v['id']))}-">明细</a>
+							<a href="-{:U('Purchase/Purchase/freeze',array('id'=>$v['id']))}-">锁定</a>
 						</td>
 					</tr>
 				</foreach>

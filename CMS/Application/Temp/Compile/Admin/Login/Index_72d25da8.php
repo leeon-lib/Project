@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>操作失败</title>
-    <link rel="stylesheet" type="text/css" href="http://127.0.0.1/CMS/hdphp/Lib/Tpl/static/css.css"/>
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1/Project/CMS/hdphp/Lib/Tpl/static/css.css"/>
 </head>
 <body>
 <div class="wrap">

@@ -37,6 +37,18 @@ class WarehouseController extends AuthController
 		$this->display();
 	}
 
+	/**
+	 * 编辑修改
+	 */
+	public function edit()
+	{
+		$id = (int)I('get.id');
+		$oldData = $this->model->getOne($id);
+		$cityList = C('CITY_LIST');
+		$this->assign('cityList', $cityList);
+		$this->assign('oldData', $oldData);
+		$this->display();
+	}
 
 	/**
 	 * 操作
@@ -44,36 +56,54 @@ class WarehouseController extends AuthController
 	public function operate()
 	{
 		$city = (int)I('post.city_id');
-		$name = I('post.name');
-		$address = I('post.address');
-		$manager = I('post.manager');
-		$mobile = (int)I('post.mobile');
-
-		if (empty($city) || (-1 == $city))
+		$name = trim(I('post.name'));
+		$address = trim(I('post.address'));
+		$manager = trim(I('post.manager'));
+		$mobile = trim(I('post.mobile'));
+		$warehouseId = I('post.id', 'intval', 0);
+		// 表单数据验证
+		if (!$this->model->create())
 		{
-			$this->error('请选择库房所属地区');
-		}
-		if (empty($name))
-		{
-			$this->error('库房名称不可为空！');
+			$this->error($this->model->getError());
 		}
 
 		$argv = array(
+			'city_id' => $city,
 			'name' => $name,
 			'address' => $address,
 			'manager' => $manager,
-			'mobile' => $mobile,
-			'city_id' => $city
+			'mobile' => $mobile
 		);
-		if (!isset($_POST['id']))
-		{// 添加
-			$argv['key_id'] = $this->model->makeKey();
-			$this->model->_insert($argv);
-			$this->success('添加成功', 'index');
-		} else {//编辑
-			$id = (int)I('post.id');
-			$this->model->_update($argv, $id);
-			$this->success('修改成功', 'index');
+		if (0 == $warehouseId)
+		{	
+			// 添加
+			if ($this->model->isExists($name))
+			{
+				$this->error('添加失败，该库房名称已存在');
+			} else {
+				$argv['key_id'] = $this->model->makeKey();
+				$this->model->doInsert($argv);
+				$this->success('添加成功', U('index'));
+			}
+		} else {
+			// 编辑
+			$oldName = $this->model->getOne($warehouseId, 'name', true);
+			if (($name != $oldName) && ($this->model->isExists($name)))
+			{
+				$this->error('修改失败，该库房名称已存在');
+			} else {
+				$this->model->doUpdate($argv, $warehouseId);
+				$this->success('修改成功', U('index'));
+			}
 		}
 	}
+
+	/**
+	 * 删除
+	 */
+	public function del()
+	{
+		echo 'Waiting construction...';
+	}
+
 }

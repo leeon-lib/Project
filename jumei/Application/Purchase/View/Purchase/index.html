@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>采购单列表</title>
+	<link rel="stylesheet" href="__STATIC__/Org/Bootstrap/css/Bootstrap.min.css">
+	<link rel="stylesheet" href="__STATIC__/Css/public.css">
+	<link rel="stylesheet" href="__STATIC__/Css/content.css">
+	<script src="__STATIC__/Org/jquery-1.7.2.min.js"></script>
+	<script src="__STATIC__/Org/cal/lhgcalendar.min.js"></script>
+</head>
+<body>
+	<div class="submenu">
+		<div class="left">
+			<a href="{|U:'Purchase/Purchase/index'}">采购单列表</a>
+			<span>|</span>
+			<a href="{|U:'Purchase/Purchase/add'}">添加采购单</a>
+		</div>
+		<div class="right">
+			<a href="">后退</a>
+			<span>|</span>
+			<a href="">刷新</a>
+		</div>
+	</div>
+	<div class="content">
+		<div class="search">
+			<form action="{|U:'Purchase/Purchase/add'}" method="post">
+				<table class="search-table">
+					<tr>
+						<td width="8%">采购单号：</td>
+						<td width="40%"><input type="text" name="product_id"></td>
+						<td width="8%">销售方式：</td>
+						<td width="40%">
+							<select name="sale_type">
+								<option value="-1">-- 不限 --</option>
+								<foreach from="$cateInfo" key="$k" value="$v">
+									<option value="{$v.cid}">{$v._name}</option>
+								</foreach>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>供应商：</td>
+						<td>
+							<select name="category_cid">
+								<option value="-1">-- 不限 --</option>
+								<foreach from="$cateInfo" key="$k" value="$v">
+									<option value="{$v.cid}">{$v._name}</option>
+								</foreach>
+							</select>
+						</td>
+						<td>到货库房：</td>
+						<td>
+							<select name="brand_id">
+								<option value="-1">-- 不限 --</option>
+								<foreach from="$brandInfo" key="$k" value="$v">
+									<option value="{$v.id}">{$v.name}</option>
+								</foreach>
+							</select>
+						</td>	
+					</tr>
+					<tr><td><input type="submit" value="搜索"></td></tr>
+					<tr><td colspan="3"><a href="">按搜索条件导出</a></td></tr>
+				</table>
+			</form>
+		</div>
+		<table class="content-table">
+			<thead>
+				<tr>
+					<td width="10%" align="center">采购单号</td>
+					<td width="20%" align="center">供应商</td>
+					<td width="10%" align="center">库房</td>
+					<td width="10%" align="center">销售方式</td>
+					<td width="10%" align="center">数量</td>
+					<td width="10%" align="center">采购日期</td>
+					<td width="10%" align="center">预计到货日期</td>
+					<td width="10%" align="center">管理操作</td>
+				</tr>
+			</thead>
+			<tbody>
+				<foreach from="$productList" key="$k" value="$v">
+					<tr>
+						<td align="center">{$v.id}</td>
+						<td align="center">
+							<empty value="$v.pic">
+								<img src="__STATIC__/Images/default_s.gif" alt="" width="60px">
+							<noempty/>
+								<img src="__HTTP_UPLOAD__/Product/{$v.pic}" alt="" width="60px">
+							</empty>
+						</td>
+						<td align="center">{$v.goods}</td>
+						<td align="center">{$v.name}</td>
+						<td align="center">{$v.category_name}</td>
+						<td align="center">{$v.brand_name}</td>
+						<td align="center">{$v.marked_price}</td>
+						<td align="center">{$v.manuf_date|date:'Y-m-d',@@}</td>
+						<td align="center">{$v.add_date|date:'Y-m-d',@@}</td>
+						<td align="center">
+							<a href="{|U:'Product/Product/edit',array('id'=>$v['id'])}">编辑</a>
+							<a href="{|U:'Product/Product/del',array('id'=>$v['id'])}">删除</a>
+						</td>
+					</tr>
+				</foreach>
+			</tbody>
+		</table>
+	</div>
+<script type="text/javascript">
+	$(function() {
+        $('#manuf_date_start').calendar({format: 'yyyy/MM/dd'});
+        $('#manuf_date_end').calendar({format: 'yyyy/MM/dd'});
+        $('#add_date_start').calendar({format: 'yyyy/MM/dd'});
+        $('#add_date_end').calendar({format: 'yyyy/MM/dd'});
+    })
+</script>
+</body>
+</html>

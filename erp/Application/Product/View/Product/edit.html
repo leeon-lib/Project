@@ -13,9 +13,9 @@
 	<div class="warp">
 		<div class="submenu">
 			<div class="left">
-				<a href="{:U('Product/Product/index')}">商品列表</a>
+				<a href="-{:U('Product/Product/index')}-">商品列表</a>
 				<span>|</span>
-				<a href="{:U('Product/Product/add')}">添加商品</a>
+				<a href="-{:U('Product/Product/add')}-">添加商品</a>
 			</div>
 			<div class="right">
 				<a href="">后退</a>
@@ -25,11 +25,11 @@
 		</div>
 		<div class="content">
 			<div class="title">
-				<a href="{:U('Product/Product/edit')}">基本信息</a>
-				<a href="{:U('Product/Product/attr')}">商品属性</a>
-				<a href="{:U('Product/Product/details')}">商品详情</a>
+				<a href="-{:U('Product/Product/edit')}-">基本信息</a>
+				<a href="-{:U('Product/Product/attr')}-">商品属性</a>
+				<a href="-{:U('Product/Product/details')}-">商品详情</a>
 			</div>
-			<form action="{:U('Product/Product/operate')}" method="post" enctype="multipart/form-data">
+			<form action="-{:U('Product/Product/operate')}-" method="post" enctype="multipart/form-data">
 				<table class="content-table">
 					<tbody>
 						<tr class="title">
@@ -37,11 +37,11 @@
 						</tr>
 						<tr>
 							<td>商品名称：</td>
-							<td><input type="text" name="name" value="{$oldInfo.name}"></td>
+							<td><input type="text" name="name" value="-{$oldInfo.name}-"></td>
 						</tr>
 						<tr>
 							<td width="10%">商品货号：</td>
-							<td><input type="text" name="goods" value="{$oldInfo.goods}"></td>
+							<td><input type="text" name="goods" value="-{$oldInfo.goods}-"></td>
 						</tr>
 						<tr>
 							<td>所属分类</td>
@@ -49,8 +49,8 @@
 								<select name="category_cid">
 									<option value="-1">必选</option>
 									<foreach name="cateData" item="v">
-										<option value="{$v.cid}" <if condition="$v['cid'] eq $oldInfo['category_cid']">selected="selected"</if> >
-											{$v.name}
+										<option value="-{$v.cid}-" <if condition="$v['cid'] eq $oldInfo['category_cid']">selected="selected"</if> >
+											-{$v.name}-
 										</option>
 									</foreach>
 								</select>
@@ -62,8 +62,8 @@
 								<select name="brand_id">
 									<option value="-1">必选</option>
 									<foreach name="brandData" item="v">
-										<option value="{$v.id}" <if condition="$v['id'] eq $oldInfo['brand_id']">selected="selected"</if> >
-											{$v.name}
+										<option value="-{$v.id}-" <if condition="$v['id'] eq $oldInfo['brand_id']">selected="selected"</if> >
+											-{$v.name}-
 										</option>
 									</foreach>
 								</select>
@@ -72,12 +72,12 @@
 						<tr>
 							<td>上市日期：</td>
 							<td>
-								<input type="text" readonly="readonly" id="updatetime" name="manuf_date" class="hd-w150" value="{$oldInfo.manuf_date|date='Y-m-d',###}">
+								<input type="text" readonly="readonly" id="updatetime" name="manuf_date" class="hd-w150" value="-{$oldInfo.manuf_date|date='Y-m-d',###}-">
 							</td>
 						</tr>
 						<tr>
 							<td>市场价：</td>
-							<td><input type="text" name="marked_price" value="{$oldInfo.marked_price}"></td>
+							<td><input type="text" name="marked_price" value="-{$oldInfo.marked_price}-"></td>
 						</tr>
 						<tr>
 							<td>商品图片：</td>
@@ -85,7 +85,7 @@
 								<empty name="$oldInfo['pic']">
 									<input type="file" name="pics">
 								<else />
-									<img src="__ROOT__/Upload/Product/{$oldInfo['pic']}" alt="">
+									<img src="__ROOT__/Upload/Product/-{$oldInfo['pic']}-" alt="">
 								</empty>
 							</td>
 						</tr>
@@ -97,7 +97,7 @@
 						</tr>
 						<tr class="btn">
 							<td><input type="submit" value="修改"></td>
-							<input type="hidden" name="product_id" value="{$oldInfo['id']}">
+							<input type="hidden" name="product_id" value="-{$oldInfo['id']}-">
 						</tr>
 					</tbody>
 				</table>
@@ -122,7 +122,7 @@
     $('.setAttr').click(function(){
     	var cid = $('select[name=category_cid] option[selected]').val();
     	var str = '';
-    	if (-1 == cid) {
+    	if (1 == cid) {
     		str = '<tr align="center" class="notice"><td colspan="10">请先选择商品分类！</td></tr>';
     	} else {
     		$.ajax({

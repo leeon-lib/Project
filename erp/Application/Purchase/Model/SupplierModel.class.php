@@ -11,23 +11,34 @@ class SupplierModel extends CommonModel
 	
 	public $tableName = 'supplier';
 
+	public $_validate = [
+		['name', 'require', '供应商名称不能为空', 1],
+		['brand_id', '_checkBrand', '请选择品牌', 1, 'callback'],
+		['email', 'email', '邮箱格式不正确', 2]
+	];
 
+	// protected $_link = [
+	// 	'Brand'			=> [
+	// 		'mapping_type' => self::MANY_TO_MANY,
+	// 		// 'class_name'   => 'Brand',
+	// 		// 'foreign_key'  => 'supplier_id',
+	// 		'mapping_fields' => 'name',
+	// 		'relation_table' => 'supplier_brand'
+	// 	],
 
-	/**
-	 * 生成Key
-	 */
-	public function makeKey()
+	// ];
+
+	// 表单的品牌验证
+	public function _checkBrand()
 	{
-		$str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-		$key = '';
-		for ($i=0; $i < 4; $i++) { 
-			$key .= $str[mt_rand(0, 61)];
-		}
-		if ($this->field('1')->where("key_id='{$key}' ")->find())
+		$brandId = I('post.brand_id');
+		if (empty($brandId) || ('-1' == $brandId))
 		{
-			$this->makeKey();
+			return false;
 		} else {
-			return $key;
+			return true;
 		}
 	}
+
+
 }

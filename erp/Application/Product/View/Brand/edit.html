@@ -11,9 +11,9 @@
 	<div class="warp">
 		<div class="submenu">
 			<div class="left">
-				<a href="{:U('Product/Brand/index')}">品牌列表</a>
+				<a href="-{:U('Product/Brand/index')}-">品牌列表</a>
 				<span>|</span>
-				<a href="{:U('Product/Brand/add')}">添加品牌</a>
+				<a href="-{:U('Product/Brand/add')}-">添加品牌</a>
 			</div>
 			<div class="right">
 				<a href="">后退</a>
@@ -22,7 +22,7 @@
 			</div>
 		</div>
 		<div class="content">
-			<form action="{:U('Product/Brand/add')}" method="post">
+			<form action="-{:U('Product/Brand/operate')}-" method="post" enctype="multipart/form-data">
 				<table class="content-table">
 					<tbody>
 						<tr class="title">
@@ -30,17 +30,18 @@
 						</tr>
 						<tr>
 							<td width="10%">品牌名称：</td>
-							<td><input type="text" name="name" value="{$info.name}"></td>
+							<td><input type="text" name="name" value="-{$oldData.name}-"></td>
 						</tr>
 						<tr>
 							<td width="10%">英文名称：</td>
-							<td><input type="text" name="en_name" value="{$info.en_name}"></td>
+							<td><input type="text" name="en_name" value="-{$oldData.en_name}-"></td>
 						</tr>
 						<tr>
 							<td>品牌Logo：</td>
-							<td><input type="file" name="logo"></td>
+							<td><input type="file" name="logo" value="-{$oldData.logo}-"></td>
 						</tr>
 						<tr class="btn">
+							<input type="hidden" name="id" value="-{$oldData.id}-">
 							<td><input type="submit" value="添加"></td>
 						</tr>
 					</tbody>

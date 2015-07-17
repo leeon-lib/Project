@@ -67,7 +67,7 @@ class CategoryController extends AuthController
 
 			if (is_null($error))
 			{
-				$this->success('添加成功',U('index'));
+				$this->success('添加成功',U('index'));die;
 			} else {
 				$error = rtrim($error,'，');
 				echo '部分添加失败，' , $error , '分类名称重复！';

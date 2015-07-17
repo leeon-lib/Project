@@ -10,9 +10,9 @@
 <body>
 	<div class="submenu">
 		<div class="left">
-			<a href="{:U('Product/Attribute/index')}">属性列表</a>
+			<a href="-{:U('Product/Attribute/index')}-">属性列表</a>
 			<span>|</span>
-			<a href="{:U('Product/Attribute/add')}">添加属性</a>
+			<a href="-{:U('Product/Attribute/add')}-">添加属性</a>
 		</div>
 		<div class="right">
 			<a href="">后退</a>
@@ -34,17 +34,17 @@
 			<tbody>
 				<foreach name="data" item="v">
 					<tr>
-						<td align="center">{$v.id}</td>
-						<td align="center">{$v.name}</td>
-						<td align="left">{$v.value}</td>
+						<td align="center">-{$v.id}-</td>
+						<td align="center">-{$v.name}-</td>
+						<td align="left">-{$v.value}-</td>
 						<eq name="v['kind_id']" value="1">
 							<td align="center">属性</td>
 						<else />
 							<td align="center">规格</td>
 						</eq>
 						<td align="center">
-							<a href="{:U('Product/Attribute/edit')}">编辑</a>
-							<a href="{:U('Product/Attribute/del')}">删除</a>
+							<a href="-{:U('Product/Attribute/edit')}-">编辑</a>
+							<a href="-{:U('Product/Attribute/del')}-">删除</a>
 						</td>
 					</tr>
 				</foreach>

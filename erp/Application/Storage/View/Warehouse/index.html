@@ -10,9 +10,9 @@
 <body>
 	<div class="submenu">
 		<div class="left">
-			<a href="{:U('Storage/Warehouse/index')}">库房列表</a>
+			<a href="-{:U('Storage/Warehouse/index')}-">库房列表</a>
 			<span>|</span>
-			<a href="{:U('Storage/Warehouse/add')}">添加库房</a>
+			<a href="-{:U('Storage/Warehouse/add')}-">添加库房</a>
 		</div>
 		<div class="right">
 			<a href="">后退</a>
@@ -37,16 +37,16 @@
 			<tbody>
 				<foreach name="warehouseList" item="v">
 					<tr>
-						<td align="center">{$v.id}</td>
-						<td align="center">{$v.name}</td>
-						<td align="center">{$v.manager}</td>
-						<td align="center">{$v.mobile}</td>
-						<td align="center">{$v.key_id}</td>
-						<td align="center">{$v.city_id}</td>
-						<td align="center">{$v.address}</td>
+						<td align="center">-{$v.id}-</td>
+						<td align="center">-{$v.name}-</td>
+						<td align="center">-{$v.manager}-</td>
+						<td align="center">-{$v.mobile}-</td>
+						<td align="center">-{$v.key_id}-</td>
+						<td align="center">-{$v.city_id}-</td>
+						<td align="center">-{$v.address}-</td>
 						<td align="center">
-							<a href="{:U('Storage/Warehouse/edit',array('id'=>$v['id']))}">编辑</a>
-							<a href="{:U('Storage/Warehouse/del',array('id'=>$v['id']))}">删除</a>
+							<a href="-{:U('Storage/Warehouse/edit',array('id'=>$v['id']))}-">编辑</a>
+							<a href="-{:U('Storage/Warehouse/del',array('id'=>$v['id']))}-">删除</a>
 						</td>
 					</tr>
 				</foreach>

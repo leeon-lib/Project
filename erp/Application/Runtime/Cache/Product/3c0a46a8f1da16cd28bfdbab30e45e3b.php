@@ -102,7 +102,7 @@
     $('.setAttr').click(function(){
     	var cid = $('select[name=category_cid] option[selected]').val();
     	var str = '';
-    	if (-1 == cid) {
+    	if (1 == cid) {
     		str = '<tr align="left" class="notice"><td colspan="10">请先选择商品分类！</td></tr>';
     	} else {
     		$.ajax({

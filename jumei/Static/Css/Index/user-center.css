@@ -1,0 +1,89 @@
+.aside {
+  float: left;
+  width: 192px;
+  margin-right: 30px;
+}
+.aside li {
+  border-bottom: 1px solid #dddddd;
+  padding: 1px;
+  margin-bottom: 1px;
+}
+.aside li a {
+  display: block;
+  padding: 10px 0 10px 5px;
+}
+.aside li a:hover {
+  color: #825d5b;
+  background: #f2f2ec;
+}
+.content {
+  overflow: 696px;
+  overflow: hidden;
+}
+.content h2 {
+  margin-bottom: 20px;
+}
+.content .list {
+  margin-bottom: 20px;
+}
+.content .list table {
+  width: 100%;
+  text-align: center;
+  line-height: 18px;
+}
+.content .list table .title {
+  line-height: 30px;
+  background: #f9f7ef;
+  border-bottom: 1px solid #dddddd;
+}
+.content .list table th,
+.content .list table td {
+  float: left;
+}
+.content .list table td {
+  padding: 12px 0;
+}
+.content .list table .num a {
+  display: inline-block;
+  width: 15px;
+  background: #ccc;
+  border-radius: 3px;
+}
+.content .list table .num input {
+  width: 20px;
+  height: 15px;
+  margin: 0 5px;
+}
+.content .list-bottom {
+  border: 1px solid #dddddd;
+  padding: 5px;
+  background: #f7f7ef;
+  line-height: 40px;
+  font-size: 13px;
+}
+.content .list-bottom > a {
+  margin-left: 10px;
+}
+.content .list-bottom .price-info {
+  float: right;
+}
+.content .list-bottom .price-info > span {
+  margin-right: 20px;
+}
+.content .list-bottom .price-info a {
+  display: inline-block;
+  background: #825d5b;
+  color: #fff;
+  line-height: 30px;
+  padding: 0 12px;
+  border-radius: 3px;
+}
+.content .list-bottom .price-info a i {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("../../../Images/item-cart-icon.png") no-repeat 0 -20px;
+  background-size: 19px 60px;
+  vertical-align: -5px;
+  margin-right: 5px;
+}

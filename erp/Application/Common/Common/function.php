@@ -43,3 +43,37 @@ function rmEmpty($arr)
 		return $arr;
 	}
 }
+
+/**
+ * 文件上传
+ * @param  string	项目附属目录下的子目录 
+ * @return string   上传后的文件信息
+ */
+function upload($path, $thumb=false)
+{
+	$upload = new \Think\Upload();// 实例化上传类
+	$upload->maxSize = 3145728 ;// 设置附件上传大小
+	$upload->exts = array('jpg', 'gif', 'png', 'jpeg', 'csv');// 设置附件上传类型
+
+	$upload->rootPath = C('UPLOAD_PATH');
+	$upload->savePath = $path;
+	// 上传文件
+	$info = current($upload->upload());
+	if(!$info) 
+	{// 上传错误提示错误信息
+		die($upload->getError());
+	} else {// 上传成功
+		$savePath = $info['savepath'] . $info['savename'];
+		// 是否缩略
+		if (!$thumb)
+		{
+			return $savePath;
+		} else {
+			$image = new \Think\Image();
+			$path = C('UPLOAD_PATH') . $savePath;
+			$image->open($path);
+			$image->thumb(C('THUMB_W'), C('THUMB_W'), \Think\Image::IMAGE_THUMB_FIXED)->save($path);
+			return $savePath;
+		}
+	}
+}

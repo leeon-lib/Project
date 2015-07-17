@@ -12,9 +12,9 @@
 	<div class="warp">
 		<div class="submenu">
 			<div class="left">
-				<a href="{:U('Product/Category/index')}">分类列表</a>
+				<a href="-{:U('Product/Category/index')}-">分类列表</a>
 				<span>|</span>
-				<a href="{:U('Product/Category/add')}">添加分类</a>
+				<a href="-{:U('Product/Category/add')}-">添加分类</a>
 			</div>
 			<div class="right">
 				<a href="">后退</a>
@@ -23,13 +23,13 @@
 			</div>
 		</div>
 		<div class="content">
-			<form action="{:U('Product/Category/setAttr')}" method="post">
+			<form action="-{:U('Product/Category/setAttr')}-" method="post">
 				<table class="content-table">
 					<tbody>
 						<tr>
 							<td>分类名称：</td>
-							<td>{$cateName}</td>
-							<input type="hidden" name="cid" value="{$hd.get.cid}" />
+							<td>-{$cateName}-</td>
+							<input type="hidden" name="cid" value="-{$hd.get.cid}-" />
 						</tr>
 						<!-- 如果有录入属性，则显示设置属性，否则提示无属性可设置 -->
 						<present name="attrInfo['nosele']">
@@ -43,7 +43,7 @@
 									<td width="10%">规格：</td>
 									<td>
 										<foreach name="attrInfo['sele'][spec]" item="v">
-											<label>{$v.name}<input type="checkbox" name="attr[sele][]" value="{$v.attribute_id}" checked="checked"></label>&nbsp;
+											<label>-{$v.name}-<input type="checkbox" name="attr[sele][]" value="-{$v.attribute_id}-" checked="checked"></label>&nbsp;
 										</foreach>
 									</td>
 								</tr>
@@ -51,7 +51,7 @@
 									<td width="10%">属性：</td>
 									<td>
 										<foreach name="attrInfo['sele']['attr']" item="v">
-											<label>{$v.name}<input type="checkbox" name="attr[sele][]" value="{$v.attribute_id}" checked="checked"></label>&nbsp;
+											<label>-{$v.name}-<input type="checkbox" name="attr[sele][]" value="-{$v.attribute_id}-" checked="checked"></label>&nbsp;
 										</foreach>
 									</td>
 								</tr>
@@ -63,7 +63,7 @@
 								<td width="10%">规格：</td>
 								<td>
 									<foreach name="attrInfo['nosele']['spec']" item="v">
-										<label>{$v.name}<input type="checkbox" name="attr[nosele][]" value="{$v.id}"></label>&nbsp;
+										<label>-{$v.name}-<input type="checkbox" name="attr[nosele][]" value="-{$v.id}-"></label>&nbsp;
 									</foreach>
 								</td>
 							</tr>
@@ -71,7 +71,7 @@
 								<td width="10%">属性：</td>
 								<td>
 									<foreach name="attrInfo['nosele'][attr]" item="v">
-										<label>{$v.name}<input type="checkbox" name="attr[nosele][]" value="{$v.id}"></label>&nbsp;
+										<label>-{$v.name}-<input type="checkbox" name="attr[nosele][]" value="-{$v.id}-"></label>&nbsp;
 									</foreach>
 								</td>
 							</tr>

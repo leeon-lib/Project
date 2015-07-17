@@ -10,9 +10,9 @@
 <body>
 	<div class="submenu">
 		<div class="left">
-			<a href="{:U('Product/Brand/index')}">品牌列表</a>
+			<a href="-{:U('Product/Brand/index')}-">品牌列表</a>
 			<span>|</span>
-			<a href="{:U('Product/Brand/add')}">添加品牌</a>
+			<a href="-{:U('Product/Brand/add')}-">添加品牌</a>
 		</div>
 		<div class="right">
 			<a href="">后退</a>
@@ -32,17 +32,17 @@
 				</tr>
 			</thead>
 			<tbody>
-				<foreach name="info" item="v">
+				<foreach name="brandList" item="v">
 					<tr>
-						<td align="center">{$v.id}</td>
+						<td align="center">-{$v.id}-</td>
 						<td align="center">
-							<img src="{$v.logo}" alt="">
+							<img src="__ROOT__/Attached/-{$v.logo}-" alt="">
 						</td>
-						<td align="left">{$v.name}</td>
-						<td align="left">{$v.en_name}</td>
+						<td align="left">-{$v.name}-</td>
+						<td align="left">-{$v.en_name}-</td>
 						<td align="center">
-							<a href="{:U('Product/Brand/edit',array('id'=>$v['id']))}">编辑</a>
-							<a href="{:U('Product/Brand/del',array('id'=>$v['id']))}">删除</a>
+							<a href="-{:U('Product/Brand/edit',array('id'=>$v['id']))}-">编辑</a>
+							<a href="-{:U('Product/Brand/del',array('id'=>$v['id']))}-">删除</a>
 						</td>
 					</tr>
 				</foreach>
