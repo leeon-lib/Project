@@ -40,8 +40,12 @@
 						<td align="left"><?php echo ($v["name"]); ?></td>
 						<td align="left"><?php echo ($v["en_name"]); ?></td>
 						<td align="center">
-							<a href="<?php echo U('Product/Brand/edit',array('id'=>$v['id']));?>">编辑</a>
-							<a href="<?php echo U('Product/Brand/del',array('id'=>$v['id']));?>">删除</a>
+							<a href="<?php echo U('Product/Brand/edit',array('id'=>$v['id']));?>">
+								<i class="glyphicon glyphicon-pencil"></i>
+							</a>&nbsp;
+							<a href="<?php echo U('Product/Brand/del',array('id'=>$v['id']));?>">
+								<i class="glyphicon glyphicon-trash"></i>
+							</a>
 						</td>
 					</tr><?php endforeach; endif; ?>
 			</tbody>

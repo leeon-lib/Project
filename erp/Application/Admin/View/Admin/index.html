@@ -86,12 +86,13 @@
 						<td align="center">-{$v.dept_name}-</td>
 						<td align="center">-{$v.role_name}-</td>
 						<td align="center">
-							<eq name="v['is_lock']" value="0">
-								<a href="-{:U('Admin/Admin/changeStatus',array('id'=>$v['id']))}-">√</a>
-							<else/>
-								<a href="-{:U('Admin/Admin/changeStatus',array('id'=>$v['id']))}-" style="color:red;">X</a>
-							</eq>
-						</td>
+							<a href="-{:U('Admin/Admin/changeStatus',array('id'=>$v['id']))}-">
+								<eq name="v['is_lock']" value="0">
+									<i class="glyphicon glyphicon-ok"></i>
+								<else/>
+									<i style="color:red;" class="glyphicon glyphicon-remove"></i>
+								</eq>
+							</a>						</td>
 						<td align="center">
 							<neq name="v.last_login" value="0">
 								-{$v.last_login|date='Y-m-d H:i:s',###}-
@@ -100,8 +101,12 @@
 							</neq>
 						</td>
 						<td align="center">
-							<a href="-{:U('Admin/Admin/edit',array('id'=>$v['id']))}-">编辑</a>
-							<a href="-{:U('Admin/Admin/del',array('id'=>$v['id']))}-">删除</a>
+							<a href="-{:U('Admin/Admin/edit',array('id'=>$v['id']))}-">
+								<i class="glyphicon glyphicon-pencil"></i>
+							</a>
+							<a href="-{:U('Admin/Admin/del',array('id'=>$v['id']))}-">
+								<i class="glyphicon glyphicon-trash"></i>
+							</a>
 						</td>
 					</tr>
 				</foreach>

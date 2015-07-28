@@ -44,8 +44,12 @@
 						<td align="center"><?php echo ($v["city_id"]); ?></td>
 						<td align="center"><?php echo ($v["address"]); ?></td>
 						<td align="center">
-							<a href="<?php echo U('Storage/Warehouse/edit',array('id'=>$v['id']));?>">编辑</a>
-							<a href="<?php echo U('Storage/Warehouse/del',array('id'=>$v['id']));?>">删除</a>
+							<a href="<?php echo U('Storage/Warehouse/edit',array('id'=>$v['id']));?>">
+								<i class="glyphicon glyphicon-pencil"></i>
+							</a>&nbsp;
+							<a href="<?php echo U('Storage/Warehouse/del',array('id'=>$v['id']));?>">
+								<i class="glyphicon glyphicon-trash"></i>
+							</a>
 						</td>
 					</tr><?php endforeach; endif; ?>
 			</tbody>

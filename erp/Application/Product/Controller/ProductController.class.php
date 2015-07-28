@@ -187,7 +187,7 @@ class ProductController extends AuthController
             {
                 $this->error('操作失败，该商品名称已存在');
             } else {
-                $argv['add_time'] = time();
+                $argv['add_date'] = time();
                 $keyPid = $this->productModel->doInsert($argv);
                 if (false == $keyPid)
                 {

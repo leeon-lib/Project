@@ -24,7 +24,7 @@ class PurchaseModel extends CommonModel
 	{
 		$str = 'PI-' . date('ymd') . '-';
 		$res = $this->order('id DESC')->limit(1)->find();
-		$res = substr($res['purchase_id'], -3);
+		$res = substr($res['purchase_sn'], -3);
 		if (!$res)
 		{
 			$str .= '001';

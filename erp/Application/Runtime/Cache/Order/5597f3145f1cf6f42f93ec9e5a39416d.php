@@ -33,7 +33,11 @@
 						<tr>
 							<td>商品货号：</td>
 							<td><input type="text" name="name"></td>
-							<td width="72%"><input type="button" value="查询"></td>
+							<td width="72%">
+								<button type="button" style="width:30px;height:30px;">
+									<i class="glyphicon glyphicon-search" style="color: #407ACC;"></i>
+								</button>
+							</td>
 						</tr>
 						<tr>
 							<td>收货人姓名：</td>
@@ -99,5 +103,8 @@
 			</form>
 		</div>
 	</div>
+<script type="text/javascript">
+	
+</script>
 </body>
 </html>

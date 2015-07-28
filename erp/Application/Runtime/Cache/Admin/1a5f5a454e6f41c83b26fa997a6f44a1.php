@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>后台管理</title>
+	<link rel="stylesheet" href="/Project/erp/web/Public/Org/Bootstrap/css/Bootstrap.min.css">
 	<link rel="stylesheet" href="/Project/erp/web/Public/Css/public.css">
 	<link rel="stylesheet" href="/Project/erp/web/Public/Css/admin.css">
 </head>
@@ -37,7 +38,10 @@
 					<a href="<?php echo U('Admin/Index/mall');?>" target="aside">商城管理</a>
 				</li>
 				<li>
-					<a href="<?php echo U('Admin/Index/admin');?>" target="aside">系统设置</a>
+					<a href="<?php echo U('Admin/Index/admin');?>" target="aside">
+						<i class="glyphicon glyphicon-cog"></i>
+						<span>系统设置</span>
+					</a>
 				</li>
 			</ul>
 		</div>
@@ -47,7 +51,7 @@
 				<p><span>User</span> Welcome!</p>
 			</div>
 			<div class="exit">
-				<a href="<?php echo U('Admin/Login/logOut');?>">退出</a>
+				<a href="<?php echo U('Admin/Login/logOut');?>"><i class="glyphicon glyphicon-off"></i></a>
 			</div>
 		</div>
 	</div>

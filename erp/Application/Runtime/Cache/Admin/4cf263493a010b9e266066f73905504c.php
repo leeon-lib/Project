@@ -81,18 +81,23 @@
 						<td align="center"><?php echo ($v["dept_name"]); ?></td>
 						<td align="center"><?php echo ($v["role_name"]); ?></td>
 						<td align="center">
-							<?php if(($v['is_lock']) == "0"): ?><a href="<?php echo U('Admin/Admin/changeStatus',array('id'=>$v['id']));?>">√</a>
-							<?php else: ?>
-								<a href="<?php echo U('Admin/Admin/changeStatus',array('id'=>$v['id']));?>" style="color:red;">X</a><?php endif; ?>
-						</td>
+							<a href="<?php echo U('Admin/Admin/changeStatus',array('id'=>$v['id']));?>">
+								<?php if(($v['is_lock']) == "0"): ?><i class="glyphicon glyphicon-ok"></i>
+								<?php else: ?>
+									<i style="color:red;" class="glyphicon glyphicon-remove"></i><?php endif; ?>
+							</a>						</td>
 						<td align="center">
 							<?php if(($v["last_login"]) != "0"): echo (date('Y-m-d H:i:s',$v["last_login"])); ?>
 							<?php else: ?>
 								－－－<?php endif; ?>
 						</td>
 						<td align="center">
-							<a href="<?php echo U('Admin/Admin/edit',array('id'=>$v['id']));?>">编辑</a>
-							<a href="<?php echo U('Admin/Admin/del',array('id'=>$v['id']));?>">删除</a>
+							<a href="<?php echo U('Admin/Admin/edit',array('id'=>$v['id']));?>">
+								<i class="glyphicon glyphicon-pencil"></i>
+							</a>
+							<a href="<?php echo U('Admin/Admin/del',array('id'=>$v['id']));?>">
+								<i class="glyphicon glyphicon-trash"></i>
+							</a>
 						</td>
 					</tr><?php endforeach; endif; ?>
 			</tbody>

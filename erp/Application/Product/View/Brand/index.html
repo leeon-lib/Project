@@ -41,8 +41,12 @@
 						<td align="left">-{$v.name}-</td>
 						<td align="left">-{$v.en_name}-</td>
 						<td align="center">
-							<a href="-{:U('Product/Brand/edit',array('id'=>$v['id']))}-">编辑</a>
-							<a href="-{:U('Product/Brand/del',array('id'=>$v['id']))}-">删除</a>
+							<a href="-{:U('Product/Brand/edit',array('id'=>$v['id']))}-">
+								<i class="glyphicon glyphicon-pencil"></i>
+							</a>&nbsp;
+							<a href="-{:U('Product/Brand/del',array('id'=>$v['id']))}-">
+								<i class="glyphicon glyphicon-trash"></i>
+							</a>
 						</td>
 					</tr>
 				</foreach>

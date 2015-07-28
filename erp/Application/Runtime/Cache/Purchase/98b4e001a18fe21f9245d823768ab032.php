@@ -55,9 +55,9 @@
 						<tr>
 							<td>销售方式：</td>
 							<td>
-								<select name="sale_type">
+								<select name="sale_type_id">
 									<option value="-1">必选</option>
-									<?php if(is_array($saleType)): foreach($saleType as $key=>$v): ?><option value="<?php echo ($key); ?>"><?php echo ($v); ?></option><?php endforeach; endif; ?>
+									<?php if(is_array($saleTypeList)): foreach($saleTypeList as $key=>$v): ?><option value="<?php echo ($key); ?>"><?php echo ($v); ?></option><?php endforeach; endif; ?>
 								</select>
 							</td>
 						</tr>

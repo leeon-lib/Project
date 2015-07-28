@@ -92,9 +92,9 @@
 			}
 		} else {
 			for (var i in brandList){
-				str += brandList[i].name ;
+				str += '<label>' + brandList[i].name ;
 				str += '<input type="checkbox" name="brand_id[]" value="'+brandList[i].id+'">';
-				str += '&nbsp;&nbsp;&nbsp;';
+				str += '&nbsp;&nbsp;&nbsp;</label>';
 			}
 		}
 		$('#brand').empty().append(str);

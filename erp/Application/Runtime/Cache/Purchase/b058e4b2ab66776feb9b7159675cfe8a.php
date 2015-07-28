@@ -58,7 +58,9 @@
 							<?php if(($v['kind_id']) == "1"): ?>自有品牌<?php endif; ?>
 							<?php if(($v['kind_id']) == "2"): ?>综合<?php endif; ?>
 						</td>
-						<td align="center"><?php echo ($v["brand_name"]); ?></td>
+						<td align="center">
+							<?php if(is_array($v["brand_name"])): foreach($v["brand_name"] as $key=>$val): echo ($val); ?>,<?php endforeach; endif; ?>
+						</td>
 						<td align="center"><?php echo ($v["manager"]); ?></td>
 						<td align="center"><?php echo ($v["mobile"]); ?></td>
 						<td align="center"><?php echo ($v["qq"]); ?></td>

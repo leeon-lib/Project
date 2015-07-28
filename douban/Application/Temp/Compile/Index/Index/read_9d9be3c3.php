@@ -4,9 +4,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>豆瓣阅读</title>
-	<link rel="stylesheet" href="http://127.0.0.1/Project/douban/Static/Css/Index/public.css">
-	<link rel="stylesheet" href="http://127.0.0.1/Project/douban/Static/Css/Index/read-style.css">
-	<link rel="stylesheet" href="http://127.0.0.1/Project/douban/Static/Css/Index/read.css">
+	<link rel="stylesheet" href="http://me.com/Project/douban/Static/Css/Index/public.css">
+	<link rel="stylesheet" href="http://me.com/Project/douban/Static/Css/Index/read-style.css">
+	<link rel="stylesheet" href="http://me.com/Project/douban/Static/Css/Index/read.css">
 </head>
 <body>
 	<!-- 顶栏导航 begin -->

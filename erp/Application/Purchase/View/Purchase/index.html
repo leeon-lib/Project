@@ -28,13 +28,13 @@
 				<table class="search-table">
 					<tr>
 						<td width="8%">采购单号：</td>
-						<td width="40%"><input type="text" name="product_id"></td>
+						<td width="40%"><input type="text" name="purchase_sn"></td>
 						<td width="8%">销售方式：</td>
 						<td width="40%">
-							<select name="sale_type">
+							<select name="sale_type_id">
 								<option value="-1">-- 不限 --</option>
-								<foreach name="cateInfo" item="v">
-									<option value="-{$v.cid}-">-{$v._name}-</option>
+								<foreach name="saleTypeList" item="v">
+									<option value="-{$key}-">-{$v}-</option>
 								</foreach>
 							</select>
 						</td>
@@ -42,18 +42,18 @@
 					<tr>
 						<td>供应商：</td>
 						<td>
-							<select name="category_cid">
+							<select name="supplier_id">
 								<option value="-1">-- 不限 --</option>
-								<foreach name="cateInfo" item="v">
-									<option value="-{$v.cid}-">-{$v._name}-</option>
+								<foreach name="supplierList" item="v">
+									<option value="-{$v.id}-">-{$v.name}-</option>
 								</foreach>
 							</select>
 						</td>
 						<td>到货库房：</td>
 						<td>
-							<select name="brand_id">
+							<select name="warehouse_id">
 								<option value="-1">-- 不限 --</option>
-								<foreach name="cateInfo" item="v">
+								<foreach name="warehouseList" item="v">
 									<option value="-{$v.id}-">-{$v.name}-</option>
 								</foreach>
 							</select>
@@ -67,34 +67,52 @@
 		<table class="content-table">
 			<thead>
 				<tr>
-					<td width="10%" align="center">采购单号</td>
-					<td width="20%" align="center">供应商</td>
-					<td width="10%" align="center">库房</td>
-					<td width="10%" align="center">销售方式</td>
-					<td width="10%" align="center">数量</td>
-					<td width="10%" align="center">采购日期</td>
-					<td width="10%" align="center">预计到货日期</td>
-					<td width="10%" align="center">备注</td>
-					<td width="10%" align="center">管理操作</td>
+					<td width="8%" align="center">采购单号</td>
+					<td width="5%" align="center">供应商</td>
+					<td width="5%" align="center">库房</td>
+					<td width="6%" align="center">销售方式</td>
+					<td width="5%" align="center">数量</td>
+					<td width="8%" align="center">采购日期</td>
+					<td width="8%" align="center">预计到货日期</td>
+					<td width="5%" align="center">采购状态</td>
+					<td width="5%" align="center">单据状态</td>
+					<td width="12%" align="center">备注</td>
+					<td width="6%" align="center">管理操作</td>
 				</tr>
 			</thead>
 			<tbody>
-				<foreach name="purchaseList" item="v">
-					<tr>
-						<td align="center">-{$v.purchase_id}-</td>
-						<td align="center">-{$v.supplier_id}-</td>
-						<td align="center">-{$v.warehouse_id}-</td>
-						<td align="center">-{$v.sale_type}-</td>
-						<td align="center">-{$v.num}-</td>
-						<td align="center">-{$v.add_date}-</td>
-						<td align="center">-{$v.expect_date}-</td>
-						<td align="center">-{$v.note}-</td>
-						<td align="center">
-							<a href="-{:U('Purchase/Purchase/details',array('id'=>$v['id']))}-">明细</a>
-							<a href="-{:U('Purchase/Purchase/freeze',array('id'=>$v['id']))}-">锁定</a>
-						</td>
-					</tr>
-				</foreach>
+				<empty name="purchaseList">
+					<tr><td colspan="20" align="center">暂无纪录</td></tr>
+				<else />
+					<foreach name="purchaseList" item="v">
+						<tr>
+							<td align="center">-{$v.purchase_sn}-</td>
+							<td align="center">-{$v.supplier_name}-</td>
+							<td align="center">-{$v.warehouse_name}-</td>
+							<td align="center">-{$v.sale_type_name}-</td>
+							<td align="center">-{$v.num}-</td>
+							<td align="center">-{$v.add_date}-</td>
+							<td align="center">-{$v.expect_date}-</td>
+							<td align="center">采购中</td>
+							<td align="center">
+								<eq name="v.lock_status" value="0">
+									<span>正常</span>
+								<else />
+									<span style="color:red;">已锁定</span>
+								</eq>
+							</td>
+							<td align="center">-{$v.note}-</td>
+							<td align="center">
+								<a href="-{:U('Purchase/Purchase/details',array('id'=>$v['id']))}-">明细</a>
+								<eq name="v.lock_status" value="0">
+									<a href="-{:U('Purchase/Purchase/freeze',array('id'=>$v['id']))}-">锁定</a>
+								<else />
+									<a href="-{:U('Purchase/Purchase/freeze',array('id'=>$v['id']))}-">解除锁定</a>
+								</eq>
+							</td>
+						</tr>
+					</foreach>
+				</empty>
 			</tbody>
 		</table>
 	</div>

@@ -32,8 +32,44 @@ class PurchaseController extends AuthController
 	 */
 	public function index()
 	{
-		// p($this->supplierModel->getList());
-		$purchaseList = $this->model->getList();
+		// 获取搜索条件
+		$purchaseSn = I('post.purchase_sn');
+		$saleTypeId = (int)I('post.sale_type_id');
+		$supplierId = (int)I('post.supplier_id');
+		$warehouseId = (int)I('post.warehouse_id');
+
+		$where = 1;
+		if (!empty($purchaseSn))
+		{
+			$where .= " AND purchase_sn = '{$purchaseSn}' ";
+		}
+		if ($saleTypeId > 0)
+		{
+			$where .= " AND sale_type_id = {$saleTypeId}";
+		}
+		if ($supplierId > 0)
+		{
+			$where .= " AND supplier_id = {$supplierId}";
+		}
+		if ($warehouseId > 0)
+		{
+			$where .= " AND warehouse_id = {$warehouseId}";
+		}
+		// 获取列表
+		$params = [
+			'where' => $where
+		];
+		$purchaseList = $this->model->getList($params);
+		foreach ($purchaseList as $key => $value)
+		{
+			$purchaseList[$key]['supplier_name'] = $this->supplierModel->getOne($value['supplier_id'], 'name', true);
+			$purchaseList[$key]['warehouse_name'] = $this->warehouseModel->getOne($value['warehouse_id'], 'name', true);
+			$purchaseList[$key]['sale_type_name'] = C('SALE_TYPE')[$value['sale_type_id']];
+		}
+		// 变量分配
+		$this->assign('supplierList', $this->supplierModel->getList());
+		$this->assign('warehouseList', $this->warehouseModel->getList());
+		$this->assign('saleTypeList', C('SALE_TYPE'));
 		$this->assign('purchaseList', $purchaseList);
 		$this->display();
 	}
@@ -44,12 +80,12 @@ class PurchaseController extends AuthController
 	public function add()
 	{
 		// 公共配置文件中定义的‘销售方式’
-		$saleType = C('SALE_TYPE');
+		$saleTypeList = C('SALE_TYPE');
 		$warehouseList = $this->warehouseModel->getList();
 		$supplierList = $this->supplierModel->getList();
 		$this->assign('warehouseList', $warehouseList);
 		$this->assign('supplierList', $supplierList);
-		$this->assign('saleType', $saleType);
+		$this->assign('saleTypeList', $saleTypeList);
 		$this->display();
 	}
 
@@ -78,14 +114,19 @@ class PurchaseController extends AuthController
 		$filePath = C('UPLOAD_PATH');
 		$filePath .= $this->upload('Purchase/');
 		$csvList = $this->csvGetLines($filePath, 1000, 1);
-		// p($csvList);die;
 		if (!$csvList)
 		{
 			$this->error('文件非法');
 		}
+		$error = $this->hasError($csvList, 3);
+		if ($error)
+		{
+			die('导入失败！<br /><br />' . $error);
+		}
 		$product_not_exists = $this->checkNotExists($csvList);
 		if ($product_not_exists)
 		{
+			echo '添加失败！<br /><br />';
 			foreach ($product_not_exists as $val)
 			{
 				header("Content-type:text/html;charset=utf-8;");
@@ -93,18 +134,14 @@ class PurchaseController extends AuthController
 			}
 			die;
 		}
-		$error = $this->hasError($csvList, 3);
-		if ($error)
-		{
-			die('导入失败！<br /><br />' . $error);
-		}
+
 		$countNum = 0;
 		foreach ($csvList as $v) {
 			$countNum += $v[2];
 		}
 		// 组合主采购表数据
 		$argvPP = [
-			'purchase_id' => $this->model->createOrder(),
+			'purchase_sn' => $this->model->createOrder(),
 			'supplier_id' => $supplierId,
 			'warehouse_id' => $warehouseId,
 			'sale_type' => $saleType,
@@ -113,23 +150,52 @@ class PurchaseController extends AuthController
 			'note' => $note,
 			'num' => $countNum
 		];
-		p($argvPP);die;
-		$argvPO = [
-			['']
-		];
-		// $this->model->doInsert($argvPP);
-		// 组合采购商品表数据
-
-		
+		// p($argvPP);die;
+		$purchase_id = $this->model->doInsert($argvPP);
+		// 采购明细表的插入
+		$values = '';
+		foreach ($csvList as $key => $val) {
+			$argv = [
+				'purchase_id' => $purchase_id,
+				'goods' => $val[0],
+				'size' => $val[1],
+				'num' => $val[2]
+			];
+			D('PurchaseProduct')->add($argv);
+		}
 		$this->success('添加成功', U('index'));
 	}
 
 	/**
-	 * 查看采购明细
+	 * 采购单明细
 	 */
 	public function details()
 	{
+		$goods = trim(I('post.goods'));
+		$size = trim(I('post.size'));
+		$skuId = (int)I('post.sku_id', -1, 'intval');
+		$barCode = trim(I('bar_code'));
 
+		$where = 1;
+		if (!empty($goods))
+		{
+			$where .= " AND goods = '{$goods}'";
+		}
+		if (!empty($size))
+		{
+			$where .= " AND size = '{$size}'";
+		}
+		if ($skuId >= 0)
+		{
+			$where .= " AND sku_id = {$skuId}";
+		}
+
+		$purchaseId = $_GET['id'] ? (int)I('get.id') : (int)I('post.id');
+		$where .= " AND purchase_id = {$purchaseId}";
+		$purchaseProductModel = D('PurchaseProduct');
+		$detailsList = $purchaseProductModel->getList(['where'=>$where]);
+		$this->assign('detailsList', $detailsList);
+		$this->display();
 	}
 
 	
@@ -138,7 +204,15 @@ class PurchaseController extends AuthController
 	 */
 	public function freeze()
 	{
-
+		$purchase_id = (int)I('get.id');
+		$lock_status = $this->model->getOne($purchase_id, 'lock_status', true);
+		if (0 == $lock_status)
+		{
+			$this->model->doUpdate(['lock_status'=>1], $purchase_id);
+		} else {
+			$this->model->doUpdate(['lock_status'=>0], $purchase_id);
+		}
+		$this->success('操作成功', U('index'), 1);
 	}
 
 	/**
@@ -312,4 +386,8 @@ class PurchaseController extends AuthController
 			return $errorRows;
 		}
 	}
+
+
+
+
 }

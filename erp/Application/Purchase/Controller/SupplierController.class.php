@@ -24,9 +24,15 @@ class SupplierController extends AuthController
 	 */
 	public function index()
 	{
-		// $supplierList = $this->model->relation(true)->find();
+		// 获取列表信息，关联出品牌名称
 		$supplierList = $this->model->getList();
-		// p($supplierList);
+		foreach ($supplierList as $key => $value) {
+			$brandIdArr = explode(',', $value['brand_id']);
+			foreach ($brandIdArr as $id) {
+				$supplierList[$key]['brand_name'][] = $this->brandModel->getOne($id, 'name', true);
+			}
+			unset($supplierList[$key]['brand_id']);
+		}
 		$this->assign('supplierList', $supplierList);
 		$this->display();
 	}
@@ -57,6 +63,48 @@ class SupplierController extends AuthController
 	 * 操作
 	 */
 	public function operate()
+	{
+		$name = trim(I('post.name'));
+		$kindId = (int)I('post.kind_id');
+		$brandId = (array)I('post.brand_id');
+		$manager = trim(I('post.manager'));
+		$mobile = trim(I('post.mobile'));
+		$qq = trim(I('post.qq'));
+		$email = trim(I('post.email'));
+		$supplierId = I('post.id', 'intval', 0);
+		// 表单数据验证
+		if (!$this->model->create())
+		{
+			$this->error($this->model->getError());
+		}
+		// 组合用于插入供应商表的数据
+		$argv = array(
+			'name' => $name,
+			'kind_id' => $kindId,
+			'manager' => $manager,
+			'mobile' => $mobile,
+			'qq' => $qq,
+			'email' => $email,
+			'brand_id' => implode(',', $brandId)
+		);
+		// p($argv);die;
+		if (0 == $supplierId)
+		{	
+			// 供应商表的添加
+			$this->model->doInsert($argv);
+			$this->success('添加成功', 'index');
+		} else {
+			// 编辑修改
+			$id = (int)I('post.id');
+			$this->model->doUpdate($argv, $id);
+			$this->success('修改成功', 'index');
+		}
+	}
+
+	/**
+	 * 操作
+	 */
+	public function operate1()
 	{
 		$name = trim(I('post.name'));
 		$kindId = (int)I('post.kind_id');

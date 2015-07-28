@@ -59,7 +59,11 @@
 							<eq name="v['kind_id']" value="1">自有品牌</eq>
 							<eq name="v['kind_id']" value="2">综合</eq>
 						</td>
-						<td align="center">-{$v.brand_name}-</td>
+						<td align="center">
+							<foreach name="v.brand_name" item="val">
+								-{$val}-,
+							</foreach>
+						</td>
 						<td align="center">-{$v.manager}-</td>
 						<td align="center">-{$v.mobile}-</td>
 						<td align="center">-{$v.qq}-</td>

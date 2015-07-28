@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>采购单列表</title>
+	<link rel="stylesheet" href="__PUBLIC__/Org/Bootstrap/css/Bootstrap.min.css">
+	<link rel="stylesheet" href="__PUBLIC__/Css/public.css">
+	<link rel="stylesheet" href="__PUBLIC__/Css/content.css">
+	<script src="__PUBLIC__/Org/jquery-1.7.2.min.js"></script>
+	<script src="__PUBLIC__/Org/cal/lhgcalendar.min.js"></script>
+</head>
+<body>
+	<div class="submenu">
+		<div class="left">
+			<a href="-{:U('Purchase/Purchase/index')}-">采购单列表</a>
+			<span>|</span>
+			<a href="-{:U('Purchase/Purchase/add')}-">添加采购单</a>
+		</div>
+		<div class="right">
+			<a href="">后退</a>
+			<span>|</span>
+			<a href="">刷新</a>
+		</div>
+	</div>
+	<div class="content">
+		<div class="search">
+			<form action="-{:U('Purchase/Purchase/details')}-" method="post">
+				<table class="search-table">
+					<tr>
+						<td width="5%">货号：</td>
+						<td width="17%"><input type="text" name="goods"></td>
+						<td width="5%">尺码：</td>
+						<td width="17%"><input type="text" name="size"></td>
+						<td width="5%">SKU ID：</td>
+						<td width="17%"><input type="text" name="sku_id"></td>
+						<td width="5%">条码：</td>
+						<td width="17%"><input type="text" name="bar_code"></td>
+						<input type="hidden" name="id" value="-{$detailsList[0]['purchase_id']}-">
+						<td><input type="submit" value="搜索"></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+		<table class="content-table">
+			<thead>
+				<tr>
+					<td width="5%" align="center">ID</td>
+					<td width="10%" align="center">货号</td>
+					<td width="10%" align="center">尺码</td>
+					<td width="10%" align="center">SKU ID</td>
+					<td width="15%" align="center">条码</td>
+					<td width="10%" align="center">数量</td>
+					<td width="10%" align="center">管理操作</td>
+				</tr>
+			</thead>
+			<tbody>
+				<empty name="detailsList">
+					<tr><td colspan="20" align="center">暂无纪录</td></tr>
+				<else />
+					<foreach name="detailsList" item="v">
+						<tr>
+							<td align="center">-{$key+1}-</td>
+							<td align="center">-{$v.goods}-</td>
+							<td align="center">-{$v.size}-</td>
+							<td align="center">-{$v.sku_id}-</td>
+							<td align="center">-{$v.bar_code}-</td>
+							<td align="center">-{$v.num}-</td>
+							<td align="center">
+								<a href="-{:U('Purchase/Purchase/details',array('id'=>$v['id']))}-">明细</a>
+								<eq name="v.lock_status" value="0">
+									<a href="-{:U('Purchase/Purchase/freeze',array('id'=>$v['id']))}-">锁定</a>
+								<else />
+									<a href="-{:U('Purchase/Purchase/freeze',array('id'=>$v['id']))}-">解除锁定</a>
+								</eq>
+							</td>
+						</tr>
+					</foreach>
+				</empty>
+			</tbody>
+		</table>
+	</div>
+<script type="text/javascript">
+	$(function() {
+        $('#manuf_date_start').calendar({format: 'yyyy/MM/dd'});
+        $('#manuf_date_end').calendar({format: 'yyyy/MM/dd'});
+        $('#add_date_start').calendar({format: 'yyyy/MM/dd'});
+        $('#add_date_end').calendar({format: 'yyyy/MM/dd'});
+    })
+</script>
+</body>
+</html>

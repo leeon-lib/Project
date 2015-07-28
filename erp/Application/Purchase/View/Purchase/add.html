@@ -59,9 +59,9 @@
 						<tr>
 							<td>销售方式：</td>
 							<td>
-								<select name="sale_type">
+								<select name="sale_type_id">
 									<option value="-1">必选</option>
-									<foreach name="saleType" item="v">
+									<foreach name="saleTypeList" item="v">
 										<option value="-{$key}-">-{$v}-</option>
 									</foreach>
 								</select>

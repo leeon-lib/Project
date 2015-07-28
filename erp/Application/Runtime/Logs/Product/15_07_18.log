@@ -1,0 +1,945 @@
+[ 2015-07-18T00:07:05+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Product/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000409s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000961s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001128s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `product_details` [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0029s ]
+SQL: SELECT `id`,`name` FROM `brand` LIMIT 1000   [ RunTime:0.0014s ]
+SQL: SELECT * FROM `product` WHERE ( 1  ) LIMIT 20   [ RunTime:0.0016s ]
+SQL: SELECT `name` FROM `category` WHERE ( cid=1 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT `name` FROM `brand` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `small` FROM `product_details` WHERE ( product_id=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `name` FROM `category` WHERE ( cid=2 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `brand` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `small` FROM `product_details` WHERE ( product_id=2 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000182s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016256s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016347s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000263s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000321s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000456s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000512s ]
+
+[ 2015-07-18T00:07:06+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Product/import.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000492s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001512s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001655s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `product_details` [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name` FROM `brand` LIMIT 1000   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000068s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000204s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008741s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008875s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000598s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000896s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000969s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001082s ]
+
+[ 2015-07-18T00:07:07+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Product/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000470s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000482s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000552s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `product_details` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0004s ]
+SQL: SELECT `id`,`name` FROM `brand` LIMIT 1000   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `product` WHERE ( 1  ) LIMIT 20   [ RunTime:0.0007s ]
+SQL: SELECT `name` FROM `category` WHERE ( cid=1 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `name` FROM `brand` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `small` FROM `product_details` WHERE ( product_id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `category` WHERE ( cid=2 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `brand` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `small` FROM `product_details` WHERE ( product_id=2 ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010994s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011048s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000134s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000186s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000639s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000726s ]
+
+[ 2015-07-18T00:07:10+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Product/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000370s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000418s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000474s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `product_details` [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0037s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name` FROM `brand` LIMIT 1000   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `product` WHERE ( 1  AND category_cid = 1 ) LIMIT 20   [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `category` WHERE ( cid=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `brand` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `small` FROM `product_details` WHERE ( product_id=1 ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000111s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011672s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011731s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000136s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000180s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000425s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000474s ]
+
+[ 2015-07-18T00:07:14+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Product/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000327s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000522s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000720s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `product_details` [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0006s ]
+SQL: SELECT `id`,`name` FROM `brand` LIMIT 1000   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `product` WHERE ( 1  AND category_cid = 2 ) LIMIT 20   [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `category` WHERE ( cid=2 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `brand` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `small` FROM `product_details` WHERE ( product_id=2 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000113s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010749s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010812s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000143s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000190s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000799s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000885s ]
+
+[ 2015-07-18T00:07:18+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Product/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000495s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000482s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000558s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `product_details` [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name` FROM `brand` LIMIT 1000   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `product` WHERE ( 1  AND category_cid = 3 ) LIMIT 20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000126s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012254s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012322s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000157s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000209s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000486s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000542s ]
+
+[ 2015-07-18T00:07:21+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Product/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000453s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001164s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001291s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0032s ]
+SQL: SHOW COLUMNS FROM `product_details` [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name` FROM `brand` LIMIT 1000   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `product` WHERE ( 1  ) LIMIT 20   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `category` WHERE ( cid=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `brand` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `small` FROM `product_details` WHERE ( product_id=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name` FROM `category` WHERE ( cid=2 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `brand` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `small` FROM `product_details` WHERE ( product_id=2 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000117s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011674s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011734s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000199s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000257s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000463s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000514s ]
+
+[ 2015-07-18T12:48:20+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Product/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000723s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000638s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000727s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0044s ]
+SQL: SHOW COLUMNS FROM `product_details` [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0026s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0014s ]
+SQL: SELECT `id`,`name` FROM `brand` LIMIT 1000   [ RunTime:0.0014s ]
+SQL: SELECT * FROM `product` WHERE ( 1  ) LIMIT 20   [ RunTime:0.0014s ]
+SQL: SELECT `name` FROM `category` WHERE ( cid=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `name` FROM `brand` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `small` FROM `product_details` WHERE ( product_id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `category` WHERE ( cid=2 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `brand` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `small` FROM `product_details` WHERE ( product_id=2 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000121s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018135s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018221s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000236s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000315s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000472s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000526s ]
+
+[ 2015-07-18T12:49:18+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Product/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000774s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001585s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001825s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `product_details` [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name` FROM `brand` LIMIT 1000   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `product` WHERE ( 1  ) LIMIT 20   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `category` WHERE ( cid=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `brand` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `small` FROM `product_details` WHERE ( product_id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `category` WHERE ( cid=2 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT `name` FROM `brand` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT `small` FROM `product_details` WHERE ( product_id=2 ) LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000217s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013838s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013944s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000187s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000547s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000608s ]
+
+[ 2015-07-18T12:49:24+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Product/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000706s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000898s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001031s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `product_details` [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0004s ]
+SQL: SELECT `id`,`name` FROM `brand` LIMIT 1000   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000152s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014545s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014667s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000282s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000337s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000760s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000856s ]
+
+[ 2015-07-18T12:49:25+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Product/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001375s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001324s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001484s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `product_details` [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name` FROM `brand` LIMIT 1000   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `product` WHERE ( 1  ) LIMIT 20   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `category` WHERE ( cid=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `brand` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `small` FROM `product_details` WHERE ( product_id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `category` WHERE ( cid=2 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `brand` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `small` FROM `product_details` WHERE ( product_id=2 ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000140s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011958s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012041s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000202s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000308s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000760s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000864s ]
+
+[ 2015-07-18T12:49:27+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Product/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000594s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000971s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001162s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `product_details` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name` FROM `brand` LIMIT 1000   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000119s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012734s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012791s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000138s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000183s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000450s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000511s ]
+
+[ 2015-07-18T12:49:32+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Product/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000317s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000508s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000570s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `product_details` [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0006s ]
+SQL: SELECT `id`,`name` FROM `brand` LIMIT 1000   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `product` WHERE ( 1  ) LIMIT 20   [ RunTime:0.0008s ]
+SQL: SELECT `name` FROM `category` WHERE ( cid=1 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `name` FROM `brand` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `small` FROM `product_details` WHERE ( product_id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `category` WHERE ( cid=2 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `brand` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `small` FROM `product_details` WHERE ( product_id=2 ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000217s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016262s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000145s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000192s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000456s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000515s ]
+
+[ 2015-07-18T12:49:33+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Product/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000624s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000982s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001140s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0032s ]
+SQL: SHOW COLUMNS FROM `product_details` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name` FROM `brand` LIMIT 1000   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `product` WHERE ( 1  ) LIMIT 20   [ RunTime:0.0005s ]
+SQL: SELECT `name` FROM `category` WHERE ( cid=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `name` FROM `brand` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `small` FROM `product_details` WHERE ( product_id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `category` WHERE ( cid=2 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `brand` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `small` FROM `product_details` WHERE ( product_id=2 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000132s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013988s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014087s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000247s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000311s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000567s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000630s ]
+
+[ 2015-07-18T12:49:54+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Product/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000446s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000955s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001108s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `product_details` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0009s ]
+SQL: SELECT `id`,`name` FROM `brand` LIMIT 1000   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `product` WHERE ( 1  ) LIMIT 20   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `category` WHERE ( cid=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `brand` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `small` FROM `product_details` WHERE ( product_id=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name` FROM `category` WHERE ( cid=2 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `brand` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `small` FROM `product_details` WHERE ( product_id=2 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000131s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016013s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016072s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000154s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000200s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000514s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000567s ]
+
+[ 2015-07-18T12:49:57+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Product/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000707s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000778s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000908s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `product_details` [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name` FROM `brand` LIMIT 1000   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000225s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012721s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012879s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000415s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000538s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000578s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000642s ]
+
+[ 2015-07-18T15:00:53+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Category/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000308s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000408s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000461s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `attribute` [ RunTime:0.0031s ]
+SQL: SHOW COLUMNS FROM `category_attr` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000215s ]
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+NOTIC: [8] Undefined index: id /Users/Liyn/Desktop/home/Project/erp/Application/Runtime/Cache/Product/86112a06863d9b7785599a645236f48d.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014267s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014378s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000395s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000482s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001094s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001202s ]
+
+[ 2015-07-18T15:03:59+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Brand/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000323s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000498s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000561s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `brand`  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000096s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000287s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009646s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009779s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000368s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000444s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000697s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000796s ]
+
+[ 2015-07-18T15:05:18+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Brand/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000397s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000478s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000540s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `brand`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000103s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008429s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008635s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000941s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001120s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001244s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001399s ]
+
+[ 2015-07-18T15:05:20+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Brand/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000356s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000484s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000544s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `brand`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000110s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008566s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008649s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000206s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000256s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000474s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000527s ]
+
+[ 2015-07-18T15:05:27+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Brand/edit/id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000327s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000441s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000498s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `brand` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000101s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008231s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008287s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000141s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000186s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000713s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000782s ]
+
+[ 2015-07-18T15:05:29+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Brand/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000309s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000408s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000461s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `brand`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000109s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012342s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012483s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000274s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000347s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000700s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000777s ]
+
+[ 2015-07-18T15:05:32+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Brand/edit/id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000404s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000567s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000649s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `brand` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000107s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007343s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007410s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000167s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000219s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000479s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000532s ]
+
+[ 2015-07-18T15:05:33+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Brand/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000450s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000643s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000735s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `brand`  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000196s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011417s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011564s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000514s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000677s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000812s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000929s ]
+
+[ 2015-07-18T15:21:16+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Product/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000306s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000404s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000456s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `product_details` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name` FROM `brand` LIMIT 1000   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `product` WHERE ( 1  ) LIMIT 20   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `category` WHERE ( cid=1 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `name` FROM `brand` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `small` FROM `product_details` WHERE ( product_id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `name` FROM `category` WHERE ( cid=2 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `brand` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `small` FROM `product_details` WHERE ( product_id=2 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013734s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013828s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000306s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000594s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000671s ]
+
+[ 2015-07-18T15:58:02+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Product/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000302s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000400s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000454s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `product_details` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name` FROM `brand` LIMIT 1000   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `product` WHERE ( 1  ) LIMIT 20   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `category` WHERE ( cid=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `brand` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `small` FROM `product_details` WHERE ( product_id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `category` WHERE ( cid=2 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `name` FROM `brand` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `small` FROM `product_details` WHERE ( product_id=2 ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000134s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014683s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014775s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000277s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000336s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000576s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000650s ]
+
+[ 2015-07-18T16:13:51+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Product/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000305s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000405s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000459s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `product_details` [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`name` FROM `brand` LIMIT 1000   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `product` WHERE ( 1  ) LIMIT 20   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `category` WHERE ( cid=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `brand` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `small` FROM `product_details` WHERE ( product_id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `category` WHERE ( cid=2 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `brand` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `small` FROM `product_details` WHERE ( product_id=2 ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000118s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010746s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010805s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000148s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000195s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000443s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000496s ]
+
+[ 2015-07-18T17:56:55+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Brand/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000931s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002277s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002601s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `brand`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000161s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015432s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015593s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001876s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002123s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001170s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001390s ]
+
+[ 2015-07-18T17:57:39+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Brand/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000525s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000669s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000798s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `brand`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000194s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000561s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027815s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028017s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000678s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000885s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001885s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002142s ]
+
+[ 2015-07-18T17:57:45+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Brand/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000318s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000432s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000490s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0113s ]
+SQL: SELECT * FROM `brand`  [ RunTime:0.0015s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000288s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018789s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018905s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000259s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000337s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000726s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000818s ]
+
+[ 2015-07-18T17:57:46+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Brand/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000546s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000737s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000954s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `brand`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000117s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000333s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016051s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016224s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000769s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000939s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000710s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000798s ]
+
+[ 2015-07-18T17:58:03+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Brand/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002263s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001616s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001720s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `brand`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000100s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013214s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013275s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000560s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000629s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000936s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001029s ]
+
+[ 2015-07-18T17:58:03+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Brand/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000327s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000685s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000806s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `brand`  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000125s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010614s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010703s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000211s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000266s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000580s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000647s ]
+
+[ 2015-07-18T17:58:07+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Brand/edit/id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000418s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000617s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000694s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `brand` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000159s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009688s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009769s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000154s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000199s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000635s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000711s ]
+
+[ 2015-07-18T17:58:09+08:00 ] 127.0.0.1 /Project/erp/web/index.php/Product/Brand/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000563s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000749s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000861s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0051s ]
+SQL: SELECT * FROM `brand`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000205s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013300s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013405s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000290s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000426s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000672s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000758s ]
+
