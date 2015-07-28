@@ -26,9 +26,11 @@ class SupplierController extends AuthController
 	{
 		// 获取列表信息，关联出品牌名称
 		$supplierList = $this->model->getList();
-		foreach ($supplierList as $key => $value) {
+		foreach ($supplierList as $key => $value)
+		{
 			$brandIdArr = explode(',', $value['brand_id']);
-			foreach ($brandIdArr as $id) {
+			foreach ($brandIdArr as $id)
+			{
 				$supplierList[$key]['brand_name'][] = $this->brandModel->getOne($id, 'name', true);
 			}
 			unset($supplierList[$key]['brand_id']);
